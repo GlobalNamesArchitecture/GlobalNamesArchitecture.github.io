@@ -33,17 +33,21 @@ and a url to complain about this decision something like:
 
     http:/resolver.globalnames.org/trusted?name_id=123&wrong_value=1
 
-When people look at returned name -- the table that shows them will have
+When people look at a returned name -- the table that shows them will have
 'trusted' field, and a button 'Report mistake'. If this button is pushed GN
 Resolver will register human curation event and data from this event will
 beused to improve performance of the classifier algorithm. Human curations will
 trump computer altorighm and they can be collected in a new data source for
 feedbacks...
 
-Details of interface can be decided later when we build the classifier. So who
-and when can build it? And now I am thinking that our Google Summer of Code
-student might be interested in making it happen instead of improving NetiNeti.
-I personally think automatic curation of names is more important.
+
+
+Details of the interface can be decided later when we build the classifier. I
+know that the problem of separating trusted names from untrusted is a task that
+about everybody who uses resolver actively asked me about one time or another.
+So who and when can build it? And now I am thinking that our Google Summer of
+Code student might be interested in making it happen instead of improving
+NetiNeti.  I personally think automatic curation of names is more important.
 
 [jorrit]: https://github.com/jhpoelen
 [globi]: http://www.globalbioticinteractions.org/about.html
