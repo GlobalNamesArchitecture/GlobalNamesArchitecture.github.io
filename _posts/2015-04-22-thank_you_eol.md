@@ -14,7 +14,7 @@ truly amazing gift from EOL is 14 100gb hard drives which will run GN
 databases.
 
 I feel happy warm and fuzzy -- thank you EOL! I hope with this new
-hardware I will be able to increase GN capasity about 5x using current code!
+hardware I will be able to increase GN capacity about 5x using current code!
 Next step -- installing Chef, Docker, and GN applications to serve the
 biodiversity community.
 
