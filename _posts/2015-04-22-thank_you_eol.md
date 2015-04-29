@@ -13,7 +13,7 @@ Laboratory][mbl], waiting to be plugged to internet and electricity. Another
 truly amazing gift from EOL is 14 100gb hard drives which will run GN
 databases.
 
-I am very touched, warm and fuzzy -- thank you EOL! I hope with this new
+I feel happy warm and fuzzy -- thank you EOL! I hope with this new
 hardware I will be able to increase GN capasity about 5x using current code!
 Next step -- installing Chef, Docker, and GN applications to serve the
 biodiversity community.
