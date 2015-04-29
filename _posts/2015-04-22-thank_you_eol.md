@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Thank you EOL!"
-date: 2015-04-28 15:41:03
+title: "Gracious gift from Encylopedia of Life"
+date: 2015-04-22 15:41:03
 categories: gna eol
 ---
 
 [Encyclopedia of Life][eol] folks made a truly glorious present to Global Names
-consisting out of many Dell 710 computers which were used for running EOL at
+consisting out of several Dell 710 servers which were used for running EOL at
 Harvard. Now, when site moved to Smithsoninan EOL donates some of these
 computers to GN, and 10 of them are already at [Marine Biological
-Laboratory][mbl] waiting to be plugged to internet and electricity. Another
+Laboratory][mbl], waiting to be plugged to internet and electricity. Another
 truly amazing gift from EOL is 14 100gb hard drives which will run GN
 databases.
 
