@@ -6,7 +6,7 @@ categories: gna eol
 ---
 
 [Encyclopedia of Life][eol] folks made a truly glorious present to Global Names
-consisting out of several Dell 710 servers which were used for running EOL at
+consisting of several Dell 710 servers which were used for running EOL at
 Harvard. Now, when site moved to Smithsoninan EOL donates some of these
 computers to GN, and 10 of them are already at [Marine Biological
 Laboratory][mbl], waiting to be plugged to internet and electricity. Another
