@@ -52,6 +52,9 @@ So who and when can build it? And now I am thinking that our Google Summer of
 Code student might be interested in making it happen instead of improving
 NetiNeti.  I personally think automatic curation of names is more important.
 
+Jorrit submitted an [issue][issue] about this idea
+
 [jorrit]: https://github.com/jhpoelen
 [globi]: http://www.globalbioticinteractions.org/about.html
 [resolver]: http://resolver.globalnames.org
+[issue]: https://github.com/GlobalNamesArchitecture/gni/issues/38
