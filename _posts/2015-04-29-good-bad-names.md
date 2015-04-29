@@ -44,3 +44,7 @@ Details of interface can be decided later when we build the classifier. So who
 and when can build it? And now I am thinking that our Google Summer of Code
 student might be interested in making it happen instead of improving NetiNeti.
 I personally think automatic curation of names is more important.
+
+[jorrit]: https://github.com/jhpoelen
+[globi]: http://www.globalbioticinteractions.org/about.html
+[resolver]: http://resolver.globalnames.org
