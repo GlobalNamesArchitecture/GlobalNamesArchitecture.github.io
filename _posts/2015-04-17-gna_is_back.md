@@ -21,7 +21,7 @@ EOL site from Harvard to Smithsonian Museum of Natural History. It is done now,
 and I am happy to be able to work on Global Names project again!
 
 What kind of resources do we have now? 2 months of Paddy (David Patterson)
-time, 2 months of Rich Pile time, About a 1.5 years of mine,
+time, 2 months of Rich Pyle time, About a 1.5 years of mine,
 and 1 year of another developer. We also got 2 excellent participants for
 Google Summer of Code this year, so it is 6 months of their time as well.
 And a quest for further funding continues as I write.
