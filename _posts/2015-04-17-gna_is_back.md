@@ -40,3 +40,5 @@ github issues, fixing bugs, adding features, thinking about new ideas.
 [bhl]: http://www.biodiversitylibrary.org/
 [globalnames]: http://globalnames.org
 [eol]: http://eol.org
+[eol-goodies]: http://globalnamesarchitecture.github.io/gna/eol/2015/04/22/thank_you_eol.html
+[mbl]: http://mbl.edu
