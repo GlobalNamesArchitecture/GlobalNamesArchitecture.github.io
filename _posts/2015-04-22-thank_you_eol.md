@@ -2,7 +2,8 @@
 layout: post
 title: "Gracious gift from Encylopedia of Life"
 date: 2015-04-22 15:41:03
-categories: gna eol
+author: "Dima Mozzherin"
+categories: "gna eol"
 ---
 
 [Encyclopedia of Life][eol] folks made a truly glorious present to Global Names

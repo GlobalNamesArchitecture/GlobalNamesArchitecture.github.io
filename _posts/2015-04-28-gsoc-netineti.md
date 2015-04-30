@@ -2,7 +2,8 @@
 layout: post
 title: "Launching NetiNeti Google Summer of Code Project"
 date: 2015-04-28 21:34:40
-categories: netineti gsoc
+author: "Dima Mozzherin"
+categories: "netineti gsoc"
 ---
 
 Today we had our first meeting to start NetiNeti enhancement project funded by

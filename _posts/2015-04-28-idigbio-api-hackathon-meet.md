@@ -2,7 +2,8 @@
 layout: post
 title: "iDigBio hackathon preparation"
 date: 2015-04-28 21:44:50
-categories: netineti gsoc
+author: "Dima Mozzherin"
+categories: "idigbio hakathon"
 ---
 
 On June 3rd I am going to [iDigBio hackathon][idig] meeting which will be about finding
