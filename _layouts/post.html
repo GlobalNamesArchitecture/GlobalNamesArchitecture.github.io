@@ -17,6 +17,14 @@ layout: default
   </header>
 
   <article class="post-content">
+		{% if page.categories and page.categories.size > 0 %}
+			<div class="tags">
+				Tagged:
+				{% for tag in page.categories %}
+				<span><i class="fa fa-tag"></i>{{ tag }}</span>
+				{% endfor %}
+			</div>
+		{% endif %}
     {{ content }}
   </article>
 
