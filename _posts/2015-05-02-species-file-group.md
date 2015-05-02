@@ -11,7 +11,7 @@ Thursday-Friday to visit [Species File Group][sfg] at the University of
 Illinois. I do know this group rather well, as [Lisa Walley][lisa] and I went
 there more than a year ago for a hackathon organized by [Matt Yoder][matt].
 
-I am quite impressed with work this group is doing and when Matt suggested
+I am quite impressed with work this group does and when Matt suggested
 me to join them -- my first thought was -- this might be a way to make
 Global Names financial situation more reliable!
 
