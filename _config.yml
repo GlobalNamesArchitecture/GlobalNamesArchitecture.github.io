@@ -3,7 +3,7 @@ title: Global Names Architecture blog
 email: dmozzherin@gmail.org
 description: > # this means to ignore newlines until "baseurl:"
   The Global Names Architecture (GNA) is a system of databases, programs, and
-  web services - a  cyberinfrastructure - evolving to discover, index,
+  web services - a  cyberinfrastructure - that allows to discover, index,
   organize and interconnect on-line information about organisms and their
   names.
 baseurl: "" # the subpath of your site, e.g. /blog/
