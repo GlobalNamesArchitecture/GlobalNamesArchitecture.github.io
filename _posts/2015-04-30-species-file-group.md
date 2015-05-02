@@ -1,34 +1,48 @@
 ---
 layout: post
-title: "Species Files Group"
+title: "Species File Group"
 date: 2015-04-30 05:52:58
 author: "Dima Mozzherin"
-categories: "gna speciesfile"
+categories: "gna speciesfile taxonworks"
 ---
 
-I am on my last leg to Boston, returning from my trip to [Species File
-Group][sfg](SFG) from University of Illinois. It was a very productive trip,
-and one that makes me think. Frankly, I am considering moving there. Why? Here
-are reasons:
+Trying to find a permanent home for GN I travelled to Champaign-Urbana on
+Thursday-Friday to visit [Species File Group][sfg] at the University of
+Illinois. I do know this group rather well, as [Lisa Walley][lisa] and I went
+there more than a year ago for a hackathon organized by [Matt Yoder][matt].
 
-* Guys are interested in it. I am glad :)
+I am quite impressed with work this group is doing and when Matt suggested
+me to join them -- my first thought was -- this might be a way to make
+Global Names reliable!
 
-* It gives longevity to GN. Currently GN completely depends on existence/lack
-of funds. The SFG group is long term funded and I would be able to work on GN
-independently of funding from NSF or other sources. Instead of thinking how to
-keep GN afloat I can think about long term plans. I am able to push GN
-consistently, instead of doing it from one funding to another.
+Currently Global Names completely depends on grants, and grants come and go. It
+is a pretty bad way to finance an infrastructure project, as you do not want to
+have roads or electricity depend on unstable funding. We always want to be able
+to drive to a store or a concert, and we want to always be able to have lights
+in our homes.  Same goes with projects like GN. If people start using them --
+they start depend on them and it is really bad situation when funding dries out
+and service deteriorates as a result.
 
-* I really like the think tank. I have had talkes with Matt Yoder and Dmitry
-Dmitriev before, and we had a lot of conversations now. I like their approaches,
-and their knowledge, and their skills.
+The visit went well. I had a great opportunity to talk to David Eades, Matt,
+Dmitry Dmitriev, and Yuri Roscov. It was especially great to talk to Yuri, as
+he is the main person behind the [Catalogue of Life][col] content. I consider
+Catalogue of Life to be one of the most important use cases and partners for
+GN, and talking to Yuri was for an extended amount of time was extremely
+helpful.
 
-* Catalogue of life Connection. Yuri is there -- the person who keeps Catalogue
-of Life data and GSDs in shape. I never met him before and we had a really
-good time talking and figuring out how GNA can help CoL. And I think we found
-many ways in which GNA can help CoL in its quest. It would make connection to
-CoL much more close
+Originally position was about helping Yuri to automate his work-flow, however
+when Matt and I talked on Skype the accent started to shift towards supporting
+Global Names. David Eades, Matt, and Yuri all believe that GN is a missing link
+in Catalogue of Life functionality and as such by working closely with Yuri,
+and figuring out what GN can do for Catalogue of Life actually does help to
+automate some of hard parts of Yuri&rsquo;swork.
 
-* David Eads. He is just one of these amazing people you are lucky to meet in
-your life
+The meeting was very encouraging and inspiring. Now I have to think hard and
+make a decision.  I would love be able to keep my house on Cape and I would
+love to be able to come in summer and work with MBL and [RISD][risd].
 
+[sfg]: http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx
+[lisa]: https://github.com/lwalley
+[matt]: https://github.com/mjy
+[col]: http://www.catalogueoflife.org/
+[risd]: http://www.risd.edu/
