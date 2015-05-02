@@ -13,7 +13,7 @@ there more than a year ago for a hackathon organized by [Matt Yoder][matt].
 
 I am quite impressed with work this group is doing and when Matt suggested
 me to join them -- my first thought was -- this might be a way to make
-Global Names reliable!
+Global Names financial situation more reliable!
 
 Currently Global Names completely depends on grants, and grants come and go. It
 is a pretty bad way to finance an infrastructure project, as you do not want to
@@ -27,7 +27,7 @@ The visit went well. I had a great opportunity to talk to David Eades, Matt,
 Dmitry Dmitriev, and Yuri Roscov. It was especially great to talk to Yuri, as
 he is the main person behind the [Catalogue of Life][col] content. I consider
 Catalogue of Life to be one of the most important use cases and partners for
-GN, and talking to Yuri was for an extended amount of time was extremely
+GN, and talking to Yuri for an extended amount of time was extremely
 helpful.
 
 Originally position was about helping Yuri to automate his work-flow, however

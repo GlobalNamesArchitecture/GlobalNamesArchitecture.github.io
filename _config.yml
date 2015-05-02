@@ -13,3 +13,5 @@ github_username: GlobalNamesArchitecture
 
 # Build settings
 markdown: kramdown
+  hard_wrap: false
+  input: GFM
