@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Species File Group"
+title: "Species File Group -- new home for GN?"
 date: 2015-05-02 12:44:45
 author: "Dima Mozzherin"
 categories: "gna speciesfile taxonworks"
