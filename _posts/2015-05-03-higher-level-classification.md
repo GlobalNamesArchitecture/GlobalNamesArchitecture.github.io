@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New High Level Classification for Catalogue of Life"
+title: "New Higher Level Classification for Catalogue of Life"
 date: 2015-05-03 10:25:31
 author: "Dima Mozzherin"
 categories: "gna col"
