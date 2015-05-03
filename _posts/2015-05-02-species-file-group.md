@@ -3,7 +3,7 @@ layout: post
 title: "Species File Group -- new home for GN?"
 date: 2015-05-02 12:44:45
 author: "Dima Mozzherin"
-categories: "gna speciesfile taxonworks"
+categories: "gna col speciesfile taxonworks"
 ---
 
 Trying to find a permanent home for GN I travelled to Champaign-Urbana on
