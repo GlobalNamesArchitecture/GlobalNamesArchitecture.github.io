@@ -7,10 +7,10 @@ categories: "gna sysopia gsoc"
 ---
 
 Our Google Summer of Code student -- [Viduranga Wijesooriya][vidur] and I had
-had our firts meeting today to start [Google Summer of Code][gsoc]
-[Sysopia][sysopia] project. The purpose of the project is not names, however I
-do consider it to be important for EOL and for GN as it allows to spend less
-time on administration of computers and more time on writing code.
+our firts meeting today to start [Google Summer of Code][gsoc] project --
+[Sysopia][sysopia]. The purpose of the project is not names, however I do
+consider it to be important for EOL and for GN as it allows to spend less time
+on administration of computers and more time on writing code.
 
 The idea behind the project is to create a dashboard that allows us to see what
 is going on with all computers in a system with one glance. The system shows
