@@ -40,7 +40,7 @@ as yes/no and a URL to complain about this decision something like:
 
     http:/resolver.globalnames.org/trusted?name_id=123&wrong_value=1
 
-People can just copy and paste this URL into browser, or set it as a "Report
+People can just copy and paste this URL into browser, or set it as a "Report a
 mistake" button for every name in their results html.  If this button is pushed
 GN Resolver will register human curation event and data from this event will be
 used to improve performance of the classifier algorithm. Human curations will
