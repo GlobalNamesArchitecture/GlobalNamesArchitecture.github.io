@@ -8,7 +8,7 @@ categories: "idigbio hakathon"
 
 On June 3rd I am going to [iDigBio hackathon][idig] meeting which will be about finding
 ways to enhance their API. Today there was a pre-hackathon meeting where
-iDigBio folks explained what how did they implement their API, it's backend, and
+iDigBio folks explained how did they implement their API, it's backend, and
 how do they use their own API for their GUIs.
 
 I had been very impress with what they have done. Backend is based on Elastic
