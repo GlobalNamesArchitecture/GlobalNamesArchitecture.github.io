@@ -55,8 +55,10 @@ Code student might be interested in making it happen instead of improving
 NetiNeti.  I personally think automatic curation of names is more important.
 
 Jorrit submitted an [issue][issue] about this idea
+Globit [issue][globit-issue]
 
 [jorrit]: https://github.com/jhpoelen
 [globi]: http://www.globalbioticinteractions.org/about.html
 [resolver]: http://resolver.globalnames.org
 [issue]: https://github.com/GlobalNamesArchitecture/gni/issues/38
+[globit-issue]: https://github.com/jhpoelen/eol-globi-data/issues/132
