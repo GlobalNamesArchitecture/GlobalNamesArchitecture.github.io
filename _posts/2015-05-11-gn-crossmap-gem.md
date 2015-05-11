@@ -16,7 +16,7 @@ data.  [Examples of input and output][examples] are included into the code.
 [README][readme] file describes how to use the project from a command line or
 as a Ruby library.
 
-This program requires internet connetion, Ruby >= 2.1 installed on the machine.
+This program requires internet connection, Ruby >= 2.1 installed on the machine.
 
 Basic usage is:
 
