@@ -53,10 +53,10 @@ learned during the hackathon. Crossmaping code is mostly based on use cases
 from [Rui Figueira][rui] and [Wouter Koch][wouter]. During the hackathon we
 also determined ways to improve quality of name resolution further by:
 
-* Use infraspecies' rank (var., f. subsp. etc) in the matching and penalize
+* Using infraspecies' rank (var., f. subsp. etc) in the matching and penalize
   score if ranks are different
-* Take in account if matching authors are basyonym or combination authors
-* Use meta-information attached to names via sensu..., not ... etc.
+* Taking in account if matching authors are basyonym or combination authors
+* Using meta-information attached to names via sensu..., not ... etc.
   to distinguish name usages
 
 [gncrossmap]: https://github.com/GlobalNamesArchitecture/gn_crossmap
