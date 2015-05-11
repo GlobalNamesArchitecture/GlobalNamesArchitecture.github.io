@@ -49,9 +49,9 @@ checklists.  We determined 3 main approaches
 A hackathon group which worked on crossmapping produced a
 [code][hackathon_crossmap] which would compare checklists against Catalogue of
 Life. The `gn_crossmap` program I am releasing is based heavily on what we
-learned during the hackathon. Crossmaping code is mostly based on input from
-[Rui Figueira][rui] and [Wouter Koch][wouter]. During the hackathon we also
-found ways to improve quality of name resolution further by:
+learned during the hackathon. Crossmaping code is mostly based on use cases
+from [Rui Figueira][rui] and [Wouter Koch][wouter]. During the hackathon we
+also found ways to improve quality of name resolution further by:
 
 * Use infraspecies' rank (var., f. subsp. etc) in the matching and penalize
   score if ranks are different
