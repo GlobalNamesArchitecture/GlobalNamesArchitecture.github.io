@@ -37,7 +37,7 @@ short| long attr        | Description
 
 Web interface to this program is also [in works][checklist]
 
-This project started at the Catalogue of Life workshop in Leiden,
+This project started at the [Catalogue of Life workshop][slides] in Leiden,
 which happened in March 2015. The main focus of the hackathon was to figure out
 how to help national checklists to create, maintain and compare data in their
 checklists.  We determined 3 main approaches
@@ -67,3 +67,4 @@ also determined ways to improve quality of name resolution further by:
 [wouter]: https://github.com/WouterKoch
 [ds]: http://resolver.globalnames.org/data_sources
 [checklist]: https://github.com/GlobalNamesArchitecture/checklist
+[slides]: https://drive.google.com/file/d/0B-WDk-H2QjRKaWJUUkpMSEdta1k/view
