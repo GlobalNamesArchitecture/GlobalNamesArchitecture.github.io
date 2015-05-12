@@ -39,7 +39,7 @@ Web interface to this program is also [in works][checklist]
 
 This project started at the [Catalogue of Life workshop][slides] in Leiden,
 which happened in March 2015. The main focus of the hackathon was to figure out
-how to help national checklists to create, maintain and compare data in their
+how to help national checklist teams to create, maintain and compare data in their
 checklists.  We determined 3 main approaches
 
 1. **Crossmapping** checklists against other checklists and/or reference sources
