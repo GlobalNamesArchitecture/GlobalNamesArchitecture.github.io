@@ -6,7 +6,7 @@ author: Dima Mozzherin
 categories: gna speciesfilegroup
 ---
 
-I did do some soul-searching, advise-gathering, thinking, planning, and crystal
+I did some soul-searching, advise-gathering, thinking, planning, and crystal
 ball gazing.  And it seems that moving [Global Names grant][gn_grant] and
 myself to [Species File Group][sfg] is a right decision.  Why? Because [Marine
 Biological Laboratory][mbl] is a hard core research institute, which completely
