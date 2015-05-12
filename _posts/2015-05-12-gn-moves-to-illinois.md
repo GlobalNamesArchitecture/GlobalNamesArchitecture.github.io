@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Global Names Goes to Illinois
+title: Global Names Grant Goes to Illinois
 date: 2015-05-12 16:14:13
 author: Dima Mozzherin
 categories: gna speciesfilegroup
