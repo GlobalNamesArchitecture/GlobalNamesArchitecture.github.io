@@ -2,7 +2,7 @@
 layout: post
 title: Global Names Grant Goes to Illinois
 date: 2015-05-12 16:14:13
-author: Dima Mozzherin
+author: [Dima Mozzherin][dimus]
 categories: gna speciesfilegroup
 ---
 
@@ -49,3 +49,4 @@ believe GN suddenly got a brighter future ahead.
 [richpyle]: https://www.ted.com/talks/richard_pyle_dives_the_twilight_zone?language=en
 [robwhitton]: https://github.com/whittonr
 [eol]: http://eol.org
+[dimus]: https://github.com/dimus
