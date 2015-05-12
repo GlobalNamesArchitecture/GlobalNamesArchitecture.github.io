@@ -29,7 +29,7 @@ understands that Global Names will need a long-term investment in hardware, and
 he provides a generous annual fund for that. It means no more 7 year old
 computers running Global Names services. I also hope it will help to integrate
 Global Names Usage Bank, a crucial GN component developed by
-[Rich Pyle][richpyle] and [Rob Whitten][robwhitton].
+[Rich Pyle][richpyle] and [Rob Whitton][robwhitton].
 
 Another big factor is ability to work closely with programmers and taxonomists
 of the SFG group. At MBL I am now the only one on EOL project ([Jeremy][jr] is
