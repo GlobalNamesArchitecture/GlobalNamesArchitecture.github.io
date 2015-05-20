@@ -6,7 +6,7 @@ author: Dima Mozzherin
 categories: idigbio api
 ---
 
-In a few weeks there will be [iDigBio API hackathon][hackathon]. As I
+In a few weeks there will be an [iDigBio API hackathon][hackathon]. As I
 menioned [earlier][oldpost] we decided to add another API client written in
 Ruby before the hackathon starts. And [Greg Traub][greg] and I are releasing
 Ruby Gem [client][gem] today.
