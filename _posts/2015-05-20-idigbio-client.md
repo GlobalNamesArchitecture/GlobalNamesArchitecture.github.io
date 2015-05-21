@@ -11,7 +11,7 @@ menioned [earlier][oldpost] we decided to add another API client written in
 Ruby before the hackathon starts. And [Greg Traub][greg] and I are releasing
 [iDigBio API Client][gem] written in Ruby today.
 
-Greg started to make ruby gem at [iDigBio][gregclient]. I took his code and
+Greg started to make a Ruby client at [iDigBio][gregclient]. I took his code and
 refactored it into a [Ruby gem][gem]. So now instead of 0 we have 2 Ruby
 clients :smile:
 
