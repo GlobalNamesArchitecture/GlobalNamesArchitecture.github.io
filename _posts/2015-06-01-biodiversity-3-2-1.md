@@ -31,8 +31,8 @@ New behavior:
 
 "Homo sapiens\r\n" -> ..."verbatim": "Homo sapiens\r\n"
 
-Global Names UUID v5 is added to the output as "id" field
----------------------------------------------------------
+[Global Names UUID v5][uuid_blog] is added to the output as "id" field
+----------------------------------------------------------------------
 
 ```json
 {
