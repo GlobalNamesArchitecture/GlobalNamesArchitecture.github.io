@@ -11,7 +11,7 @@ There was a short meeting about [Catalogue of Life][col] future directions
 organized at [Species File Group][sfg] at Champaign/Urbana. Concerning Global
 Names it was a very productive meeting. It was great to understand the current
 state of Catalogue of Life, to see that CoL is not loosing momentum inspite of
-financial problems of biodiversity informatics in general. There were
+financial problems of biodiversity informatics in general. There was
 definitely interest in creating more bridges between various projects.
 
 Yuri Roskov did present a 'pilot' project of cooperation between Encyclopeia of
