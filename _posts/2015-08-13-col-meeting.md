@@ -17,7 +17,7 @@ definitely interest in creating more bridges between various projects.
 Yuri Roskov did present a 'pilot' project of cooperation between Encyclopeia of
 Life species pages group and CoL. Data about [~2000 species of
 scorpions][scorpions] had been harvested from html-based site to be used in
-both projects. I think it was a great exersize and I do hope it will be just
+both projects. I think it was a great exercise and I do hope it will be just
 the first example of such cooperation.
 
 From the point of Global Names there were good news too. I think it was
