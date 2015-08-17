@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io.png?label=ready&title=Ready)](https://waffle.io/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io)
 globalnamesarchitecture.github.io
 =================================
 
