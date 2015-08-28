@@ -1,6 +1,10 @@
 ---
 layout: docs
-title: Projects
+title: Applications and libraries
 ---
 
-Global Names Includes several legacy and current projects.
+
+<div class="note unreleased">
+  <h5>Work in progress</h5>
+  <p>Nothing here yet...</p>
+</div>

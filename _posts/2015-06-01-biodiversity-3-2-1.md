@@ -2,8 +2,10 @@
 layout: news_item
 title: Global Names Parser v3.2.1
 date: 2015-06-01 11:02:24
+product: Parser
+version: 3.2.1
 author: dimus
-categories: parser uuid
+categories: parser uuid release
 ---
 
 New version of [Scientific Name Parser][parser] is [out][gem]

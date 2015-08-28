@@ -146,6 +146,7 @@ nav {
 /*
  * This code is courtesy Ben Balter, modified by Parker Moore for jekyllrb.com
  * http://ben.balter.com/2014/03/13/pages-anchor-links/
+ * then modified for globalnames.org
  */
 .header-link {
   position: relative;
@@ -571,7 +572,7 @@ article {
 
   h2, h3, h4, h5, h6 { margin: 1em 0; }
 
-  h4 { color: #fff; }
+  h4 { color: $gn-green; }
 
   ul li {
 
