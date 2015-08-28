@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Glossary
+date: 2015-08-28 18:38:23
 permalink: /docs/glossary/
 ---
 
