@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title:  "GNA work continues"
 date:   2015-04-17 10:53:00
-author: "Dima Mozzherin"
-categories: "gna eol"
+author: "dimus"
+categories: gna eol
 ---
 Last year we did get the second round of funding for Global Names Architecture
 development. Our [first grant][gn1] had been about exploration of how to find

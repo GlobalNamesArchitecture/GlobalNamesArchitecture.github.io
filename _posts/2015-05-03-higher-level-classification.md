@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: "New Higher Level Classification for Catalogue of Life"
 date: 2015-05-03 10:25:31
-author: "Dima Mozzherin"
-categories: "gna col"
+author: "dimus"
+categories: col
 ---
 
 [Bob Corrigan][bob] sent around an email pointing at a [paper in PLOS][paper]

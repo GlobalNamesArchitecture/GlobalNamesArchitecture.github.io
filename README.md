@@ -1,7 +1,3 @@
-globalnamesarchitecture.github.io
-=================================
+# Global Names Docs and Blog
 
-[Blog][1] for Global Names Architecture
-
-
-[1]: https://globalnamesarchitecture.github.io
+This project contains news and documents about Globa Names Architecture -- an international effort to improve handling scientific names for biodiversity informatics, medicine and biology.

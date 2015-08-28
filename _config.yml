@@ -1,24 +1,10 @@
-# Site settings
-title: Global Names Architecture blog
-email: dmozzherin@gmail.org
-description: > # this means to ignore newlines until "baseurl:"
-  The Global Names Architecture (GNA) is a system of databases, programs, and
-  web services - a  cyberinfrastructure - that allows to discover, index,
-  organize and interconnect on-line information about organisms and their
-  names.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://globalnamesarchitecture.github.io"
-# twitter_username: dimus
-github_username: GlobalNamesArchitecture
-
-# Build settings
 markdown: kramdown
-kramdown:
-  hard_wrap: false
-  input: GFM
+highlighter: pygments
+permalink: /news/:year/:month/:day/:title/
+excerpt_separator: ""
 
-gems:
-- jekyll-mentions
-- jemoji
-- jekyll-redirect-from
-- jekyll-sitemap
+repository: https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io
+
+collections:
+  docs:
+    output: true

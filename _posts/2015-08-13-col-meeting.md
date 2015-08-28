@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: Catalogue of Life Meeting in Champaign/Urbana
 date: 2015-08-13 09:26:28
-author: Dima Mozzherin
-categories: gna catalogue-of-life
+author: dimus
+categories: catalogue-of-life
 comments: true
 ---
 

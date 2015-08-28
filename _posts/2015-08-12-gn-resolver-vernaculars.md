@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: Global Names Resolver now shows vernacular names
 date: 2015-08-12 10:00:43
-author: Dima Mozzherin
-categories: gna resolver
+author: dimus
+categories: resolver
 comments: true
 ---
 

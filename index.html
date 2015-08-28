@@ -1,23 +1,55 @@
 ---
 layout: default
+title: GlobalNames Home
+overview: true
 ---
 
-<div class="home">
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <h1>Global Names Architecture</h1>
+      <h4 >Scientific Names Services</h4>
+    </div>
+  </div>
+</section>
+<section class="about-gn">
+  <div class="grid">
+    <div class="unit whole">
+      <div class="grid pane">
+        <div class="unit whole center-on-mobiles">
+          <div class="pane-content">
+              <p>The Global Names Architecture (GNA) is a system of web-services which helps people to register, find, index, check and organize biological scientific names and interconnect on-line information about species.</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="grid">
+    <div class="unit one-third">
+      <h2>Resolve</h2>
+      <p>
+        Check if the names you have are real, spelled right, and currently used.
+      </p>
+      <a href="http://resolver.globalnames.org">Resolver &rarr;</a>
+    </div>
+    <div class="unit one-third">
+      <h2>Find</h2>
+      <p>Discover scientific names in texts, PDFs, and even images you
+      took in a Natural History Museum.</p>
+      <a href="http://gnrd.globalnames.org">Name Finder &rarr;</a>
+    </div>
+    <div class="unit one-third">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+      <h2>Register</h2>
+      <p>
+        If you are a zoologist -- you can officially register species
+        electronically.
+      </p>
+      <a href="http://zoobank.org">Zoobank &rarr;</a>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>

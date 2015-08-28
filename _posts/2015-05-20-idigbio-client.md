@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: news_item
 title: iDigBio API Client v0.1.1
 date: 2015-05-20 08:01:08
-author: Dima Mozzherin
+author: dimus
 categories: idigbio api
 ---
 

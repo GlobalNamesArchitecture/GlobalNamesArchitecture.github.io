@@ -1,10 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: Global Names Parser v3.2.1
 date: 2015-06-01 11:02:24
-author: Dima Mozzherin
-categories: gna parser uuid
-comments: true
+author: dimus
+categories: parser uuid
 ---
 
 New version of [Scientific Name Parser][parser] is [out][gem]

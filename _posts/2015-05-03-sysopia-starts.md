@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: "Starting GSOC 2015 Sysopia Project"
 date: 2015-05-03 09:25:38
-author: "Dima Mozzherin"
-categories: "gna sysopia gsoc"
+author: "dimus"
+categories: sysopia gsoc
 ---
 
 Our Google Summer of Code student -- [Viduranga Wijesooriya][vidur] and I had

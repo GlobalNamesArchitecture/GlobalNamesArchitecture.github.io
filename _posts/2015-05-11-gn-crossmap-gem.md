@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: New tool to crossmap checklists
 date: 2015-05-11 11:39:02
-author: Dima Mozzherin
-categories: gna resolver checklist
+author: dimus
+categories: resolver checklist
 ---
 
 Yesterday I released a new command line tool for name resolution called

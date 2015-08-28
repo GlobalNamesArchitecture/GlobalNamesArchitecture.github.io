@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: news_item
 title: "Launching NetiNeti Google Summer of Code Project"
 date: 2015-04-28 21:34:40
-author: "Dima Mozzherin"
+author: "dimus"
 categories: "netineti gsoc"
 ---
 

@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: news_item
 title: "Good names, bad names?"
 date: 2015-04-29 15:52:58
-author: "Dima Mozzherin"
+author: "dimus"
 categories: "gni resolver globi"
 ---
 

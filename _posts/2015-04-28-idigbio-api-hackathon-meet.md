@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: news_item
 title: "iDigBio hackathon preparation"
 date: 2015-04-28 21:44:50
-author: "Dima Mozzherin"
+author: "dimus"
 categories: "idigbio hakathon"
 ---
 

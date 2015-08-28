@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: news_item
 title: Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project
 date: 2015-05-06 09:02:32
-author: Dima Mozzherin
-categories: gna phylogeny trees nsf
+author: dimus
+categories: phylogeny trees nsf
 ---
 
 Yesterday [Arlin Stoltzfus][arlin] organized a kickoff meeting for the project
