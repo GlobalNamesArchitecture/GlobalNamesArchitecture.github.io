@@ -1,10 +1,20 @@
-markdown: kramdown
-highlighter: pygments
 permalink: /news/:year/:month/:day/:title/
 excerpt_separator: ""
-
+baseurl: ""
+url: "http://globalnames.org"
 repository: https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io
 
 collections:
   docs:
     output: true
+
+markdown: kramdown
+kramdown:
+  hard_wrap: false
+  input: GFM
+
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
