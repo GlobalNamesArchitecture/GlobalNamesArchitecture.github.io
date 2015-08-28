@@ -35,7 +35,7 @@ New behavior:
 [Global Names UUID v5][uuid_blog] is added to the output as "id" field
 ----------------------------------------------------------------------
 
-```json
+{% highlight json %}
 {
     "scientificName": {
         "id": "16f235a0-e4a3-529c-9b83-bd15fe722110",
@@ -60,7 +60,8 @@ New behavior:
         }
     }
 }
-```
+{% endhighlight %}
+
 Read more about UUID v5 in another [blog post][uuid_blog]
 
 Names with underscores instead of spaces are supported
@@ -78,7 +79,7 @@ are not code compliant.
 
 New behavior:
 
-```json
+{% highlight json %}
 {
     "scientificName": {
         "id": "b3a9b1a3-f73c-5333-8194-a84c6583d130",
@@ -109,7 +110,7 @@ New behavior:
         }
     }
 }
-```
+{% endhighlight %}
 
 [parser]: https://github.com/GlobalNamesArchitecture/biodiversity
 [gem]: https://rubygems.org/gems/biodiversity

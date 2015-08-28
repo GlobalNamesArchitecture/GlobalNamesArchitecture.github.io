@@ -9,9 +9,9 @@ collections:
     output: true
 
 markdown: kramdown
-kramdown:
-  hard_wrap: false
-  input: GFM
+# kramdown:
+#   hard_wrap: false
+#   input: GFM
 
 gems:
 - jekyll-mentions
