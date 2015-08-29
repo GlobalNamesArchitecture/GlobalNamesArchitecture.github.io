@@ -1,0 +1,9 @@
+- title: Getting Started
+  docs:
+    - home
+    - glossary
+
+- title: Names
+  docs:
+    - good-bad-names
+    - curious-names

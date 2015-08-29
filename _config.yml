@@ -8,6 +8,8 @@ highlighter: pygments
 collections:
   docs:
     output: true
+  apps:
+    output: true
 
 markdown: kramdown
 # kramdown:

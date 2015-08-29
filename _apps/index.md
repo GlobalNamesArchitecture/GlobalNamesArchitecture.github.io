@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: Applications and libraries
+date: 2015-08-28 18:39:28
+permalink: /apps/
 ---
 
 
