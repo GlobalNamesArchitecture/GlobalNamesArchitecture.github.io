@@ -13,3 +13,7 @@
     - biodiversity
     - gn-crossmap
     - taxamatch
+    - dwc-archive
+    - damerau-levenshtein
+    - idigbio-client
+    - gn-uuid
