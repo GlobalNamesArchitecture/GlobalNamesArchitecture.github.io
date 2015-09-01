@@ -10,13 +10,14 @@ permalink: /apps/gni/
 ---
 
 <div class="note application">
+
   <ul>
     <li>Web App</li>
     <li>API App</li>
   </ul>
 
-  <p>GNI collects name strings from many sources. Then GNI reconciles
-  differences in spelling, combines names into lexical groups and gives a link
-  back to sources where names are used.</p>
+  <p>Web-wide index of scientific names. GNI collects name strings from many
+  sources. Then GNI reconciles differences in spelling, combines names into
+  lexical groups and gives a link back to sources where names are used.</p>
 
-  </div>
+</div>

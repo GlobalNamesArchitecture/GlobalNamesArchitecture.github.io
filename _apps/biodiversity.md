@@ -4,8 +4,8 @@ title: Biodiversity Parser
 date: 2015-08-31 12:26:25
 type: apps
 homepage: http://rubygems.org/gems/biodiversity
-code: https://github.org/GlobalNamesArchitecture/biodiversity
-documentation: http://www.rubydoc.info/gems/biodiversity/
+code: https://github.com/GlobalNamesArchitecture/biodiversity
+documentation: http://rubydoc.info/gems/biodiversity
 permalink: /apps/biodiversity/
 ---
 
