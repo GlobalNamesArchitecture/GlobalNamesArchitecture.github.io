@@ -9,11 +9,17 @@ layout: default
 
       <div class="unit four-fifths">
         <article>
-          <h1>{{ page.title }}</h1>
           {% if page.date %}
-          <div class="doc-date">Revised on: {{ page.date | date_to_string }}</div>
+          <div class="doc-date">Edited on: {{ page.date | date_to_string }}</div>
           {% endif %}
+          <h2>
+          {{ page.title }}
+          <a href="{{ page.url }}" class="permalink" title="Permalink">∞</a>
+          </h2>
           {{ content }}
+          {% if page.type == "apps" %}
+            {% include apps_content.html %}
+          {% endif %}
           {% include section_nav.html %}
         </article>
       </div>

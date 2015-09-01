@@ -1,9 +1,11 @@
-- title: Getting Started
+- title: Web Apps 
   docs:
-    - home
-    - glossary
+    - zoobank
+    - gni
+    - gnr
+    - gnrd
 
-- title: Names
+- title: Libraries
   docs:
-    - good-bad-names
-    - curious-names
+    - biodiversity
+    - taxamatch

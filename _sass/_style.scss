@@ -30,6 +30,9 @@ body {
   font-kerning: normal;
 }
 
+.break {
+  margin-bottom: 3em;
+}
 .clear {
   display: block;
 }
@@ -294,6 +297,12 @@ article {
   color: grey;
 }
 
+.app-date {
+  float: right;
+  font-size: 0.7em;
+  color: grey;
+}
+
 /* Right-side nav - used by both docs and news */
 
 aside {
@@ -422,6 +431,11 @@ aside {
 }
 
 /* News */
+
+
+h1.section {
+  margin-top: 1em;
+}
 
 article h2:first-child { margin-top: 0; }
 
@@ -580,7 +594,7 @@ article {
   h4 { color: $gn-green; }
 
   ul li {
-
+    font-size: 1em;
     p { margin: 0; }
 
     blockquote { margin: 10px 0; }
@@ -588,10 +602,13 @@ article {
 
   ul li,
   ol li {
+    margin: 0;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
   }
-
+  ul { 
+    margin: 0; 
+    padding: 0;
+  }
 }
 
 h5, h6 {
@@ -755,6 +772,7 @@ code.output {
   p {
     font-weight: 400;
     font-size: .75em;
+    padding-bottom: 0.3em;
   }
 
   &:after {
@@ -767,9 +785,26 @@ code.output {
     font-weight: 700;
     // text-shadow: 0 -1px 0 rgba(0,0,0,.5);
   }
+
+  a {
+    color: #fff;
+    font-weight: 800;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      color: #fff;
+      font-size: 0.8em;
+      padding: 0;
+      margin: 1em 1em 1em 0;
+    }
+  }
 }
 
-.info {
+.application {
   background-color: #0389aa;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAzODlhYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDYxN2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0389aa), to(#00617f));
@@ -780,7 +815,7 @@ code.output {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0389aa', endColorstr='#00617f',GradientType=0 );
 }
 
-.warning {
+.library {
   background-color: #9e2812;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllMjgxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZjBkMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9e2812), to(#6f0d0d));
@@ -802,14 +837,14 @@ code.output {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd9239', endColorstr='#a27528',GradientType=0 );
 }
 
-.info:before { border-color: transparent #00617f #00617f transparent; }
+.application:before { border-color: transparent #00617f #00617f transparent; }
 
-.warning:before { border-color: transparent #6f0d0d #6f0d0d transparent; }
+.library:before { border-color: transparent #6f0d0d #6f0d0d transparent; }
 
 .unreleased:before { border-color: transparent #664719 #664719 transparent; }
 
-.info:after {
-  content: '\24D8';
+.application:after {
+  content: '\2A5C';
   color: #fff;
   position: absolute;
   top: 15px;
@@ -819,14 +854,14 @@ code.output {
   // text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 
-.warning:after {
-  content: '\203C';
+.library:after {
+  content: '\270E';
   color: #fff;
   position: absolute;
   top: 15px;
   left: 15px;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 400;
   // text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 

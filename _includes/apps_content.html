@@ -1,0 +1,14 @@
+<ul>
+  {% if page.homepage %}
+  <li><a href="{{ page.homepage }}" target="_blank">Homepage</a></li>
+  {% endif %}
+  {% if page.api %}
+  <li><a href="{{ page.api }}" target="_blank">API Documentation</a></li>
+  {% endif %}
+  {% if page.code %}
+  <li><a href="{{ page.code }}" target="_blank">Code</a></li>
+  {% endif %}
+  {% if page.documentation %}
+  <li><a href="{{ page.code }}" target="_blank">Documentation</a></li>
+  {% endif %}
+</ul>

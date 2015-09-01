@@ -1,7 +1,11 @@
+{% assign data = site.data.docs %}
+{% if page.type == "apps" %}
+  {% assign data = site.data.apps %}
+{% endif %}
 <div class="docs-nav-mobile unit whole show-on-mobiles">
   <select onchange="if (this.value) window.location.href=this.value">
     <option value="">Navigate the docs…</option>
-    {% for section in site.data.docs %}
+    {% for section in data %}
     <optgroup label="{{ section.title }}">
       {% include docs_option.html items=section.docs %}
     </optgroup>
