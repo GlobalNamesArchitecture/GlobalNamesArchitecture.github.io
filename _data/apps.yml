@@ -4,8 +4,12 @@
     - gni
     - gnr
     - gnrd
+    - name-spotter
+    - biblio-spotter
+    - gnite
 
 - title: Libraries
   docs:
     - biodiversity
+    - gn-crossmap
     - taxamatch
