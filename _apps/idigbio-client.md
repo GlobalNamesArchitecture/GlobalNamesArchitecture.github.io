@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Idigbio Client
+title: iDigBio Client
 date: 2015-08-31 12:26:25
 type: apps
 homepage: http://rubygems.org/gems/idigbio_client
