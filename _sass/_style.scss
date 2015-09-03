@@ -3,6 +3,7 @@ $gn-yellow: #fdba12;
 $gn-green: #007934;
 $gn-green-darker: darken($gn-green, 15%);
 $gn-blue: #001689;
+$gn-blue-light: lighten($gn-blue, 40%);
 $light-grey: #eee;
 $grey: #666;
 $dark-grey: #333;
@@ -107,6 +108,31 @@ nav {
     }
   }
 }
+
+.social-media {
+  float: right;
+  margin-left: 2em;
+  a {
+    &.sharer {
+      padding: 0px 4px;
+      border-radius: 4px;
+      color: #333;
+
+      i {
+        margin: 2px;
+      }
+    }
+    &.facebook {
+      background: $gn-blue-light;
+      color: #fff;
+    }
+    &.twitter {
+      background: $gn-blue-light;
+      color: #fff;
+    }
+  }
+}
+
 
 .mobile-nav {
 

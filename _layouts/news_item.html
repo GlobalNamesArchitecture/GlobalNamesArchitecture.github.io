@@ -20,7 +20,12 @@ layout: news
       <img src="https://github.com/{{ page.author }}.png" class="avatar" alt="{{ page.author }} avatar" width="24" height="24">
       {{ page.author }}
     </a>
+    <div class="social-media">
+			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+			<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+    </div>
   </div>
+  
   <div class="post-content">
     {{ content }}
   </div>
