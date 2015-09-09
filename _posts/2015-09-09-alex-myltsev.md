@@ -9,7 +9,7 @@ comments: true
 
 Global Names is happy to welcome a new member -- Alexander Myltsev
 (@alexander-myltsev on GitHub). Alexander is of [parboiled2] fame. Parboiled2
-is a [Parsing Expressed Grammar][peg] parser for Scala, and it was originated
+is a [Parsing Expressed Grammar][peg] parser for Scala, and it did originate
 from Alex' code which he wrote as a Google Summer of Code participant in 2013.
 
 ![Alexander Myltsev][alex-img]
