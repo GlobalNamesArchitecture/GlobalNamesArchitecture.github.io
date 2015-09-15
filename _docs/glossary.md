@@ -4,7 +4,9 @@ title: Glossary
 date: 2015-08-28 18:38:23
 permalink: /docs/glossary/
 ---
-** Requests and feedback are appreciated. We use bolding to indicate that a term is being used as a name-string, and not as a scientific name.**
+**Requests and feedback are appreciated**. 
+
+Terms in bold indicate that a term is being used as a name-string
 
 #### Ambiregnal
 Organisms which may be subject to more than one code of nomenclature. Examples include (but are not limited to) the cyanobacteria which, while bacteria and therefore logically subject to the International Code of Nomenclature of
