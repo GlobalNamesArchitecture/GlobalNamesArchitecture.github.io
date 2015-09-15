@@ -29,7 +29,7 @@ The name of the scientist or group of scientists who introduce a new code-compli
 A scientific name that complies with the provisions of the of the zoological code. Botanists use 'validly published" for this.  'Code Compliant' is alternative term. 
 
 #### Basionym
-Refers to binomen which is the first instance of the use of a species epithet. The species epithet may be moved to a different genus to create a 'new combination'.   *Gerardia purpurea Linnaeus* is the basionym of *Agalinis purpurea (L.)
+Refers to binomen which is the first instance of the use of a species epithet. The species epithet may be moved to a different genus to create a 'new combination'.   *Gerardia purpurea* Linnaeus is the basionym of *Agalinis purpurea (L.)
 Pennell*. 'Protonym' is used in a similar way, but more precisely refers to the first 'appearance' of a name.
 
 #### Binomial nomenclature
