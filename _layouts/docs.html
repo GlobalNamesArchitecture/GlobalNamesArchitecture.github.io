@@ -1,4 +1,5 @@
 ---
+doc: single
 layout: default
 ---
 
@@ -9,13 +10,21 @@ layout: default
 
       <div class="unit four-fifths">
         <article>
-          {% if page.date %}
-          <div class="doc-date">Edited on: {{ page.date | date_to_string }}</div>
-          {% endif %}
           <h2>
           {{ page.title }}
           <a href="{{ page.url }}" class="permalink" title="Permalink">∞</a>
           </h2>
+    <div>
+   {% if page.date %}
+   <span class="doc-date">Edited on: {{ page.date | date_to_string }}</span>
+   {% endif %}
+   {% if page.author %}
+   <a href="https://github.com/{{ page.author }}" class="post-author">
+      <img src="https://github.com/{{ page.author }}.png" class="avatar" alt="{{ page.author }} avatar" width="24" height="24">
+      {{ page.author }}
+    </a>
+   {% endif %}
+    </div>
           {{ content }}
           {% if page.type == "apps" %}
             {% include apps_content.html %}

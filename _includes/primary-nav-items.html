@@ -2,7 +2,7 @@
   <li class="{% if page.overview %}current{% endif %}">
     <a href="/">Home</a>
   </li>
-  <li class="{% if page.author %}current{% endif %}">
+  <li class="{% if page.url contains '/news/' %}current{% endif %}">
     <a href="/news/">News</a>
   </li>
   <li class="{% if page.url contains '/apps/' %}current{% endif %}">

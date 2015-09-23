@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Glossary
-date: 2015-08-28 18:38:23
+date: 2015-09-23 08:00:46
+author: djpmapleferryman
 permalink: /docs/glossary/
 ---
-**Requests and feedback are appreciated**. 
 
-Terms in bold indicate that a term is being used as a name-string
+> Requests and feedback are appreciated. Terms in **bold** indicate that a term is being used as a name-string
 
 
 #### Ambiregnal
@@ -20,7 +20,7 @@ Bacteria, are studied by the same community as studies eukaryotic algae and who 
 
 
 #### Atlas of Living Australia (ALA)
-A large project in Australia that provides the infrastructure to improve exchange, collaboration and other forms of interoperability among Australian government departments and organizations with interests in biodiversity. Data management framework nowunderpins other national biodiversity sites, such as for France. 
+A large project in Australia that provides the infrastructure to improve exchange, collaboration and other forms of interoperability among Australian government departments and organizations with interests in biodiversity. Data management framework nowunderpins other national biodiversity sites, such as for France.
 
 
 #### Appearance
@@ -32,7 +32,7 @@ The name of the scientist or group of scientists who introduce a new code-compli
 
 
 #### Available name
-A scientific name that complies with the provisions of the of the zoological code. Botanists use 'validly published" for this.  'Code Compliant' is alternative term. 
+A scientific name that complies with the provisions of the of the zoological code. Botanists use 'validly published" for this.  'Code Compliant' is alternative term.
 
 
 #### Basionym
@@ -68,7 +68,7 @@ A [project][col] which aims to collate all species into a curated single checkli
 
 #### Chresonym
 A reference to the use of a name. The sperm whale *Physeter catodon* was first formally described by Linnaeus in the 1758 edition of Systema Naturae, so the correct name with authority information is *Physeter catodon* Linnaeus, 1758. **Physeter catodon*: Harmer, 1928** on the other hand refers to the use of the name by Harmer. Chresonyms may be  similar in
-appearance to the scientific name plus authority (the example above may be given as **Physeter catodon* Harmer, 1928**). Chresonyms may be distinguished by the presence of an additional element of punctuation.  A chresonym may simply regfer to a usage, or may be used to indzicate the taxonomic concept that occurred in the source. In some taxonomic areas, it is routine to include chresonyms among the synonymy lists. This is wrong as the chresonym is NOT based on a nomenclatural act. 
+appearance to the scientific name plus authority (the example above may be given as **Physeter catodon* Harmer, 1928**). Chresonyms may be distinguished by the presence of an additional element of punctuation.  A chresonym may simply regfer to a usage, or may be used to indzicate the taxonomic concept that occurred in the source. In some taxonomic areas, it is routine to include chresonyms among the synonymy lists. This is wrong as the chresonym is NOT based on a nomenclatural act.
 
 
 #### Clade identifiable.
@@ -84,7 +84,7 @@ Refers to a nomenclatural code that sets rules and guidelines for the formation 
 
 
 #### Code compliant name
-A scientific name that complies with the provisions of the appropriate  code.  Other terms with similar meanings include 'available name'and  'validly published" name. 
+A scientific name that complies with the provisions of the appropriate  code.  Other terms with similar meanings include 'available name'and  'validly published" name.
 
 
 ####  Code of Phytosociologial Nomenclature
@@ -92,7 +92,7 @@ One of the less well known codes of nomenclature which issues the rules of **syn
 
 
 ####  Common name
-Also referred to as colloquial or vernacular name for a taxon. See Vernacular name. 
+Also referred to as colloquial or vernacular name for a taxon. See Vernacular name.
 
 
 ####  Committee on Phylogenetic Nomenclature (CPN)
@@ -100,7 +100,7 @@ A committee of the International Society for Phylogenetic Nomenclature from whic
 
 
 ####  Colloquial name
-Also referred to as common or vernacular name for a taxon. See Vernacular name. 
+Also referred to as common or vernacular name for a taxon. See Vernacular name.
 
 
 #### Crossmapping
@@ -128,7 +128,7 @@ DOIs are persistent identifiers used, for example, by publishers for articles. A
 another file with occurrence information, or further files dealing with other types of information. This is GBIF's preferred data exchange standard and is integrated with their IPT environment.
 
 
-### Dryad
+#### Dryad
 According to their web-site,  “DataDryad.org is a curated general-purpose repositorythat makes the data underlying scientific publicationsdiscoverable, freely reusable, and citable. Dryad has integrated data submission for a growing list of journals; submission of data from other publications is also welcome”.
 
 
@@ -146,8 +146,8 @@ consortium agreement has started on the 1st of March 2006 and lasted until 2011.
 
 ####  Entity
 A group of organisms, such as a taxon, but entity can also be used for groups that may lack a formal name or rank, such as trees, microbes, creepy-crawlies.
- 
- 
+
+
 ####  Encyclopedia Of Life (EOL)
 A [project][eol] to create a web page for every known species on Earth.
 
@@ -159,7 +159,7 @@ The second part of the latin 'binomial' for species - the "**robur**" of *Banski
 Organisms, parts of organisms, or the works of organisms that are no longer living, are subject to gravity and are associated with sediments.  The best estimate of the total number of described fossil species is about 250,000
 
 
-#### Fuzzy matching 
+#### Fuzzy matching
 A technique of comparing name strings that allows for controlled degrees (one character, two characters) or mis-match. The intention is to identify different name strings as lexical variants - caused through typographical, transliteration, or OCR errors - for the same name. Global Names FuzzyMatching (GNFM) is based on an algorithm developed  Tony Rees (CSIRO, Australia).   Fuzzy matching identifies **Dorsophila melanogaster** as being a variant of **Drosophila melanogaster**.  The tolerance can be adjusted, but at tolerances of two characters and above, there is a high probability that (canonical) name-strings representing different names may be matched together.  This is also possible with a tolerance of one character (**Mumia** matches **Cumia**,
 **Mimia**, **Mucia**, **Mukia**, **Numia**, and **Rumia**.
 
@@ -181,7 +181,7 @@ Conceived as an open-ended names-based cyberinfrastructure, GNA  will provides d
 
 
 #### Global Names Classification and List Respository GNACLR
-GNACLR is a repository of classifications and lists of names, and metadata relating to source,  The name-strings within the sources are compiled in GlobalNames Index. GNACLR is accessible at http://gnaclr.globalnames.org/classifications 
+GNACLR is a repository of classifications and lists of names, and metadata relating to source,  The name-strings within the sources are compiled in GlobalNames Index. GNACLR is accessible at http://gnaclr.globalnames.org/classifications
 
 
 ####  Global Names Index (GNI)
@@ -199,7 +199,7 @@ GNRD is a toolkit that is used to find names in sources.  It combines names reco
 
 
 ####  Global Names Usage Bank (GNUB)
-An data management environment to record the occurrence of names in documents, databases, notes or other records. A  central component of GNA. The usages will include all nomenclatural acts, making GNUB critical to nomenclators and  
+An data management environment to record the occurrence of names in documents, databases, notes or other records. A  central component of GNA. The usages will include all nomenclatural acts, making GNUB critical to nomenclators and
 registration environments such as Index Fungorum, IPNI, and Zoobank. GNUB will index usages that help to clarify the meaning of each name and so contains resources that will be
 developed into taxonomic tools and services.
 
@@ -209,7 +209,7 @@ A name may be deemed to be good if it is a well-formed scientific name, complies
 
 
 ####	GSD
-A Global Species Database is a provider of taxonomic content relating to one or more specified clades to the Catalogue of Life.  According to the Catalogue of Web Site, a GSD is  a  taxonomic database, which aspires to cover one taxon worldwide, contain a taxonomic checklist of all species within that taxon, deal with species as taxa, and contain synonymy and taxonomic opinion, have an explicit mechanism for seeking at least one responsible/consensus taxonomy, and for applying it consistently and cross-index significant alternative taxonomies in their synonymy. 
+A Global Species Database is a provider of taxonomic content relating to one or more specified clades to the Catalogue of Life.  According to the Catalogue of Web Site, a GSD is  a  taxonomic database, which aspires to cover one taxon worldwide, contain a taxonomic checklist of all species within that taxon, deal with species as taxa, and contain synonymy and taxonomic opinion, have an explicit mechanism for seeking at least one responsible/consensus taxonomy, and for applying it consistently and cross-index significant alternative taxonomies in their synonymy.
 
 
 ####  Heterotypic synonym also Taxonomic synonym,  Subjective synonym
@@ -240,7 +240,7 @@ A data identifier is an alphanumeric string that is used to refer to a data reco
 
 
 ####	Identifier (molecular)
-Molecular identifiers are also referred to as BarCodes, and are typically the sequence of a small part of the genome that can be used to distinguish among taxa.  The part of the genome that is used differs for different clades, and is selected if it  does not show (much) variation within species, but exhibits differences among species.  Cox-1 used for many animals, 16S subunit ribosomal RNA for various protists, and so on.  
+Molecular identifiers are also referred to as BarCodes, and are typically the sequence of a small part of the genome that can be used to distinguish among taxa.  The part of the genome that is used differs for different clades, and is selected if it  does not show (much) variation within species, but exhibits differences among species.  Cox-1 used for many animals, 16S subunit ribosomal RNA for various protists, and so on.
 
 
 ####  Index Bergeyana
@@ -357,7 +357,7 @@ until later it was given a scientific name *Pelagibacter ubique* but as this was
 
 
 ####	Negated names
-Name-strings may contain annotations that negate some or all of the canonical elements in the name-string. These include aff., cf, nr. non, not, ab., ?, sensu auctt. etc.).  In essence, they alert us to the fact that the name string in use does not refer to the taxon that is usually refers to. Each annotation had a different taxonomic meaning not, similar to, in the sense of authors to indicate that the taxon is not as originally proposed. Examples include: **Limax cf. graecus sensu Wiktor, 2001**, and **Labiotermes nr labralis**, they do not refer to *Limax graecus* (but to a species that is similar to Limax graecus in the sense of Wiktor; nor to *Labiotermes labralis* but that the species in question is similar (near) to *Labiotermes labralis* 
+Name-strings may contain annotations that negate some or all of the canonical elements in the name-string. These include aff., cf, nr. non, not, ab., ?, sensu auctt. etc.).  In essence, they alert us to the fact that the name string in use does not refer to the taxon that is usually refers to. Each annotation had a different taxonomic meaning not, similar to, in the sense of authors to indicate that the taxon is not as originally proposed. Examples include: **Limax cf. graecus sensu Wiktor, 2001**, and **Labiotermes nr labralis**, they do not refer to *Limax graecus* (but to a species that is similar to Limax graecus in the sense of Wiktor; nor to *Labiotermes labralis* but that the species in question is similar (near) to *Labiotermes labralis*
 
 
 ####  Nom. nov.
@@ -382,11 +382,11 @@ An open-ended and occasional series of workshops initiated by GNA and used used 
 
 
 #### Nominal taxa
-A scientific name that has been introduced for a taxon without evaluation or confirmation that the name is code-compliant, or that it appropriately applies to a distinct taxon.  When a taxonomist reviews a taxonomic area, they will compile a list of all nominal taxa, then determine which names are code-compliant, and then make decisions about the clade to which the name applies along with making synonymy lists. 
+A scientific name that has been introduced for a taxon without evaluation or confirmation that the name is code-compliant, or that it appropriately applies to a distinct taxon.  When a taxonomist reviews a taxonomic area, they will compile a list of all nominal taxa, then determine which names are code-compliant, and then make decisions about the clade to which the name applies along with making synonymy lists.
 
 
 #### Parser
-A software tool that  breaks a name into its semantically discrete elements (such as genus, species epithet, infraspecific epithet, annotations, authors, dates of authorship, hybrid marks and so on.  The Global Names parser is accessible at http://gni.globalnames.org/parsers/new.  
+A software tool that  breaks a name into its semantically discrete elements (such as genus, species epithet, infraspecific epithet, annotations, authors, dates of authorship, hybrid marks and so on.  The Global Names parser is accessible at http://gni.globalnames.org/parsers/new.
 
 
 ####  The Pan European Species Directories Infrastructure (PESI)
@@ -394,7 +394,7 @@ PESI provides standardised and authoritative taxonomic information by integratin
 
 
 #### Parent Child
-The arrangement of taxa into a hierarchy or phylogeny by reference to membership - the group is the parent, and the subordinate taxa or clades are the children.  
+The arrangement of taxa into a hierarchy or phylogeny by reference to membership - the group is the parent, and the subordinate taxa or clades are the children.
 
 
 ####  Phylocode
@@ -451,7 +451,7 @@ The levels within a hierarchical classification of organisms. There are seven pr
 
 
 ####  Reconciliation
-The GN solution to the "many-names-for-one-taxon" problem, as an alternative to seeking the use of a single preferred name. Reconciliation involves mapping all alternative name-strings for the same taxon into ‘reconciliation groups’ so that a query initiated with a single name can be ‘exploded’ to access data that was published under any name for the taxon. 
+The GN solution to the "many-names-for-one-taxon" problem, as an alternative to seeking the use of a single preferred name. Reconciliation involves mapping all alternative name-strings for the same taxon into ‘reconciliation groups’ so that a query initiated with a single name can be ‘exploded’ to access data that was published under any name for the taxon.
 
 
 ####  Reconciliation group
@@ -465,7 +465,7 @@ Zoobank. Registration may be pro-active (i.e. one can obtain a registration numb
 
 
 ####  Resolution
-Resolution extends the process of 'reconciliation', presenting the name that is endorsed by a preferred taxonomic authority (his, her, or their view of the ‘right” scientific name for a taxon).  
+Resolution extends the process of 'reconciliation', presenting the name that is endorsed by a preferred taxonomic authority (his, her, or their view of the ‘right” scientific name for a taxon).
 
 
 ####	Scientific name
@@ -547,7 +547,7 @@ nomenclatural acts that relate to the application of the appropriate code, or ta
 
 
 ####	Taxonomic act
-A published determination by one or more taxonomists that bear on the identify of a taxon.  This may be the discovery of a new taxon, a judgement as to heterotypic (subjective or taxonomic) synonyms, the placement of taxa within hierarchical classifications, clarification of taxonomic concepts, and so on.  Taxonomic acts include nomenclatural acts.  
+A published determination by one or more taxonomists that bear on the identify of a taxon.  This may be the discovery of a new taxon, a judgement as to heterotypic (subjective or taxonomic) synonyms, the placement of taxa within hierarchical classifications, clarification of taxonomic concepts, and so on.  Taxonomic acts include nomenclatural acts.
 
 
 ####  Taxonomic intelligence
@@ -591,7 +591,7 @@ A scientific name comprised of a single single word, in the name-string a **Zyzz
 The ocurrence or occurrences of elements of a name within a document.  If Smith (1955) published an article on *Aus bus*, and mentioned the name "Aus bus" 14 times within the article (i.e. there are 14 appearances of the binomial), then there would be three usages - "*Aus* in Smith 1955", "*bus* in Smith 1955", and (arguably) "*Aus bus* in Smith 1955".  The combination of the name and the reference is a chresonym.  In the event that the usages bears on the identity of the taxon, these usages may also be referred to as "*Aus* sec Smith 1955" or "*Aus bus* sensu Smith 1955".
 
 
-#UUID
+#### UUID
 UUID: a  32 alphanumeric string (e.g. 65247ae4-2c16-59ca-bc6d-9ae241202572)  that can be used as a unique identifier for a digital object (in this case it is the GN UUID for **Cafeteria roenbergensis**).  Global Names uses an algorithmic approach to generate the UUIDS  so that other users with the same algorithm will obtain the same UUID for the same name-string.  The UUID may be presented with a pointer to a location by which the identifier can be dereferenced to reveal the information it points to. The ZooBank identifier for the same species is urn:lsid:zoobank.org:act:17665D1C-4022-4A71-8B1F-FE19B01B8F81. Catalogue of Life does not list *Cafeteria*, but for *Cafeteriavirus* the identifier is urn:lsid:catalogueoflife.org:taxon:f3b2be98-18fd-11e5-9774-bc764e0806fb:col20150623. As there can be multiple UUIDs for the same data object, such that reconciliation of identifiers has to be part of the overall name reconciliation process.
 
 

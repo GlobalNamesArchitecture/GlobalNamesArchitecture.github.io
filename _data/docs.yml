@@ -3,6 +3,10 @@
     - home
     - glossary
 
+- title: GN docs
+  docs:
+    - gnub
+
 - title: Names
   docs:
     - good-bad-names
