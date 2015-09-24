@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Glossary
-date: 2015-09-23 08:00:46
+date: 2015-09-24 18:24:31
 author: djpmapleferryman
 permalink: /docs/glossary/
 ---
 
-> Requests and feedback are appreciated. Terms in **bold** indicate that a term is being used as a name-string
+> [Requests and feedback][feedback] are appreciated. Terms in **bold** indicate that a term is being used as a name-string
 
 
 #### Ambiregnal
@@ -616,3 +616,4 @@ Zoobank.org. Online register for names of animal, part of the activities of the 
 [gbif]: http://gbif.org
 [aotus]: https://en.wikipedia.org/wiki/Aotus
 [itis]: http://itis.gov
+[feedback]: https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/issues
