@@ -19,8 +19,8 @@ is a win/win situation for both projects and for biodiversity.
 Our next steps are releasing JVM-based [scientific name parser][gnparser],
 building scalable, reliable and fast name resolution service and integratation
 of  name resolution with the key Global Names project developed by [Rich
-Pyle][richpyle] and [Rob Whitton][robwhitton] -- Global Names Usage Bank for
-which Rich just submitted a grant proposal.
+Pyle][richpyle] and [Rob Whitton][robwhitton] -- [Global Names Usage
+Bank][gnub] for which Rich just submitted a grant proposal.
 
 [sfg]: http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx
 [col]: http://catalogueoflife.com
@@ -28,3 +28,4 @@ which Rich just submitted a grant proposal.
 [robwhitton]: https://github.com/whittonr
 [davideades]: http://wwx.inhs.illinois.edu/directory/show/dceades
 [gnparser]: https://github.com/GlobalNamesArchitecture/gnparser
+[gnub]: http://globalnames.org/docs/gnub/
