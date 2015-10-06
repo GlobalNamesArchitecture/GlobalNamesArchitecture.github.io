@@ -41,6 +41,10 @@ David Shorthouse
 
 Robert Whitton
 
+![Anne Thessen][athessen-img]
+
+Anne Thessen
+
 ![David Mark Welch][dmarkwelch-img]
 
 David Mark Welch
@@ -60,6 +64,7 @@ Alexander Myltsev
 [dmozzherin-img]: /img/people/dmozzherin.jpg
 [dshorthouse-img]: /img/people/dshorthouse.jpg
 [rwhitton-img]: /img/people/rwhitton.jpg
+[athessen-img]: /img/people/athessen.jpg
 [dmarkwelch-img]: /img/people/dmarkwelch.jpg
 [deades-img]: /img/people/deades.jpg
 [amyltsev-img]: /img/people/amyltsev.jpg
