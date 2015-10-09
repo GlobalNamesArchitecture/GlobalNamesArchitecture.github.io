@@ -3,7 +3,6 @@ layout: news_item
 title: BioGUID merges with GN
 date: 2015-10-08 08:53:49
 author: deepreef
-published: false
 categories: gnub
 ---
 
