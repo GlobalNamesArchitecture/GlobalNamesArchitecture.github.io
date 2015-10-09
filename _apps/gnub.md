@@ -9,7 +9,6 @@ permalink: /apps/gnub/
 ---
 <div class="note application">
   <ul>
-    <li>Web App</li>
     <li>API Apps</li>
   </ul>
   <p>GNUB connects names with their nomenclatural use. Through such uses we
