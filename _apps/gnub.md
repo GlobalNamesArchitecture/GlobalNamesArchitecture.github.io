@@ -3,11 +3,13 @@ layout: docs
 title: GN Usage Bank (GNUB)
 date: 2015-09-21 15:12:32
 type: apps
+homepage: http://gnub.org
 description: /docs/gnub
 permalink: /apps/gnub/
 ---
 <div class="note application">
   <ul>
+    <li>Web App</li>
     <li>API Apps</li>
   </ul>
   <p>GNUB connects names with their nomenclatural use. Through such uses we
