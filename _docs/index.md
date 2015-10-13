@@ -12,7 +12,7 @@ index, organize and interconnect on-line information about organisms and serve
 the needs of biologists. That is the vision for the Global Names Architecture
 (GNA).
 
-Rich Pyle made a very informative [indroduction into problems][tdwg-talk]
+Rich Pyle made a very informative [inroduction into problems][tdwg-talk]
 Global Names is aimed to solve.
 
 This site aims to provide information about projects released as parts of
@@ -34,6 +34,6 @@ Global Names.
 -->
 
 Please [file an issue on github]({{ site.repository }}/issues/new) if you have
-suggestions about style/or content of this site.
+suggestions about style or content of this site.
 
 [tdwg-talk]: http://www.tdwg.org/fileadmin/2008conference/slides/Pyle_03_01_Taxonomic_Names_of_Organisms.swf
