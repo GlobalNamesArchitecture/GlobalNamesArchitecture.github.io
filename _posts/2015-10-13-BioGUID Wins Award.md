@@ -1,6 +1,6 @@
 ---
 layout: news_item
-title: BioGUID merges with GN
+title: BioGUID Wins Award!
 date: 2015-10-13 20:55:49
 author: deepreef
 categories: bioguid
