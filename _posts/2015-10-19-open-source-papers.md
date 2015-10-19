@@ -1,6 +1,6 @@
 ---
 layout: news_item
-title: Writing papers as open source
+title: Writing Papers as Open Source
 date: 2015-10-19 09:10:09
 author: dimus
 categories: openscience
