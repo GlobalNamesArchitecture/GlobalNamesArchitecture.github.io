@@ -6,7 +6,7 @@ author: dimus
 categories: openscience
 ---
 
-Does a culture exists out there which considers a process of writing scientific
+Does a culture exist out there which considers a process of writing scientific
 papers to be akin to writing an open source code?
 
 For the last 8 years I had been blessed being paid for doing open source
