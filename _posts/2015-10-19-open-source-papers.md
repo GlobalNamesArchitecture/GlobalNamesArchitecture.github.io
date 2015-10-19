@@ -23,7 +23,7 @@ write a scientific paper --
 
 Obviously there is a progress with the last point, but what about other 2?
 
-* Can I use public revision control system writing a paper?
+* Can I use public revision control system when I am writing a paper?
 * Can I publish using a revision control system from the very first paragraph for all to see?
 * What open standards/tools can I use (LaTeX, or even markdown?) for writing a paper
 * Can I consider publishing paper to be a 'release', like for a program?
