@@ -6,6 +6,9 @@ author: dimus
 categories: openscience
 ---
 
+Is there a culture out there which considers writing scientific papers be akin
+to writing an open source code?
+
 For the last 8 years I had been blessed being paid by doing open source
 development. It means that for that long about everything I do is almost
 instantly available publicly. This model fits my way of thinking, my values,
