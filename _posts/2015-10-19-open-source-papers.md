@@ -9,7 +9,7 @@ categories: openscience
 Does a culture exists out there which considers a process of writing scientific
 papers to be akin to writing an open source code?
 
-For the last 8 years I had been blessed being paid by doing open source
+For the last 8 years I had been blessed being paid for doing open source
 development. It means that for that long about everything I do is almost
 instantly available publicly. This model fits my way of thinking, my values,
 and I see an advantage in making all I do available for public to see, comment,
