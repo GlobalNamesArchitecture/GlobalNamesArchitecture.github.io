@@ -49,7 +49,9 @@ Final Result
 
 I am still learning my ropes, but excited about the progress. And the paper
 about [Global Names Parser][gnparser] is now on [GitHub][gnparser-paper-github]
-and [OverLeaf][gnparser-paper-overleaf]!
+and [OverLeaf][gnparser-paper-overleaf]! Overleaf allows anybody interested to
+see the paper in user-friendly PDF format. It also simplifies submission of
+papers to a large variety of open access journals.
 
 [gnparser-paper-github]: https://github.com/gnpapers/gnparser
 [gnparser-paper-overleaf]: https://www.overleaf.com/read/zqsnwhrmpxrm
