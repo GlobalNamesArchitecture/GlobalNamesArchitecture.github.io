@@ -3,7 +3,6 @@ layout: news_item
 title: Writing Papers as Open Source -- Solutions
 date: 2015-10-31 00:15:11
 author: dimus
-published: false
 categories: openscience
 ---
 
@@ -53,6 +52,10 @@ and [OverLeaf][gnparser-paper-overleaf]! Overleaf allows anybody interested to
 see the paper in user-friendly PDF format. It also simplifies submission of
 papers to a large variety of open access journals.
 
+I created a post on my personal blog describing how did I [set up my
+system][latex-setup] with LaTeX, vim and tmux.
+
 [gnparser-paper-github]: https://github.com/gnpapers/gnparser
 [gnparser-paper-overleaf]: https://www.overleaf.com/read/zqsnwhrmpxrm
 [gnparser]: https://github.com/GlobalNamesArchitecture/gnparser
+[latex-setup]: http://mozzherin.org/2015/11/01/open-paper.html
