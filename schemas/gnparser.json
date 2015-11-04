@@ -16,7 +16,7 @@
               "type": "string",
               "description": "normalized value of uninomial string"
             },
-            "autorship": {
+            "authorship": {
               "$ref": "#/definitions/authorship"
             },
             "rank": {
@@ -72,12 +72,6 @@
               "description": "species_epithet string"
             },
             "authorship": { "$ref": "#/definitions/authorship" },
-            "basionym_authorship": {
-              "$ref": "#/definitions/basionym_authorship"
-            },
-            "combination_authorship": {
-              "$ref": "#/definitions/combination_authorship"
-            },
             "annotation_identification": {
               "type": "string",
               "description": "annotation for not fully identified specimen" },
@@ -109,11 +103,7 @@
           "type": "string",
           "description": "rank of the infraspecific epithet"
         },
-        "authorship": { "$ref": "#/definitions/authorship" },
-        "basionym_authorship":
-        { "$ref": "#/definitions/basionym_authorship" },
-        "combination_authorship":
-        { "$ref": "#/definitions/combination_authorship" }
+        "authorship": { "$ref": "#/definitions/authorship" }
       }
     },
     "authorship": {
@@ -122,9 +112,9 @@
       "additionalProperties": false,
       "properties": {
         "value": { "type": "string" },
-        "basionym_authorship": {
-          "$ref": "#/definitions/basionym_authorship"
-        }
+        "basionym_authorship": { "$ref": "#/definitions/basionym_authorship" },
+        "combination_authorship":
+          { "$ref": "#/definitions/combination_authorship" }
       }
     },
     "basionym_authorship": {
@@ -186,7 +176,7 @@
         "value": {
           "type": "string",
           "description": "year string",
-          "pattern": "^(1[789][5-9]|20[0-9])[0-9?]([^0-9]|$)"
+          "pattern": "^(17[5-9]|1[89][0-9]|20[0-9])[0-9?]([^0-9]|$)"
         },
         "approximate": {
           "type": "boolean",
