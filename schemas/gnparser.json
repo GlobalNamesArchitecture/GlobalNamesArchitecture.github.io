@@ -49,7 +49,7 @@
             }
           }
         },
-        "infragenus": {
+        "infrageneric_epithet": {
           "type": "object",
           "description": "subgenus in zoological names",
           "required": ["value"],
@@ -81,7 +81,7 @@
           ]
         },
         "annotation_identification":
-          { "$ref": "#/definitions/annotation_identification"},
+        { "$ref": "#/definitions/annotation_identification"},
         "ignored": { "$ref": "#/definitions/ignored"}
       }
     },
@@ -105,92 +105,92 @@
     "annotation_identification": {
       "type": "string",
       "description": "annotation for not fully identified specimen" },
-    "ignored": {
-      "type": "object",
-      "description": "tail of the name after annotation identification",
-      "additionalProperties": false,
-      "properties": {
-        "value": {"type": "string"}
-      }
-    },
-    "authorship": {
-      "type": "object",
-      "description": "normalized rendering of authorship",
-      "additionalProperties": false,
-      "properties": {
-        "value": { "type": "string" },
-        "basionym_authorship": { "$ref": "#/definitions/basionym_authorship" },
-        "combination_authorship":
+      "ignored": {
+        "type": "object",
+        "description": "tail of the name after annotation identification",
+        "additionalProperties": false,
+        "properties": {
+          "value": {"type": "string"}
+        }
+      },
+      "authorship": {
+        "type": "object",
+        "description": "normalized rendering of authorship",
+        "additionalProperties": false,
+        "properties": {
+          "value": { "type": "string" },
+          "basionym_authorship": { "$ref": "#/definitions/basionym_authorship" },
+          "combination_authorship":
           { "$ref": "#/definitions/combination_authorship" }
-      }
-    },
-    "basionym_authorship": {
-      "type": "object",
-      "description": "authorship of original name and combination",
-      "required": ["authors"],
-      "additionalProperties": false,
-      "properties": {
-        "authors": {
-          "type": "array",
-          "description": "list of authors' names",
-          "minItems": 1,
-          "items": {
-            "type": "string"
+        }
+      },
+      "basionym_authorship": {
+        "type": "object",
+        "description": "authorship of original name and combination",
+        "required": ["authors"],
+        "additionalProperties": false,
+        "properties": {
+          "authors": {
+            "type": "array",
+            "description": "list of authors' names",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "ex_authors": {
+            "type": "array",
+            "description": "list of ex-authors' names",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "year": { "$ref": "#/definitions/year" }
+        }
+      },
+      "combination_authorship": {
+        "type": "object",
+        "description": "authorship of new combination",
+        "required": ["authors"],
+        "additionalProperties": false,
+        "properties": {
+          "authors": {
+            "type": "array",
+            "description": "list of authors' names",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "ex_authors": {
+            "type": "array",
+            "description": "list of ex-authors' names",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "year": { "$ref": "#/definitions/year" }
+        }
+      },
+      "year": {
+        "type": "object",
+        "description": "year of publication",
+        "required": ["value"],
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "type": "string",
+            "description": "year string",
+            "pattern": "^(17[5-9]|1[89][0-9]|20[0-9])[0-9?]([^0-9]|$)"
+          },
+          "approximate": {
+            "type": "boolean",
+            "description": "indicates that a year is approximate"
           }
-        },
-        "ex_authors": {
-          "type": "array",
-          "description": "list of ex-authors' names",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "year": { "$ref": "#/definitions/year" }
-      }
-    },
-    "combination_authorship": {
-      "type": "object",
-      "description": "authorship of new combination",
-      "required": ["authors"],
-      "additionalProperties": false,
-      "properties": {
-        "authors": {
-          "type": "array",
-          "description": "list of authors' names",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "ex_authors": {
-          "type": "array",
-          "description": "list of ex-authors' names",
-          "minItems": 1,
-          "items": {
-            "type": "string"
-          }
-        },
-        "year": { "$ref": "#/definitions/year" }
-      }
-    },
-    "year": {
-      "type": "object",
-      "description": "year of publication",
-      "required": ["value"],
-      "additionalProperties": false,
-      "properties": {
-        "value": {
-          "type": "string",
-          "description": "year string",
-          "pattern": "^(17[5-9]|1[89][0-9]|20[0-9])[0-9?]([^0-9]|$)"
-        },
-        "approximate": {
-          "type": "boolean",
-          "description": "indicates that a year is approximate"
         }
       }
-    }
   },
 
   "id": "http://globalnames.org/schemas/gnparser.json",
@@ -300,7 +300,7 @@
             "type": "string",
             "description": "semantic meaning of a word",
             "enum": ["hybrid_char","annotation_identification","rank",
-              "uninomial","genus","infragenus","specific_epithet",
+              "uninomial","genus","infrageneric_epithet","specific_epithet",
               "infraspecific_epithet","year","approximate_year","author_word",
               "author_word_filius"]
           },
