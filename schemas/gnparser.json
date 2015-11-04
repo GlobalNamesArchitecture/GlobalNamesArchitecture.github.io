@@ -34,7 +34,7 @@
     "polynomial_name": {
       "type": "object",
       "description": "includes binomial and polynomial names",
-      "required": ["genus","specific_epithet"],
+      "required": ["genus"],
       "additionalProperties": false,
       "properties": {
         "genus": {
@@ -71,14 +71,7 @@
               "type": "string",
               "description": "species_epithet string"
             },
-            "authorship": { "$ref": "#/definitions/authorship" },
-            "annotation_identification": {
-              "type": "string",
-              "description": "annotation for not fully identified specimen" },
-            "ignored": {
-              "type": "string",
-              "description": "tail of the name after annotation identification"
-            }
+            "authorship": { "$ref": "#/definitions/authorship" }
           }
         },
         "infraspecific_epithets": {
@@ -86,7 +79,10 @@
           "items": [
             { "$ref": "#/definitions/infraspecific_epithet" }
           ]
-        }
+        },
+        "annotation_identification":
+          { "$ref": "#/definitions/annotation_identification"},
+        "ignored": { "$ref": "#/definitions/ignored"}
       }
     },
     "infraspecific_epithet": {
@@ -104,6 +100,17 @@
           "description": "rank of the infraspecific epithet"
         },
         "authorship": { "$ref": "#/definitions/authorship" }
+      }
+    },
+    "annotation_identification": {
+      "type": "string",
+      "description": "annotation for not fully identified specimen" },
+    "ignored": {
+      "type": "object",
+      "description": "tail of the name after annotation identification",
+      "additionalProperties": false,
+      "properties": {
+        "value": {"type": "string"}
       }
     },
     "authorship": {
