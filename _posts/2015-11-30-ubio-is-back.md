@@ -8,7 +8,7 @@ comments: true
 ---
 
 [uBio](http://ubio.org) and [Nomenclator Zoologicus online](http://ubio.org/NomenclatorZoologicus) experienced difficulties this year and had been down a
-lot lately, mostly because there is no system administrator to look for it at
+lot lately, mostly because there is no system administrator to look for them at
 Marine Biological Laboratory anymore.
 
 I moved uBio from old hardware at Marine Biological Laboratory to Google
