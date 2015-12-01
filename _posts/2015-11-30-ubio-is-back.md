@@ -24,4 +24,4 @@ best to keep it running on my spare time. MBL/WHOI library pays for the cloud.
 
 Docker containers to run uBio are located at
 [dockerhub](https://hub.docker.com/u/mblab/dashboard/). We use Docker and
-Kubernets at Google Container Engine to keep it alive.
+Kubernetes at Google Container Engine to keep it alive.
