@@ -272,9 +272,9 @@
         }
       }
     },
-    "garbage": {
+    "unparsed_tail": {
       "type": "string",
-      "description": "unpareable tail of the name, if it exists"
+      "description": "unparceable tail of the name, if it exists"
     },
     "details": {
       "type": "array",
