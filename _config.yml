@@ -3,7 +3,7 @@ excerpt_separator: ""
 baseurl: ""
 # url: "http://globalnames.org"
 repository: https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io
-highlighter: pygments
+highlighter: rouge
 
 collections:
   docs:
