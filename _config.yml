@@ -21,3 +21,32 @@ gems:
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
+- jekyll/scholar
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: year,month
+  order: descending
+
+  group_by: year
+  group_order: descending
+
+  source: ./_assets/bibliography
+  bibliography: refs.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+  bibtex_filters:
+  - superscript
+  - latex
+
+  details_dir:    _bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@* "
