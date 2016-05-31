@@ -544,6 +544,22 @@ article h2:first-child { margin-top: 0; }
   @include box-shadow(0 -1px 0 #2f2f2f);
 }
 
+/* Bibliography */
+
+ol.bibliography {
+  li {
+    margin-bottom: 0.5em;
+  }
+  .bibnote {
+    background-color: white;
+    color: $gn-green; 
+    padding: 0.5em;
+    margin-top: 10px;
+    @include border-radius(10px 10px 10px 10px);
+    @include box-shadow(-2px -2px 0 #ccc);
+  }
+}
+
 /* Code Highlighting */
 
 

@@ -33,8 +33,9 @@ layout: default
         </article>
       </div>
 
+          {% if page.type != "bibliography" %}
       {% include docs_contents.html %}
-
+          {% endif %}
       <div class="clear"></div>
 
     </div>

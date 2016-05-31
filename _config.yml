@@ -24,7 +24,7 @@ gems:
 - jekyll/scholar
 
 scholar:
-  style: apa
+  style: ./_assets/bibliography/gn.csl
   locale: en
 
   sort_by: year,month
@@ -35,7 +35,7 @@ scholar:
 
   source: ./_assets/bibliography
   bibliography: refs.bib
-  bibliography_template: "{{reference}}"
+  bibliography_template: bibtemplate
 
   replace_strings: true
   join_strings:    true
@@ -45,7 +45,7 @@ scholar:
   - superscript
   - latex
 
-  details_dir:    _bibliography
+  details_dir:    bibliography
   details_layout: bibtex.html
   details_link:   Details
 
