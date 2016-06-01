@@ -1,0 +1,651 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>New UUID v5 Generation Tool -- gn_uuid v0.5.0</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v3.1.6">
+  <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body class="wrap">
+  <header role="banner">
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="">
+    <a href="/docs/home/">Doc<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span></a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit one-quarter center-on-mobiles">
+      <div class="logo">
+        <a href="/">
+          <span class="sr-only">GlobalNames</span>
+          <img src="/img/gna-logo.svg" width="100" alt="GNA Logo">
+        </a>
+      </div>
+    </div>
+    <nav class="main-nav unit three-quarters hide-on-mobiles">
+      <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="">
+    <a href="/docs/home/">Doc<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span></a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <section class="news">
+    <div class="grid">
+
+      <div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the blog…</option>
+    <option value="/news/">Home</option>
+    <optgroup label="v1.x">
+      
+      <option value="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</option>
+      
+      <option value="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</option>
+      
+      <option value="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</option>
+      
+      <option value="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</option>
+      
+      <option value="/news/2015/10/19/open-source-papers/">Writing Papers as Open Source</option>
+      
+      <option value="/news/2015/10/14/bishop-museum-workshop/">Honolulu Workshop</option>
+      
+      <option value="/news/2015/10/13/BioGUID-Wins-Award/">BioGUID Wins Award!</option>
+      
+      <option value="/news/2015/10/08/BioGUID-Moved/">BioGUID merges with GN</option>
+      
+      <option value="/news/2015/10/06/gnub-proposal/">GNUB proposal submitted to NSF</option>
+      
+      <option value="/news/2015/10/05/ui-mid-november/">Global Names Gains Stable Funding</option>
+      
+      <option value="/news/2015/09/22/otol-eol/">Crossmapping Names by IDs</option>
+      
+      <option value="/news/2015/09/09/alex-myltsev/">Alexander Myltsev</option>
+      
+      <option value="/news/2015/09/03/sysopia/">Sysopia release v0.5.0</option>
+      
+      <option value="/news/2015/09/03/globalnames-site/">Site globalnames.org merged with GN blog</option>
+      
+      <option value="/news/2015/08/27/parser-3-4-1/">GN Parser v.3.4.1</option>
+      
+      <option value="/news/2015/08/20/parser-3-4-0/">GN Parser v.3.4.0</option>
+      
+      <option value="/news/2015/08/14/parser-3-3-0/">GlobalNames Parser v.3.3.0 adds host option for socket server</option>
+      
+      <option value="/news/2015/08/13/col-meeting/">Catalogue of Life Meeting in Champaign/Urbana</option>
+      
+      <option value="/news/2015/08/12/gn-resolver-vernaculars/">Global Names Resolver now shows vernacular names</option>
+      
+      <option value="/news/2015/06/01/biodiversity-3-2-1/">Global Names Parser v3.2.1</option>
+      
+      <option value="/news/2015/05/31/gn-uuid-0-5-0/">New UUID v5 Generation Tool -- gn_uuid v0.5.0</option>
+      
+      <option value="/news/2015/05/31/gn-crossmap-0-1-6/">Crossmap Tool v0.1.6</option>
+      
+      <option value="/news/2015/05/28/gn-crossmap-0-1-5/">Crossmap Tool v0.1.5</option>
+      
+      <option value="/news/2015/05/20/idigbio-client/">iDigBio API Client v0.1.1</option>
+      
+      <option value="/news/2015/05/14/parser-3-1-10/">Scientific Name Parser v3.1.10</option>
+      
+      <option value="/news/2015/05/12/gn-moves-to-illinois/">Global Names Grant Goes to Illinois</option>
+      
+      <option value="/news/2015/05/11/gn-crossmap-gem/">New tool to crossmap checklists</option>
+      
+      <option value="/news/2015/05/06/phylo-trees/">Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</option>
+      
+      <option value="/news/2015/05/03/higher-level-classification/">New Higher Level Classification for Catalogue of Life</option>
+      
+      <option value="/news/2015/05/03/sysopia-starts/">Starting GSOC 2015 Sysopia Project</option>
+      
+      <option value="/news/2015/05/02/species-file-group/">Species File Group -- new home for GN?</option>
+      
+      <option value="/news/2015/04/29/good-bad-names/">Good names, bad names?</option>
+      
+      <option value="/news/2015/04/28/idigbio-api-hackathon-meet/">iDigBio hackathon preparation</option>
+      
+      <option value="/news/2015/04/28/gsoc-netineti/">Launching NetiNeti Google Summer of Code Project</option>
+      
+      <option value="/news/2015/04/27/gsoc-2015-starts/">Google Summer of Code 2015 starts</option>
+      
+      <option value="/news/2015/04/22/thank_you_eol/">Gracious gift from Encylopedia of Life</option>
+      
+      <option value="/news/2015/04/17/gna_is_back/">GNA work continues</option>
+      
+    </optgroup>
+  </select>
+</div>
+
+
+      <div class="unit four-fifths">
+        <article>
+  <h2>
+    New UUID v5 Generation Tool -- gn_uuid v0.5.0
+    <a href="/news/2015/05/31/gn-uuid-0-5-0/" class="permalink" title="Permalink">∞</a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      uuid and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      31 May 2015
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+    <div class="social-media">
+			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+			<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+    </div>
+  </div>
+  
+  <div class="post-content">
+    <p>We are releasing a new tool - <a href="https://github.com/GlobalNamesArchitecture/gn_uuid">gn_uuid</a> to simplify creation of UUID
+version 5 identifiers for scientific name strings.  UUID v5 has features which
+are particular useful for the biodiversity community.</p>
+
+<h2 id="uuid-version-5-description">UUID version 5: Description</h2>
+
+<p><a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">Universally unique identifiers</a> are very popular because for all
+practical purposes they <a href="http://tools.ietf.org/html/rfc4122#section-2_">guarantee globally unique IDs</a> without any
+negotiation between different entities. There are several ways how UUIDs can be
+created:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>UUID version</th>
+      <th>Uniqueness is achieved by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>version 1</td>
+      <td>Using computer’s MAC address and time</td>
+    </tr>
+    <tr>
+      <td>version 2</td>
+      <td>like v1 plus adding info about user and local domain</td>
+    </tr>
+    <tr>
+      <td>version 3</td>
+      <td>Using MD5 hash of a string in combination with a name space</td>
+    </tr>
+    <tr>
+      <td>version 4</td>
+      <td>Using pseudo-random algorithms</td>
+    </tr>
+    <tr>
+      <td>version 5</td>
+      <td>Using SHA1 hash of a string in combination with a name space</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>UUID v5 is generated using information from a string, so everyone who uses this
+method will generate exactly same ID out of the same string. Interested parties
+do need to agree on generation of a name space, and after that no matter which
+programming language they use – they will be able to exchange data about a
+string using their identifiers.</p>
+
+<p>This gem already has a DNS domain “globalnames.org” defined as a name space, so
+generation of the UUID v5 becomes simpler.</p>
+
+<p>I believe UUID v5 creates very exciting opportunities for biodiversity
+community.  For example if one expert annotates a string or attaches data to it
+– this information can be linked globally and then harvested by anybody,
+without any preliminary negotiation.</p>
+
+<p>Quite often researches make an argument that a scientific name is an identifier
+on its own and there is no need for another level of indirection like UUID.
+They are right, scientific name string can be an identifier, however,
+scientific names have severe shortcomings in such a role.</p>
+
+<h2 id="why-scientific-names-are-bad-identifiers-for-computers">Why Scientific Names are Bad Identifiers for Computers</h2>
+
+<h3 id="scientific-name-strings-have-different-length">Scientific name strings have different length</h3>
+
+<p>More often than not identifiers end up in databases and used as a primary index
+to sort, connect and search data. Scientific name strings vary from 2 bytes to
+more than  500 bytes in length. So if they are used as keys in database they
+are inefficient, they waste a lot of space, become less efficient for finding
+or sorting information – indexes key size is usually determined by the
+the largest key.</p>
+
+<p>UUIDs have always the same, rather small size – 16 bytes.  Even when UUIDs are
+used in their “standard” string representation – they are still reasonably
+small – 36 characters. Storing them in a database as a number is obviously more
+efficient.</p>
+
+<h3 id="it-is-hard-to-spot-differences-in-name-strings">It is hard to spot differences in name strings</h3>
+
+<p>It is very hard for human eye to spot the difference between strings like this</p>
+
+<ul>
+  <li>
+    <p>Corchoropsis tomentosa var. psilocarpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+  </li>
+  <li>
+    <p>Corchoropsis tomentosa var. psilocanpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+  </li>
+</ul>
+
+<p>Much easier for their corresponding UUIDs</p>
+
+<ul>
+  <li>
+    <p>5edecb2b-903f-54f1-a087-b47b3b021fcd</p>
+  </li>
+  <li>
+    <p>833c664b-7d00-5c3b-97a4-98b0ab7d0a9a</p>
+  </li>
+</ul>
+
+<h3 id="name-strings-come-in-different-encodings">Name strings come in different encodings.</h3>
+
+<p>Currently Latin1, UTF-8 and UTF-16 are most popular encodings used in
+biodiversity. If authorship or name itself has characters outside of the
+128bits of ASCII code – identically looking names will be quite different for
+computers.</p>
+
+<h3 id="name-strings-are-less-stable-because-of-their-encoding">Name strings are less stable because of their encoding</h3>
+
+<p>When names are moved from one database to another, from one paper to another
+sometimes they do not survive the trip. If you spent any time looking at
+scientific names in electronic form you did see something like this:</p>
+
+<ul>
+  <li>
+    <p>Acacia ampliceps ? Acacia bivenosa</p>
+  </li>
+  <li>
+    <p>Absidia macrospora V�nov� 1968</p>
+  </li>
+  <li>
+    <p>Absidia sphaerosporangioides Man&lt;acute&gt;ka &amp; Truszk., 1958</p>
+  </li>
+  <li>
+    <p>Cnemisus kaszabi Endr?di 1964</p>
+  </li>
+</ul>
+
+<p>Usually names like these had been submitted in a “wrong” encoding and some
+characters in them were misinterpreted. UUID on the other hand is just a
+hexadecimal number, which can be transitioned between various encodings more
+safely.</p>
+
+<h3 id="name-strings-might-look-the-same-in-print-or-on-screen-but-be-different">Name strings might look the same in print or on screen, but be different</h3>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">Homo sapiens</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">Homo sаpiens</code></p>
+  </li>
+</ul>
+
+<p>These two strings might look exactly the same on a screen or printed on paper,
+but in reality they are different. Here are their UUIDs:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">16f235a0-e4a3-529c-9b83-bd15fe722110</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">093dc7f7-5915-56a5-87de-033e20310b14</code></p>
+  </li>
+</ul>
+
+<p>The difference is that the second name has a Cyrillic <code class="highlighter-rouge">а</code> character, which in
+most cases will look exactly the same as Latin <code class="highlighter-rouge">a</code> character. And when the
+names are printed on paper there is absolutely no way to tell the difference.
+UUID will tell us that these two name strings are not the same.</p>
+
+<h3 id="nothing-prevents-to-continue-to-use-name-strings-for-human-interaction">Nothing prevents to continue to use name strings for human interaction</h3>
+
+<p>One argument that people often give – it is much easier for users to type</p>
+
+<p>http://biosite.org/Parus_major</p>
+
+<p>than</p>
+
+<p>http://biosite.org/47d61c81-5a0f-5448-964a-34bbfb54ce8b</p>
+
+<p>For most of us it is definitely true and nothing prevents developers
+to create links of the first type, while still using UUIDs behind the scene.</p>
+
+<h2 id="why-uuids-v5-are-better-than-any-other-uuids-as-a-scientific-name-identifier">Why UUIDs v5 are better than any other UUIDs as a scientific name identifier</h2>
+
+<ul>
+  <li>
+    <p>They can be generated independently by anybody and still be the same to the
+same name string</p>
+  </li>
+  <li>
+    <p>They use SHA1 algorithm which does not have (extremely rare) collisions
+found for MD5 algorithm</p>
+  </li>
+  <li>
+    <p>Same ID can be generated in <a href="https://github.com/GlobalNamesArchitecture/gn_uuid_examples">any popular language</a> following
+<a href="http://tools.ietf.org/html/rfc4122#section-4.3">well-defined algorithm</a></p>
+  </li>
+</ul>
+
+
+  </div>
+</article>
+
+      </div>
+
+      <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <ul>
+      <li class="">
+        <a href="/news/">All News</a>
+      </li>
+    </ul>
+    <h4>Recent Releases</h4>
+    <ul>
+      
+      <li class="">
+        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/11/30/gnparser-0-2-0/">GNParser v0.2.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/09/03/sysopia/">Sysopia v0.5.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/08/27/parser-3-4-1/">Parser v3.4.1</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/08/20/parser-3-4-0/">Parser v3.4.0</a>
+      </li>
+      
+    </ul>
+    <h4>Other News</h4>
+    <ul>
+        
+        <li class="">
+          <a href="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/19/open-source-papers/">Writing Papers as Open Source</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/14/bishop-museum-workshop/">Honolulu Workshop</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/13/BioGUID-Wins-Award/">BioGUID Wins Award!</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/08/BioGUID-Moved/">BioGUID merges with GN</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/06/gnub-proposal/">GNUB proposal submitted to NSF</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/05/ui-mid-november/">Global Names Gains Stable Funding</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/22/otol-eol/">Crossmapping Names by IDs</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/09/alex-myltsev/">Alexander Myltsev</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/03/sysopia/">Sysopia release v0.5.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/03/globalnames-site/">Site globalnames.org merged with GN blog</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/27/parser-3-4-1/">GN Parser v.3.4.1</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/20/parser-3-4-0/">GN Parser v.3.4.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/14/parser-3-3-0/">GlobalNames Parser v.3.3.0 adds host option for socket server</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/13/col-meeting/">Catalogue of Life Meeting in Champaign/Urbana</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/12/gn-resolver-vernaculars/">Global Names Resolver now shows vernacular names</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/06/01/biodiversity-3-2-1/">Global Names Parser v3.2.1</a>
+        </li>
+        
+        <li class="current">
+          <a href="/news/2015/05/31/gn-uuid-0-5-0/">New UUID v5 Generation Tool -- gn_uuid v0.5.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/31/gn-crossmap-0-1-6/">Crossmap Tool v0.1.6</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/28/gn-crossmap-0-1-5/">Crossmap Tool v0.1.5</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/20/idigbio-client/">iDigBio API Client v0.1.1</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/14/parser-3-1-10/">Scientific Name Parser v3.1.10</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/12/gn-moves-to-illinois/">Global Names Grant Goes to Illinois</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/11/gn-crossmap-gem/">New tool to crossmap checklists</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/06/phylo-trees/">Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/03/higher-level-classification/">New Higher Level Classification for Catalogue of Life</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/03/sysopia-starts/">Starting GSOC 2015 Sysopia Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/02/species-file-group/">Species File Group -- new home for GN?</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/29/good-bad-names/">Good names, bad names?</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/28/idigbio-api-hackathon-meet/">iDigBio hackathon preparation</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/28/gsoc-netineti/">Launching NetiNeti Google Summer of Code Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/27/gsoc-2015-starts/">Google Summer of Code 2015 starts</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/22/thank_you_eol/">Gracious gift from Encylopedia of Life</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/17/gna_is_back/">GNA work continues</a>
+        </li>
+        
+    </ul>
+  </aside>
+</div>
+
+
+      <div class="clear"></div>
+
+    </div>
+  </section>
+
+
+  <footer role="contentinfo">
+  <div class="grid" style="vertical-align: middle">
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+          <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
+        </a>
+        The content of this</br>website is in public domain
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+      Powered by <a href="http://github.com/jekyll/jekyll">Jekyll</a>
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        Hosted on 
+        <a href="https://github.com/GlobalNamesArchitecture">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+
+  
+
+
+</body>
+</html>

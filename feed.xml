@@ -1,7 +1,3 @@
----
-permalink: /feed.xml
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -15,10 +11,10 @@ permalink: /feed.xml
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>Wed, 01 Jun 2016 16:25:00 -0500</pubDate>
+    <lastBuildDate>Wed, 01 Jun 2016 16:25:00 -0500</lastBuildDate>
     <language>en-US</language>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <generator>Jekyll v3.1.6</generator>
     <description>Scientific Name Services</description>
     <image>
       <description>Scientific Names Services</description>
@@ -28,21 +24,1778 @@ permalink: /feed.xml
       <width>144</width>
       <height>73</height>
     </image>
-    {% for post in site.posts %}
+    
     <item>
-      <title>{{ post.title | xml_escape}}</title>
-      <link>http://globalnames.org{{ post.url }}</link>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <dc:creator>{{ post.author }}</dc:creator>
-      {% for tag in post.tags %}
-      <category>{{ tag | xml_escape }}</category>
-      {% endfor %}
-      {% for cat in post.categories %}
-      <category>{{ cat | xml_escape }}</category>
-      {% endfor %}
-      <guid isPermaLink="true">http://globalnames.org{{ post.url }}</guid>
-      <description>{{ post.content | xml_escape }}</description>
+      <title>Scala-based gnparser v.0.3.0</title>
+      <link>http://globalnames.org/news/2016/05/23/gnparser-0-3-0/</link>
+      <pubDate>Mon, 23 May 2016 06:33:44 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gnparser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2016/05/23/gnparser-0-3-0/</guid>
+      <description>&lt;p&gt;To avoid confusion – gnparser is a new project, different from the formerly
+released biodiversity parser.&lt;/p&gt;
+
+&lt;p&gt;We are happy to announce the second public release of Scala-based
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;. There are many significant
+changes in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.0&quot;&gt;v. 0.3.0 release&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Speed improvements. Parser is about 50% faster than already quite fast 0.2.0
+version. We were able to parse 30 million names per CPU per hour with this
+release.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compatibility with Scala 2.10.6: it was important for us to make the parser
+backward compatible with this older version of Scala, because we wanted
+to support Spark project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compatibility with Spark v. 1.6.1. Now the parser can be used in BigData
+projects running on Spark and massively parallelize parsing process using
+Spark platform. We added &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/blob/master/examples/spark/README.rst&quot;&gt;documenation&lt;/a&gt; describing how to use
+the parser with either Scala or Python natively on Spark.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Simplified parsing output in addition to “Standard output”: It analyzes the
+name-strings and returns its id, canonical form, canonical form with
+infraspecific ranks, authorship and a year.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Improved and stabilized JSON fields. You can find complete description of
+the parser JSON output in its &lt;a href=&quot;http://globalnames.org/schemas/gnparser.json&quot;&gt;JSON schema&lt;/a&gt;. We based names of
+fields on &lt;a href=&quot;http://www.tdwg.org/standards/117&quot;&gt;TDWG’s Taxon Concept Schema&lt;/a&gt;, and we indend to keep
+JSON format stable from now on.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There were many structural changes, bug-fixes and quality improvements.
+They are described in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.0&quot;&gt;release&lt;/a&gt; documenation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
     </item>
-    {% endfor %}
+    
+    <item>
+      <title>uBio and Nomenclator Zoologicus are back</title>
+      <link>http://globalnames.org/news/2015/11/30/ubio-is-back/</link>
+      <pubDate>Mon, 30 Nov 2015 11:54:44 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>uBio</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/11/30/ubio-is-back/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;http://ubio.org&quot;&gt;uBio&lt;/a&gt; and &lt;a href=&quot;http://ubio.org/NomenclatorZoologicus&quot;&gt;Nomenclator Zoologicus online&lt;/a&gt; experienced difficulties this year and had been down a
+lot lately, mostly because there is no system administrator to look for them at
+Marine Biological Laboratory anymore.&lt;/p&gt;
+
+&lt;p&gt;I moved uBio from old hardware at Marine Biological Laboratory to Google
+Container Engine, and it is running again. Some functionality is not back yet,
+mostly due to some hard-coded configuration parameters in files.  I hope
+problems with the code will be fixed eventually by interested parties (I do
+not plan to rewrite the code). I’ll coordinate my efforts with Dave Remsen and
+Patrick Leary, and hopefully together we will preserve uBio for the community.&lt;/p&gt;
+
+&lt;p&gt;Please note that being a system administrator for uBio is not part of my job.
+I like the project, I consider it to be a ‘precursor’ of GN, I will try my
+best to keep it running on my spare time. MBL/WHOI library pays for the cloud.&lt;/p&gt;
+
+&lt;p&gt;Docker containers to run uBio are located at
+&lt;a href=&quot;https://hub.docker.com/u/mblab/dashboard/&quot;&gt;dockerhub&lt;/a&gt;. We use Docker and
+Kubernetes at Google Container Engine to keep it alive.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scala-based gnparser v.0.3.0</title>
+      <link>http://globalnames.org/news/2015/11/30/gnparser-0-2-0/</link>
+      <pubDate>Mon, 30 Nov 2015 11:01:30 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gnparser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/11/30/gnparser-0-2-0/</guid>
+      <description>&lt;p&gt;(Please note that gnparser is a new project, different from the formerly
+released biodiversity parser.)&lt;/p&gt;
+
+&lt;p&gt;We are happy to announce a public release of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt;
+or &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; – the first project that marks transition of Global Names
+reconciliation and resolution services from “prototype” to “production”. The
+&lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; project is developed by @alexander-myltsev and @dimus in Scala
+language. GNParser can be used as a library, a command line tool, a socket
+server, a web-program and RESTful-service. It is easiest to try it at
+&lt;a href=&quot;http://parser.globalnames.org&quot;&gt;parser.globalnames.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Scientific names might be expressed by quite different name strings. Sometimes
+the difference is just one comma, sometimes authors are included or excluded,
+sometimes ranks are omitted. With all this variability “in the wild” we need to
+figure out how to group all these different spelling variants.  Name parsing is
+an unexpectedly complex and absolutely necessary step for connecting biological
+information via scientific names.&lt;/p&gt;
+
+&lt;p&gt;In 2008 Global Names released &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Biodiversity Gem&lt;/a&gt; – a
+scientific name parser written in Ruby for these purposes. The library in its
+3 variants enjoyed a significant success – about &lt;a href=&quot;https://rubygems.org/search?utf8=%E2%9C%93&amp;amp;query=biodiversity&quot;&gt;150 000
+downloads&lt;/a&gt; and a notion as the &lt;a href=&quot;http://biogems.info/&quot;&gt;most popular bio-library&lt;/a&gt;
+for Ruby language. It allowed to parse about 2-3 million names an hour, and
+had been the basis of name reconciliation for many projects from the moment
+of its publication.&lt;/p&gt;
+
+&lt;p&gt;GNParser is a direct descendant of the biodiversity gem. It serves the same
+purpose and input/output format of both projects are similar. It also marks
+eventual discontinuation of ‘biodiversity gem project’ and migration of all
+Global Names code to the new &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; library.&lt;/p&gt;
+
+&lt;p&gt;Why did we go through the pain of making a completely new parser from scratch?
+The short answer is &lt;em&gt;scalability and portability&lt;/em&gt;. We want to be able to
+remove parsing step from being a bottleneck for any number of names thrown at
+resolution services. For example finding all names in &lt;a href=&quot;http://www.biodiversitylibrary.org/&quot;&gt;Biodiversity Heritage
+Library&lt;/a&gt; took us 43 days 3 years ago. Parsing step alone took more than 1
+day. If we want to improve algorithms of finding names in BHL – we cannot
+wait 40 days. We want to be able to do it within one day and improve whole
+BHL index every time our algorithms are enhanced significantly.&lt;/p&gt;
+
+&lt;p&gt;We have an ambitious goal of making time spent on sending names to resolution
+services over internet and then time spent on transferring the answers back to
+be the bottlenecks of our name matching services. For such speeds we need a
+very fast parsing. Scala allows us to dramatically improve speed and
+scalability of the parsing step.&lt;/p&gt;
+
+&lt;p&gt;Having a parser running in Java Virtual Machine environment allows us to give
+biodiversity community a much more portable parsing tool. &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/tree/master/examples&quot;&gt;Out of the
+box&lt;/a&gt; parser library will work with Scala, Java, R, Jython and JRuby
+directly. We hope that it will speedup and simplify many biodiversity projects.&lt;/p&gt;
+
+&lt;p&gt;This is the first public release of the library. Please download it, run
+it, test it and give us your feedback, so we can improve it further. Happy
+parsing :smile:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; JSON output format might change slightly or dramatically, as we
+are in the process of refining it. The JSON format should be finalized for
+version 0.3.0&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Writing Papers as Open Source -- Solutions</title>
+      <link>http://globalnames.org/news/2015/10/30/open-source-papers2/</link>
+      <pubDate>Fri, 30 Oct 2015 19:15:11 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>openscience</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/30/open-source-papers2/</guid>
+      <description>&lt;p&gt;I decided to figure out how can I write scientific papers in truly Open Source
+fashion. And here are practical decisions that allowed me to do it:&lt;/p&gt;
+
+&lt;h2 id=&quot;criteria&quot;&gt;Criteria&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Paper draft is under true revision control system&lt;/li&gt;
+  &lt;li&gt;Open access from the very beginning&lt;/li&gt;
+  &lt;li&gt;Open tools/standards&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+
+&lt;h3 id=&quot;revision-control&quot;&gt;Revision control&lt;/h3&gt;
+
+&lt;p&gt;To use full power of revision control system a project should be mostly in text
+format of some sort. We currently keep practically all our code on GitHub, so
+Git was a natural choice.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-toolsformats&quot;&gt;Open tools/formats&lt;/h3&gt;
+
+&lt;p&gt;I decided to go with LaTeX, as it is tried and powerful markup, very well
+suited for scientific writing. It allows to work with plain text, so we can
+easily keep revisions in Git.&lt;/p&gt;
+
+&lt;p&gt;Vim is my editor of choice, but nothing prevents me or co-authors to use any
+other modern text editor for LaTeX.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-access&quot;&gt;Open access&lt;/h3&gt;
+
+&lt;p&gt;With LaTeX and Git it is easy to provide early access to the work in progress,
+especially with 2 commercial products that give free access for open projects
+– GitHub and OverLeaf. Overleaf supports git, although not as well as GitHub
+does. So currently is it better to have GitHub as the main repository, and keep
+Overleaf as a glorified viewer and use it only as a secondary repository.
+Another useful tool is Mendeley for finding and organazing bibliography.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-result&quot;&gt;Final Result&lt;/h2&gt;
+
+&lt;p&gt;I am still learning my ropes, but excited about the progress. And the paper
+about &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt; is now on &lt;a href=&quot;https://github.com/gnpapers/gnparser&quot;&gt;GitHub&lt;/a&gt;
+and &lt;a href=&quot;https://www.overleaf.com/read/zqsnwhrmpxrm&quot;&gt;OverLeaf&lt;/a&gt;! Overleaf allows anybody interested to
+see the paper in user-friendly PDF format. It also simplifies submission of
+papers to a large variety of open access journals.&lt;/p&gt;
+
+&lt;p&gt;I created a post on my personal blog describing how did I &lt;a href=&quot;http://mozzherin.org/2015/11/01/open-paper.html&quot;&gt;set up my
+system&lt;/a&gt; with LaTeX, vim and tmux.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Writing Papers as Open Source</title>
+      <link>http://globalnames.org/news/2015/10/19/open-source-papers/</link>
+      <pubDate>Mon, 19 Oct 2015 04:10:09 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>openscience</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/19/open-source-papers/</guid>
+      <description>&lt;p&gt;Does a culture exist out there which considers a process of writing scientific
+papers to be akin to writing an open source code?&lt;/p&gt;
+
+&lt;p&gt;For the last 8 years I had been blessed being paid for doing open source
+development. It means that for that long about everything I do is almost
+instantly available publicly. This model fits my way of thinking, my values,
+and I see an advantage in making all I do available for public to see, comment,
+and enhance.&lt;/p&gt;
+
+&lt;p&gt;Now I am writing a paper, and I feel being thrown into “dark ages”. Whole paper
+writing and publishing culture was one of the reasons I left molecular biology
+and went to programming. I assume the following is usually true when people
+write a scientific paper –&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;People normally do not share publicly what they work on until it is published.&lt;/li&gt;
+  &lt;li&gt;People normally use proprietary software to write papers&lt;/li&gt;
+  &lt;li&gt;People often loose their copyright or ability to share their work when their paper is accepted by a journal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obviously there is a progress with the last point, but what about other 2?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can I use public revision control system when I am writing a paper?&lt;/li&gt;
+  &lt;li&gt;Can I publish using a revision control system from the very first paragraph for all to see?&lt;/li&gt;
+  &lt;li&gt;What open standards/tools can I use (LaTeX, or even markdown?) for writing a paper&lt;/li&gt;
+  &lt;li&gt;Can I consider publishing paper to be a ‘release’, like for a program?&lt;/li&gt;
+  &lt;li&gt;Should electronic version be frozen? Can it evolve after publication?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Honolulu Workshop</title>
+      <link>http://globalnames.org/news/2015/10/14/bishop-museum-workshop/</link>
+      <pubDate>Wed, 14 Oct 2015 13:55:36 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gna</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/14/bishop-museum-workshop/</guid>
+      <description>&lt;p&gt;Last week (October 5-9 2015) @deepreef, @dimus, @alexander-myltsev had a
+workshop in Honolulu at &lt;a href=&quot;http://www.bishopmuseum.org&quot;&gt;Bishop Museum&lt;/a&gt; to sync ideas, learn more about each
+other work, and design new generation of services. The meeting had been
+productive and I think in the end our two GN groups get integrated. We
+are moving all our code under one roof at GitHub now.&lt;/p&gt;
+
+&lt;p&gt;We had an interesting meeting with @jar398 from &lt;a href=&quot;http://opentreeoflife.org/&quot;&gt;Open Tree of Life&lt;/a&gt; trying to
+figure out how can we connect OTOL with all the other resources on the web, and
+@deepreef suggested to use his &lt;a href=&quot;http://bioguid.org/&quot;&gt;BioGuid&lt;/a&gt; project for these purposes. We moved
+BioGuid to github and added all the GitHubbish bells and whistles like a
+&lt;a href=&quot;http://blog.bioguid.org&quot;&gt;blog&lt;/a&gt; and [gitter][bioguid-gitter] for example to the project.
+I think it is pretty cool that we will have a &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/BioGUID/issues/10&quot;&gt;downloadable csv&lt;/a&gt;
+file from all the IDs @deepreef collected that can be used by all other
+projects in new exiting ways.&lt;/p&gt;
+
+&lt;p&gt;Another interesting conversation was with &lt;a href=&quot;http://phylotastic.org/&quot;&gt;Phylotastic&lt;/a&gt; project. We worked on
+an idea of making an application which will allow convert pictures of
+scientific names people take at museums or from pages of research papers into
+texts, extract names appeared there and build phylo-trees from these names
+using Open Tree. Also the app would show pictures from Encyclopedia of Life and
+pages from Wikipedia. Such app will mash up interfaces of Global Names to find
+and reconcile names, Open Tree to build trees, and EOL to get information
+about species.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>BioGUID Wins Award!</title>
+      <link>http://globalnames.org/news/2015/10/13/BioGUID-Wins-Award/</link>
+      <pubDate>Tue, 13 Oct 2015 15:55:49 -0500</pubDate>
+      <dc:creator>deepreef</dc:creator>
+      
+      
+      <category>bioguid</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/13/BioGUID-Wins-Award/</guid>
+      <description>&lt;p&gt;As we &lt;a href=&quot;http://globalnames.org/news/2015/10/08/bioguid-moved/&quot;&gt;annouced previously&lt;/a&gt;, &lt;a href=&quot;http://bioguid.globalnames.org&quot;&gt;BioGUID.org&lt;/a&gt; has been incorporated into the Global Names suite of indexes and services. Within two days of this happening, we recieved some wonderful news: BioGUID.org &lt;a href=&quot;http://www.gbif.org/newsroom/news/2015-ebbe-nielsen-challenge-winners&quot;&gt;won second place&lt;/a&gt; in the GBIF Ebbe Nielsen Challenge! We’re very excited about this recognition, and it re-inforces our decision to incorporate BioGUID into the GNA system. You can follow continuing developments on the new &lt;a href=&quot;http://blog.globalnames.org&quot;&gt;BioGUID Blog&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>BioGUID merges with GN</title>
+      <link>http://globalnames.org/news/2015/10/08/BioGUID-Moved/</link>
+      <pubDate>Thu, 08 Oct 2015 03:53:49 -0500</pubDate>
+      <dc:creator>deepreef</dc:creator>
+      
+      
+      <category>gnub</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/08/BioGUID-Moved/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;http://bioguid.globalnames.org&quot;&gt;BioGUID.org&lt;/a&gt;, an indexing service that cross-links identifiers assigned to data objects in the biodiversity information universe, has now been incorporated into the Global Names suite of indexes and services. BioGUID.org represents the third major data component of Global Names (along side &lt;a href=&quot;http://gni.globalnames.org&quot;&gt;GNI&lt;/a&gt; and &lt;a href=&quot;http://gnub.globalnames.org&quot;&gt;GNUB&lt;/a&gt;), and replaces a less robust identifier linking service that had previously been included within GNUB.  In addition to the crucial role of cross-linking identifiers within the general GN architecture itself, the broader function of BioGUID.org falls within the scope of Global Names in the sense that identifiers can be thought of as names, and names play the same functional role as identifiers.&lt;/p&gt;
+
+&lt;p&gt;We are currently in the process of porting BioGUID into the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture&quot;&gt;GN GitHub&lt;/a&gt;, and you can follow developments on the new &lt;a href=&quot;http://blog.bioguid.org&quot;&gt;BioGUID Blog&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>GNUB proposal submitted to NSF</title>
+      <link>http://globalnames.org/news/2015/10/06/gnub-proposal/</link>
+      <pubDate>Tue, 06 Oct 2015 11:03:49 -0500</pubDate>
+      <dc:creator>deepreef</dc:creator>
+      
+      
+      <category>gnub</category>
+      
+      <category>nsf</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/06/gnub-proposal/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;http://www.bishopmuseum.org&quot;&gt;Bishop Museum&lt;/a&gt;, in partnership with the &lt;a href=&quot;http://www.catalogueoflife.org/&quot;&gt;Catalogue of Life&lt;/a&gt;, &lt;a href=&quot;https://www.idigbio.org/&quot;&gt;iDigBio&lt;/a&gt;,
+&lt;a href=&quot;http://www.gbif.org&quot;&gt;GBIF&lt;/a&gt;, &lt;a href=&quot;http://marinespecies.org/&quot;&gt;WoRMS&lt;/a&gt;, &lt;a href=&quot;http://plazi.org/&quot;&gt;PLAZI&lt;/a&gt;, &lt;a href=&quot;http://biodiversitylibrary.org/&quot;&gt;BHL&lt;/a&gt;, the &lt;a href=&quot;http://www.nadsdiptera.org/ICD/ICDhome.htm&quot;&gt;International Congresses of Dipterology&lt;/a&gt;,
+and &lt;a href=&quot;http://www.pensoft.net/&quot;&gt;Pensoft Publishers&lt;/a&gt;, submitted a proposal to the &lt;a href=&quot;http://www.nsf.gov&quot;&gt;U.S. National Science
+Foundation&lt;/a&gt;’s &lt;a href=&quot;http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5444&quot;&gt;Advances in Biological Informatics (ABI)&lt;/a&gt; program, to develop
+the Global Names Usage Bank.  This proposed project will dramatically improve
+the core infrastructure behind GNUB in particular, and globalnames in general.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Global Names Gains Stable Funding</title>
+      <link>http://globalnames.org/news/2015/10/05/ui-mid-november/</link>
+      <pubDate>Mon, 05 Oct 2015 00:59:02 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>speciesfilegroup</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/05/ui-mid-november/</guid>
+      <description>&lt;p&gt;Moving Global Names to a stable ground… On October 1st I did sign a job offer
+from &lt;a href=&quot;http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx&quot;&gt;Species File Group&lt;/a&gt; and going to start at the new position on
+November 16th. This position is supported by a fund created by &lt;a href=&quot;http://wwx.inhs.illinois.edu/directory/show/dceades&quot;&gt;David
+Eades&lt;/a&gt; (thank you David) and allows to think of grants not like a
+vehicle for GN’s survival, but means of further enhancement of the system. I am
+honored and touched that David, and &lt;a href=&quot;http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx&quot;&gt;Species File Group&lt;/a&gt; created this
+amazing opportunity for Global Names. This move should also lead to a tight
+integration between &lt;a href=&quot;http://catalogueoflife.com&quot;&gt;Catalogue of Life&lt;/a&gt; and Global Names, which in my view
+is a win/win situation for both projects and for biodiversity.&lt;/p&gt;
+
+&lt;p&gt;Our next steps are releasing JVM-based &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;scientific name parser&lt;/a&gt;,
+building scalable, reliable and fast name resolution service and integratation
+of  name resolution with the key Global Names project developed by &lt;a href=&quot;https://www.ted.com/talks/richard_pyle_dives_the_twilight_zone?language=en&quot;&gt;Rich
+Pyle&lt;/a&gt; and &lt;a href=&quot;https://github.com/whittonr&quot;&gt;Rob Whitton&lt;/a&gt; – &lt;a href=&quot;http://globalnames.org/docs/gnub/&quot;&gt;Global Names Usage
+Bank&lt;/a&gt; for which Rich just submitted a grant proposal.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Crossmapping Names by IDs</title>
+      <link>http://globalnames.org/news/2015/09/22/otol-eol/</link>
+      <pubDate>Tue, 22 Sep 2015 11:26:49 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>crossmap</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/09/22/otol-eol/</guid>
+      <description>&lt;p&gt;Yesterday @hyanwong and @jhpoelen mentioned on &lt;a href=&quot;https://gitter.im/EOL/eol&quot;&gt;eol&lt;/a&gt; and &lt;a href=&quot;https://gitter.im/GlobalNamesArchitecture/GlobalNames&quot;&gt;global
+names&lt;/a&gt; gitter chats that it would be great to be able to crossmap
+names from different sources by IDs.&lt;/p&gt;
+
+&lt;p&gt;What would be a use for such a crossmap? It would allow to quickly mashup data
+from various projects in interesting ways. For example to show images of
+species from &lt;a href=&quot;http://eol.org/api&quot;&gt;EOL API&lt;/a&gt; on phylo-trees generated using &lt;a href=&quot;https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs&quot;&gt;Open Tree of Life API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=VuWxlsw-ftQ&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/VuWxlsw-ftQ/0.jpg&quot; alt=&quot;TreeOfLife&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-Taxonomy&quot;&gt;OpenTree Taxonomy&lt;/a&gt; has mapping of OTT IDs to &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/&quot;&gt;NCBI&lt;/a&gt; IDs.
+&lt;a href=&quot;http://eol.org&quot;&gt;Encyclopdia of Life&lt;/a&gt; also has mapping of NCBI IDs to EOL IDs. So if
+someone wants to map NCBI names to EOL using the same algorithm as EOL used –
+they only need to query data about IDs. Even better – it would create a very
+fast connection of one aggregator (Open Tree), to another aggregator (EOL)
+through IDs of other sources without doing explicit name resolution.&lt;/p&gt;
+
+&lt;p&gt;Such queries would be much faster, as they would be just about comparing
+indexed columns in a table. However the quality of the results from such
+approach would depend on the quality of name resolution used by the
+aggregators.&lt;/p&gt;
+
+&lt;p&gt;I am thinking about trying just that. As a pilot – we can generate Darwin Core
+Archive files from OTT and EOL which would contain information about IDs from
+other sources. Then we will need to add an API that would make it possible to
+run queries from such information.&lt;/p&gt;
+
+&lt;p&gt;Another good suggestion from @jhpoelen – is to publish data about this kind of
+crossmap as a csv file, that can be easily put in some kind of a database and
+used separately on its own.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Alexander Myltsev</title>
+      <link>http://globalnames.org/news/2015/09/09/alex-myltsev/</link>
+      <pubDate>Wed, 09 Sep 2015 02:46:21 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>globalnames</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/09/09/alex-myltsev/</guid>
+      <description>&lt;p&gt;Global Names is happy to welcome a new member – Alexander Myltsev
+(@alexander-myltsev on GitHub). Alexander is of &lt;a href=&quot;https://github.com/sirthias/parboiled2&quot;&gt;parboiled2&lt;/a&gt; fame. Parboiled2
+is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Parsing_expression_grammar&quot;&gt;Parsing Expressed Grammar&lt;/a&gt; parser for Scala, and it did originate
+from Alex’ code which he wrote as a Google Summer of Code participant in 2013.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/amyltsev.jpg&quot; alt=&quot;Alexander Myltsev&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alexander lives in Moscow and currently works on a port of biodiversity parser
+to Scala; the project is called &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;gnparser&lt;/a&gt;. The new parser is compatible with
+Java, JRuby, Jython and everything else written for Java virtual machine
+environment. When the parser is ready it will be the basis of a new Scala-based
+collection of GN tools.&lt;/p&gt;
+
+&lt;p&gt;Alexander had been working with us for a few months now, but I had been waiting
+with the announcement until major paperwork hurdles were solved.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Sysopia release v0.5.0</title>
+      <link>http://globalnames.org/news/2015/09/03/sysopia/</link>
+      <pubDate>Thu, 03 Sep 2015 13:05:09 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>sysopia</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/09/03/sysopia/</guid>
+      <description>&lt;p&gt;Last week was the end of the Google Summer or Code season. Out of two projects
+that we had been mentoring one was not really about biology. It was a project
+for system administrators. A &lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;visualization tool&lt;/a&gt; for staistics about
+cpu usage, memory, disk space etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/sysopia.png&quot; alt=&quot;Sysopia&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Everybody who runs involved biodiversity informatics projects knows how
+important it is to monitor your systems. There are several open source tools
+for that – Nagios, Sensu, Graphite, Systemd, Collectd…&lt;/p&gt;
+
+&lt;p&gt;Our monitoring system of choice is &lt;a href=&quot;https://sensuapp.org/&quot;&gt;Sensu&lt;/a&gt;. It is very flexible and powerful
+tool, well designed and suitable for large number of tasks. One of these is
+collecting statistics from computers and store them in about any kind of
+database. As a result Sensu can be used for monitoring critical events and for
+collecting data about systems. The question is however how to visualize all the
+collected data.&lt;/p&gt;
+
+&lt;p&gt;We designed &lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;Sysopia&lt;/a&gt; to do exactly that. During the summer @vpowerrc
+expanded original prototype and created powerful and flexible visualization
+tool which is capable to give system administrator an understanding what is
+happening with 2-20 computers at a glance, receive life updates, and compare
+today’s statistics with up to one year of data. We already use Sysopia in
+production, and we are going to deploy it for Global Names as soon as our
+new computers are in place.&lt;/p&gt;
+
+&lt;p&gt;You can read more about sysopia on its &lt;a href=&quot;https://eol.github.io/sysopia&quot;&gt;help&lt;/a&gt; page&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Site globalnames.org merged with GN blog</title>
+      <link>http://globalnames.org/news/2015/09/03/globalnames-site/</link>
+      <pubDate>Thu, 03 Sep 2015 10:37:55 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>globalnames</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/09/03/globalnames-site/</guid>
+      <description>&lt;p&gt;For quite a while we used to have a Drupal-based site for GlobalNames. As we do
+have now a &lt;a href=&quot;http://github.org/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt;-based blog, it was logical to move our static site as well.
+And now it did happen – both of them are accessible via &lt;a href=&quot;http://globalnames.org&quot;&gt;globalnames.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This new site will continue to be an ‘official’ blog for news about GNA, we
+will publish information about new releases of software here, documents and
+discussions about scientific names.&lt;/p&gt;
+
+&lt;p&gt;One great thing about this move – it is possible for anybody with account at
+&lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt; to participate – if you want to add a document, or a blog item –
+just fork the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io&quot;&gt;repository&lt;/a&gt;, add a post to the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/tree/master/_posts&quot;&gt;_posts&lt;/a&gt; directory and
+send a pull request. At some point we will add detailed instructions how to do
+that.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>GN Parser v.3.4.1</title>
+      <link>http://globalnames.org/news/2015/08/27/parser-3-4-1/</link>
+      <pubDate>Thu, 27 Aug 2015 06:58:18 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>parser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/27/parser-3-4-1/</guid>
+      <description>&lt;p&gt;New version 3.4.1 of GlobalNames Parser gem &lt;a href=&quot;http://rubygems.org/gems/biodiversity&quot;&gt;biodiversity&lt;/a&gt; is out.
+It adds ability to parse authors names starting with &lt;code class=&quot;highlighter-rouge&quot;&gt;d&#39;&lt;/code&gt; like
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Cirsium creticum d&#39;Urv. subsp. creticum&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;which now is parsed correctly&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>GN Parser v.3.4.0</title>
+      <link>http://globalnames.org/news/2015/08/20/parser-3-4-0/</link>
+      <pubDate>Thu, 20 Aug 2015 06:58:18 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>parser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/20/parser-3-4-0/</guid>
+      <description>&lt;p&gt;New version 3.4.0 of GlobalNames Parser gem &lt;a href=&quot;http://rubygems.org/gems/biodiversity&quot;&gt;biodiversity&lt;/a&gt; is out. It adds new
+method that allows to add infraspecific ranks to canonical forms after the
+fact.&lt;/p&gt;
+
+&lt;p&gt;It was possible to add ranks in canonical forms before using the following
+code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;biodiversity&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ScientificNameParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;canonical_with_rank: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Carex scirpoidea subsp. convoluta (Kük.)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:scientificName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:canonical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#output: Carex scirpoidea subsp. convoluta&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now it is also possible to add ranks to canonical forms after the fact using
+static method &lt;code class=&quot;highlighter-rouge&quot;&gt;ScientificNameParser.add_rank_to_canonical&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;biodiversity&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ScientificNameParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Carex scirpoidea subsp. convoluta (Kük.)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:scientificName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:canonical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#output: Carex scirpoidea convoluta&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;ScientificNameParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_rank_to_canonical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:scientificName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:canonical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#output: Carex scirpoidea subsp. convoluta&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>GlobalNames Parser v.3.3.0 adds host option for socket server</title>
+      <link>http://globalnames.org/news/2015/08/14/parser-3-3-0/</link>
+      <pubDate>Fri, 14 Aug 2015 20:58:18 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>parser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/14/parser-3-3-0/</guid>
+      <description>&lt;p&gt;New version 3.3.0 of GlobalNames Parser gem biodiversity is out. It adds new
+option to socket server &lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--host&lt;/code&gt; to change default 127.0.0.1
+host setting.  To see full set of options run&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install biodiversity
+parserver -h&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Catalogue of Life Meeting in Champaign/Urbana</title>
+      <link>http://globalnames.org/news/2015/08/13/col-meeting/</link>
+      <pubDate>Thu, 13 Aug 2015 04:26:28 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>catalogue-of-life</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/13/col-meeting/</guid>
+      <description>&lt;p&gt;There was a short meeting about &lt;a href=&quot;http://www.catalogueoflife.org/&quot;&gt;Catalogue of Life&lt;/a&gt; future directions
+organized at &lt;a href=&quot;http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx&quot;&gt;Species File Group&lt;/a&gt; at Champaign/Urbana. Concerning Global
+Names it was a very productive meeting. It was great to understand the current
+state of Catalogue of Life, to see that CoL is not loosing momentum inspite of
+financial problems of biodiversity informatics in general. There was
+definitely interest in creating more bridges between various projects.&lt;/p&gt;
+
+&lt;p&gt;Yuri Roskov did present a ‘pilot’ project of cooperation between Encyclopeia of
+Life species pages group and CoL. Data about &lt;a href=&quot;http://www.ntnu.no/ub/scorpion-files/&quot;&gt;~2000 species of
+scorpions&lt;/a&gt; had been harvested from html-based site to be used in
+both projects. I think it was a great exercise and I do hope it will be just
+the first example of such cooperation.&lt;/p&gt;
+
+&lt;p&gt;From the point of Global Names there were good news too. I think it was
+everybody’s feeling that Global Names resolution is an important complementary
+service for Catalogue of Life. Cooperation between various biodiversity
+projects was brought up again and again, and organizing biodiversity
+infrastructure as a mix of several projects where GBIF, EOL, CoL, GN etc
+work as modules of a bigger puzzle, complement and enhance each other.&lt;/p&gt;
+
+&lt;p&gt;One thing that was brought up is lack of nomenclatural component in GN. I
+talked about our plans to integrate &lt;a href=&quot;http://www.gbif.org/dataset/34a96ebe-e51c-4222-9d08-5c2043c39dec&quot;&gt;GN Usage Bank&lt;/a&gt; and
+&lt;a href=&quot;http://resolver.globalnames.org/&quot;&gt;GN Resolver&lt;/a&gt; and demonstrate the flow of nomenclatural data into
+resolution/reconciliation process. We will try to make such connection by
+November and demonstrate the workflow on upcoming GBIF/CoL workshop.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Global Names Resolver now shows vernacular names</title>
+      <link>http://globalnames.org/news/2015/08/12/gn-resolver-vernaculars/</link>
+      <pubDate>Wed, 12 Aug 2015 05:00:43 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>resolver</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/12/gn-resolver-vernaculars/</guid>
+      <description>&lt;p&gt;If you use &lt;a href=&quot;http://resolver.globalnames.org&quot;&gt;Global Names Resolver&lt;/a&gt; and you are interested in
+vernacular names associated with scientific names you can add
+&lt;a href=&quot;http://resolver.globalnames.org/name_resolvers.json?names=Bubo%20bubo&amp;amp;with_vernaculars=true&quot;&gt;with_vernaculars=true&lt;/a&gt; flag to see them.  If you are most
+interested in particular &lt;a href=&quot;http://resolver.globalnames.org/data_sources&quot;&gt;data sources&lt;/a&gt; you can add
+&lt;a href=&quot;http://resolver.globalnames.org/name_resolvers.json?names=Bubo%20bubo&amp;amp;with_vernaculars=true&amp;amp;data_source_ids=11|4&quot;&gt;data_source_ids&lt;/a&gt; setting.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Global Names Parser v3.2.1</title>
+      <link>http://globalnames.org/news/2015/06/01/biodiversity-3-2-1/</link>
+      <pubDate>Mon, 01 Jun 2015 06:02:24 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>parser</category>
+      
+      <category>uuid</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/06/01/biodiversity-3-2-1/</guid>
+      <description>&lt;h1 id=&quot;new-version-of-scientific-name-parserparser-is-outgem&quot;&gt;New version of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Scientific Name Parser&lt;/a&gt; is &lt;a href=&quot;https://rubygems.org/gems/biodiversity&quot;&gt;out&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;This release has some backward compatibility issues with output.&lt;/p&gt;
+
+&lt;h2 id=&quot;field-verbatim-is-not-preprocessed-in-any-way&quot;&gt;Field “verbatim” is not preprocessed in any way&lt;/h2&gt;
+
+&lt;p&gt;In previous versions we did strip empty spaces and new line characters around
+the name to generate “verbatim” field. Now name stays the way it was entered
+into the parser.&lt;/p&gt;
+
+&lt;p&gt;Old behavior:&lt;/p&gt;
+
+&lt;p&gt;“Homo sapiens    “ -&amp;gt; …“verbatim”: “Homo sapiens”&lt;/p&gt;
+
+&lt;p&gt;“Homo sapiens\r\n” -&amp;gt; …“verbatim”: “Homo sapiens”&lt;/p&gt;
+
+&lt;p&gt;New behavior:&lt;/p&gt;
+
+&lt;p&gt;“Homo sapiens    “ -&amp;gt; …“verbatim”: “Homo sapiens    “&lt;/p&gt;
+
+&lt;p&gt;“Homo sapiens\r\n” -&amp;gt; …“verbatim”: “Homo sapiens\r\n”&lt;/p&gt;
+
+&lt;h2 id=&quot;global-names-uuid-v5uuidblog-is-added-to-the-output-as-id-field&quot;&gt;&lt;a href=&quot;http://globalnamesarchitecture.github.io/gna/uuid/2015/05/31/gn-uuid-0-5-0.html&quot;&gt;Global Names UUID v5&lt;/a&gt; is added to the output as “id” field&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Read more about UUID v5 in another &lt;a href=&quot;http://globalnamesarchitecture.github.io/gna/uuid/2015/05/31/gn-uuid-0-5-0.html&quot;&gt;blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;names-with-underscores-instead-of-spaces-are-supported&quot;&gt;Names with underscores instead of spaces are supported&lt;/h2&gt;
+
+&lt;p&gt;Such names are often used in representations of phyo-trees. Parser now
+substitutes underscores to spaces during normalization phase&lt;/p&gt;
+
+&lt;h2 id=&quot;normalized-canonical-forms-do-not-have-apostrophes-anymore&quot;&gt;Normalized canonical forms do not have apostrophes anymore&lt;/h2&gt;
+
+&lt;p&gt;I am removing behavior introduced in v3.1.10 which would preserve apostrophes
+in normalized version of names like “Arca m’coyi Tenison-Woods”. Apostrophes
+are not code compliant.&lt;/p&gt;
+
+&lt;p&gt;New behavior:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;b3a9b1a3-f73c-5333-8194-a84c6583d130&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca m&#39;coyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;authorship&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;basionymAuthorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;authorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;12&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author_word&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>New UUID v5 Generation Tool -- gn_uuid v0.5.0</title>
+      <link>http://globalnames.org/news/2015/05/31/gn-uuid-0-5-0/</link>
+      <pubDate>Sun, 31 May 2015 04:01:43 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>uuid</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/31/gn-uuid-0-5-0/</guid>
+      <description>&lt;p&gt;We are releasing a new tool - &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_uuid&quot;&gt;gn_uuid&lt;/a&gt; to simplify creation of UUID
+version 5 identifiers for scientific name strings.  UUID v5 has features which
+are particular useful for the biodiversity community.&lt;/p&gt;
+
+&lt;h2 id=&quot;uuid-version-5-description&quot;&gt;UUID version 5: Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Universally_unique_identifier&quot;&gt;Universally unique identifiers&lt;/a&gt; are very popular because for all
+practical purposes they &lt;a href=&quot;http://tools.ietf.org/html/rfc4122#section-2_&quot;&gt;guarantee globally unique IDs&lt;/a&gt; without any
+negotiation between different entities. There are several ways how UUIDs can be
+created:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;UUID version&lt;/th&gt;
+      &lt;th&gt;Uniqueness is achieved by&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;version 1&lt;/td&gt;
+      &lt;td&gt;Using computer’s MAC address and time&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;version 2&lt;/td&gt;
+      &lt;td&gt;like v1 plus adding info about user and local domain&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;version 3&lt;/td&gt;
+      &lt;td&gt;Using MD5 hash of a string in combination with a name space&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;version 4&lt;/td&gt;
+      &lt;td&gt;Using pseudo-random algorithms&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;version 5&lt;/td&gt;
+      &lt;td&gt;Using SHA1 hash of a string in combination with a name space&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;UUID v5 is generated using information from a string, so everyone who uses this
+method will generate exactly same ID out of the same string. Interested parties
+do need to agree on generation of a name space, and after that no matter which
+programming language they use – they will be able to exchange data about a
+string using their identifiers.&lt;/p&gt;
+
+&lt;p&gt;This gem already has a DNS domain “globalnames.org” defined as a name space, so
+generation of the UUID v5 becomes simpler.&lt;/p&gt;
+
+&lt;p&gt;I believe UUID v5 creates very exciting opportunities for biodiversity
+community.  For example if one expert annotates a string or attaches data to it
+– this information can be linked globally and then harvested by anybody,
+without any preliminary negotiation.&lt;/p&gt;
+
+&lt;p&gt;Quite often researches make an argument that a scientific name is an identifier
+on its own and there is no need for another level of indirection like UUID.
+They are right, scientific name string can be an identifier, however,
+scientific names have severe shortcomings in such a role.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-scientific-names-are-bad-identifiers-for-computers&quot;&gt;Why Scientific Names are Bad Identifiers for Computers&lt;/h2&gt;
+
+&lt;h3 id=&quot;scientific-name-strings-have-different-length&quot;&gt;Scientific name strings have different length&lt;/h3&gt;
+
+&lt;p&gt;More often than not identifiers end up in databases and used as a primary index
+to sort, connect and search data. Scientific name strings vary from 2 bytes to
+more than  500 bytes in length. So if they are used as keys in database they
+are inefficient, they waste a lot of space, become less efficient for finding
+or sorting information – indexes key size is usually determined by the
+the largest key.&lt;/p&gt;
+
+&lt;p&gt;UUIDs have always the same, rather small size – 16 bytes.  Even when UUIDs are
+used in their “standard” string representation – they are still reasonably
+small – 36 characters. Storing them in a database as a number is obviously more
+efficient.&lt;/p&gt;
+
+&lt;h3 id=&quot;it-is-hard-to-spot-differences-in-name-strings&quot;&gt;It is hard to spot differences in name strings&lt;/h3&gt;
+
+&lt;p&gt;It is very hard for human eye to spot the difference between strings like this&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Corchoropsis tomentosa var. psilocarpa (Harms &amp;amp; Loes.) C.Y.Wu &amp;amp; Y.Tang&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Corchoropsis tomentosa var. psilocanpa (Harms &amp;amp; Loes.) C.Y.Wu &amp;amp; Y.Tang&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Much easier for their corresponding UUIDs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;5edecb2b-903f-54f1-a087-b47b3b021fcd&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;833c664b-7d00-5c3b-97a4-98b0ab7d0a9a&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;name-strings-come-in-different-encodings&quot;&gt;Name strings come in different encodings.&lt;/h3&gt;
+
+&lt;p&gt;Currently Latin1, UTF-8 and UTF-16 are most popular encodings used in
+biodiversity. If authorship or name itself has characters outside of the
+128bits of ASCII code – identically looking names will be quite different for
+computers.&lt;/p&gt;
+
+&lt;h3 id=&quot;name-strings-are-less-stable-because-of-their-encoding&quot;&gt;Name strings are less stable because of their encoding&lt;/h3&gt;
+
+&lt;p&gt;When names are moved from one database to another, from one paper to another
+sometimes they do not survive the trip. If you spent any time looking at
+scientific names in electronic form you did see something like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acacia ampliceps ? Acacia bivenosa&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Absidia macrospora V�nov� 1968&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Absidia sphaerosporangioides Man&amp;lt;acute&amp;gt;ka &amp;amp; Truszk., 1958&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cnemisus kaszabi Endr?di 1964&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usually names like these had been submitted in a “wrong” encoding and some
+characters in them were misinterpreted. UUID on the other hand is just a
+hexadecimal number, which can be transitioned between various encodings more
+safely.&lt;/p&gt;
+
+&lt;h3 id=&quot;name-strings-might-look-the-same-in-print-or-on-screen-but-be-different&quot;&gt;Name strings might look the same in print or on screen, but be different&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Homo sapiens&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Homo sаpiens&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These two strings might look exactly the same on a screen or printed on paper,
+but in reality they are different. Here are their UUIDs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;16f235a0-e4a3-529c-9b83-bd15fe722110&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;093dc7f7-5915-56a5-87de-033e20310b14&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The difference is that the second name has a Cyrillic &lt;code class=&quot;highlighter-rouge&quot;&gt;а&lt;/code&gt; character, which in
+most cases will look exactly the same as Latin &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; character. And when the
+names are printed on paper there is absolutely no way to tell the difference.
+UUID will tell us that these two name strings are not the same.&lt;/p&gt;
+
+&lt;h3 id=&quot;nothing-prevents-to-continue-to-use-name-strings-for-human-interaction&quot;&gt;Nothing prevents to continue to use name strings for human interaction&lt;/h3&gt;
+
+&lt;p&gt;One argument that people often give – it is much easier for users to type&lt;/p&gt;
+
+&lt;p&gt;http://biosite.org/Parus_major&lt;/p&gt;
+
+&lt;p&gt;than&lt;/p&gt;
+
+&lt;p&gt;http://biosite.org/47d61c81-5a0f-5448-964a-34bbfb54ce8b&lt;/p&gt;
+
+&lt;p&gt;For most of us it is definitely true and nothing prevents developers
+to create links of the first type, while still using UUIDs behind the scene.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-uuids-v5-are-better-than-any-other-uuids-as-a-scientific-name-identifier&quot;&gt;Why UUIDs v5 are better than any other UUIDs as a scientific name identifier&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;They can be generated independently by anybody and still be the same to the
+same name string&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;They use SHA1 algorithm which does not have (extremely rare) collisions
+found for MD5 algorithm&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Same ID can be generated in &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_uuid_examples&quot;&gt;any popular language&lt;/a&gt; following
+&lt;a href=&quot;http://tools.ietf.org/html/rfc4122#section-4.3&quot;&gt;well-defined algorithm&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Crossmap Tool v0.1.6</title>
+      <link>http://globalnames.org/news/2015/05/31/gn-crossmap-0-1-6/</link>
+      <pubDate>Sun, 31 May 2015 03:58:50 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>crossmap</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/31/gn-crossmap-0-1-6/</guid>
+      <description>&lt;p&gt;Version 0.1.6 of &lt;code class=&quot;highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; tool is out.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap&quot;&gt;Global Names Crossmap&lt;/a&gt; tool allows to match names from a a
+spreadsheet to names from &lt;a href=&quot;http://resolver.globalnames.org/data_sources&quot;&gt;any data source&lt;/a&gt; in Global Names
+Resolver.&lt;/p&gt;
+
+&lt;p&gt;Fixes a bug in rank inferring by &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Global Names Parser&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Crossmap Tool v0.1.5</title>
+      <link>http://globalnames.org/news/2015/05/28/gn-crossmap-0-1-5/</link>
+      <pubDate>Thu, 28 May 2015 01:54:54 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>crossmap</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/28/gn-crossmap-0-1-5/</guid>
+      <description>&lt;p&gt;New version of gn_crossmap tool is out.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap&quot;&gt;Global Names Crossmap&lt;/a&gt; tool allows to match names from a a
+spreadsheet to names from &lt;a href=&quot;http://resolver.globalnames.org/data_sources&quot;&gt;any data source&lt;/a&gt; in Global Names
+Resolver.&lt;/p&gt;
+
+&lt;p&gt;The main change in this version – output file with crossmap data now contains
+all fields from original input document and it allows to filter and sort data
+using any field from the input.&lt;/p&gt;
+
+&lt;p&gt;Other changes are&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #5 - All original fields are now preserved in the output file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #3 - If ingest has more than 10K rows – user will see logging events&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #4 Bug - Add error messages if headers don’t have necessary fields&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #2 - Header fields are now allowed to have trailing spaces&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #7 Bug - Empty rank does not break crossmapping anymore&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@dimus - #1 Bug - Add missing rest-client gem&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>iDigBio API Client v0.1.1</title>
+      <link>http://globalnames.org/news/2015/05/20/idigbio-client/</link>
+      <pubDate>Wed, 20 May 2015 03:01:08 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>idigbio</category>
+      
+      <category>api</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/20/idigbio-client/</guid>
+      <description>&lt;p&gt;In a few weeks there will be an &lt;a href=&quot;https://github.com/idigbio-api-hackathon/HackathonCentral/wiki&quot;&gt;iDigBio API hackathon&lt;/a&gt;. As I
+menioned &lt;a href=&quot;https://globalnamesarchitecture.github.io/idigbio/hakathon/2015/04/28/idigbio-api-hackathon-meet.html&quot;&gt;earlier&lt;/a&gt; we decided to add another API client written in
+Ruby before the hackathon starts. And &lt;a href=&quot;https://github.com/gete76&quot;&gt;Greg Traub&lt;/a&gt; and I are releasing
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/idigbio_client&quot;&gt;iDigBio API Client&lt;/a&gt; written in Ruby today.&lt;/p&gt;
+
+&lt;p&gt;Greg started to make a Ruby client at &lt;a href=&quot;https://github.com/iDigBio/idigbio-ruby-client&quot;&gt;iDigBio&lt;/a&gt;. I took his code and
+refactored it into a &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/idigbio_client&quot;&gt;Ruby gem&lt;/a&gt;. So now instead of 0 we have 2 Ruby
+clients :smile:&lt;/p&gt;
+
+&lt;p&gt;This is the very first release, so if you will start using it and find
+something is wrong/missing please submit an &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/idigbio_client/issues&quot;&gt;issue&lt;/a&gt;. The gem uses &lt;a href=&quot;https://beta-search.idigbio.org/v2/&quot;&gt;beta
+API&lt;/a&gt;, so sometimes it might get ‘stuck’. This problem will go away when
+beta API will move to production.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Scientific Name Parser v3.1.10</title>
+      <link>http://globalnames.org/news/2015/05/14/parser-3-1-10/</link>
+      <pubDate>Thu, 14 May 2015 03:57:07 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>parser</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/14/parser-3-1-10/</guid>
+      <description>&lt;h1 id=&quot;new-version-of-scientific-name-parserparser-is-outgem&quot;&gt;New version of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Scientific Name Parser&lt;/a&gt; is &lt;a href=&quot;https://rubygems.org/gems/biodiversity&quot;&gt;out&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Addressing most of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity/issues/7&quot;&gt;Issue #7&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;do-not-parse-non-virus-names-containing-rna&quot;&gt;Do not parse non-virus names containing RNA&lt;/h3&gt;
+
+&lt;p&gt;If a name was not detected as a virus but contains RNA word it will not be
+parsed anymore. It is a problem for some surrogate names, like
+&lt;strong&gt;Candida albicans RNA_CTR0-3&lt;/strong&gt; but they are very rare.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Candida albicans RNA_CTR0-3&lt;/td&gt;
+      &lt;td&gt;Not parsed&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alpha proteobacterium RNA12&lt;/td&gt;
+      &lt;td&gt;Not parsed&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ustilaginoidea virens RNA virus&lt;/td&gt;
+      &lt;td&gt;Not parsed, marked as virus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Calathus (Lindrothius) KURNAKOV 1961&lt;/td&gt;
+      &lt;td&gt;Parsed as before&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;better-detection-of-virus-names&quot;&gt;Better detection of virus names&lt;/h3&gt;
+
+&lt;p&gt;Names containing &lt;code class=&quot;highlighter-rouge&quot;&gt;virophage&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*NPV&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*sattelite&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*particle&lt;/code&gt; are marked as ‘viruses’ and
+not parsed&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Gossypium mustilinum symptomless alphasatellite
+Okra leaf curl Mali alphasatellites-Cameroon
+Bemisia betasatellite LW-2014
+Tomato leaf curl Bangladesh betasatellites [India/Patna/Chilli/2008]
+Intracisternal A-particles
+Saccharomyces cerevisiae killer particle M1
+Uranotaenia sapphirina NPV
+Spodoptera exigua nuclear polyhedrosis virus SeMNPV
+Spodoptera frugiperda MNPV
+Rachiplusia ou MNPV (strain R1)
+Orgyia pseudotsugata nuclear polyhedrosis virus OpMNPV
+Mamestra configurata NPV-A
+Helicoverpa armigera SNPV NNg1
+Zamilon virophage
+Sputnik virophage 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;better-handling-of-speciesinfraspecies-epithets-with-apostrophe&quot;&gt;Better handling of species/infraspecies epithets with apostrophe&lt;/h3&gt;
+
+&lt;p&gt;Names like below are now parsed correctly. Their normalized/canonical forms
+preserve apostrophe&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Junellia o&#39;donelli Moldenke, 1946
+Trophon d&#39;orbignyi Carcelles, 1946
+Arca m&#39;coyi Tenison-Woods, 1878
+Nucula m&#39;andrewii Hanley, 1860
+Eristalis l&#39;herminierii Macquart
+Odynerus o&#39;neili Cameron
+Serjania meridionalis Cambess. var. o&#39;donelli F.A. Barkley
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Global Names Grant Goes to Illinois</title>
+      <link>http://globalnames.org/news/2015/05/12/gn-moves-to-illinois/</link>
+      <pubDate>Tue, 12 May 2015 11:14:13 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>speciesfilegroup</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/12/gn-moves-to-illinois/</guid>
+      <description>&lt;p&gt;I did some soul-searching, advise-gathering, thinking, planning, and crystal
+ball gazing.  And it seems that moving &lt;a href=&quot;http://www.nsf.gov/awardsearch/showAward?AWD_ID=1356347&quot;&gt;Global Names grant&lt;/a&gt; and
+myself to &lt;a href=&quot;http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx&quot;&gt;Species File Group&lt;/a&gt; is a right decision.  Why? Because &lt;a href=&quot;http://mbl.edu&quot;&gt;Marine
+Biological Laboratory&lt;/a&gt; is a hard core research institute, which completely
+depends on grants and as such is not well-suited for &lt;em&gt;infrastructure&lt;/em&gt;
+projects. Global Names is definitely an infrastructure project and I know very
+well how bad it is to be responsible for an infrastructure project and not
+being able to work on it. It is just not a good way to do business.&lt;/p&gt;
+
+&lt;p&gt;It is my 8th year at MBL. I enjoy MBL, I love living on Cape Cod. I love an
+immense energy of MBL collective mind.  I met really amazing people, amazing
+scientists here. I worked with great people at &lt;a href=&quot;http://eol.org&quot;&gt;Encyclopedia of Life&lt;/a&gt;
+project.  And also I was never sure if I will be there next year, or sometimes
+next month.  I had weeks and months when I had no ability to move forward with
+Global Names, because it had no financial support at that time.&lt;/p&gt;
+
+&lt;p&gt;Species Files Group is long term financed, allowing a long term commitment.
+They are interested in Global Names, they do want me to continue to develop it,
+integrate it with Catalogue of Life. And these are my goals too. David Eades
+understands that Global Names will need a long-term investment in hardware, and
+he provides a generous annual fund for that. It means no more 7 year old
+computers running Global Names services. I also hope it will help to integrate
+Global Names Usage Bank, a crucial GN component developed by
+&lt;a href=&quot;https://www.ted.com/talks/richard_pyle_dives_the_twilight_zone?language=en&quot;&gt;Rich Pyle&lt;/a&gt; and &lt;a href=&quot;https://github.com/whittonr&quot;&gt;Rob Whitton&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Another big factor is ability to work closely with programmers and taxonomists
+of the SFG group. At MBL I am now the only one on EOL project (&lt;a href=&quot;https://github.com/jrice&quot;&gt;Jeremy&lt;/a&gt; is
+remote), and I feel I am getting stale without nomenclators/taxonomists around.&lt;/p&gt;
+
+&lt;p&gt;Of course we need to figure out how to move current GN computers without
+shutting down services for a few weeks. I imagine I would have to rent an
+expensive cloud setup for a month or two, and run GN from there while machines
+are in transit. We will have to figure out how to transfer grant, make a new
+hire for the project etc. But all of these are good problems to solve. I
+believe GN suddenly got a brighter future ahead.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>New tool to crossmap checklists</title>
+      <link>http://globalnames.org/news/2015/05/11/gn-crossmap-gem/</link>
+      <pubDate>Mon, 11 May 2015 06:39:02 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>resolver</category>
+      
+      <category>checklist</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/11/gn-crossmap-gem/</guid>
+      <description>&lt;p&gt;Yesterday I released a new command line tool for name resolution called
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap&quot;&gt;gn_crossmap&lt;/a&gt;. It is designed for people who work with checklists
+of scientific names using a spreadsheet software (MS Excel, Apple Numbers, Open
+Office, Libre Office, Google Sheets etc.) and want to compare names that they
+have with another reference source. The program takes a spreadsheet saved as
+csv file as input and generates another csv-based spreadsheet with resolution
+data.  &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap/tree/master/spec/files&quot;&gt;Examples of input and output&lt;/a&gt; are included into the code.
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap/blob/master/README.md&quot;&gt;README&lt;/a&gt; file describes how to use the project from a command line or
+as a Ruby library.&lt;/p&gt;
+
+&lt;p&gt;This program requires internet connection, Ruby &amp;gt;= 2.1 installed on the machine.&lt;/p&gt;
+
+&lt;p&gt;Basic usage is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install gn_crossmap
+$ crossmap -i input.csv -o ouput.csv -d 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;short&lt;/th&gt;
+      &lt;th&gt;long attr&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-i&lt;/td&gt;
+      &lt;td&gt;–input&lt;/td&gt;
+      &lt;td&gt;checklist’s spreadsheet saved as csv file&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-o&lt;/td&gt;
+      &lt;td&gt;–output&lt;/td&gt;
+      &lt;td&gt;path to the output file. Default is output.csv in the current directory&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-d&lt;/td&gt;
+      &lt;td&gt;–data-source-id&lt;/td&gt;
+      &lt;td&gt;ID of one of the GN Resolver &lt;a href=&quot;http://resolver.globalnames.org/data_sources&quot;&gt;data sources&lt;/a&gt;, Catalogue of Life id (1) is default&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Web interface to this program is also &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/checklist&quot;&gt;in works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This project started at the &lt;a href=&quot;https://drive.google.com/file/d/0B-WDk-H2QjRKaWJUUkpMSEdta1k/view&quot;&gt;Catalogue of Life workshop&lt;/a&gt; in Leiden,
+which happened in March 2015. The main focus of the hackathon was to figure out
+how to help national checklist teams to create, maintain and compare data in their
+data.  We determined 3 main approaches&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Crossmapping&lt;/strong&gt; checklists against other checklists and/or reference sources&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Annotation&lt;/strong&gt; of crossmapped data – ability to share metadata, report mistakes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Distribution of species&lt;/strong&gt; – how to fix occurance errors for a country&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A hackathon group which worked on crossmapping produced a
+&lt;a href=&quot;https://github.com/Sp2000/hackathon_group1&quot;&gt;code&lt;/a&gt; which would compare checklists against Catalogue of
+Life. The &lt;code class=&quot;highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; program I am releasing is based heavily on what we
+learned during the hackathon. Crossmaping code is mostly based on use cases
+from &lt;a href=&quot;https://github.com/rpfigueira&quot;&gt;Rui Figueira&lt;/a&gt; and &lt;a href=&quot;https://github.com/WouterKoch&quot;&gt;Wouter Koch&lt;/a&gt;. During the hackathon we
+also determined ways to improve quality of name resolution further by:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using infraspecies’ rank (var., f. subsp. etc) in the matching and penalize
+score if ranks are different&lt;/li&gt;
+  &lt;li&gt;Taking in account if matching authors are basyonym or combination authors&lt;/li&gt;
+  &lt;li&gt;Using meta-information attached to names via sensu…, not … etc.
+to distinguish name usages&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</title>
+      <link>http://globalnames.org/news/2015/05/06/phylo-trees/</link>
+      <pubDate>Wed, 06 May 2015 04:02:32 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>phylogeny</category>
+      
+      <category>trees</category>
+      
+      <category>nsf</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/06/phylo-trees/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&quot;https://github.com/arlin&quot;&gt;Arlin Stoltzfus&lt;/a&gt; organized a kickoff meeting for the project
+that got funded by NSF this year - “&lt;a href=&quot;http://nsf.gov/awardsearch/showAward?AWD_ID=1458572&quot;&gt;Collaborative Research: ABI Development: An
+open infrastructure to disseminate phylogenetic knowledge&lt;/a&gt;”. Global Names is
+participating in project and I believe it will be an interesting ride.&lt;/p&gt;
+
+&lt;p&gt;The idea behind is pretty cool. Imagine that someone works on a group of
+organisms.  They submit names of the organisms to a service and the service
+builds a phylogenetic tree out of the names. When tree is created it will start
+its own life similar to a repo on Github. People will be able to reuse it,
+annotate it for their own purposes, create derivative trees. It would be a
+pretty nice feature for &lt;a href=&quot;http://eol.org&quot;&gt;Encyclopedia of Life&lt;/a&gt; to see how species
+belonging to a particular clade are related to each other through phylogeny.
+One problem with creation of such trees is name normalization. Scientific names
+can have many alternative spellings, so to find phylo-information we will need
+to be able to map names from user list to names which are recognized by the
+service.&lt;/p&gt;
+
+&lt;p&gt;I suspect that a crossmapping tool I am working on this week might be adjusted
+for this particular task, but as usual – the devil is in details and we will
+find out the requirements during the design process.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>New Higher Level Classification for Catalogue of Life</title>
+      <link>http://globalnames.org/news/2015/05/03/higher-level-classification/</link>
+      <pubDate>Sun, 03 May 2015 05:25:31 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>col</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/03/higher-level-classification/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;https://about.me/bobcorrigan&quot;&gt;Bob Corrigan&lt;/a&gt; sent around an email pointing at a &lt;a href=&quot;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119248&quot;&gt;paper in PLOS&lt;/a&gt;
+which describes new classification adopted by &lt;a href=&quot;http://www.catalogueoflife.org/&quot;&gt;Catalogue of Life&lt;/a&gt;. After
+looking through the paper my understanding is that it is a step forward and at
+the same time business as usual for &lt;code class=&quot;highlighter-rouge&quot;&gt;CoL&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Catalogue of Life&lt;/code&gt; needs a solid managerial classification for their data and
+according to article the goal is achieved:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Our goal, therefore, is to provide a hierarchical classification for the CoL
+and its contributors that (a) is ranked to encompass ordinal-level taxa to
+facilitate a seamless import of contributing databases; (b) serves the needs
+of the diverse public-domain user community, most of whom are familiar with
+the Linnaean conceptual system of ordering taxon relationships; and (c) is
+likely to be more or less stable for the next five years. Such a modern
+comprehensive hierarchy did not previously exist at this level of
+specificity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Classifications are a dirty business so as usual –&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;These actual complexities of phylogenetic history emphasize that
+classification is a practical human enterprise where compromises must be made&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Altogether looks like CoL gets a new hierarchical face.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Starting GSOC 2015 Sysopia Project</title>
+      <link>http://globalnames.org/news/2015/05/03/sysopia-starts/</link>
+      <pubDate>Sun, 03 May 2015 04:25:38 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>sysopia</category>
+      
+      <category>gsoc</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/03/sysopia-starts/</guid>
+      <description>&lt;p&gt;Our Google Summer of Code student – &lt;a href=&quot;https://github.com/vpowerrc&quot;&gt;Viduranga Wijesooriya&lt;/a&gt; and I had
+our firts meeting today to start &lt;a href=&quot;https://www.google-melange.com/gsoc/project/details/google/gsoc2015/vpowerrc/5665117697998848&quot;&gt;Google Summer of Code&lt;/a&gt; project –
+&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;Sysopia&lt;/a&gt;. The purpose of the project is not names, however I do
+consider it to be important for EOL and for GN as it allows to spend less time
+on administration of computers and more time on writing code.&lt;/p&gt;
+
+&lt;p&gt;The idea behind the project is to create a dashboard that allows us to see what
+is going on with all computers in a system with one glance. The system shows
+several metrics graphs, each of which shows information about all machines at
+the same time.  By default it shows data for 24 hours, so if everything works
+well it is enough for sysadmin to check out sysopia once a day to have a very
+good idea about what is happening with the system from the moment Sysopia is
+installed. We did install it for EOL and I find it very useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;&lt;img src=&quot;/images/sysopia.png&quot; alt=&quot;sysopia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Not much functionality is there yet, but graphs show well, and it is possible
+to get a point data by hovering over a line, and highlight a particular machine
+when hovering over the machine name in the dialog box.&lt;/p&gt;
+
+&lt;p&gt;Currently the only backend for sysopia is &lt;a href=&quot;http://sensuapp.org/&quot;&gt;Sensu&lt;/a&gt; but we are going to
+expand it to other backends after we nail down the user interface.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Species File Group -- new home for GN?</title>
+      <link>http://globalnames.org/news/2015/05/02/species-file-group/</link>
+      <pubDate>Sat, 02 May 2015 07:44:45 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>col</category>
+      
+      <category>speciesfile</category>
+      
+      <category>taxonworks</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/05/02/species-file-group/</guid>
+      <description>&lt;p&gt;Trying to find a permanent home for GN I travelled to Champaign-Urbana on
+Thursday-Friday to visit &lt;a href=&quot;http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx&quot;&gt;Species File Group&lt;/a&gt; at the University of
+Illinois. I do know this group rather well, as &lt;a href=&quot;https://github.com/lwalley&quot;&gt;Lisa Walley&lt;/a&gt; and I went
+there more than a year ago for a hackathon organized by &lt;a href=&quot;https://github.com/mjy&quot;&gt;Matt Yoder&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am quite impressed with work this group does and when Matt suggested
+me to join them – my first thought was – this might be a way to make
+Global Names financial situation more reliable!&lt;/p&gt;
+
+&lt;p&gt;Currently Global Names completely depends on grants, and grants come and go. It
+is a pretty bad way to finance an infrastructure project, as you do not want to
+have roads or electricity depend on unstable funding. We always want to be able
+to drive to a store or a concert, and we want to always be able to have lights
+in our homes.  Same goes with projects like GN. If people start using them –
+they start depend on them and it is really bad situation when funding dries out
+and service deteriorates as a result.&lt;/p&gt;
+
+&lt;p&gt;The visit went well. I had a great opportunity to talk to David Eades, Matt,
+Dmitry Dmitriev, and Yuri Roscov. It was especially great to talk to Yuri, as
+he is the main person behind the &lt;a href=&quot;http://www.catalogueoflife.org/&quot;&gt;Catalogue of Life&lt;/a&gt; content. I consider
+Catalogue of Life to be one of the most important use cases and partners for
+GN, and talking to Yuri for an extended amount of time was extremely
+helpful.&lt;/p&gt;
+
+&lt;p&gt;Originally position was about helping Yuri to automate his work-flow, however
+when Matt and I talked on Skype the accent started to shift towards supporting
+Global Names. David Eades, Matt, and Yuri all believe that GN is a missing link
+in Catalogue of Life functionality and as such by working closely with Yuri,
+and figuring out what GN can do for Catalogue of Life actually does help to
+automate some of hard parts of Yuri’s work.&lt;/p&gt;
+
+&lt;p&gt;The meeting was very encouraging and inspiring. Now I have to think hard and
+make a decision.  I would love be able to keep my house on Cape and I would
+love to be able to come in summer and work with &lt;a href=&quot;http://mbl.edu&quot;&gt;MBL&lt;/a&gt; and &lt;a href=&quot;http://www.risd.edu/&quot;&gt;RISD&lt;/a&gt;.
+And it seems nothing prevents me to spend 3 months on Cape in summer if I move.
+On Monady I am going to talk about my trip at my work at MBL.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Good names, bad names?</title>
+      <link>http://globalnames.org/news/2015/04/29/good-bad-names/</link>
+      <pubDate>Wed, 29 Apr 2015 10:52:58 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gni</category>
+      
+      <category>resolver</category>
+      
+      <category>globi</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/29/good-bad-names/</guid>
+      <description>&lt;p&gt;Just had a great conversation with &lt;a href=&quot;https://github.com/jhpoelen&quot;&gt;Jorrit Poelen&lt;/a&gt; from &lt;a href=&quot;http://www.globalbioticinteractions.org/about.html&quot;&gt;GloBI&lt;/a&gt;.
+Jorrit uses &lt;a href=&quot;http://resolver.globalnames.org&quot;&gt;GN Resolver&lt;/a&gt; to clean up names for Globi, and on top of
+knowing that name exists in GN Resolver he also needs to know if the name is
+actually valid.&lt;/p&gt;
+
+&lt;p&gt;Resolver by design contains ‘good’ and ‘bad’ names. We do need to know what
+kind of misspellings exist in the wild and map information associated with them
+to good names. These misspellings and outright wrong names make Jorrit’s
+life much harder, as we do not have a tool that clearly marks ‘good’ names as
+good.  There are ways to be more or less sure if a name is good:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If names belong to a specific clade – use only highly curated sources&lt;/li&gt;
+  &lt;li&gt;Count how many sources know about a name&lt;/li&gt;
+  &lt;li&gt;See if a name appears at least in one curated source&lt;/li&gt;
+  &lt;li&gt;Check if name got parsed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But all these approaches are not universal, and do not give a clear answer.  So
+what would be a solution?&lt;/p&gt;
+
+&lt;p&gt;It seems that a good solution would be to write a classifier which takes in
+account all relevant features and meta-features of a name, considers them and
+then puts the name into ‘good’ or ‘bad’ bucket.  Every name has several
+features associated with it and we can train a Bayes classifier to make a
+decision if name is ‘good’ or ‘bad’ using these features. When it is done
+running through our ~20 million names – each of them will be marked as trusted
+or not.&lt;/p&gt;
+
+&lt;p&gt;I am pretty much sure that such classifier, especially at its first iteration
+will make mistakes. How can we deal with them? Here is an idea – when API
+returns back data back to a user – data will have two new fields – ‘trusted’
+as yes/no and a URL to complain about this decision something like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http:/resolver.globalnames.org/trusted?name_id=123&amp;amp;wrong_value=1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;People can just copy and paste this URL into browser, or set it as a “Report a
+mistake” button for every name in their results html.  If this button is pushed
+GN Resolver will register human curation event and data from this event will be
+used to improve performance of the classifier algorithm. Human curations will
+trump computer algorithm and they can be collected in a new data source for
+feedbacks…&lt;/p&gt;
+
+&lt;p&gt;Details of the interface can be decided later when we build the classifier. I
+know that the problem of separating trusted names from untrusted is a task that
+about everybody who uses resolver actively asked me about one time or another.
+So who and when can build it? And now I am thinking that our Google Summer of
+Code student might be interested in making it happen instead of improving
+NetiNeti.  I personally think automatic curation of names is more important.&lt;/p&gt;
+
+&lt;p&gt;Jorrit submitted an &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gni/issues/38&quot;&gt;issue&lt;/a&gt; about this idea
+Globit &lt;a href=&quot;https://github.com/jhpoelen/eol-globi-data/issues/132&quot;&gt;issue&lt;/a&gt;&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>iDigBio hackathon preparation</title>
+      <link>http://globalnames.org/news/2015/04/28/idigbio-api-hackathon-meet/</link>
+      <pubDate>Tue, 28 Apr 2015 16:44:50 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>idigbio</category>
+      
+      <category>hakathon</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/28/idigbio-api-hackathon-meet/</guid>
+      <description>&lt;p&gt;On June 3rd I am going to &lt;a href=&quot;https://github.com/idigbio-api-hackathon/HackathonCentral/wiki&quot;&gt;iDigBio hackathon&lt;/a&gt; meeting which will be about finding
+ways to enhance their API. Today there was a pre-hackathon meeting where
+iDigBio folks explained how did they implement their API, it’s backend, and
+how do they use their own API for their GUIs.&lt;/p&gt;
+
+&lt;p&gt;I had been very impress with what they have done. Backend is based on Elastic
+search, API is RESTful and json based. What was a surprise for me – the API
+calls are often take pure json as arguments. It was also great to see how did
+they simplified Elastic search queries for API, keeping their API queries
+simple and powerful at the same time.&lt;/p&gt;
+
+&lt;p&gt;They also made Python and R clients for the API. So I will try to make Ruby
+version of the API client before the hackathon.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Launching NetiNeti Google Summer of Code Project</title>
+      <link>http://globalnames.org/news/2015/04/28/gsoc-netineti/</link>
+      <pubDate>Tue, 28 Apr 2015 16:34:40 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>netineti</category>
+      
+      <category>gsoc</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/28/gsoc-netineti/</guid>
+      <description>&lt;p&gt;Today we had our first meeting to start NetiNeti enhancement project funded by
+Google Summer of Code. The studend who was selected do do the job is a 4th
+year graduate from University of Philadelphia &lt;a href=&quot;https://github.com/wencanluo&quot;&gt;Wencan Luo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The purpose of the project is to improve performance of our NLP-based
+scientific name finding tool – NetiNeti, developed 5 years ago by [Lakshmi
+Manohar Acella][lakshmi]. Lets see how it will go…&lt;/p&gt;
+
+&lt;p&gt;Official coding time starts on May 27th – for now we are going through a design
+phase – figuring out who are the users of the application, then we will try
+to do idealized design of its features, find implementaion paths and limitations
+existing to implement the features and then Wencan is going to do exploration
+of features.&lt;/p&gt;
+
+&lt;p&gt;For the process we are going to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ZenHub&lt;/code&gt; to manage issues, obviosusly
+&lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub&lt;/code&gt; for the code and ability to have a project related blog with Github
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Google Summer of Code 2015 starts</title>
+      <link>http://globalnames.org/news/2015/04/27/gsoc-2015-starts/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>eol</category>
+      
+      <category>gsoc</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/27/gsoc-2015-starts/</guid>
+      <description>&lt;p&gt;Today is the official start of Google Summer of Code work. Up to now
+organizations submitted their ideas, organizations had been chosen by Goggle,
+students decided which ideas and organizations they like and submitted their
+proposals, Google decided on how many projects from every organizations they
+are willing to fund, and finally – the best proposals from students were
+matched to the funded ideas. Encyclopedia of Life and Global Names submitted 4
+proposals and we got 3 of them funded, so congratulations to us and to students
+:)&lt;/p&gt;
+
+&lt;h3 id=&quot;enhancements-in-eol-semantic-searcheol-search&quot;&gt;&lt;a href=&quot;https://www.google-melange.com/gsoc/project/details/google/gsoc2015/avinashda/5707702298738688&quot;&gt;Enhancements in EOL Semantic Search&lt;/a&gt;&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Student:&lt;/td&gt;
+      &lt;td&gt;Avinash Daiict&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mentor:&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/AmrMMorad&quot;&gt;Amr Morad&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;devops-dashboard-sysopiasysopia&quot;&gt;&lt;a href=&quot;https://www.google-melange.com/gsoc/project/details/google/gsoc2015/vpowerrc/5665117697998848&quot;&gt;DevOps Dashboard Sysopia&lt;/a&gt;&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Student:&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/vpowerrc&quot;&gt;Viduranga Wijesooriya&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mentor:&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/dimus&quot;&gt;dimus&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;finding-scientific-namesnetineti&quot;&gt;&lt;a href=&quot;https://www.google-melange.com/gsoc/project/details/google/gsoc2015/wcluo/5661458385862656&quot;&gt;Finding Scientific Names&lt;/a&gt;&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Student:&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/wencanluo&quot;&gt;Wencan Luo&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mentor:&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/dimus&quot;&gt;dimus&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I had been very happy to see how many people were interested in the idea of
+finding scientific names in texts – we had 12 proposals, so competition was
+fierce this year! I think we got great students and I am looking forward
+to the Google Summer of Code 2015.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Gracious gift from Encylopedia of Life</title>
+      <link>http://globalnames.org/news/2015/04/22/thank_you_eol/</link>
+      <pubDate>Wed, 22 Apr 2015 10:41:03 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>eol</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/22/thank_you_eol/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;http://eol.org&quot;&gt;Encyclopedia of Life&lt;/a&gt; folks made a truly glorious present to Global Names
+consisting of several Dell 710 servers which were used for running EOL at
+Harvard. Now, when site moved to Smithsoninan EOL donates some of these
+computers to GN, and 10 of them are already at &lt;a href=&quot;http://mbl.edu&quot;&gt;Marine Biological
+Laboratory&lt;/a&gt;, waiting to be plugged to internet and electricity. Another
+truly amazing gift from EOL is 14 100gb hard drives which will run GN
+databases.&lt;/p&gt;
+
+&lt;p&gt;I feel happy warm and fuzzy – thank you EOL! I hope with this new
+hardware I will be able to increase GN capacity about 5x using current code!
+Next step – installing Chef, Docker, and GN applications to serve the
+biodiversity community.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>GNA work continues</title>
+      <link>http://globalnames.org/news/2015/04/17/gna_is_back/</link>
+      <pubDate>Fri, 17 Apr 2015 05:53:00 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gna</category>
+      
+      <category>eol</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2015/04/17/gna_is_back/</guid>
+      <description>&lt;p&gt;Last year we did get the second round of funding for Global Names Architecture
+development. Our &lt;a href=&quot;http://nsf.gov/awardsearch/showAward?AWD_ID=1062387&quot;&gt;first grant&lt;/a&gt; had been about exploration of how to find
+scientific names in texts, how to crossmap different spelling variants of the
+same names to each other, how to connect names to literature collected at
+&lt;a href=&quot;http://www.biodiversitylibrary.org/&quot;&gt;Biodiversity Heritage Library&lt;/a&gt;, how to organize scientific name usages,
+how to register new zoological scientific names electronically. Several
+intersting projects spanned out of this effort and you can read about them
+at &lt;a href=&quot;http://globalnames.org&quot;&gt;Global Names site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was a hard year for &lt;a href=&quot;http://eol.org&quot;&gt;Encyclopedia of Life&lt;/a&gt; where I work, and for Global
+Names. I did have to spend most of the first 8 months since our second NSF
+grant got funding helping EOL with system administration support and transfer
+EOL site from Harvard to Smithsonian Museum of Natural History. It is done now,
+and I am happy to be able to work on Global Names project again!&lt;/p&gt;
+
+&lt;p&gt;What kind of resources do we have now? 2 months of Paddy (David Patterson)
+time, 2 months of Rich Pyle time, About a 1.5 years of mine,
+and 1 year of another developer. We also got 2 excellent participants for
+Google Summer of Code this year, so it is 6 months of their time as well.
+And a quest for further funding continues as I write.&lt;/p&gt;
+
+&lt;p&gt;Encyclopedia of Life kindly donated a lot of &lt;a href=&quot;http://globalnamesarchitecture.github.io/gna/eol/2015/04/22/thank_you_eol.html&quot;&gt;hardware&lt;/a&gt;, and
+&lt;a href=&quot;http://mbl.edu&quot;&gt;Marine Biological Laboratory&lt;/a&gt; provides us with a whole rack of space,
+fast internet connection. So we are set for an exciting year ahead!&lt;/p&gt;
+
+&lt;p&gt;What are the plans? This grant covers work on name finding and name resolution.
+We try to find major use-cases (Arctos, EOL, iDigBio, Catalogue of Life, GBIF)
+and satisfy their needs. We expect it will cover needs of 90% of other users,
+and the remaining 10% of functionality will trickle by means of going through
+github issues, fixing bugs, adding features, thinking about new ideas.&lt;/p&gt;
+
+</description>
+    </item>
+    
   </channel>
 </rss>

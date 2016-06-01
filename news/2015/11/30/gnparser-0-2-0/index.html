@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Scala-based gnparser v.0.3.0</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v3.1.6">
+  <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body class="wrap">
+  <header role="banner">
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="">
+    <a href="/docs/home/">Doc<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span></a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit one-quarter center-on-mobiles">
+      <div class="logo">
+        <a href="/">
+          <span class="sr-only">GlobalNames</span>
+          <img src="/img/gna-logo.svg" width="100" alt="GNA Logo">
+        </a>
+      </div>
+    </div>
+    <nav class="main-nav unit three-quarters hide-on-mobiles">
+      <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="">
+    <a href="/docs/home/">Doc<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span></a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <section class="news">
+    <div class="grid">
+
+      <div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the blog…</option>
+    <option value="/news/">Home</option>
+    <optgroup label="v1.x">
+      
+      <option value="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</option>
+      
+      <option value="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</option>
+      
+      <option value="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</option>
+      
+      <option value="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</option>
+      
+      <option value="/news/2015/10/19/open-source-papers/">Writing Papers as Open Source</option>
+      
+      <option value="/news/2015/10/14/bishop-museum-workshop/">Honolulu Workshop</option>
+      
+      <option value="/news/2015/10/13/BioGUID-Wins-Award/">BioGUID Wins Award!</option>
+      
+      <option value="/news/2015/10/08/BioGUID-Moved/">BioGUID merges with GN</option>
+      
+      <option value="/news/2015/10/06/gnub-proposal/">GNUB proposal submitted to NSF</option>
+      
+      <option value="/news/2015/10/05/ui-mid-november/">Global Names Gains Stable Funding</option>
+      
+      <option value="/news/2015/09/22/otol-eol/">Crossmapping Names by IDs</option>
+      
+      <option value="/news/2015/09/09/alex-myltsev/">Alexander Myltsev</option>
+      
+      <option value="/news/2015/09/03/sysopia/">Sysopia release v0.5.0</option>
+      
+      <option value="/news/2015/09/03/globalnames-site/">Site globalnames.org merged with GN blog</option>
+      
+      <option value="/news/2015/08/27/parser-3-4-1/">GN Parser v.3.4.1</option>
+      
+      <option value="/news/2015/08/20/parser-3-4-0/">GN Parser v.3.4.0</option>
+      
+      <option value="/news/2015/08/14/parser-3-3-0/">GlobalNames Parser v.3.3.0 adds host option for socket server</option>
+      
+      <option value="/news/2015/08/13/col-meeting/">Catalogue of Life Meeting in Champaign/Urbana</option>
+      
+      <option value="/news/2015/08/12/gn-resolver-vernaculars/">Global Names Resolver now shows vernacular names</option>
+      
+      <option value="/news/2015/06/01/biodiversity-3-2-1/">Global Names Parser v3.2.1</option>
+      
+      <option value="/news/2015/05/31/gn-uuid-0-5-0/">New UUID v5 Generation Tool -- gn_uuid v0.5.0</option>
+      
+      <option value="/news/2015/05/31/gn-crossmap-0-1-6/">Crossmap Tool v0.1.6</option>
+      
+      <option value="/news/2015/05/28/gn-crossmap-0-1-5/">Crossmap Tool v0.1.5</option>
+      
+      <option value="/news/2015/05/20/idigbio-client/">iDigBio API Client v0.1.1</option>
+      
+      <option value="/news/2015/05/14/parser-3-1-10/">Scientific Name Parser v3.1.10</option>
+      
+      <option value="/news/2015/05/12/gn-moves-to-illinois/">Global Names Grant Goes to Illinois</option>
+      
+      <option value="/news/2015/05/11/gn-crossmap-gem/">New tool to crossmap checklists</option>
+      
+      <option value="/news/2015/05/06/phylo-trees/">Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</option>
+      
+      <option value="/news/2015/05/03/higher-level-classification/">New Higher Level Classification for Catalogue of Life</option>
+      
+      <option value="/news/2015/05/03/sysopia-starts/">Starting GSOC 2015 Sysopia Project</option>
+      
+      <option value="/news/2015/05/02/species-file-group/">Species File Group -- new home for GN?</option>
+      
+      <option value="/news/2015/04/29/good-bad-names/">Good names, bad names?</option>
+      
+      <option value="/news/2015/04/28/idigbio-api-hackathon-meet/">iDigBio hackathon preparation</option>
+      
+      <option value="/news/2015/04/28/gsoc-netineti/">Launching NetiNeti Google Summer of Code Project</option>
+      
+      <option value="/news/2015/04/27/gsoc-2015-starts/">Google Summer of Code 2015 starts</option>
+      
+      <option value="/news/2015/04/22/thank_you_eol/">Gracious gift from Encylopedia of Life</option>
+      
+      <option value="/news/2015/04/17/gna_is_back/">GNA work continues</option>
+      
+    </optgroup>
+  </select>
+</div>
+
+
+      <div class="unit four-fifths">
+        <article>
+  <h2>
+    Scala-based gnparser v.0.3.0
+    <a href="/news/2015/11/30/gnparser-0-2-0/" class="permalink" title="Permalink">∞</a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      gnparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      30 Nov 2015
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+    <div class="social-media">
+			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+			<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+    </div>
+  </div>
+  
+  <div class="post-content">
+    <p>(Please note that gnparser is a new project, different from the formerly
+released biodiversity parser.)</p>
+
+<p>We are happy to announce a public release of <a href="https://github.com/GlobalNamesArchitecture/gnparser">Global Names Parser</a>
+or <code class="highlighter-rouge">gnparser</code> – the first project that marks transition of Global Names
+reconciliation and resolution services from “prototype” to “production”. The
+<code class="highlighter-rouge">gnparser</code> project is developed by <a href="https://github.com/alexander-myltsev" class="user-mention">@alexander-myltsev</a> and <a href="https://github.com/dimus" class="user-mention">@dimus</a> in Scala
+language. GNParser can be used as a library, a command line tool, a socket
+server, a web-program and RESTful-service. It is easiest to try it at
+<a href="http://parser.globalnames.org">parser.globalnames.org</a></p>
+
+<p>Scientific names might be expressed by quite different name strings. Sometimes
+the difference is just one comma, sometimes authors are included or excluded,
+sometimes ranks are omitted. With all this variability “in the wild” we need to
+figure out how to group all these different spelling variants.  Name parsing is
+an unexpectedly complex and absolutely necessary step for connecting biological
+information via scientific names.</p>
+
+<p>In 2008 Global Names released <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Biodiversity Gem</a> – a
+scientific name parser written in Ruby for these purposes. The library in its
+3 variants enjoyed a significant success – about <a href="https://rubygems.org/search?utf8=%E2%9C%93&amp;query=biodiversity">150 000
+downloads</a> and a notion as the <a href="http://biogems.info/">most popular bio-library</a>
+for Ruby language. It allowed to parse about 2-3 million names an hour, and
+had been the basis of name reconciliation for many projects from the moment
+of its publication.</p>
+
+<p>GNParser is a direct descendant of the biodiversity gem. It serves the same
+purpose and input/output format of both projects are similar. It also marks
+eventual discontinuation of ‘biodiversity gem project’ and migration of all
+Global Names code to the new <code class="highlighter-rouge">gnparser</code> library.</p>
+
+<p>Why did we go through the pain of making a completely new parser from scratch?
+The short answer is <em>scalability and portability</em>. We want to be able to
+remove parsing step from being a bottleneck for any number of names thrown at
+resolution services. For example finding all names in <a href="http://www.biodiversitylibrary.org/">Biodiversity Heritage
+Library</a> took us 43 days 3 years ago. Parsing step alone took more than 1
+day. If we want to improve algorithms of finding names in BHL – we cannot
+wait 40 days. We want to be able to do it within one day and improve whole
+BHL index every time our algorithms are enhanced significantly.</p>
+
+<p>We have an ambitious goal of making time spent on sending names to resolution
+services over internet and then time spent on transferring the answers back to
+be the bottlenecks of our name matching services. For such speeds we need a
+very fast parsing. Scala allows us to dramatically improve speed and
+scalability of the parsing step.</p>
+
+<p>Having a parser running in Java Virtual Machine environment allows us to give
+biodiversity community a much more portable parsing tool. <a href="https://github.com/GlobalNamesArchitecture/gnparser/tree/master/examples">Out of the
+box</a> parser library will work with Scala, Java, R, Jython and JRuby
+directly. We hope that it will speedup and simplify many biodiversity projects.</p>
+
+<p>This is the first public release of the library. Please download it, run
+it, test it and give us your feedback, so we can improve it further. Happy
+parsing <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"></p>
+
+<p><strong>WARNING:</strong> JSON output format might change slightly or dramatically, as we
+are in the process of refining it. The JSON format should be finalized for
+version 0.3.0</p>
+
+
+  </div>
+</article>
+
+      </div>
+
+      <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <ul>
+      <li class="">
+        <a href="/news/">All News</a>
+      </li>
+    </ul>
+    <h4>Recent Releases</h4>
+    <ul>
+      
+      <li class="current">
+        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
+      </li>
+      
+      <li class="current">
+        <a href="/news/2015/11/30/gnparser-0-2-0/">GNParser v0.2.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/09/03/sysopia/">Sysopia v0.5.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/08/27/parser-3-4-1/">Parser v3.4.1</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2015/08/20/parser-3-4-0/">Parser v3.4.0</a>
+      </li>
+      
+    </ul>
+    <h4>Other News</h4>
+    <ul>
+        
+        <li class="current">
+          <a href="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</a>
+        </li>
+        
+        <li class="current">
+          <a href="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/19/open-source-papers/">Writing Papers as Open Source</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/14/bishop-museum-workshop/">Honolulu Workshop</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/13/BioGUID-Wins-Award/">BioGUID Wins Award!</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/08/BioGUID-Moved/">BioGUID merges with GN</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/06/gnub-proposal/">GNUB proposal submitted to NSF</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/10/05/ui-mid-november/">Global Names Gains Stable Funding</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/22/otol-eol/">Crossmapping Names by IDs</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/09/alex-myltsev/">Alexander Myltsev</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/03/sysopia/">Sysopia release v0.5.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/09/03/globalnames-site/">Site globalnames.org merged with GN blog</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/27/parser-3-4-1/">GN Parser v.3.4.1</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/20/parser-3-4-0/">GN Parser v.3.4.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/14/parser-3-3-0/">GlobalNames Parser v.3.3.0 adds host option for socket server</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/13/col-meeting/">Catalogue of Life Meeting in Champaign/Urbana</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/08/12/gn-resolver-vernaculars/">Global Names Resolver now shows vernacular names</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/06/01/biodiversity-3-2-1/">Global Names Parser v3.2.1</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/31/gn-uuid-0-5-0/">New UUID v5 Generation Tool -- gn_uuid v0.5.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/31/gn-crossmap-0-1-6/">Crossmap Tool v0.1.6</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/28/gn-crossmap-0-1-5/">Crossmap Tool v0.1.5</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/20/idigbio-client/">iDigBio API Client v0.1.1</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/14/parser-3-1-10/">Scientific Name Parser v3.1.10</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/12/gn-moves-to-illinois/">Global Names Grant Goes to Illinois</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/11/gn-crossmap-gem/">New tool to crossmap checklists</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/06/phylo-trees/">Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/03/higher-level-classification/">New Higher Level Classification for Catalogue of Life</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/03/sysopia-starts/">Starting GSOC 2015 Sysopia Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/05/02/species-file-group/">Species File Group -- new home for GN?</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/29/good-bad-names/">Good names, bad names?</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/28/idigbio-api-hackathon-meet/">iDigBio hackathon preparation</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/28/gsoc-netineti/">Launching NetiNeti Google Summer of Code Project</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/27/gsoc-2015-starts/">Google Summer of Code 2015 starts</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/22/thank_you_eol/">Gracious gift from Encylopedia of Life</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2015/04/17/gna_is_back/">GNA work continues</a>
+        </li>
+        
+    </ul>
+  </aside>
+</div>
+
+
+      <div class="clear"></div>
+
+    </div>
+  </section>
+
+
+  <footer role="contentinfo">
+  <div class="grid" style="vertical-align: middle">
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+          <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
+        </a>
+        The content of thiswebsite is in public domain
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+      Powered by <a href="http://github.com/jekyll/jekyll">Jekyll</a>
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        Hosted on 
+        <a href="https://github.com/GlobalNamesArchitecture">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+
+  
+
+
+</body>
+</html>
