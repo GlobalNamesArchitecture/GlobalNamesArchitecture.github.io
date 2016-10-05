@@ -31,7 +31,7 @@ git checkout master
 cp -r _site/* .
 git add .
 git commit -m 'your message'
-bit push
+git push
 ```
 The site should be uptdated at [globalnames.org] shortly.
 
