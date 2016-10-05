@@ -120,8 +120,8 @@ DEPENDENCIES
   kramdown (~> 1.8)
   mime-types (~> 2.6)
   pygments.rb (~> 0.6)
-  rake
+  rake (~> 11.1)
   rouge (~> 1.10)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
