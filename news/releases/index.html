@@ -89,11 +89,13 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2016/10/06/gnparser-0-3-3/">gnparser release v0.3.3</option>
+      
       <option value="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</option>
       
       <option value="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</option>
       
-      <option value="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</option>
+      <option value="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.2.0</option>
       
       <option value="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</option>
       
@@ -172,6 +174,71 @@
         
   <article>
   <h2>
+    <a href="/news/2016/10/06/gnparser-0-3-3/">
+      gnparser release v0.3.3
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      gnparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      06 Oct 2016
+    </span>
+    <a href="https://github.com/alexander-myltsev" class="post-author">
+      <img src="https://github.com/alexander-myltsev.png" class="avatar" alt="alexander-myltsev avatar" width="24" height="24">
+      alexander-myltsev
+    </a>
+  </div>
+  <div class="post-content">
+    <p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="highlighter-rouge">gnparser</code></a>.
+Changes in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">v0.3.3 release</a>:</p>
+
+<ul>
+  <li>add optionally showing canonical name UUID</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="err">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
+</span><span class="err">res</span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
+</span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
+  </span><span class="s2">"canonical_name"</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="err">//</span><span class="w"> </span><span class="err">...</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p>add year’s range to AST node that is encoded with <code class="highlighter-rouge">Year</code>’s field
+<code class="highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
+  </li>
+  <li>
+    <p>parse names ending on hybrid sign (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/88">#88</a>)</p>
+  </li>
+  <li>
+    <p>support hybrid abbreviation expansions (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/310">#310</a>)</p>
+  </li>
+  <li>
+    <p>support raw hybrid formula parsing (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/311">#311</a>)</p>
+  </li>
+  <li>
+    <p>continuous build is moved to <a href="https://circleci.com/gh/GlobalNamesArchitecture/gnparser">CircleCI</a></p>
+  </li>
+  <li>
+    <p>and many structural changes, bug-fixes and quality improvements.
+They are described in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">release</a> documenation.</p>
+  </li>
+</ul>
+
+
+  </div>
+</article>
+
+
+  <article>
+  <h2>
     <a href="/news/2016/05/23/gnparser-0-3-0/">
       Scala-based gnparser v.0.3.0
     </a>
@@ -240,7 +307,7 @@ They are described in the <a href="https://github.com/GlobalNamesArchitecture/gn
   <article>
   <h2>
     <a href="/news/2015/11/30/gnparser-0-2-0/">
-      Scala-based gnparser v.0.3.0
+      Scala-based gnparser v.0.2.0
     </a>
   </h2>
   <span class="post-category">
@@ -940,6 +1007,10 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
       </li>
       
@@ -955,13 +1026,13 @@ using any field from the input.</p>
         <a href="/news/2015/08/27/parser-3-4-1/">Parser v3.4.1</a>
       </li>
       
-      <li class="">
-        <a href="/news/2015/08/20/parser-3-4-0/">Parser v3.4.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2016/10/06/gnparser-0-3-3/">gnparser release v0.3.3</a>
+        </li>
         
         <li class="">
           <a href="/news/2016/05/23/gnparser-0-3-0/">Scala-based gnparser v.0.3.0</a>
@@ -972,7 +1043,7 @@ using any field from the input.</p>
         </li>
         
         <li class="">
-          <a href="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.3.0</a>
+          <a href="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.2.0</a>
         </li>
         
         <li class="">
