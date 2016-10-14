@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Wed, 12 Oct 2016 05:49:58 -0500</pubDate>
-    <lastBuildDate>Wed, 12 Oct 2016 05:49:58 -0500</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 05:26:38 -0500</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 05:26:38 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.1.6</generator>
     <description>Scientific Name Services</description>
@@ -1503,7 +1503,7 @@ well it is enough for sysadmin to check out sysopia once a day to have a very
 good idea about what is happening with the system from the moment Sysopia is
 installed. We did install it for EOL and I find it very useful.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;&lt;img src=&quot;/images/sysopia.png&quot; alt=&quot;sysopia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;&lt;img src=&quot;/images/blog/sysopia.png&quot; alt=&quot;sysopia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Not much functionality is there yet, but graphs show well, and it is possible
 to get a point data by hovering over a line, and highlight a particular machine
