@@ -32,5 +32,5 @@ expand it to other backends after we nail down the user interface.
 [vidur]: https://github.com/vpowerrc
 [gsoc]: https://www.google-melange.com/gsoc/project/details/google/gsoc2015/vpowerrc/5665117697998848
 [sysopia]: https://github.com/EOL/sysopia
-[sysopia-img]: /images/sysopia.png
+[sysopia-img]: /images/blog/sysopia.png
 [sensu]: http://sensuapp.org/
