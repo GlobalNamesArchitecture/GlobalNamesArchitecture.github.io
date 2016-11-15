@@ -1,3 +1,4 @@
+.idea
 Gemfile.lock
 *.gem
 pkg/
@@ -9,7 +10,6 @@ _site/
 bbin/
 gh-pages/
 coverage
-.ruby-version
 .ruby-gemset
 .sass-cache
 tmp/*
