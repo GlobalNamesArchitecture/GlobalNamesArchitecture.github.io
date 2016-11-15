@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Fri, 14 Oct 2016 05:26:38 -0500</pubDate>
-    <lastBuildDate>Fri, 14 Oct 2016 05:26:38 -0500</lastBuildDate>
+    <pubDate>Tue, 15 Nov 2016 15:55:06 -0600</pubDate>
+    <lastBuildDate>Tue, 15 Nov 2016 15:55:06 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.1.6</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,44 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>Names in November meeting</title>
+      <link>http://globalnames.org/news/2016/11/15/names-in-november/</link>
+      <pubDate>Tue, 15 Nov 2016 09:51:28 -0600</pubDate>
+      <dc:creator>deepreef</dc:creator>
+      
+      
+      <category>names</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2016/11/15/names-in-november/</guid>
+      <description>&lt;p&gt;Global Names developers Dmitry Mozzherin and Richard Pyle were invited to
+attend a workshop called “Names in November”, organized by the Catalog of Life
+and GBIF and hosted in Leiden.  The three-day meeting involved more than twenty
+people from key taxonomic and nomenclatural organizations, and focused on
+discussing ways that a global information system of taxonomy, including both
+names data and accepted species information, could be designed to more
+seamlessly interconnect biodiversity data through organism names.  Although the
+theme of the meeting was certainly not new (many participants in this meeting
+had attended similar meetings going back decades discussing essentially the
+same idea), the tone of the discussion was refreshing in that it focused
+comparatively little on politics and technical details, and instead
+concentrated on identifying whether such a shared taxonomic infrastructure was
+even possible (given the political, financial, and technical circumstances
+currently existing within the main likely partners), and what conditions would
+need to be met.&lt;/p&gt;
+
+&lt;p&gt;Many of the points that participants agreed on in terms of needs and services
+very closely matched the fundamental goals and infrastructure we have developed
+(and continue to develop) within the context of Global Names.  Now that GN is
+much more closely coordinating with the Catalog of Life, GN data indexes and
+services will likely play an important role in implementing the shared global
+taxonomy resource envisioned during the meeting. Following this meeting, we
+have a renewed sense of focus within GN development to finish harmonizing
+integration of GNI and GNUB services, and especially to rapidly increase the
+effort to bulk-populate GNUB from existing data.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>gnparser release v0.3.3</title>
