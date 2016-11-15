@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Wed, 05 Oct 2016 13:32:18 -0500</pubDate>
-    <lastBuildDate>Wed, 05 Oct 2016 13:32:18 -0500</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 05:26:38 -0500</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 05:26:38 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.1.6</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,60 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>gnparser release v0.3.3</title>
+      <link>http://globalnames.org/news/2016/10/06/gnparser-0-3-3/</link>
+      <pubDate>Thu, 06 Oct 2016 09:00:00 -0500</pubDate>
+      <dc:creator>alexander-myltsev</dc:creator>
+      
+      
+      <category>gnparser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2016/10/06/gnparser-0-3-3/</guid>
+      <description>&lt;p&gt;We are happy to announce the release of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;&lt;/a&gt;.
+Changes in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3&quot;&gt;v0.3.3 release&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;add optionally showing canonical name UUID&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;scala&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fromString(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;).render(compact=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;showCanonicalUuid=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;canonical_name&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;add year’s range to AST node that is encoded with &lt;code class=&quot;highlighter-rouge&quot;&gt;Year&lt;/code&gt;’s field
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rangeEnd: Option[CapturePosition]&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;parse names ending on hybrid sign (&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/issues/88&quot;&gt;#88&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;support hybrid abbreviation expansions (&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/issues/310&quot;&gt;#310&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;support raw hybrid formula parsing (&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/issues/311&quot;&gt;#311&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;continuous build is moved to &lt;a href=&quot;https://circleci.com/gh/GlobalNamesArchitecture/gnparser&quot;&gt;CircleCI&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and many structural changes, bug-fixes and quality improvements.
+They are described in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3&quot;&gt;release&lt;/a&gt; documenation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Scala-based gnparser v.0.3.0</title>
@@ -113,7 +167,7 @@ Kubernetes at Google Container Engine to keep it alive.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Scala-based gnparser v.0.3.0</title>
+      <title>Scala-based gnparser v.0.2.0</title>
       <link>http://globalnames.org/news/2015/11/30/gnparser-0-2-0/</link>
       <pubDate>Mon, 30 Nov 2015 11:01:30 -0600</pubDate>
       <dc:creator>dimus</dc:creator>
@@ -1449,7 +1503,7 @@ well it is enough for sysadmin to check out sysopia once a day to have a very
 good idea about what is happening with the system from the moment Sysopia is
 installed. We did install it for EOL and I find it very useful.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;&lt;img src=&quot;/images/sysopia.png&quot; alt=&quot;sysopia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/EOL/sysopia&quot;&gt;&lt;img src=&quot;/images/blog/sysopia.png&quot; alt=&quot;sysopia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Not much functionality is there yet, but graphs show well, and it is possible
 to get a point data by hovering over a line, and highlight a particular machine
