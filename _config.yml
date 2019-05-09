@@ -10,13 +10,15 @@ collections:
     output: true
   apps:
     output: true
+  workshops:
+    output: true
 
 markdown: kramdown
 # kramdown:
 #   hard_wrap: false
 #   input: GFM
 
-gems:
+plugins:
 - jekyll-mentions
 - jemoji
 - jekyll-redirect-from
