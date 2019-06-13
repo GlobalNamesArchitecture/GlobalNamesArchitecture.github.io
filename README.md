@@ -33,6 +33,6 @@ git add .
 git commit -m 'your message'
 git push
 ```
-The site should be uptdated at [globalnames.org] shortly.
+The site should be updated at [globalnames.org] shortly.
 
 [globalnames.org]: http://globalnames.org

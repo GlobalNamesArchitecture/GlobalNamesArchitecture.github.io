@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 09 May 2019 16:42:06 -0500</pubDate>
-    <lastBuildDate>Thu, 09 May 2019 16:42:06 -0500</lastBuildDate>
+    <pubDate>Thu, 13 Jun 2019 15:47:15 -0500</pubDate>
+    <lastBuildDate>Thu, 13 Jun 2019 15:47:15 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -24,20 +24,6 @@
       <width>144</width>
       <height>73</height>
     </image>
-    
-    <item>
-      <title>New gnparser</title>
-      <link>http://globalnames.org/news/2017/05/19/catalogue-of-life/</link>
-      <pubDate>Fri, 19 May 2017 23:53:39 -0500</pubDate>
-      <dc:creator>dimus</dc:creator>
-      
-      
-      <category>blog</category>
-      
-      <guid isPermaLink="true">http://globalnames.org/news/2017/05/19/catalogue-of-life/</guid>
-      <description>
-</description>
-    </item>
     
     <item>
       <title>Power down</title>
