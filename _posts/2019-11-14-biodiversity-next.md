@@ -3,7 +3,7 @@ layout: news_item
 title: Biodiversity-Next Conference
 date: 2019-11-14 04:53:39
 author: dimus
-categories: announcement
+categories: Meetings/Workshops
 comments: true
 ---
 
