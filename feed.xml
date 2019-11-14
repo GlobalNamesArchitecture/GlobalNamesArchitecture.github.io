@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 14 Nov 2019 10:09:14 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Nov 2019 10:09:14 -0600</lastBuildDate>
+    <pubDate>Thu, 14 Nov 2019 10:12:35 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Nov 2019 10:12:35 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -32,7 +32,7 @@
       <dc:creator>dimus</dc:creator>
       
       
-      <category>announcement</category>
+      <category>Meetings/Workshops</category>
       
       <guid isPermaLink="true">http://globalnames.org/news/2019/11/13/biodiversity-next/</guid>
       <description>&lt;p&gt;For the last couple of years I have been working on making scientific-name
