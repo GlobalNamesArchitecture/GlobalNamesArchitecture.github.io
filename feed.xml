@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 14 Nov 2019 10:19:27 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Nov 2019 10:19:27 -0600</lastBuildDate>
+    <pubDate>Thu, 14 Nov 2019 11:06:21 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Nov 2019 11:06:21 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -69,12 +69,12 @@ in our algorithms and increase the quality of scientific names index
 continuously.&lt;/p&gt;
 
 &lt;p&gt;We are very interested to work with other people who try to enhance usability
-of collections like BHL by running natural language processing and machine
-learning algorithms. During the conference several researches in the field
-agreed to participate in a brain-storming workshop at Illinois Natural
-History Survay, Champaign/Urbana to develop new technologies for data-mining
-in BHL and other similar corpora. We are planning to organize such a workshop
-in April/May 2020.&lt;/p&gt;
+of literature aggregators like BHL by developing natural language processing
+and machine learning algorithms. During the conference several researches in
+the field agreed to participate in a brain-storming workshop at Illinois
+Natural History Survay, Champaign/Urbana to develop new technologies for
+data-mining in BHL and other similar corpora. We are planning to organize
+such a workshop in April/May 2020.&lt;/p&gt;
 </description>
     </item>
     
