@@ -39,9 +39,9 @@ in our algorithms and increase the quality of scientific names index
 continuously.
 
 We are very interested to work with other people who try to enhance usability
-of literature aggregators like BHL by running natural language processing and
-machine learning algorithms. During the conference several researches in the
-field agreed to participate in a brain-storming workshop at Illinois Natural
-History Survay, Champaign/Urbana to develop new technologies for data-mining
-in BHL and other similar corpora. We are planning to organize such a workshop
-in April/May 2020.
+of literature aggregators like BHL by developing natural language processing
+and machine learning algorithms. During the conference several researches in
+the field agreed to participate in a brain-storming workshop at Illinois
+Natural History Survay, Champaign/Urbana to develop new technologies for
+data-mining in BHL and other similar corpora. We are planning to organize
+such a workshop in April/May 2020.
