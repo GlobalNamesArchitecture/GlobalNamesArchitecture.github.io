@@ -1,7 +1,7 @@
 ---
 layout: news_item
 title: gnparser release (v0.12.0) can be used in most modern languages
-date: 2019-11-14 04:53:39
+date: 2019-11-19 15:01:13
 author: dimus
 categories: gnparser and release
 comments: true
