@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Writing Papers as Open Source</title>
+  <title>gnparser release (v0.12.0) can be used in most modern languages</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -186,17 +186,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Writing Papers as Open Source
-    <a href="/news/2015/10/19/open-source-papers/" class="permalink" title="Permalink">∞</a>
+    gnparser release (v0.12.0) can be used in most modern languages
+    <a href="/news/2019/11/19/gnparser-clib/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      openscience
+      gnparser, and, and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      19 Oct 2015
+      19 Nov 2019
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -209,35 +209,64 @@
   </div>
   
   <div class="post-content">
-    <p>Does a culture exist out there which considers a process of writing scientific
-papers to be akin to writing an open source code?</p>
+    <p>A few days ago we released v0.12.0 of <a href="https://gitlab.com/gogna/gnparser/-/releases">gnparser (Go
+version)</a>. This version made it
+possible to compile gnparser algorithms into <a href="https://gitlab.com/gogna/gnparser/blob/master/binding/main.go">C-compatible
+library</a>. Such
+library makes it possible to use gnparser with its native speeds in any
+language that supports binding to C. Such languages inlude Python, Ruby, Java
+(via JNI), Rust, C, C++ and many others.</p>
 
-<p>For the last 8 years I had been blessed being paid for doing open source
-development. It means that for that long about everything I do is almost
-instantly available publicly. This model fits my way of thinking, my values,
-and I see an advantage in making all I do available for public to see, comment,
-and enhance.</p>
+<p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
+gem</a> to take benefit
+of a dramatic speed increase and parsing quality of <code class="highlighter-rouge">gnparser</code>.</p>
 
-<p>Now I am writing a paper, and I feel being thrown into “dark ages”. Whole paper
-writing and publishing culture was one of the reasons I left molecular biology
-and went to programming. I assume the following is usually true when people
-write a scientific paper –</p>
+<p>Here are a quick benchmarks that compare how <code class="highlighter-rouge">biodiversity</code> performs before
+and now:</p>
 
-<ul>
-  <li>People normally do not share publicly what they work on until it is published.</li>
-  <li>People normally use proprietary software to write papers</li>
-  <li>People often loose their copyright or ability to share their work when their paper is accepted by a journal</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Program</th>
+      <th>Version</th>
+      <th>Full/Simple</th>
+      <th style="text-align: right">Names/min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gnparser</td>
+      <td>0.12.0</td>
+      <td>Simple</td>
+      <td style="text-align: right">3,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Simple</td>
+      <td style="text-align: right">2,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Full JSON</td>
+      <td style="text-align: right">800,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>3.5.1</td>
+      <td>n/a</td>
+      <td style="text-align: right">40,000</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Obviously there is a progress with the last point, but what about other 2?</p>
+<p>With this improved speed Encyclopedia of Life, which is written in Ruby,
+can process all their names using Ruby in less than 15 minutes.</p>
 
-<ul>
-  <li>Can I use public revision control system when I am writing a paper?</li>
-  <li>Can I publish using a revision control system from the very first paragraph for all to see?</li>
-  <li>What open standards/tools can I use (LaTeX, or even markdown?) for writing a paper</li>
-  <li>Can I consider publishing paper to be a ‘release’, like for a program?</li>
-  <li>Should electronic version be frozen? Can it evolve after publication?</li>
-</ul>
+<p>README file of <code class="highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
+library and <code class="highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
+other languages.</p>
 
   </div>
 </article>
@@ -254,7 +283,7 @@ write a scientific paper –</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2019/11/19/gnparser-clib/"> v</a>
       </li>
       
@@ -278,7 +307,7 @@ write a scientific paper –</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2019/11/19/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
         </li>
         
@@ -314,7 +343,7 @@ write a scientific paper –</p>
           <a href="/news/2015/10/30/open-source-papers2/">Writing Papers as Open Source -- Solutions</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/10/19/open-source-papers/">Writing Papers as Open Source</a>
         </li>
         
