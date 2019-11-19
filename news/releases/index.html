@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2019/11/13/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</option>
+      
       <option value="/news/2019/11/13/biodiversity-next/">Biodiversity-Next Conference</option>
       
       <option value="/news/2017/05/19/blackout/">Power down</option>
@@ -183,6 +185,90 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2019/11/13/gnparser-clib/">
+      gnparser release (v0.12.0) can be used in most modern languages
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      gnparser, and, and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      13 Nov 2019
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p>A few days ago we released v0.12.0 of <a href="https://gitlab.com/gogna/gnparser/-/releases">gnparser (Go
+version)</a>. This version made it
+possible to compile gnparser algorithms into <a href="https://gitlab.com/gogna/gnparser/blob/master/binding/main.go">C-compatible
+library</a>. Such
+library makes it possible to use gnparser with its native speeds in any
+language that supports binding to C. Such languages inlude Python, Ruby, Java
+(via JNI), Rust, C, C++ and many others.</p>
+
+<p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
+gem</a> to take benefit
+of a dramatic speed increase and parsing quality of <code class="highlighter-rouge">gnparser</code>.</p>
+
+<p>Here are a quick benchmarks that compare how <code class="highlighter-rouge">biodiversity</code> performs before
+and now:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Program</th>
+      <th>Version</th>
+      <th>Full/Simple</th>
+      <th style="text-align: right">Names/min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gnparser</td>
+      <td>0.12.0</td>
+      <td>Simple</td>
+      <td style="text-align: right">3,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Simple</td>
+      <td style="text-align: right">2,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Full JSON</td>
+      <td style="text-align: right">800,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>3.5.1</td>
+      <td>n/a</td>
+      <td style="text-align: right">40,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>With this improved speed Encyclopedia of Life, which is written in Ruby,
+can process all their names using Ruby in less than 15 minutes.</p>
+
+<p>README file of <code class="highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
+library and <code class="highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
+other languages.</p>
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2016/10/06/gnparser-0-3-3/">
@@ -1018,6 +1104,10 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2019/11/13/gnparser-clib/"> v</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
       </li>
       
@@ -1033,13 +1123,13 @@ using any field from the input.</p>
         <a href="/news/2015/09/03/sysopia/">Sysopia v0.5.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2015/08/27/parser-3-4-1/">Parser v3.4.1</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2019/11/13/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/11/13/biodiversity-next/">Biodiversity-Next Conference</a>

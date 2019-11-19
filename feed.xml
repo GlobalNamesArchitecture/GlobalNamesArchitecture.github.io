@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 14 Nov 2019 11:06:21 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Nov 2019 11:06:21 -0600</lastBuildDate>
+    <pubDate>Tue, 19 Nov 2019 14:57:35 -0600</pubDate>
+    <lastBuildDate>Tue, 19 Nov 2019 14:57:35 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,81 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>gnparser release (v0.12.0) can be used in most modern languages</title>
+      <link>http://globalnames.org/news/2019/11/13/gnparser-clib/</link>
+      <pubDate>Wed, 13 Nov 2019 22:53:39 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gnparser</category>
+      
+      <category>and</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2019/11/13/gnparser-clib/</guid>
+      <description>&lt;p&gt;A few days ago we released v0.12.0 of &lt;a href=&quot;https://gitlab.com/gogna/gnparser/-/releases&quot;&gt;gnparser (Go
+version)&lt;/a&gt;. This version made it
+possible to compile gnparser algorithms into &lt;a href=&quot;https://gitlab.com/gogna/gnparser/blob/master/binding/main.go&quot;&gt;C-compatible
+library&lt;/a&gt;. Such
+library makes it possible to use gnparser with its native speeds in any
+language that supports binding to C. Such languages inlude Python, Ruby, Java
+(via JNI), Rust, C, C++ and many others.&lt;/p&gt;
+
+&lt;p&gt;We already updated &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Ruby’s biodiversity parser
+gem&lt;/a&gt; to take benefit
+of a dramatic speed increase and parsing quality of &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are a quick benchmarks that compare how &lt;code class=&quot;highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; performs before
+and now:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Program&lt;/th&gt;
+      &lt;th&gt;Version&lt;/th&gt;
+      &lt;th&gt;Full/Simple&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Names/min&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;gnparser&lt;/td&gt;
+      &lt;td&gt;0.12.0&lt;/td&gt;
+      &lt;td&gt;Simple&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3,000,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;biodiversity&lt;/td&gt;
+      &lt;td&gt;4.0.1&lt;/td&gt;
+      &lt;td&gt;Simple&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2,000,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;biodiversity&lt;/td&gt;
+      &lt;td&gt;4.0.1&lt;/td&gt;
+      &lt;td&gt;Full JSON&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;800,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;biodiversity&lt;/td&gt;
+      &lt;td&gt;3.5.1&lt;/td&gt;
+      &lt;td&gt;n/a&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;40,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;With this improved speed Encyclopedia of Life, which is written in Ruby,
+can process all their names using Ruby in less than 15 minutes.&lt;/p&gt;
+
+&lt;p&gt;README file of &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; contains &lt;a href=&quot;https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library&quot;&gt;instructions&lt;/a&gt; how to make such c-shared
+library and &lt;code class=&quot;highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; code is a good example of connecting the library to
+other languages.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Biodiversity-Next Conference</title>

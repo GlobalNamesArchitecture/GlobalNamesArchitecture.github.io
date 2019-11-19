@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Global Names Gains Stable Funding</title>
+  <title>gnparser release (v0.12.0) can be used in most modern languages</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -186,17 +186,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Global Names Gains Stable Funding
-    <a href="/news/2015/10/05/ui-mid-november/" class="permalink" title="Permalink">∞</a>
+    gnparser release (v0.12.0) can be used in most modern languages
+    <a href="/news/2019/11/13/gnparser-clib/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      speciesfilegroup
+      gnparser, and, and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      05 Oct 2015
+      13 Nov 2019
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -209,22 +209,64 @@
   </div>
   
   <div class="post-content">
-    <p>Moving Global Names to a stable ground… On October 1st I did sign a job offer
-from <a href="http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx">Species File Group</a> and going to start at the new position on
-November 16th. This position is supported by a fund created by <a href="http://wwx.inhs.illinois.edu/directory/show/dceades">David
-Eades</a> (thank you David) and allows to think of grants not like a
-vehicle for GN’s survival, but means of further enhancement of the system. I am
-honored and touched that David, and <a href="http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx">Species File Group</a> created this
-amazing opportunity for Global Names. This move should also lead to a tight
-integration between <a href="http://catalogueoflife.com">Catalogue of Life</a> and Global Names, which in my view
-is a win/win situation for both projects and for biodiversity.</p>
+    <p>A few days ago we released v0.12.0 of <a href="https://gitlab.com/gogna/gnparser/-/releases">gnparser (Go
+version)</a>. This version made it
+possible to compile gnparser algorithms into <a href="https://gitlab.com/gogna/gnparser/blob/master/binding/main.go">C-compatible
+library</a>. Such
+library makes it possible to use gnparser with its native speeds in any
+language that supports binding to C. Such languages inlude Python, Ruby, Java
+(via JNI), Rust, C, C++ and many others.</p>
 
-<p>Our next steps are releasing JVM-based <a href="https://github.com/GlobalNamesArchitecture/gnparser">scientific name parser</a>,
-building scalable, reliable and fast name resolution service and integratation
-of  name resolution with the key Global Names project developed by <a href="https://www.ted.com/talks/richard_pyle_dives_the_twilight_zone?language=en">Rich
-Pyle</a> and <a href="https://github.com/whittonr">Rob Whitton</a> – <a href="http://globalnames.org/docs/gnub/">Global Names Usage
-Bank</a> for which Rich just submitted a grant proposal.</p>
+<p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
+gem</a> to take benefit
+of a dramatic speed increase and parsing quality of <code class="highlighter-rouge">gnparser</code>.</p>
 
+<p>Here are a quick benchmarks that compare how <code class="highlighter-rouge">biodiversity</code> performs before
+and now:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Program</th>
+      <th>Version</th>
+      <th>Full/Simple</th>
+      <th style="text-align: right">Names/min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gnparser</td>
+      <td>0.12.0</td>
+      <td>Simple</td>
+      <td style="text-align: right">3,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Simple</td>
+      <td style="text-align: right">2,000,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>4.0.1</td>
+      <td>Full JSON</td>
+      <td style="text-align: right">800,000</td>
+    </tr>
+    <tr>
+      <td>biodiversity</td>
+      <td>3.5.1</td>
+      <td>n/a</td>
+      <td style="text-align: right">40,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>With this improved speed Encyclopedia of Life, which is written in Ruby,
+can process all their names using Ruby in less than 15 minutes.</p>
+
+<p>README file of <code class="highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
+library and <code class="highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
+other languages.</p>
 
   </div>
 </article>
@@ -241,7 +283,7 @@ Bank</a> for which Rich just submitted a grant proposal.</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2019/11/13/gnparser-clib/"> v</a>
       </li>
       
@@ -265,7 +307,7 @@ Bank</a> for which Rich just submitted a grant proposal.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2019/11/13/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
         </li>
         
@@ -321,7 +363,7 @@ Bank</a> for which Rich just submitted a grant proposal.</p>
           <a href="/news/2015/10/06/gnub-proposal/">GNUB proposal submitted to NSF</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/10/05/ui-mid-november/">Global Names Gains Stable Funding</a>
         </li>
         
