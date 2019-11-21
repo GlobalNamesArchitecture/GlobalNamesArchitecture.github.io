@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Biodiversity-Next Conference</title>
+  <title>Outcomes draft (Final Report for NSF award \#1645959)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -190,17 +190,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Biodiversity-Next Conference
-    <a href="/news/2019/11/13/biodiversity-next/" class="permalink" title="Permalink">∞</a>
+    Outcomes draft (Final Report for NSF award \#1645959)
+    <a href="/news/2019/11/21/nsf1645959-outcomes/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      Meetings/Workshops
+      NSF
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      13 Nov 2019
+      21 Nov 2019
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -213,46 +213,107 @@
   </div>
   
   <div class="post-content">
-    <p>For the last couple of years I have been working on making scientific-name
-detection possible on a massive scale. The result of this work was creation
-of several tools that increased the speed of name-finding dramatically:</p>
+    <p>We developed an ability to discover scientific names in millions of books in
+a matter of hours. We are now able to finish name-finding for Biodiversity
+Heritage Library (200 000 volumes) in 12 hours on a single laptop, and
+HathiTrust Digital Library (18 million volumes, estimated 10% of all
+published books) in 9 hours, using 50 servers. Scientific name-strings are
+often represented differently by different sources. For example <em>Homo
+sapiens</em> can be written as <em>Homo sapiens</em> Linnaeus, 1758, <em>Homo sapiens
+sapiens</em>, <em>Homo sapiens</em> Linn. etc. To understand that all these variations
+talk about the same species they need to be normalized. We built a tool that
+normalizes 300 million name-strings per hour on a single computer. Also we
+created a service that is able to verify scientific names in all existing
+variations. The service validates names against well-known curated data
+sources with a rate of 800,000 per hour. As a result of all these new
+developments we have an opportunity to create a truly global index of
+scientific names and mine biological information using scientific names as
+anchors.</p>
+
+<p>Modern biology depends heavily on scientific names. They were introduced in
+18th century by Carl Linnaeus. For more than a quarter of a millennium they
+are the basis of sharing information about biological taxa. Scientific names
+are heavily used by researches, physicians, students, governmental agencies,
+citizen scientists etc. Scientific names create a common basis for
+biology and give us an ability to connect millions of medical and
+biological facts together into a graph of knowledge.</p>
+
+<p>However scientific names change quite often. According to our observations
+there are about 3 different scientific names per species on average. On top
+of that, scientific names usually are not rendered exactly the same way in
+different publications, as we showed above, and such lexical variants of
+names have to be reconciled. To collect a complete history of studies about
+species we have to be able to take in account of these differences between
+name variations. To provide an access to globally accumulated biodiversity
+knowledge we have to scientific names in literature published in the last 250
+years.</p>
+
+<p>Our group have been participating in Global Names Architecture project since
+2007 and tried to find solutions for these three major questions:</p>
 
 <ul>
-  <li>name-parsing: <a href="https://parser.globalnames.org">gnparser</a></li>
-  <li>name-detection: <a href="https://github.com/gnames/gnfinder">gnfinder</a></li>
-  <li>name-curation: <a href="https://github.com/gnames/gntagger">gntagger</a></li>
-  <li>name-verification (built by Alex Myltsev): <a href="https://index.globalnames.org">gnindex</a></li>
+  <li>How to find scientific names in texts?</li>
+  <li>How to “normalize” lexical and spelling inconsistencies in names belonging to
+the same lexical group?</li>
+  <li>How to connect a given name to all names ever given to its taxon, and find
+which one of these names is currently accepted as valid?</li>
 </ul>
 
-<p>As a result we are able to scan large corpora of biodiversity
-literature, such as Biodhiversity Heritage Library — BHL (200 000 volumes) and
-HathiTrust Digital Library (16 000 000 volumes) in a matter of hours.</p>
+<p>Former ABI innovation grant from NSF from 2011 (#1062387) gave us an
+opportunity to develop functional prototypes of programs that were answering
+these questions. However, these prototypes had been too slow to be applied
+to whole corpus of biological and medical human knowledge.</p>
 
-<p>Recently, we presented our achievements at Biodiversity Next conference, an
-expanded version of traditional yearly TDWG meeting. I had a talk at a
-symposium <a href="https://biss.pensoft.net/browse_user_collection_documents?collection_id=125">Improving access to hidden scientific data in the Biodiversity
-Heritage
-Library</a>.
-You can read about it in more details at a <a href="https://blog.biodiversitylibrary.org/2019/11/bhl-at-biodiversity-next.html">BHL blog
-post</a>.</p>
+<p>We understood that for such programs to be useful on a global scale they must
+be dramatically improved in speed, quality and scalability. They must be able
+to use all resources of a multi-processor computer, and scale to multiple
+machines with ease. Current ABI Development funding allowed us to achieve
+speed and scalability goals.</p>
 
-<p>Such a significant collection of biodiversity literature as BHL gains
-dramatically in usability from data mining efforts. For many years they use
-the scientific names index that had been generated by our project: Global
-Names Architecture. Several years ago generation of such index was a very
-slow and laboreous task, that could not be repeated easily. With our recent
-developments we are able to index BHL repeatedly with ease. It gives us
-an opportunity to listen for feedback from BHL users, make incremental improvements
-in our algorithms and increase the quality of scientific names index
-continuously.</p>
+<p>We developed 3 major software tools:</p>
 
-<p>We are very interested to work with other people who try to enhance usability
-of literature aggregators like BHL by developing natural language processing
-and machine learning algorithms. During the conference several researches in
-the field agreed to participate in a brain-storming workshop at Illinois
-Natural History Survay, Champaign/Urbana to develop new technologies for
-data-mining in BHL and other similar corpora. We are planning to organize
-such a workshop in April/May 2020.</p>
+<h2 id="parser-of-scientific-names-gnparser">Parser of Scientific Names: gnparser</h2>
+
+<p>This tool allows to dissect vast majority of scientific names into their
+semantic elements. For example it is able to find out that “Carex scirpoidea
+ssp. convoluta (Kük.) Dunlop” and “Carex scirpoidea Michaux var. convoluta
+Kükenthal” both have the same conservative element “Cares scirpoidea
+convoluta”, but vary in rank (variety vs subspecies) “Carex scirpoidea var.
+convoluta” and “Carex scirpoidea subsp. convoluta”. Such matching is very
+important for aggregation of biodiversity data from a variety of sources. The
+gnparser program is designed to be small, easy to install and be blazingly
+fast. It is currently used by several prominent biodiversity aggregators,
+such as Encyclopedia of Life and Catalogue of Life, as well as Global Names
+Index. It is able to process 300,000,000 names in an hour on one computer.</p>
+
+<h2 id="global-names-index-gnindex">Global Names Index: gnindex</h2>
+
+<p>The gnindex service aggregates scientific names from a large number of
+biodiversity data sources and uses them to verify incoming names. A user is
+able to send a list of name-strings and find out if they are known names, if
+they contain spelling mistakes, if they are currently accepted as valid
+names, etc. Such service is important for many use cases, for example as a
+verification tool for species lists collected by citizen scientists, as a
+curation tool for museum collections, for mapping country species lists of
+government agencies to standardized data set, such as Catalogue of Life etc.
+This tool relies heavily on gnparser to align data from many sources. It is
+also indispensable for verifying (reconciling/resolving) name candidates
+found in texts by our algorithms. This service currently has a throughput of
+800,000 names per hour.</p>
+
+<h2 id="global-names-finder-gnfinder">Global Names Finder: gnfinder</h2>
+
+<p>The gnfinder tool uses heuristic and natural language processing algorithms
+to detect scientific names in texts. In machine learning terms it belongs to
+named entity recognition class of tools. It marks parts of texts that
+potentially can be scientific names, and then sends them for remote
+verification to gnindex. Average book in digital libraries is about 300 pages
+long. On a single machine we are able to reach a rate of name-detection to
+45,000 books an hour.</p>
+
+<p>To summarize, these new tools give us ability to create indexes of scientific
+names in a matter of hours for gigantic collections of literature and make
+a global index for all digitized literature possible.</p>
 
   </div>
 </article>
@@ -293,7 +354,7 @@ such a workshop in April/May 2020.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2019/11/21/nsf1645959-outcomes/">Outcomes draft (Final Report for NSF award \#1645959)</a>
         </li>
         
@@ -305,7 +366,7 @@ such a workshop in April/May 2020.</p>
           <a href="/news/2019/11/19/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2019/11/13/biodiversity-next/">Biodiversity-Next Conference</a>
         </li>
         

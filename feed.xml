@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Tue, 19 Nov 2019 15:15:31 -0600</pubDate>
-    <lastBuildDate>Tue, 19 Nov 2019 15:15:31 -0600</lastBuildDate>
+    <pubDate>Thu, 21 Nov 2019 11:54:57 -0600</pubDate>
+    <lastBuildDate>Thu, 21 Nov 2019 11:54:57 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,157 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>Outcomes draft (Final Report for NSF award \#1645959)</title>
+      <link>http://globalnames.org/news/2019/11/21/nsf1645959-outcomes/</link>
+      <pubDate>Thu, 21 Nov 2019 05:24:45 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>NSF</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2019/11/21/nsf1645959-outcomes/</guid>
+      <description>&lt;p&gt;We developed an ability to discover scientific names in millions of books in
+a matter of hours. We are now able to finish name-finding for Biodiversity
+Heritage Library (200 000 volumes) in 12 hours on a single laptop, and
+HathiTrust Digital Library (18 million volumes, estimated 10% of all
+published books) in 9 hours, using 50 servers. Scientific name-strings are
+often represented differently by different sources. For example &lt;em&gt;Homo
+sapiens&lt;/em&gt; can be written as &lt;em&gt;Homo sapiens&lt;/em&gt; Linnaeus, 1758, &lt;em&gt;Homo sapiens
+sapiens&lt;/em&gt;, &lt;em&gt;Homo sapiens&lt;/em&gt; Linn. etc. To understand that all these variations
+talk about the same species they need to be normalized. We built a tool that
+normalizes 300 million name-strings per hour on a single computer. Also we
+created a service that is able to verify scientific names in all existing
+variations. The service validates names against well-known curated data
+sources with a rate of 800,000 per hour. As a result of all these new
+developments we have an opportunity to create a truly global index of
+scientific names and mine biological information using scientific names as
+anchors.&lt;/p&gt;
+
+&lt;p&gt;Modern biology depends heavily on scientific names. They were introduced in
+18th century by Carl Linnaeus. For more than a quarter of a millennium they
+are the basis of sharing information about biological taxa. Scientific names
+are heavily used by researches, physicians, students, governmental agencies,
+citizen scientists etc. Scientific names create a common basis for
+biology and give us an ability to connect millions of medical and
+biological facts together into a graph of knowledge.&lt;/p&gt;
+
+&lt;p&gt;However scientific names change quite often. According to our observations
+there are about 3 different scientific names per species on average. On top
+of that, scientific names usually are not rendered exactly the same way in
+different publications, as we showed above, and such lexical variants of
+names have to be reconciled. To collect a complete history of studies about
+species we have to be able to take in account of these differences between
+name variations. To provide an access to globally accumulated biodiversity
+knowledge we have to scientific names in literature published in the last 250
+years.&lt;/p&gt;
+
+&lt;p&gt;Our group have been participating in Global Names Architecture project since
+2007 and tried to find solutions for these three major questions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How to find scientific names in texts?&lt;/li&gt;
+  &lt;li&gt;How to “normalize” lexical and spelling inconsistencies in names belonging to
+the same lexical group?&lt;/li&gt;
+  &lt;li&gt;How to connect a given name to all names ever given to its taxon, and find
+which one of these names is currently accepted as valid?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Former ABI innovation grant from NSF from 2011 (#1062387) gave us an
+opportunity to develop functional prototypes of programs that were answering
+these questions. However, these prototypes had been too slow to be applied
+to whole corpus of biological and medical human knowledge.&lt;/p&gt;
+
+&lt;p&gt;We understood that for such programs to be useful on a global scale they must
+be dramatically improved in speed, quality and scalability. They must be able
+to use all resources of a multi-processor computer, and scale to multiple
+machines with ease. Current ABI Development funding allowed us to achieve
+speed and scalability goals.&lt;/p&gt;
+
+&lt;p&gt;We developed 3 major software tools:&lt;/p&gt;
+
+&lt;h2 id=&quot;parser-of-scientific-names-gnparser&quot;&gt;Parser of Scientific Names: gnparser&lt;/h2&gt;
+
+&lt;p&gt;This tool allows to dissect vast majority of scientific names into their
+semantic elements. For example it is able to find out that “Carex scirpoidea
+ssp. convoluta (Kük.) Dunlop” and “Carex scirpoidea Michaux var. convoluta
+Kükenthal” both have the same conservative element “Cares scirpoidea
+convoluta”, but vary in rank (variety vs subspecies) “Carex scirpoidea var.
+convoluta” and “Carex scirpoidea subsp. convoluta”. Such matching is very
+important for aggregation of biodiversity data from a variety of sources. The
+gnparser program is designed to be small, easy to install and be blazingly
+fast. It is currently used by several prominent biodiversity aggregators,
+such as Encyclopedia of Life and Catalogue of Life, as well as Global Names
+Index. It is able to process 300,000,000 names in an hour on one computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;global-names-index-gnindex&quot;&gt;Global Names Index: gnindex&lt;/h2&gt;
+
+&lt;p&gt;The gnindex service aggregates scientific names from a large number of
+biodiversity data sources and uses them to verify incoming names. A user is
+able to send a list of name-strings and find out if they are known names, if
+they contain spelling mistakes, if they are currently accepted as valid
+names, etc. Such service is important for many use cases, for example as a
+verification tool for species lists collected by citizen scientists, as a
+curation tool for museum collections, for mapping country species lists of
+government agencies to standardized data set, such as Catalogue of Life etc.
+This tool relies heavily on gnparser to align data from many sources. It is
+also indispensable for verifying (reconciling/resolving) name candidates
+found in texts by our algorithms. This service currently has a throughput of
+800,000 names per hour.&lt;/p&gt;
+
+&lt;h2 id=&quot;global-names-finder-gnfinder&quot;&gt;Global Names Finder: gnfinder&lt;/h2&gt;
+
+&lt;p&gt;The gnfinder tool uses heuristic and natural language processing algorithms
+to detect scientific names in texts. In machine learning terms it belongs to
+named entity recognition class of tools. It marks parts of texts that
+potentially can be scientific names, and then sends them for remote
+verification to gnindex. Average book in digital libraries is about 300 pages
+long. On a single machine we are able to reach a rate of name-detection to
+45,000 books an hour.&lt;/p&gt;
+
+&lt;p&gt;To summarize, these new tools give us ability to create indexes of scientific
+names in a matter of hours for gigantic collections of literature and make
+a global index for all digitized literature possible.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Biodiversity Heritage Library (BHL) link to Catalogue of Life Plus (CoL+)</title>
+      <link>http://globalnames.org/news/2019/11/20/col-gbif-bhl/</link>
+      <pubDate>Wed, 20 Nov 2019 08:55:30 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>meeting</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2019/11/20/col-gbif-bhl/</guid>
+      <description>&lt;p&gt;Peter Schalk and Olaf Bánki (GBIF and CoL+) came to our group today. We had a
+short meeting to start connecting names from Catalogue of Life to original
+nomenclatural events collected in Biodiversity Heritage Library. We had a
+remote connection to folks from BHL (Joel Richard and Mike Lichtenberg), and
+CoL+ (Dave Remsen, Markus Doering).&lt;/p&gt;
+
+&lt;p&gt;Markus said that he will create a list of references for proto/basionyms in
+CoL+, and starting December I will start trying to connect the names from BHL
+to these references. If things work well, it will enhance usability of
+Col/Col+ and BHL as well.&lt;/p&gt;
+
+&lt;p&gt;Markus created today a &lt;a href=&quot;https://gitter.im/CatalogueOfLife/colbhl&quot;&gt;gitter
+account&lt;/a&gt; that we can use for this
+project.&lt;/p&gt;
+
+&lt;p&gt;Olaf will set a weekly meetings through December-January to keep us all in
+sync for this project. Will be interesting to learn from IPNI about their
+approach of doing pretty much the same task.&lt;/p&gt;
+
+&lt;p&gt;We also had a good conversation with Peter, Ed Devalt and Olaf about
+importance of different biodiversity projects working together instead of
+trying to re-implement each other ‘wheels’. I would say there is definitely a
+progress in cooperation between different initiatives and it is good news for
+biodiversity informatics.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>gnparser release (v0.12.0) can be used in most modern languages</title>
