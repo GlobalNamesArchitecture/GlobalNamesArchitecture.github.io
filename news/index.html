@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2019/12/10/gnrd/">GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</option>
+      
       <option value="/news/2019/11/21/nsf1645959-outcomes/">Outcomes draft (Final Report for NSF award 1645959)</option>
       
       <option value="/news/2019/11/20/col-gbif-bhl/">Biodiversity Heritage Library (BHL) link to Catalogue of Life Plus (CoL+)</option>
@@ -189,6 +191,61 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2019/12/10/gnrd/">
+      GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNRD and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      10 Dec 2019
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p>Big change came to GNRD, a program David Shorthouse and Dmitry Mozzherin
+released back in 2012. <a href="https://gnrd.globalnames.org">GNRD</a> is a web
+application that is able to find scientific names in UTF-8 encoded plain
+texts, in PDFs, MS Word and MS Excel documents, and even images.</p>
+
+<p>For a long time it used two name-finding libraries TaxonFinder (developed by
+Patrick Leary) and NetiNeti (developed by Lakshmi Manohar Akella). Both
+project served us well all these years using complementary heuristic and
+natural language processing algorithms all these years. <a href="https://www.biodiversitylibrary.org/">Biodiversity
+Heritage Library</a>,
+<a href="https://biostor.org/">BioStor</a> and many others used GNRD for detection of
+scientific names for many eyars with success. However the speed for
+large-scale name-finding was not satisfactory. To make large-scale
+name-detection possible we developed
+<a href="https://github/gnames/gnfinder">gnfinder</a> that also uses both heuristic and
+NLP algorithms. With this new release of GNRD we substitute TasonFinder and
+Netineti engines to gnfinder.</p>
+
+<p>We tried hard to keep API as close as possible to how it was before, however
+there are a few changes, especially at the name-verification (reconciliation
+and resolution) part. This change made both name-finding and
+name-verification much much faster with increased quality. For example, it
+used to take 15 seconds to find names in a 1000-page biological book. Now it
+takes only 0.5 seconds. GNRD tries to get names with OCR errors as well, as a
+result you might get false positives. We do recommend to use
+name-verification option to weed out such false results.</p>
+
+<p>If you need to cite GNRD in a paper it v0.9.0 has a DOI attached:
+<a href="https://zenodo.org/record/3569619"><code class="highlighter-rouge">10.5281/zenodo.3569619</code></a></p>
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2019/11/21/nsf1645959-outcomes/">
@@ -2884,6 +2941,10 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2019/12/10/gnrd/">GNRD v0.9.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2019/11/19/gnparser-clib/">GNParser v0.12.0</a>
       </li>
       
@@ -2899,13 +2960,13 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
         <a href="/news/2015/11/30/gnparser-0-2-0/">GNParser v0.2.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2015/09/03/sysopia/">Sysopia v0.5.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2019/12/10/gnrd/">GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/11/21/nsf1645959-outcomes/">Outcomes draft (Final Report for NSF award 1645959)</a>

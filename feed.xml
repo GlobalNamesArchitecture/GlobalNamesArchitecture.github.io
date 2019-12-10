@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 21 Nov 2019 12:03:11 -0600</pubDate>
-    <lastBuildDate>Thu, 21 Nov 2019 12:03:11 -0600</lastBuildDate>
+    <pubDate>Tue, 10 Dec 2019 15:19:24 -0600</pubDate>
+    <lastBuildDate>Tue, 10 Dec 2019 15:19:24 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,50 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</title>
+      <link>http://globalnames.org/news/2019/12/10/gnrd/</link>
+      <pubDate>Tue, 10 Dec 2019 08:50:39 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>GNRD</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2019/12/10/gnrd/</guid>
+      <description>&lt;p&gt;Big change came to GNRD, a program David Shorthouse and Dmitry Mozzherin
+released back in 2012. &lt;a href=&quot;https://gnrd.globalnames.org&quot;&gt;GNRD&lt;/a&gt; is a web
+application that is able to find scientific names in UTF-8 encoded plain
+texts, in PDFs, MS Word and MS Excel documents, and even images.&lt;/p&gt;
+
+&lt;p&gt;For a long time it used two name-finding libraries TaxonFinder (developed by
+Patrick Leary) and NetiNeti (developed by Lakshmi Manohar Akella). Both
+project served us well all these years using complementary heuristic and
+natural language processing algorithms all these years. &lt;a href=&quot;https://www.biodiversitylibrary.org/&quot;&gt;Biodiversity
+Heritage Library&lt;/a&gt;,
+&lt;a href=&quot;https://biostor.org/&quot;&gt;BioStor&lt;/a&gt; and many others used GNRD for detection of
+scientific names for many eyars with success. However the speed for
+large-scale name-finding was not satisfactory. To make large-scale
+name-detection possible we developed
+&lt;a href=&quot;https://github/gnames/gnfinder&quot;&gt;gnfinder&lt;/a&gt; that also uses both heuristic and
+NLP algorithms. With this new release of GNRD we substitute TasonFinder and
+Netineti engines to gnfinder.&lt;/p&gt;
+
+&lt;p&gt;We tried hard to keep API as close as possible to how it was before, however
+there are a few changes, especially at the name-verification (reconciliation
+and resolution) part. This change made both name-finding and
+name-verification much much faster with increased quality. For example, it
+used to take 15 seconds to find names in a 1000-page biological book. Now it
+takes only 0.5 seconds. GNRD tries to get names with OCR errors as well, as a
+result you might get false positives. We do recommend to use
+name-verification option to weed out such false results.&lt;/p&gt;
+
+&lt;p&gt;If you need to cite GNRD in a paper it v0.9.0 has a DOI attached:
+&lt;a href=&quot;https://zenodo.org/record/3569619&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;10.5281/zenodo.3569619&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Outcomes draft (Final Report for NSF award 1645959)</title>
