@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>BioGUID merges with GN</title>
+  <title>gnfinder release 0.9.1 -- bug fixes</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -194,21 +194,21 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    BioGUID merges with GN
-    <a href="/news/2015/10/08/BioGUID-Moved/" class="permalink" title="Permalink">∞</a>
+    gnfinder release 0.9.1 -- bug fixes
+    <a href="/news/2019/12/11/gnfinder/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      gnub
+      gnfinder and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      08 Oct 2015
+      11 Dec 2019
     </span>
-    <a href="https://github.com/deepreef" class="post-author">
-      <img src="https://github.com/deepreef.png" class="avatar" alt="deepreef avatar" width="24" height="24">
-      deepreef
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
     </a>
     <div class="social-media">
 			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
@@ -217,10 +217,21 @@
   </div>
   
   <div class="post-content">
-    <p><a href="http://bioguid.globalnames.org">BioGUID.org</a>, an indexing service that cross-links identifiers assigned to data objects in the biodiversity information universe, has now been incorporated into the Global Names suite of indexes and services. BioGUID.org represents the third major data component of Global Names (along side <a href="http://gni.globalnames.org">GNI</a> and <a href="http://gnub.globalnames.org">GNUB</a>), and replaces a less robust identifier linking service that had previously been included within GNUB.  In addition to the crucial role of cross-linking identifiers within the general GN architecture itself, the broader function of BioGUID.org falls within the scope of Global Names in the sense that identifiers can be thought of as names, and names play the same functional role as identifiers.</p>
+    <p>We are releasing a bug-fixing version (v0.9.1) of
+<a href="https://github.com/gnames/gnfinder">gnfinder</a>, a written in Go project that
+provides ability to search for scientific names in plain UTF-8 encoded texts.
+It now has a better version and build timestamp report, its black list
+dictionary expanded by 5 more words, and a bug fixed that prevents client
+programs to break if name-verification returned an error instead of result.
+We also started experimenting with making gnfinder available for other
+languages through a C-shared library.</p>
 
-<p>We are currently in the process of porting BioGUID into the <a href="https://github.com/GlobalNamesArchitecture">GN GitHub</a>, and you can follow developments on the new <a href="http://blog.bioguid.org">BioGUID Blog</a>.</p>
+<p>More can be found in gnfinder’s
+<a href="https://github.com/gnames/gnfinder/blob/master/CHANGELOG.md">CHANGELOG file</a>.</p>
 
+<p>The gnfinder code is used to create scientific name indices
+in Biodiversity Heritage Library, HathiTrust Digital Library, and serves as an
+engine for <a href="https://gnrd.globalnames.org">GNRD</a></p>
 
   </div>
 </article>
@@ -237,7 +248,7 @@
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
       </li>
       
@@ -261,7 +272,7 @@
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</a>
         </li>
         
@@ -325,7 +336,7 @@
           <a href="/news/2015/10/13/BioGUID-Wins-Award/">BioGUID Wins Award!</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/10/08/BioGUID-Moved/">BioGUID merges with GN</a>
         </li>
         

@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Tue, 10 Dec 2019 15:28:18 -0600</pubDate>
-    <lastBuildDate>Tue, 10 Dec 2019 15:28:18 -0600</lastBuildDate>
+    <pubDate>Wed, 11 Dec 2019 13:02:49 -0600</pubDate>
+    <lastBuildDate>Wed, 11 Dec 2019 13:02:49 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v3.8.5</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,36 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>gnfinder release 0.9.1 -- bug fixes</title>
+      <link>http://globalnames.org/news/2019/12/11/gnfinder/</link>
+      <pubDate>Wed, 11 Dec 2019 06:52:20 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>gnfinder</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2019/12/11/gnfinder/</guid>
+      <description>&lt;p&gt;We are releasing a bug-fixing version (v0.9.1) of
+&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;gnfinder&lt;/a&gt;, a written in Go project that
+provides ability to search for scientific names in plain UTF-8 encoded texts.
+It now has a better version and build timestamp report, its black list
+dictionary expanded by 5 more words, and a bug fixed that prevents client
+programs to break if name-verification returned an error instead of result.
+We also started experimenting with making gnfinder available for other
+languages through a C-shared library.&lt;/p&gt;
+
+&lt;p&gt;More can be found in gnfinder’s
+&lt;a href=&quot;https://github.com/gnames/gnfinder/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The gnfinder code is used to create scientific name indices
+in Biodiversity Heritage Library, HathiTrust Digital Library, and serves as an
+engine for &lt;a href=&quot;https://gnrd.globalnames.org&quot;&gt;GNRD&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</title>
