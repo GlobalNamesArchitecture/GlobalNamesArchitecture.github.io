@@ -4,6 +4,7 @@ Gemfile.lock
 pkg/
 *.swp
 *~
+.vscode
 _site/
 .bundle/
 .DS_Store
