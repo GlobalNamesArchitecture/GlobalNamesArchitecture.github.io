@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "rake", "~> 11.1"
+gem "rake", "~> 12.3"
 gem "jekyll", "~> 3.1"
 gem "jekyll-coffeescript", "~> 1.0"
 gem "jekyll-gist", "~> 1.3"
