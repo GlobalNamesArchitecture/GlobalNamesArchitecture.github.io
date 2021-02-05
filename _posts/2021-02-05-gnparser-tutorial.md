@@ -106,10 +106,12 @@ up a scientific name into its components, but because gnparser also assesses
 name string "quality". gnparser gives each name it parses a quality score as
 follows:
 
+```text
 "quality": 1 - No problems were detected
 "quality": 2 - There were small problems, normalized result should still be good
 "quality": 3 - There were serious problems with the name, and the final result is rather doubtful
 "quality": 0 - A string could not be recognized as a scientific name and parsing fails
+```
 
 The output of gnparser is in JSON format, which isn't much fun for us human
 readers: parser1
