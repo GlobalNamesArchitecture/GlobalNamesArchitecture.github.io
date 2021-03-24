@@ -33,10 +33,6 @@
 <lastmod>2015-08-31T07:26:25-05:00</lastmod>
 </url>
 <url>
-<loc>/apps/gnverify/</loc>
-<lastmod>2015-08-31T07:26:25-05:00</lastmod>
-</url>
-<url>
 <loc>/apps/idigbio-client/</loc>
 <lastmod>2015-08-31T07:26:25-05:00</lastmod>
 </url>
@@ -71,6 +67,10 @@
 <url>
 <loc>/apps/gnparser/</loc>
 <lastmod>2021-03-24T02:43:46-05:00</lastmod>
+</url>
+<url>
+<loc>/apps/gnverifier/</loc>
+<lastmod>2021-03-24T13:41:02-05:00</lastmod>
 </url>
 <url>
 <loc>/docs/good-bad-names/</loc>
