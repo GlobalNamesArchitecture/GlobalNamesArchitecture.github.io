@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: GNverifier
-date: 2015-08-31 12:26:25
+date: 2021-03-24 18:41:02
 type: apps
 homepage: http://verifier.globalnames.org
 api: https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0
 code: https://github.com/gnames/gnverify
 docker: https://hub.docker.com/r/gnames/gnverify
-permalink: /apps/gnverify/
+permalink: /apps/gnverifier/
 ---
 
 <div class="note application">
@@ -23,7 +23,7 @@ permalink: /apps/gnverify/
   and partial matching to give as close matching result as possible for all
   lexical variants of a name. GNverifier uses two other Global Names projects
   as a backend: <a href="https://github.com/gnames/gnames">GNames</a> provides
-  an API for GNverifier, <a htref:="https://github.com/gnames/gnmatcher">GNmatcher</a>
+  an API for GNverifier, <a href="https://github.com/gnames/gnmatcher">GNmatcher</a>
   provides algorithms for fast exact and fuzzy matching of names.</p>
 
 </div>
