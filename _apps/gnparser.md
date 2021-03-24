@@ -5,7 +5,7 @@ date: 2021-03-24 07:43:46
 type: apps
 homepage: http://parser.globalnames.org
 code: https://github.com/gnames/gnparser
-documentation: https://github.com/gnames/gnparser/blob/master/README.rst
+documentation: https://github.com/gnames/gnparser/blob/master/README.md
 docker: https://hub.docker.com/r/gnames/gognparser/
 permalink: /apps/gnparser/
 ---
