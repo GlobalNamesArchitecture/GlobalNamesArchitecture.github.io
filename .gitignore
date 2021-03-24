@@ -5,7 +5,7 @@ pkg/
 *.swp
 *~
 .vscode
-_site/
+_site/**
 .bundle/
 .DS_Store
 bbin/
@@ -15,5 +15,6 @@ coverage
 .sass-cache
 tmp/*
 .jekyll-metadata
+.jekyll-cache
 /vendor
 t
