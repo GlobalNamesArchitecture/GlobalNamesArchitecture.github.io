@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: GN Parser
-date: 2015-10-30 18:46:38
+title: GNparser
+date: 2021-03-24 07:43:46
 type: apps
 homepage: http://parser.globalnames.org
-code: https://github.com/GlobalNamesArchitecture/gnparser
-documentation: https://github.com/GlobalNamesArchitecture/gnparser/blob/master/README.rst
-docker: https://hub.docker.com/r/gnames/gnparser/
+code: https://github.com/gnames/gnparser
+documentation: https://github.com/gnames/gnparser/blob/master/README.rst
+docker: https://hub.docker.com/r/gnames/gognparser/
 permalink: /apps/gnparser/
 ---
 
@@ -15,14 +15,19 @@ permalink: /apps/gnparser/
   <ul>
     <li>Web App</li>
     <li>API App</li>
-    <li>Socket Server</li>
     <li>Command Line Tool</li>
     <li>Library</li>
   </ul>
 
-  <p> Scientific names parser rebuilt from scratch in Scala. We learned a lot
-  from Biodiversity parser, and used that knowledge to make GN Parser, which is
-  faster, better, more scalable, more portable redesign of parsing algorithms.
+  <p> Scientific name parser allows to compare names from different datasets,
+  check if names are well-formed, collect data about authors, years etc.
+  </p>
+
+  <p> GNparser is rebuilt from scratch in Go language. It is now 100 times
+  faster than original Ruby code, and from 2 to 8 times faster than Scala code.
+  Ruby version of GNparser,
+  <a href="https://github.com/GlobalNamesArchitecture/biodiversity"> biodiversity
+  gem</a>, uses Go code internally now.
   </p>
 
 </div>

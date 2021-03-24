@@ -17,6 +17,7 @@ permalink: /apps/biodiversity/
   </ul>
   <p>
   Breaks scientific names, even complex ones, into semantic pieces.
-  Extracts canonical forms, authorships, checks how well a name is formed
+  Extracts canonical forms, authorships, checks how well a name is formed.
+  Uses <a href="https://github.com/gnames/gnparser">GNparser</a> internally.
   </p>
 </div>

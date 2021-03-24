@@ -1,12 +1,12 @@
-- title: Web Apps 
+- title: Web Apps
   docs:
     - zoobank
-    - gnub
-    - bioguid
     - gnparser
-    - gni
     - gnr
     - gnrd
+    - gnub
+    - bioguid
+    - gni
     - name-spotter
     - biblio-spotter
     - gnite
