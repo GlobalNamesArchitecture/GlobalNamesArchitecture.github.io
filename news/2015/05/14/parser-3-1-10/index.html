@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Scientific Name Parser v3.1.10</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v3.8.5">
+  <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -93,6 +93,8 @@
     <option value="">Navigate the blog…</option>
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
+      
+      <option value="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</option>
       
       <option value="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</option>
       
@@ -256,10 +258,10 @@ parsed anymore. It is a problem for some surrogate names, like
 
 <h3 id="better-detection-of-virus-names">Better detection of virus names</h3>
 
-<p>Names containing <code class="highlighter-rouge">virophage</code> <code class="highlighter-rouge">*NPV</code>, <code class="highlighter-rouge">*sattelite</code>, <code class="highlighter-rouge">*particle</code> are marked as ‘viruses’ and
+<p>Names containing <code class="language-plaintext highlighter-rouge">virophage</code> <code class="language-plaintext highlighter-rouge">*NPV</code>, <code class="language-plaintext highlighter-rouge">*sattelite</code>, <code class="language-plaintext highlighter-rouge">*particle</code> are marked as ‘viruses’ and
 not parsed</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Gossypium mustilinum symptomless alphasatellite
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Gossypium mustilinum symptomless alphasatellite
 Okra leaf curl Mali alphasatellites-Cameroon
 Bemisia betasatellite LW-2014
 Tomato leaf curl Bangladesh betasatellites [India/Patna/Chilli/2008]
@@ -281,7 +283,7 @@ Sputnik virophage 3
 <p>Names like below are now parsed correctly. Their normalized/canonical forms
 preserve apostrophe</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Junellia o'donelli Moldenke, 1946
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Junellia o'donelli Moldenke, 1946
 Trophon d'orbignyi Carcelles, 1946
 Arca m'coyi Tenison-Woods, 1878
 Nucula m'andrewii Hanley, 1860
@@ -307,6 +309,10 @@ Serjania meridionalis Cambess. var. o'donelli F.A. Barkley
     <ul>
       
       <li class="">
+        <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
       </li>
       
@@ -322,13 +328,13 @@ Serjania meridionalis Cambess. var. o'donelli F.A. Barkley
         <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
       </li>
       
-      <li class="">
-        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</a>

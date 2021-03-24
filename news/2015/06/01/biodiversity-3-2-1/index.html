@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Global Names Parser v3.2.1</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v3.8.5">
+  <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -93,6 +93,8 @@
     <option value="">Navigate the blog…</option>
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
+      
+      <option value="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</option>
       
       <option value="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</option>
       
@@ -242,26 +244,26 @@ into the parser.</p>
 <h2 id="global-names-uuid-v5-is-added-to-the-output-as-id-field"><a href="http://globalnamesarchitecture.github.io/gna/uuid/2015/05/31/gn-uuid-0-5-0.html">Global Names UUID v5</a> is added to the output as “id” field</h2>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo"</span><span class="w">
+    </span><span class="nl">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sapiens"</span><span class="w">
+            </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sapiens"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">]</span><span class="w">
+        </span><span class="nl">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -282,32 +284,32 @@ are not code compliant.</p>
 <p>New behavior:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b3a9b1a3-f73c-5333-8194-a84c6583d130"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca m'coyi Tenison-Woods"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi Tenison-Woods"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca"</span><span class="w">
+    </span><span class="nl">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b3a9b1a3-f73c-5333-8194-a84c6583d130"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca m'coyi Tenison-Woods"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi Tenison-Woods"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mcoyi"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"authorship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"basionymAuthorTeam"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"authorTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Tenison-Woods"</span><span class="p">]</span><span class="w">
+            </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mcoyi"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"authorship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"basionymAuthorTeam"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"authorTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Tenison-Woods"</span><span class="p">]</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"12"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"author_word"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span><span class="w">
+        </span><span class="nl">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"12"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"author_word"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -329,6 +331,10 @@ are not code compliant.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
       </li>
       
@@ -344,13 +350,13 @@ are not code compliant.</p>
         <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
       </li>
       
-      <li class="">
-        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</a>

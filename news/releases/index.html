@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Releases</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v3.8.5">
+  <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -93,6 +93,8 @@
     <option value="">Navigate the blog…</option>
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
+      
+      <option value="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</option>
       
       <option value="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</option>
       
@@ -195,6 +197,160 @@
         
   <article>
   <h2>
+    <a href="/news/2021/03/23/gnparser/">
+      GNparser (Go language) release 1.1.0
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      23 Mar 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p>Scientific name parsing allows to determine a <em>canonical form</em>, the
+<em>authorship</em> of a name, and receive other meta-information. Canonical forms are
+crucial for comparing names from different data sources.</p>
+
+<p>We are releasing <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> v1.1.0 written in Go language. We
+support <a href="https://semver.org/">Semantic Versioning</a>, therefore it is a stable version. Output format,
+functions, and settings are going to be backward compatible for many years
+(until v2).</p>
+
+<p>This is the 3rd implementation of name-parsing for Global Names Architecture
+project. First one, written in Ruby, <a href="https://github.com/GlobalNamesArchitecture/biodiversity"><strong>biodiversity gem</strong></a>,
+uses now the Go code of <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a>. Second one, written in Scala
+<a href="https://github.com/GlobalNamesArchitecture/gnparser">is archived</a>, and awaits for a new maintainer.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> is a sophisticated software, it is able to parse the
+most complex scientific names. It is also very fast, and able to parse more
+than 200 million names in an hour. The parser is a core component of many other
+Global Names Architecture projects.</p>
+
+<p>It can be used via:</p>
+
+<ul>
+  <li><a href="https://parser.globalnames.org">Web page</a></li>
+  <li><a href="https://app.swaggerhub.com/apis-docs/dimus/gnparser/1.0.0">REST API</a></li>
+  <li><a href="https://github.com/gnames/gnparser#command-line">Command line application</a></li>
+  <li><a href="https://rubygems.org/gems/biodiversity">Ruby Gem</a></li>
+  <li><a href="https://github.com/ropensci/rgnparser">R package</a></li>
+  <li><a href="https://github.com/gnames/gnparser#use-as-a-library-in-go">Go Library</a></li>
+</ul>
+
+<p>We also provide
+<a href="https://github.com/gnames/gnparser/blob/master/binding/main.go">C-binding</a> to
+its code. This approach allows to incorporate <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> natively
+into all languages that support C-binding (such as Java, Python, Ruby etc)</p>
+
+<h2 id="pledge-for-github-stars">Pledge for <a href="https://github.com">GitHub</a> stars</h2>
+
+<p>Mac and Linux users often use <a href="https://brew.sh/">Homebrew</a> packaging system to install software
+on their computers. Windows users can access [Homrebrew] too, if they install
+<a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windwos Subsystem for Linux 2 (WSL2)</a>. To be added to “official”
+<a href="https://brew.sh/">Homebrew</a> repository <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> needs to collect &gt;70 stars on
+the <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong> GitHub page</a>.</p>
+
+<p>If you have a <a href="https://github.com">GitHub</a> account and would like to see <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a>
+available via <code class="language-plaintext highlighter-rouge">brew install gnparser</code> command, please click a star on the
+project page.</p>
+
+<h2 id="improvements-since-the-last-scala-based-release-of-gnparser">Improvements since the last Scala-based release of GNparser</h2>
+
+<ul>
+  <li>
+    <p>Speed — about 2 times faster than Scala-based version for CSV output,
+             and about 8 times faster for JSON output.</p>
+  </li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/27">Issue #27</a> — support for <code class="language-plaintext highlighter-rouge">agamosp. agamossp. agamovar.</code> ranks.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/28">Issue #28</a> — support for non-ASCII apostrophes.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/36">Issue #36</a> — support <code class="language-plaintext highlighter-rouge">_</code> as a space for files in Newick format.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/40">Issue #40</a> — support names where one of parentheses is missing.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/43">Issue #43</a> — support for <code class="language-plaintext highlighter-rouge">notho-</code> (hybrid) ranks.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/45">Issue #45</a> — support for <code class="language-plaintext highlighter-rouge">natio</code> rank.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/46">Issue #46</a> — support for <code class="language-plaintext highlighter-rouge">subg.</code> rank.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/48">Issue #48</a> — improve transliteration of diactritical characters.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/49">Issue #49</a> — support for outdated names with several hyphens in specific
+                epithet.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/51">Issue #51</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus) cus</code> in botany and zoology
+                (author or subgenus).</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/52">Issue #52</a> — support hyphen in outdated genus names.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/57">Issue #57</a> — warn when <code class="language-plaintext highlighter-rouge">f.</code> might mean either <code class="language-plaintext highlighter-rouge">filius</code> or <code class="language-plaintext highlighter-rouge">forma</code>.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/58">Issue #58</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus)</code> in ICN and ICZN
+                (author or subgenus).</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/63">Issue #63</a> — normalize <code class="language-plaintext highlighter-rouge">format</code> to <code class="language-plaintext highlighter-rouge">f.</code> instead of <code class="language-plaintext highlighter-rouge">fm.</code>.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/60">Issue #60</a> — allow outdated ranks in form of Greek letters.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/61">Issue #61</a> — support authors’ names with <code class="language-plaintext highlighter-rouge">bis</code> suffix.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/66">Issue #66</a> — remove HTML tags from names, unless asked otherwise.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/67">Issue #67</a> — add name’s authorship to the “root” of JSON structure.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/68">Issue #68</a> — provide stemmed canonical form.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/69">Issue #69</a> — provide shared C library to bind <strong>GNparser</strong> to
+                other languages.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/72">Issue #72</a> — parse surrogate names from BOLD project.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/75">Issue #75</a> — normalize subspecies to subsp.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/74">Issue #74</a> — support CSV output.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/78">Issue #78</a> — parse virus-like non-virus names correctly.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/79">Issue #79</a> — make CSV as a default output.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/80">Issue #80</a> — add cardinality to output.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/81">Issue #81</a> — support year ranges like ‘1778/79’.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/82">Issue #82</a> — parse authors with prefix <code class="language-plaintext highlighter-rouge">zu</code>.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/89">Issue #89</a> — allow <code class="language-plaintext highlighter-rouge">subspec.</code> as a rank.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/90">Issue #90</a> — allow <code class="language-plaintext highlighter-rouge">ß</code> in names.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/93">Issue #93</a> — parse <code class="language-plaintext highlighter-rouge">y</code> from Spanish papers as an author separator.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/127">Issue #127</a> — release a stable 1.0.0 version.</li>
+  <li>
+<a href="https://github.com/gnames/gnparser/issues/162">Issue #162</a> — support bacterial <code class="language-plaintext highlighter-rouge">Candidatus</code> names.</li>
+</ul>
+
+
+  </div>
+</article>
+
+
+  <article>
+  <h2>
     <a href="/news/2019/12/11/gnfinder/">
       gnfinder release 0.9.1 -- bug fixes
     </a>
@@ -262,7 +418,7 @@ texts, in PDFs, MS Word and MS Excel documents, and even images.</p>
 
 <p>For a long time it used two name-finding libraries TaxonFinder (developed by
 Patrick Leary) and NetiNeti (developed by Lakshmi Manohar Akella). Both
-project served us well all these years using complementary heuristic and
+projects served us well all these years using complementary heuristic and
 natural language processing algorithms. <a href="https://www.biodiversitylibrary.org/">Biodiversity
 Heritage Library</a>,
 <a href="https://biostor.org/">BioStor</a> and many others used GNRD for detection of
@@ -283,7 +439,7 @@ OCR errors as well, as a result you might get false positives. We do
 recommend to use name-verification option to weed out such false results.</p>
 
 <p>If you need to cite GNRD in a paper, v0.9.0 has a DOI attached:
-<a href="https://zenodo.org/record/3569619"><code class="highlighter-rouge">10.5281/zenodo.3569619</code></a></p>
+<a href="https://zenodo.org/record/3569619"><code class="language-plaintext highlighter-rouge">10.5281/zenodo.3569619</code></a></p>
 
   </div>
 </article>
@@ -320,9 +476,9 @@ language that supports binding to C. Such languages inlude Python, Ruby, Java
 
 <p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
 gem</a> to take benefit
-of a dramatic speed increase and parsing quality of <code class="highlighter-rouge">gnparser</code>.</p>
+of a dramatic speed increase and parsing quality of <code class="language-plaintext highlighter-rouge">gnparser</code>.</p>
 
-<p>Here are a quick benchmarks that compare how <code class="highlighter-rouge">biodiversity</code> performs before
+<p>Here are a quick benchmarks that compare how <code class="language-plaintext highlighter-rouge">biodiversity</code> performs before
 and now:</p>
 
 <table>
@@ -365,8 +521,8 @@ and now:</p>
 <p>With this improved speed Encyclopedia of Life, which is written in Ruby,
 can process all their names using Ruby in less than 15 minutes.</p>
 
-<p>README file of <code class="highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
-library and <code class="highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
+<p>README file of <code class="language-plaintext highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
+library and <code class="language-plaintext highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
 other languages.</p>
 
   </div>
@@ -394,26 +550,26 @@ other languages.</p>
     </a>
   </div>
   <div class="post-content">
-    <p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="highlighter-rouge">gnparser</code></a>.
+    <p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="language-plaintext highlighter-rouge">gnparser</code></a>.
 Changes in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">v0.3.3 release</a>:</p>
 
 <ul>
   <li>add optionally showing canonical name UUID</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
-</span><span class="err">res</span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="err">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
+</span><span class="err">res</span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
 </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"canonical_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"canonical_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
 </span><span class="err">//</span><span class="w"> </span><span class="err">...</span></code></pre></figure>
 
 <ul>
   <li>
-    <p>add year’s range to AST node that is encoded with <code class="highlighter-rouge">Year</code>’s field
-<code class="highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
+    <p>add year’s range to AST node that is encoded with <code class="language-plaintext highlighter-rouge">Year</code>’s field
+<code class="language-plaintext highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
   </li>
   <li>
     <p>parse names ending on hybrid sign (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/88">#88</a>)</p>
@@ -463,7 +619,7 @@ They are described in the <a href="https://github.com/GlobalNamesArchitecture/gn
 released biodiversity parser.</p>
 
 <p>We are happy to announce the second public release of Scala-based
-<a href="https://github.com/GlobalNamesArchitecture/gnparser">Global Names Parser</a> or <code class="highlighter-rouge">gnparser</code>. There are many significant
+<a href="https://github.com/GlobalNamesArchitecture/gnparser">Global Names Parser</a> or <code class="language-plaintext highlighter-rouge">gnparser</code>. There are many significant
 changes in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.0">v. 0.3.0 release</a>.</p>
 
 <ul>
@@ -530,9 +686,9 @@ They are described in the <a href="https://github.com/GlobalNamesArchitecture/gn
 released biodiversity parser.)</p>
 
 <p>We are happy to announce a public release of <a href="https://github.com/GlobalNamesArchitecture/gnparser">Global Names Parser</a>
-or <code class="highlighter-rouge">gnparser</code> – the first project that marks transition of Global Names
+or <code class="language-plaintext highlighter-rouge">gnparser</code> – the first project that marks transition of Global Names
 reconciliation and resolution services from “prototype” to “production”. The
-<code class="highlighter-rouge">gnparser</code> project is developed by <a href="https://github.com/alexander-myltsev" class="user-mention">@alexander-myltsev</a> and <a href="https://github.com/dimus" class="user-mention">@dimus</a> in Scala
+<code class="language-plaintext highlighter-rouge">gnparser</code> project is developed by <a href="https://github.com/alexander-myltsev" class="user-mention">@alexander-myltsev</a> and <a href="https://github.com/dimus" class="user-mention">@dimus</a> in Scala
 language. GNParser can be used as a library, a command line tool, a socket
 server, a web-program and RESTful-service. It is easiest to try it at
 <a href="http://parser.globalnames.org">parser.globalnames.org</a></p>
@@ -555,7 +711,7 @@ of its publication.</p>
 <p>GNParser is a direct descendant of the biodiversity gem. It serves the same
 purpose and input/output format of both projects are similar. It also marks
 eventual discontinuation of ‘biodiversity gem project’ and migration of all
-Global Names code to the new <code class="highlighter-rouge">gnparser</code> library.</p>
+Global Names code to the new <code class="language-plaintext highlighter-rouge">gnparser</code> library.</p>
 
 <p>Why did we go through the pain of making a completely new parser from scratch?
 The short answer is <em>scalability and portability</em>. We want to be able to
@@ -666,8 +822,8 @@ new computers are in place.</p>
   </div>
   <div class="post-content">
     <p>New version 3.4.1 of GlobalNames Parser gem <a href="http://rubygems.org/gems/biodiversity">biodiversity</a> is out.
-It adds ability to parse authors names starting with <code class="highlighter-rouge">d'</code> like
-<code class="highlighter-rouge">Cirsium creticum d'Urv. subsp. creticum</code></p>
+It adds ability to parse authors names starting with <code class="language-plaintext highlighter-rouge">d'</code> like
+<code class="language-plaintext highlighter-rouge">Cirsium creticum d'Urv. subsp. creticum</code></p>
 
 <p>which now is parsed correctly</p>
 
@@ -711,7 +867,7 @@ code:</p>
 <span class="c1">#output: Carex scirpoidea subsp. convoluta</span></code></pre></figure>
 
 <p>Now it is also possible to add ranks to canonical forms after the fact using
-static method <code class="highlighter-rouge">ScientificNameParser.add_rank_to_canonical</code></p>
+static method <code class="language-plaintext highlighter-rouge">ScientificNameParser.add_rank_to_canonical</code></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"biodiversity"</span>
 <span class="n">parser</span> <span class="o">=</span> <span class="no">ScientificNameParser</span><span class="p">.</span><span class="nf">new</span>
@@ -749,7 +905,7 @@ static method <code class="highlighter-rouge">ScientificNameParser.add_rank_to_c
   </div>
   <div class="post-content">
     <p>New version 3.3.0 of GlobalNames Parser gem biodiversity is out. It adds new
-option to socket server <code class="highlighter-rouge">-H</code> or <code class="highlighter-rouge">--host</code> to change default 127.0.0.1
+option to socket server <code class="language-plaintext highlighter-rouge">-H</code> or <code class="language-plaintext highlighter-rouge">--host</code> to change default 127.0.0.1
 host setting.  To see full set of options run</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install </span>biodiversity
@@ -808,26 +964,26 @@ into the parser.</p>
 <a href="http://globalnamesarchitecture.github.io/gna/uuid/2015/05/31/gn-uuid-0-5-0.html">Global Names UUID v5</a> is added to the output as “id” field</h2>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo"</span><span class="w">
+    </span><span class="nl">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sapiens"</span><span class="w">
+            </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sapiens"</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">]</span><span class="w">
+        </span><span class="nl">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -848,32 +1004,32 @@ are not code compliant.</p>
 <p>New behavior:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b3a9b1a3-f73c-5333-8194-a84c6583d130"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca m'coyi Tenison-Woods"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi Tenison-Woods"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca"</span><span class="w">
+    </span><span class="nl">"scientificName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b3a9b1a3-f73c-5333-8194-a84c6583d130"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"parser_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2.1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca m'coyi Tenison-Woods"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi Tenison-Woods"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca mcoyi"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hybrid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nl">"genus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arca"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mcoyi"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"authorship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"basionymAuthorTeam"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"authorTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Tenison-Woods"</span><span class="p">]</span><span class="w">
+            </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mcoyi"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"authorship"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"basionymAuthorTeam"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"authorTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenison-Woods"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Tenison-Woods"</span><span class="p">]</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">],</span><span class="w">
-            </span><span class="s2">"12"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"author_word"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span><span class="w">
+        </span><span class="nl">"parser_run"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"genus"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"species"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"12"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"author_word"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -1042,10 +1198,10 @@ safely.</p>
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">Homo sapiens</code></p>
+    <p><code class="language-plaintext highlighter-rouge">Homo sapiens</code></p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">Homo sаpiens</code></p>
+    <p><code class="language-plaintext highlighter-rouge">Homo sаpiens</code></p>
   </li>
 </ul>
 
@@ -1054,15 +1210,15 @@ but in reality they are different. Here are their UUIDs:</p>
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">16f235a0-e4a3-529c-9b83-bd15fe722110</code></p>
+    <p><code class="language-plaintext highlighter-rouge">16f235a0-e4a3-529c-9b83-bd15fe722110</code></p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">093dc7f7-5915-56a5-87de-033e20310b14</code></p>
+    <p><code class="language-plaintext highlighter-rouge">093dc7f7-5915-56a5-87de-033e20310b14</code></p>
   </li>
 </ul>
 
-<p>The difference is that the second name has a Cyrillic <code class="highlighter-rouge">а</code> character, which in
-most cases will look exactly the same as Latin <code class="highlighter-rouge">a</code> character. And when the
+<p>The difference is that the second name has a Cyrillic <code class="language-plaintext highlighter-rouge">а</code> character, which in
+most cases will look exactly the same as Latin <code class="language-plaintext highlighter-rouge">a</code> character. And when the
 names are printed on paper there is absolutely no way to tell the difference.
 UUID will tell us that these two name strings are not the same.</p>
 
@@ -1122,7 +1278,7 @@ found for MD5 algorithm</p>
     </a>
   </div>
   <div class="post-content">
-    <p>Version 0.1.6 of <code class="highlighter-rouge">gn_crossmap</code> tool is out.</p>
+    <p>Version 0.1.6 of <code class="language-plaintext highlighter-rouge">gn_crossmap</code> tool is out.</p>
 
 <p><a href="https://github.com/GlobalNamesArchitecture/gn_crossmap">Global Names Crossmap</a> tool allows to match names from a a
 spreadsheet to names from <a href="http://resolver.globalnames.org/data_sources">any data source</a> in Global Names
@@ -1208,6 +1364,10 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
       </li>
       
@@ -1223,13 +1383,13 @@ using any field from the input.</p>
         <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
       </li>
       
-      <li class="">
-        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</a>

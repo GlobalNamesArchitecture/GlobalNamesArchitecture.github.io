@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>gnparser release v0.3.3</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v3.8.5">
+  <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -93,6 +93,8 @@
     <option value="">Navigate the blog…</option>
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
+      
+      <option value="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</option>
       
       <option value="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</option>
       
@@ -217,26 +219,26 @@
   </div>
   
   <div class="post-content">
-    <p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="highlighter-rouge">gnparser</code></a>.
+    <p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="language-plaintext highlighter-rouge">gnparser</code></a>.
 Changes in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">v0.3.3 release</a>:</p>
 
 <ul>
   <li>add optionally showing canonical name UUID</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
-</span><span class="err">res</span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="err">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
+</span><span class="err">res</span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
 </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"canonical_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"canonical_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
 </span><span class="err">//</span><span class="w"> </span><span class="err">...</span></code></pre></figure>
 
 <ul>
   <li>
-    <p>add year’s range to AST node that is encoded with <code class="highlighter-rouge">Year</code>’s field
-<code class="highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
+    <p>add year’s range to AST node that is encoded with <code class="language-plaintext highlighter-rouge">Year</code>’s field
+<code class="language-plaintext highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
   </li>
   <li>
     <p>parse names ending on hybrid sign (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/88">#88</a>)</p>
@@ -273,6 +275,10 @@ They are described in the <a href="https://github.com/GlobalNamesArchitecture/gn
     <ul>
       
       <li class="">
+        <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
       </li>
       
@@ -288,13 +294,13 @@ They are described in the <a href="https://github.com/GlobalNamesArchitecture/gn
         <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
       </li>
       
-      <li class="">
-        <a href="/news/2016/05/23/gnparser-0-3-0/">GNParser v0.3.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</a>

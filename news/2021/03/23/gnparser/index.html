@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Good names, bad names?</title>
+  <title>GNparser (Go language) release 1.1.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -196,17 +196,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Good names, bad names?
-    <a href="/news/2015/04/29/good-bad-names/" class="permalink" title="Permalink">∞</a>
+    GNparser (Go language) release 1.1.0
+    <a href="/news/2021/03/23/gnparser/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      gni, resolver, and globi
+      GNparser and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      29 Apr 2015
+      23 Mar 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -219,59 +219,100 @@
   </div>
   
   <div class="post-content">
-    <p>Just had a great conversation with <a href="https://github.com/jhpoelen">Jorrit Poelen</a> from <a href="http://www.globalbioticinteractions.org/about.html">GloBI</a>.
-Jorrit uses <a href="http://resolver.globalnames.org">GN Resolver</a> to clean up names for Globi, and on top of
-knowing that name exists in GN Resolver he also needs to know if the name is
-actually valid.</p>
+    <p>Scientific name parsing allows to determine a <em>canonical form</em>, the
+<em>authorship</em> of a name, and receive other meta-information. Canonical forms are
+crucial for comparing names from different data sources.</p>
 
-<p>Resolver by design contains ‘good’ and ‘bad’ names. We do need to know what
-kind of misspellings exist in the wild and map information associated with them
-to good names. These misspellings and outright wrong names make Jorrit’s
-life much harder, as we do not have a tool that clearly marks ‘good’ names as
-good.  There are ways to be more or less sure if a name is good:</p>
+<p>We are releasing <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> v1.1.0 written in Go language. We
+support <a href="https://semver.org/">Semantic Versioning</a>, therefore it is a stable version. Output format,
+functions, and settings are going to be backward compatible for many years
+(until v2).</p>
+
+<p>This is the 3rd implementation of name-parsing for Global Names Architecture
+project. First one, written in Ruby, <a href="https://github.com/GlobalNamesArchitecture/biodiversity"><strong>biodiversity gem</strong></a>,
+uses now the Go code of <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a>. Second one, written in Scala
+<a href="https://github.com/GlobalNamesArchitecture/gnparser">is archived</a>, and awaits for a new maintainer.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> is a sophisticated software, it is able to parse the
+most complex scientific names. It is also very fast, and able to parse more
+than 200 million names in an hour. The parser is a core component of many other
+Global Names Architecture projects.</p>
+
+<p>It can be used via:</p>
 
 <ul>
-  <li>If names belong to a specific clade – use only highly curated sources</li>
-  <li>Count how many sources know about a name</li>
-  <li>See if a name appears at least in one curated source</li>
-  <li>Check if name got parsed</li>
+  <li><a href="https://parser.globalnames.org">Web page</a></li>
+  <li><a href="https://app.swaggerhub.com/apis-docs/dimus/gnparser/1.0.0">REST API</a></li>
+  <li><a href="https://github.com/gnames/gnparser#command-line">Command line application</a></li>
+  <li><a href="https://rubygems.org/gems/biodiversity">Ruby Gem</a></li>
+  <li><a href="https://github.com/ropensci/rgnparser">R package</a></li>
+  <li><a href="https://github.com/gnames/gnparser#use-as-a-library-in-go">Go Library</a></li>
 </ul>
 
-<p>But all these approaches are not universal, and do not give a clear answer.  So
-what would be a solution?</p>
+<p>We also provide
+<a href="https://github.com/gnames/gnparser/blob/master/binding/main.go">C-binding</a> to
+its code. This approach allows to incorporate <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> natively
+into all languages that support C-binding (such as Java, Python, Ruby etc)</p>
 
-<p>It seems that a good solution would be to write a classifier which takes in
-account all relevant features and meta-features of a name, considers them and
-then puts the name into ‘good’ or ‘bad’ bucket.  Every name has several
-features associated with it and we can train a Bayes classifier to make a
-decision if name is ‘good’ or ‘bad’ using these features. When it is done
-running through our ~20 million names – each of them will be marked as trusted
-or not.</p>
+<h2 id="pledge-for-github-stars">Pledge for <a href="https://github.com">GitHub</a> stars</h2>
 
-<p>I am pretty much sure that such classifier, especially at its first iteration
-will make mistakes. How can we deal with them? Here is an idea – when API
-returns back data back to a user – data will have two new fields – ‘trusted’
-as yes/no and a URL to complain about this decision something like:</p>
+<p>Mac and Linux users often use <a href="https://brew.sh/">Homebrew</a> packaging system to install software
+on their computers. Windows users can access [Homrebrew] too, if they install
+<a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windwos Subsystem for Linux 2 (WSL2)</a>. To be added to “official”
+<a href="https://brew.sh/">Homebrew</a> repository <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> needs to collect &gt;70 stars on
+the <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong> GitHub page</a>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http:/resolver.globalnames.org/trusted?name_id=123&amp;wrong_value=1
-</code></pre></div></div>
+<p>If you have a <a href="https://github.com">GitHub</a> account and would like to see <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a>
+available via <code class="language-plaintext highlighter-rouge">brew install gnparser</code> command, please click a star on the
+project page.</p>
 
-<p>People can just copy and paste this URL into browser, or set it as a “Report a
-mistake” button for every name in their results html.  If this button is pushed
-GN Resolver will register human curation event and data from this event will be
-used to improve performance of the classifier algorithm. Human curations will
-trump computer algorithm and they can be collected in a new data source for
-feedbacks…</p>
+<h2 id="improvements-since-the-last-scala-based-release-of-gnparser">Improvements since the last Scala-based release of GNparser</h2>
 
-<p>Details of the interface can be decided later when we build the classifier. I
-know that the problem of separating trusted names from untrusted is a task that
-about everybody who uses resolver actively asked me about one time or another.
-So who and when can build it? And now I am thinking that our Google Summer of
-Code student might be interested in making it happen instead of improving
-NetiNeti.  I personally think automatic curation of names is more important.</p>
-
-<p>Jorrit submitted an <a href="https://github.com/GlobalNamesArchitecture/gni/issues/38">issue</a> about this idea
-Globit <a href="https://github.com/jhpoelen/eol-globi-data/issues/132">issue</a></p>
+<ul>
+  <li>
+    <p>Speed — about 2 times faster than Scala-based version for CSV output,
+             and about 8 times faster for JSON output.</p>
+  </li>
+  <li><a href="https://github.com/gnames/gnparser/issues/27">Issue #27</a> — support for <code class="language-plaintext highlighter-rouge">agamosp. agamossp. agamovar.</code> ranks.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/28">Issue #28</a> — support for non-ASCII apostrophes.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/36">Issue #36</a> — support <code class="language-plaintext highlighter-rouge">_</code> as a space for files in Newick format.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/40">Issue #40</a> — support names where one of parentheses is missing.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/43">Issue #43</a> — support for <code class="language-plaintext highlighter-rouge">notho-</code> (hybrid) ranks.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/45">Issue #45</a> — support for <code class="language-plaintext highlighter-rouge">natio</code> rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/46">Issue #46</a> — support for <code class="language-plaintext highlighter-rouge">subg.</code> rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/48">Issue #48</a> — improve transliteration of diactritical characters.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/49">Issue #49</a> — support for outdated names with several hyphens in specific
+                epithet.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/51">Issue #51</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus) cus</code> in botany and zoology
+                (author or subgenus).</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/52">Issue #52</a> — support hyphen in outdated genus names.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/57">Issue #57</a> — warn when <code class="language-plaintext highlighter-rouge">f.</code> might mean either <code class="language-plaintext highlighter-rouge">filius</code> or <code class="language-plaintext highlighter-rouge">forma</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/58">Issue #58</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus)</code> in ICN and ICZN
+                (author or subgenus).</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/63">Issue #63</a> — normalize <code class="language-plaintext highlighter-rouge">format</code> to <code class="language-plaintext highlighter-rouge">f.</code> instead of <code class="language-plaintext highlighter-rouge">fm.</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/60">Issue #60</a> — allow outdated ranks in form of Greek letters.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/61">Issue #61</a> — support authors’ names with <code class="language-plaintext highlighter-rouge">bis</code> suffix.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/66">Issue #66</a> — remove HTML tags from names, unless asked otherwise.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/67">Issue #67</a> — add name’s authorship to the “root” of JSON structure.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/68">Issue #68</a> — provide stemmed canonical form.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/69">Issue #69</a> — provide shared C library to bind <strong>GNparser</strong> to
+                other languages.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/72">Issue #72</a> — parse surrogate names from BOLD project.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/75">Issue #75</a> — normalize subspecies to subsp.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/74">Issue #74</a> — support CSV output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/78">Issue #78</a> — parse virus-like non-virus names correctly.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/79">Issue #79</a> — make CSV as a default output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/80">Issue #80</a> — add cardinality to output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/81">Issue #81</a> — support year ranges like ‘1778/79’.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/82">Issue #82</a> — parse authors with prefix <code class="language-plaintext highlighter-rouge">zu</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/89">Issue #89</a> — allow <code class="language-plaintext highlighter-rouge">subspec.</code> as a rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/90">Issue #90</a> — allow <code class="language-plaintext highlighter-rouge">ß</code> in names.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/93">Issue #93</a> — parse <code class="language-plaintext highlighter-rouge">y</code> from Spanish papers as an author separator.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/127">Issue #127</a> — release a stable 1.0.0 version.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/162">Issue #162</a> — support bacterial <code class="language-plaintext highlighter-rouge">Candidatus</code> names.</li>
+</ul>
 
 
   </div>
@@ -289,7 +330,7 @@ Globit <a href="https://github.com/jhpoelen/eol-globi-data/issues/132">issue</a>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
       </li>
       
@@ -313,7 +354,7 @@ Globit <a href="https://github.com/jhpoelen/eol-globi-data/issues/132">issue</a>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>
         </li>
         
@@ -477,7 +518,7 @@ Globit <a href="https://github.com/jhpoelen/eol-globi-data/issues/132">issue</a>
           <a href="/news/2015/05/02/species-file-group/">Species File Group -- new home for GN?</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/04/29/good-bad-names/">Good names, bad names?</a>
         </li>
         

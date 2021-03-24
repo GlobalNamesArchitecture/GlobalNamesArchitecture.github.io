@@ -11,10 +11,10 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Wed, 11 Dec 2019 13:02:49 -0600</pubDate>
-    <lastBuildDate>Wed, 11 Dec 2019 13:02:49 -0600</lastBuildDate>
+    <pubDate>Wed, 24 Mar 2021 07:21:37 -0500</pubDate>
+    <lastBuildDate>Wed, 24 Mar 2021 07:21:37 -0500</lastBuildDate>
     <language>en-US</language>
-    <generator>Jekyll v3.8.5</generator>
+    <generator>Jekyll v4.2.0</generator>
     <description>Scientific Name Services</description>
     <image>
       <description>Scientific Names Services</description>
@@ -24,6 +24,116 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>GNparser (Go language) release 1.1.0</title>
+      <link>http://globalnames.org/news/2021/03/23/gnparser/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>GNparser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2021/03/23/gnparser/</guid>
+      <description>&lt;p&gt;Scientific name parsing allows to determine a &lt;em&gt;canonical form&lt;/em&gt;, the
+&lt;em&gt;authorship&lt;/em&gt; of a name, and receive other meta-information. Canonical forms are
+crucial for comparing names from different data sources.&lt;/p&gt;
+
+&lt;p&gt;We are releasing &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt; v1.1.0 written in Go language. We
+support &lt;a href=&quot;https://semver.org/&quot;&gt;Semantic Versioning&lt;/a&gt;, therefore it is a stable version. Output format,
+functions, and settings are going to be backward compatible for many years
+(until v2).&lt;/p&gt;
+
+&lt;p&gt;This is the 3rd implementation of name-parsing for Global Names Architecture
+project. First one, written in Ruby, &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;&lt;strong&gt;biodiversity gem&lt;/strong&gt;&lt;/a&gt;,
+uses now the Go code of &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt;. Second one, written in Scala
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;is archived&lt;/a&gt;, and awaits for a new maintainer.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt; is a sophisticated software, it is able to parse the
+most complex scientific names. It is also very fast, and able to parse more
+than 200 million names in an hour. The parser is a core component of many other
+Global Names Architecture projects.&lt;/p&gt;
+
+&lt;p&gt;It can be used via:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://parser.globalnames.org&quot;&gt;Web page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://app.swaggerhub.com/apis-docs/dimus/gnparser/1.0.0&quot;&gt;REST API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser#command-line&quot;&gt;Command line application&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rubygems.org/gems/biodiversity&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ropensci/rgnparser&quot;&gt;R package&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser#use-as-a-library-in-go&quot;&gt;Go Library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also provide
+&lt;a href=&quot;https://github.com/gnames/gnparser/blob/master/binding/main.go&quot;&gt;C-binding&lt;/a&gt; to
+its code. This approach allows to incorporate &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt; natively
+into all languages that support C-binding (such as Java, Python, Ruby etc)&lt;/p&gt;
+
+&lt;h2 id=&quot;pledge-for-github-stars&quot;&gt;Pledge for &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; stars&lt;/h2&gt;
+
+&lt;p&gt;Mac and Linux users often use &lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; packaging system to install software
+on their computers. Windows users can access [Homrebrew] too, if they install
+&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;&gt;Windwos Subsystem for Linux 2 (WSL2)&lt;/a&gt;. To be added to “official”
+&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; repository &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt; needs to collect &amp;gt;70 stars on
+the &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt; GitHub page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have a &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; account and would like to see &lt;a href=&quot;https://github.com/gnames/gnparser&quot;&gt;&lt;strong&gt;GNparser&lt;/strong&gt;&lt;/a&gt;
+available via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew install gnparser&lt;/code&gt; command, please click a star on the
+project page.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements-since-the-last-scala-based-release-of-gnparser&quot;&gt;Improvements since the last Scala-based release of GNparser&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Speed — about 2 times faster than Scala-based version for CSV output,
+             and about 8 times faster for JSON output.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/27&quot;&gt;Issue #27&lt;/a&gt; — support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agamosp. agamossp. agamovar.&lt;/code&gt; ranks.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/28&quot;&gt;Issue #28&lt;/a&gt; — support for non-ASCII apostrophes.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/36&quot;&gt;Issue #36&lt;/a&gt; — support &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt; as a space for files in Newick format.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/40&quot;&gt;Issue #40&lt;/a&gt; — support names where one of parentheses is missing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/43&quot;&gt;Issue #43&lt;/a&gt; — support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;notho-&lt;/code&gt; (hybrid) ranks.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/45&quot;&gt;Issue #45&lt;/a&gt; — support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;natio&lt;/code&gt; rank.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/46&quot;&gt;Issue #46&lt;/a&gt; — support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subg.&lt;/code&gt; rank.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/48&quot;&gt;Issue #48&lt;/a&gt; — improve transliteration of diactritical characters.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/49&quot;&gt;Issue #49&lt;/a&gt; — support for outdated names with several hyphens in specific
+                epithet.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/51&quot;&gt;Issue #51&lt;/a&gt; — distinguish between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Aus (Bus) cus&lt;/code&gt; in botany and zoology
+                (author or subgenus).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/52&quot;&gt;Issue #52&lt;/a&gt; — support hyphen in outdated genus names.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/57&quot;&gt;Issue #57&lt;/a&gt; — warn when &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f.&lt;/code&gt; might mean either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filius&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forma&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/58&quot;&gt;Issue #58&lt;/a&gt; — distinguish between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Aus (Bus)&lt;/code&gt; in ICN and ICZN
+                (author or subgenus).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/63&quot;&gt;Issue #63&lt;/a&gt; — normalize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;format&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f.&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fm.&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/60&quot;&gt;Issue #60&lt;/a&gt; — allow outdated ranks in form of Greek letters.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/61&quot;&gt;Issue #61&lt;/a&gt; — support authors’ names with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bis&lt;/code&gt; suffix.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/66&quot;&gt;Issue #66&lt;/a&gt; — remove HTML tags from names, unless asked otherwise.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/67&quot;&gt;Issue #67&lt;/a&gt; — add name’s authorship to the “root” of JSON structure.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/68&quot;&gt;Issue #68&lt;/a&gt; — provide stemmed canonical form.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/69&quot;&gt;Issue #69&lt;/a&gt; — provide shared C library to bind &lt;strong&gt;GNparser&lt;/strong&gt; to
+                other languages.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/72&quot;&gt;Issue #72&lt;/a&gt; — parse surrogate names from BOLD project.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/75&quot;&gt;Issue #75&lt;/a&gt; — normalize subspecies to subsp.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/74&quot;&gt;Issue #74&lt;/a&gt; — support CSV output.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/78&quot;&gt;Issue #78&lt;/a&gt; — parse virus-like non-virus names correctly.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/79&quot;&gt;Issue #79&lt;/a&gt; — make CSV as a default output.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/80&quot;&gt;Issue #80&lt;/a&gt; — add cardinality to output.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/81&quot;&gt;Issue #81&lt;/a&gt; — support year ranges like ‘1778/79’.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/82&quot;&gt;Issue #82&lt;/a&gt; — parse authors with prefix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zu&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/89&quot;&gt;Issue #89&lt;/a&gt; — allow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subspec.&lt;/code&gt; as a rank.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/90&quot;&gt;Issue #90&lt;/a&gt; — allow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ß&lt;/code&gt; in names.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/93&quot;&gt;Issue #93&lt;/a&gt; — parse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; from Spanish papers as an author separator.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/127&quot;&gt;Issue #127&lt;/a&gt; — release a stable 1.0.0 version.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/issues/162&quot;&gt;Issue #162&lt;/a&gt; — support bacterial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Candidatus&lt;/code&gt; names.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    </item>
     
     <item>
       <title>gnfinder release 0.9.1 -- bug fixes</title>
@@ -74,7 +184,7 @@ texts, in PDFs, MS Word and MS Excel documents, and even images.&lt;/p&gt;
 
 &lt;p&gt;For a long time it used two name-finding libraries TaxonFinder (developed by
 Patrick Leary) and NetiNeti (developed by Lakshmi Manohar Akella). Both
-project served us well all these years using complementary heuristic and
+projects served us well all these years using complementary heuristic and
 natural language processing algorithms. &lt;a href=&quot;https://www.biodiversitylibrary.org/&quot;&gt;Biodiversity
 Heritage Library&lt;/a&gt;,
 &lt;a href=&quot;https://biostor.org/&quot;&gt;BioStor&lt;/a&gt; and many others used GNRD for detection of
@@ -95,7 +205,7 @@ OCR errors as well, as a result you might get false positives. We do
 recommend to use name-verification option to weed out such false results.&lt;/p&gt;
 
 &lt;p&gt;If you need to cite GNRD in a paper, v0.9.0 has a DOI attached:
-&lt;a href=&quot;https://zenodo.org/record/3569619&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;10.5281/zenodo.3569619&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://zenodo.org/record/3569619&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10.5281/zenodo.3569619&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -272,9 +382,9 @@ language that supports binding to C. Such languages inlude Python, Ruby, Java
 
 &lt;p&gt;We already updated &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/biodiversity&quot;&gt;Ruby’s biodiversity parser
 gem&lt;/a&gt; to take benefit
-of a dramatic speed increase and parsing quality of &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;.&lt;/p&gt;
+of a dramatic speed increase and parsing quality of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here are a quick benchmarks that compare how &lt;code class=&quot;highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; performs before
+&lt;p&gt;Here are a quick benchmarks that compare how &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; performs before
 and now:&lt;/p&gt;
 
 &lt;table&gt;
@@ -317,8 +427,8 @@ and now:&lt;/p&gt;
 &lt;p&gt;With this improved speed Encyclopedia of Life, which is written in Ruby,
 can process all their names using Ruby in less than 15 minutes.&lt;/p&gt;
 
-&lt;p&gt;README file of &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; contains &lt;a href=&quot;https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library&quot;&gt;instructions&lt;/a&gt; how to make such c-shared
-library and &lt;code class=&quot;highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; code is a good example of connecting the library to
+&lt;p&gt;README file of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; contains &lt;a href=&quot;https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library&quot;&gt;instructions&lt;/a&gt; how to make such c-shared
+library and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; code is a good example of connecting the library to
 other languages.&lt;/p&gt;
 </description>
     </item>
@@ -442,26 +552,26 @@ effort to bulk-populate GNUB from existing data.&lt;/p&gt;
       <category>release</category>
       
       <guid isPermaLink="true">http://globalnames.org/news/2016/10/06/gnparser-0-3-3/</guid>
-      <description>&lt;p&gt;We are happy to announce the release of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;&lt;/a&gt;.
+      <description>&lt;p&gt;We are happy to announce the release of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;&lt;/a&gt;.
 Changes in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3&quot;&gt;v0.3.3 release&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;add optionally showing canonical name UUID&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;scala&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fromString(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;).render(compact=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;showCanonicalUuid=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;scala&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fromString(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;).render(compact=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;showCanonicalUuid=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;canonical_name&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;canonical_name&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;add year’s range to AST node that is encoded with &lt;code class=&quot;highlighter-rouge&quot;&gt;Year&lt;/code&gt;’s field
-&lt;code class=&quot;highlighter-rouge&quot;&gt;rangeEnd: Option[CapturePosition]&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;add year’s range to AST node that is encoded with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Year&lt;/code&gt;’s field
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rangeEnd: Option[CapturePosition]&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;parse names ending on hybrid sign (&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/issues/88&quot;&gt;#88&lt;/a&gt;)&lt;/p&gt;
@@ -500,7 +610,7 @@ They are described in the &lt;a href=&quot;https://github.com/GlobalNamesArchite
 released biodiversity parser.&lt;/p&gt;
 
 &lt;p&gt;We are happy to announce the second public release of Scala-based
-&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;. There are many significant
+&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt;. There are many significant
 changes in the &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.0&quot;&gt;v. 0.3.0 release&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -587,9 +697,9 @@ Kubernetes at Google Container Engine to keep it alive.&lt;/p&gt;
 released biodiversity parser.)&lt;/p&gt;
 
 &lt;p&gt;We are happy to announce a public release of &lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gnparser&quot;&gt;Global Names Parser&lt;/a&gt;
-or &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; – the first project that marks transition of Global Names
+or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; – the first project that marks transition of Global Names
 reconciliation and resolution services from “prototype” to “production”. The
-&lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; project is developed by @alexander-myltsev and @dimus in Scala
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; project is developed by @alexander-myltsev and @dimus in Scala
 language. GNParser can be used as a library, a command line tool, a socket
 server, a web-program and RESTful-service. It is easiest to try it at
 &lt;a href=&quot;http://parser.globalnames.org&quot;&gt;parser.globalnames.org&lt;/a&gt;&lt;/p&gt;
@@ -612,7 +722,7 @@ of its publication.&lt;/p&gt;
 &lt;p&gt;GNParser is a direct descendant of the biodiversity gem. It serves the same
 purpose and input/output format of both projects are similar. It also marks
 eventual discontinuation of ‘biodiversity gem project’ and migration of all
-Global Names code to the new &lt;code class=&quot;highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; library.&lt;/p&gt;
+Global Names code to the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnparser&lt;/code&gt; library.&lt;/p&gt;
 
 &lt;p&gt;Why did we go through the pain of making a completely new parser from scratch?
 The short answer is &lt;em&gt;scalability and portability&lt;/em&gt;. We want to be able to
@@ -1024,8 +1134,8 @@ that.&lt;/p&gt;
       
       <guid isPermaLink="true">http://globalnames.org/news/2015/08/27/parser-3-4-1/</guid>
       <description>&lt;p&gt;New version 3.4.1 of GlobalNames Parser gem &lt;a href=&quot;http://rubygems.org/gems/biodiversity&quot;&gt;biodiversity&lt;/a&gt; is out.
-It adds ability to parse authors names starting with &lt;code class=&quot;highlighter-rouge&quot;&gt;d'&lt;/code&gt; like
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Cirsium creticum d'Urv. subsp. creticum&lt;/code&gt;&lt;/p&gt;
+It adds ability to parse authors names starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d'&lt;/code&gt; like
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cirsium creticum d'Urv. subsp. creticum&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;which now is parsed correctly&lt;/p&gt;
 
@@ -1058,7 +1168,7 @@ code:&lt;/p&gt;
 &lt;span class=&quot;c1&quot;&gt;#output: Carex scirpoidea subsp. convoluta&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now it is also possible to add ranks to canonical forms after the fact using
-static method &lt;code class=&quot;highlighter-rouge&quot;&gt;ScientificNameParser.add_rank_to_canonical&lt;/code&gt;&lt;/p&gt;
+static method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ScientificNameParser.add_rank_to_canonical&lt;/code&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;biodiversity&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ScientificNameParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
@@ -1085,7 +1195,7 @@ static method &lt;code class=&quot;highlighter-rouge&quot;&gt;ScientificNamePars
       
       <guid isPermaLink="true">http://globalnames.org/news/2015/08/14/parser-3-3-0/</guid>
       <description>&lt;p&gt;New version 3.3.0 of GlobalNames Parser gem biodiversity is out. It adds new
-option to socket server &lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--host&lt;/code&gt; to change default 127.0.0.1
+option to socket server &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-H&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--host&lt;/code&gt; to change default 127.0.0.1
 host setting.  To see full set of options run&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;biodiversity
@@ -1191,26 +1301,26 @@ into the parser.&lt;/p&gt;
 &lt;h2 id=&quot;global-names-uuid-v5-is-added-to-the-output-as-id-field&quot;&gt;&lt;a href=&quot;http://globalnamesarchitecture.github.io/gna/uuid/2015/05/31/gn-uuid-0-5-0.html&quot;&gt;Global Names UUID v5&lt;/a&gt; is added to the output as “id” field&lt;/h2&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;16f235a0-e4a3-529c-9b83-bd15fe722110&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo sapiens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Homo&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sapiens&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -1231,32 +1341,32 @@ are not code compliant.&lt;/p&gt;
 &lt;p&gt;New behavior:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;b3a9b1a3-f73c-5333-8194-a84c6583d130&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca m'coyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scientificName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;b3a9b1a3-f73c-5333-8194-a84c6583d130&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca m'coyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;authorship&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;basionymAuthorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;authorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;authorship&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;basionymAuthorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;authorTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;12&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author_word&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parser_run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;positions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;genus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;species&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;12&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author_word&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -1414,10 +1524,10 @@ safely.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Homo sapiens&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Homo sapiens&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Homo sаpiens&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Homo sаpiens&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1426,15 +1536,15 @@ but in reality they are different. Here are their UUIDs:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;16f235a0-e4a3-529c-9b83-bd15fe722110&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16f235a0-e4a3-529c-9b83-bd15fe722110&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;093dc7f7-5915-56a5-87de-033e20310b14&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;093dc7f7-5915-56a5-87de-033e20310b14&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The difference is that the second name has a Cyrillic &lt;code class=&quot;highlighter-rouge&quot;&gt;а&lt;/code&gt; character, which in
-most cases will look exactly the same as Latin &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; character. And when the
+&lt;p&gt;The difference is that the second name has a Cyrillic &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;а&lt;/code&gt; character, which in
+most cases will look exactly the same as Latin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; character. And when the
 names are printed on paper there is absolutely no way to tell the difference.
 UUID will tell us that these two name strings are not the same.&lt;/p&gt;
 
@@ -1483,7 +1593,7 @@ found for MD5 algorithm&lt;/p&gt;
       <category>release</category>
       
       <guid isPermaLink="true">http://globalnames.org/news/2015/05/31/gn-crossmap-0-1-6/</guid>
-      <description>&lt;p&gt;Version 0.1.6 of &lt;code class=&quot;highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; tool is out.&lt;/p&gt;
+      <description>&lt;p&gt;Version 0.1.6 of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; tool is out.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/GlobalNamesArchitecture/gn_crossmap&quot;&gt;Global Names Crossmap&lt;/a&gt; tool allows to match names from a a
 spreadsheet to names from &lt;a href=&quot;http://resolver.globalnames.org/data_sources&quot;&gt;any data source&lt;/a&gt; in Global Names
@@ -1620,10 +1730,10 @@ parsed anymore. It is a problem for some surrogate names, like
 
 &lt;h3 id=&quot;better-detection-of-virus-names&quot;&gt;Better detection of virus names&lt;/h3&gt;
 
-&lt;p&gt;Names containing &lt;code class=&quot;highlighter-rouge&quot;&gt;virophage&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*NPV&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*sattelite&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*particle&lt;/code&gt; are marked as ‘viruses’ and
+&lt;p&gt;Names containing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virophage&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*NPV&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*sattelite&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*particle&lt;/code&gt; are marked as ‘viruses’ and
 not parsed&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Gossypium mustilinum symptomless alphasatellite
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Gossypium mustilinum symptomless alphasatellite
 Okra leaf curl Mali alphasatellites-Cameroon
 Bemisia betasatellite LW-2014
 Tomato leaf curl Bangladesh betasatellites [India/Patna/Chilli/2008]
@@ -1645,7 +1755,7 @@ Sputnik virophage 3
 &lt;p&gt;Names like below are now parsed correctly. Their normalized/canonical forms
 preserve apostrophe&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Junellia o'donelli Moldenke, 1946
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Junellia o'donelli Moldenke, 1946
 Trophon d'orbignyi Carcelles, 1946
 Arca m'coyi Tenison-Woods, 1878
 Nucula m'andrewii Hanley, 1860
@@ -1732,7 +1842,7 @@ as a Ruby library.&lt;/p&gt;
 
 &lt;p&gt;Basic usage is:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install gn_crossmap
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install gn_crossmap
 $ crossmap -i input.csv -o ouput.csv -d 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1784,7 +1894,7 @@ data.  We determined 3 main approaches&lt;/p&gt;
 
 &lt;p&gt;A hackathon group which worked on crossmapping produced a
 &lt;a href=&quot;https://github.com/Sp2000/hackathon_group1&quot;&gt;code&lt;/a&gt; which would compare checklists against Catalogue of
-Life. The &lt;code class=&quot;highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; program I am releasing is based heavily on what we
+Life. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gn_crossmap&lt;/code&gt; program I am releasing is based heavily on what we
 learned during the hackathon. Crossmaping code is mostly based on use cases
 from &lt;a href=&quot;https://github.com/rpfigueira&quot;&gt;Rui Figueira&lt;/a&gt; and &lt;a href=&quot;https://github.com/WouterKoch&quot;&gt;Wouter Koch&lt;/a&gt;. During the hackathon we
 also determined ways to improve quality of name resolution further by:&lt;/p&gt;
@@ -1851,9 +1961,9 @@ find out the requirements during the design process.&lt;/p&gt;
       <description>&lt;p&gt;&lt;a href=&quot;https://about.me/bobcorrigan&quot;&gt;Bob Corrigan&lt;/a&gt; sent around an email pointing at a &lt;a href=&quot;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119248&quot;&gt;paper in PLOS&lt;/a&gt;
 which describes new classification adopted by &lt;a href=&quot;http://www.catalogueoflife.org/&quot;&gt;Catalogue of Life&lt;/a&gt;. After
 looking through the paper my understanding is that it is a step forward and at
-the same time business as usual for &lt;code class=&quot;highlighter-rouge&quot;&gt;CoL&lt;/code&gt;.&lt;/p&gt;
+the same time business as usual for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CoL&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Catalogue of Life&lt;/code&gt; needs a solid managerial classification for their data and
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Catalogue of Life&lt;/code&gt; needs a solid managerial classification for their data and
 according to article the goal is achieved:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2019,7 +2129,7 @@ will make mistakes. How can we deal with them? Here is an idea – when API
 returns back data back to a user – data will have two new fields – ‘trusted’
 as yes/no and a URL to complain about this decision something like:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http:/resolver.globalnames.org/trusted?name_id=123&amp;amp;wrong_value=1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http:/resolver.globalnames.org/trusted?name_id=123&amp;amp;wrong_value=1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;People can just copy and paste this URL into browser, or set it as a “Report a
@@ -2097,9 +2207,9 @@ to do idealized design of its features, find implementaion paths and limitations
 existing to implement the features and then Wencan is going to do exploration
 of features.&lt;/p&gt;
 
-&lt;p&gt;For the process we are going to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ZenHub&lt;/code&gt; to manage issues, obviosusly
-&lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub&lt;/code&gt; for the code and ability to have a project related blog with Github
-and &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For the process we are going to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZenHub&lt;/code&gt; to manage issues, obviosusly
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GitHub&lt;/code&gt; for the code and ability to have a project related blog with Github
+and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;.&lt;/p&gt;
 
 </description>
     </item>
