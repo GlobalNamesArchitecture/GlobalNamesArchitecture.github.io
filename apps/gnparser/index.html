@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>GN Parser</title>
+  <title>GNparser</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -177,137 +177,11 @@
     
   
     
-      <option value="/apps/gnub/">GN Usage Bank (GNUB)</option>
-    
   
     
   
     
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <option value="/apps/bioguid/">BioGUID</option>
-    
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <option value="/apps/gnparser/">GN Parser</option>
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <option value="/apps/gni/">GN Index (GNI)</option>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
+      <option value="/apps/gnparser/">GNparser</option>
     
   
 
@@ -380,6 +254,132 @@
   
     
       <option value="/apps/gnrd/">GNRD</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/apps/gnub/">GN Usage Bank (GNUB)</option>
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/apps/bioguid/">BioGUID</option>
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/apps/gni/">GN Index (GNI)</option>
+    
+  
+    
+  
+    
+  
+    
+  
     
   
     
@@ -835,12 +835,12 @@
       <div class="unit four-fifths">
         <article>
           <h2>
-          GN Parser
+          GNparser
           <a href="/apps/gnparser/" class="permalink" title="Permalink">∞</a>
           </h2>
     <div>
    
-   <span class="doc-date">Edited on: 30 Oct 2015</span>
+   <span class="doc-date">Edited on: 24 Mar 2021</span>
    
    
     </div>
@@ -849,14 +849,19 @@
   <ul>
     <li>Web App</li>
     <li>API App</li>
-    <li>Socket Server</li>
     <li>Command Line Tool</li>
     <li>Library</li>
   </ul>
 
-  <p> Scientific names parser rebuilt from scratch in Scala. We learned a lot
-  from Biodiversity parser, and used that knowledge to make GN Parser, which is
-  faster, better, more scalable, more portable redesign of parsing algorithms.
+  <p> Scientific name parser allows to compare names from different datasets,
+  check if names are well-formed, collect data about authors, years etc.
+  </p>
+
+  <p> GNparser is rebuilt from scratch in Go language. It is now 100 times
+  faster than original Ruby code, and from 2 to 8 times faster than Scala code.
+  Ruby version of GNparser,
+  <a href="https://github.com/GlobalNamesArchitecture/biodiversity"> biodiversity
+  gem</a>, uses Go code internally now.
   </p>
 
 </div>
@@ -868,15 +873,15 @@
   
   
   
-  <li><a href="https://github.com/GlobalNamesArchitecture/gnparser" target="_blank">Code</a></li>
+  <li><a href="https://github.com/gnames/gnparser" target="_blank">Code</a></li>
   
   
   
-  <li><a href="https://github.com/GlobalNamesArchitecture/gnparser/blob/master/README.rst" target="_blank">Documentation</a></li>
+  <li><a href="https://github.com/gnames/gnparser/blob/master/README.rst" target="_blank">Documentation</a></li>
   
   
   
-  <li><a href="https://hub.docker.com/r/gnames/gnparser/" target="_blank">Docker Container</a></li>
+  <li><a href="https://hub.docker.com/r/gnames/gognparser/" target="_blank">Docker Container</a></li>
   
 </ul>
 
@@ -929,6 +934,108 @@
   
     
       <li class=""><a href="/apps/zoobank/">ZooBank</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="current"><a href="/apps/gnparser/">GNparser</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/apps/gnr/">GN Resolver (GNR)</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/apps/gnrd/">GNRD</a></li>
       
 
 
@@ -1034,109 +1141,7 @@
     
   
     
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <li class="current"><a href="/apps/gnparser/">GN Parser</a></li>
-      
-
-
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
       <li class=""><a href="/apps/gni/">GN Index (GNI)</a></li>
-      
-
-
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <li class=""><a href="/apps/gnr/">GN Resolver (GNR)</a></li>
-      
-
-
-  
-
-  
-
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <li class=""><a href="/apps/gnrd/">GNRD</a></li>
       
 
 
