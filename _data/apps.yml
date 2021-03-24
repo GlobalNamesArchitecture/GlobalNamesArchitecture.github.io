@@ -2,7 +2,7 @@
   docs:
     - zoobank
     - gnparser
-    - gnr
+    - gnverifier
     - gnrd
     - gnub
     - bioguid
