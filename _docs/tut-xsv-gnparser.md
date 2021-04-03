@@ -16,7 +16,7 @@ a checklist are well-formed. In this tutorial we will use [gnparser] and [xsv]
 command line applications to quickly go through names in a CSV file and create
 an output that combines original data with parsed information.
 
-[xsv] is a very fast and powerful application to access and operate data in
+[xsv] is a very fast and powerful program to access and operate data in
 CSV format.
 
 [gnparser] is a biodiversity informatics application for parsing scientific
@@ -70,12 +70,13 @@ are surrounded by quotes.
 4,"Xanthophenax pacificator Rousse & Villemant, 2012"
 ```
 
-To parse such file we have to extract the second CSV field with names, get
-rid of the header and remove quotes. We can use `xsv` application for such task.
+To parse names in the file we have to extract the second CSV field with names,
+get rid of the header and remove quotes. We can use `xsv` application for such
+task.
 
 `xsv` has many very useful commands. Here we are going to use `xsv select` and
 `xsv fmt`. We are also going to use command line pipes `|`: they allow to
-redirect output of one command into input of the next command.
+redirect the output of one command into the input of the next command.
 
 ```bash
 $ head names.csv|xsv select ScientificName|tail -n +2|xsv fmt -t '\t'
@@ -90,7 +91,7 @@ Thalassironus de Man 1889
 Bruelia nawabi Ansari 1957
 ```
 
-`head names.csv` gave us first 10 lines of a file.
+`head names.csv` gave us the first 10 lines of a file.
 
 `xsv select ScientificName` picked the second field out of these 10 lines.
 
@@ -113,7 +114,8 @@ $ xsv select ScientificName names.csv|tail -n +2|xsv fmt -t '\t'|gnparser > pars
 2021/04/02 20:04:21 Parsing 100000-th line
 ```
 
-[gnparser] returns parsed results in exactly same order as the original file. Lets examine the parsing result.
+[gnparser] returns parsed results in the exactly same order as the original
+file. Lets examine the parsing result.
 
 ```bash
 $ wc -l parsed.csv
@@ -269,7 +271,7 @@ data.
     }
     ```
 
-    Looks like [gnparser] could not finish parsing and returned a warning
+    It looks like [gnparser] could not finish parsing and returned a warning
     `Unparsed tail`. It would expect an infraspecific epithet after `subsp.`,
     but received `sensu` instead.
 
