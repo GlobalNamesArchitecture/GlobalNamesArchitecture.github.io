@@ -3,6 +3,10 @@
     - home
     - glossary
 
+- title: Tutorials
+  docs:
+    - tut-xsv-gnparser
+
 - title: GN docs
   docs:
     - gnub
