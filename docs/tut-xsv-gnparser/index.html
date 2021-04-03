@@ -1,0 +1,800 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Parse names in CSV file</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v4.2.0">
+  <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body class="wrap">
+  <header role="banner">
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/workshops/">Workshops</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="current">
+    <a href="/docs/home/">Docs</a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit one-quarter center-on-mobiles">
+      <div class="logo">
+        <a href="/">
+          <span class="sr-only">GlobalNames</span>
+          <img src="/img/gna-logo.svg" width="100" alt="GNA Logo">
+        </a>
+      </div>
+    </div>
+    <nav class="main-nav unit three-quarters hide-on-mobiles">
+      <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/workshops/">Workshops</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="current">
+    <a href="/docs/home/">Docs</a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <section class="docs">
+    <div class="grid">
+
+      
+
+<div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the docs…</option>
+    
+    <optgroup label="Getting Started">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+      <option value="/docs/home/">Introduction</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/glossary/">Glossary</option>
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="Tutorials">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/tut-xsv-gnparser/">Parse names in CSV file</option>
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="GN docs">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/gnub/">Global Names Usage Bank (GNUB)</option>
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="Names">
+      
+
+
+
+
+
+  
+
+  
+    
+      <option value="/docs/good-bad-names/">Good and Bad Names</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+      <option value="/docs/curious-names/">Odd Names</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+  </select>
+</div>
+
+
+      <div class="unit four-fifths">
+        <article>
+          <h2>
+          Parse names in CSV file
+          <a href="/docs/tut-xsv-gnparser/" class="permalink" title="Permalink">∞</a>
+          </h2>
+    <div>
+   
+   <span class="doc-date">Edited on: 02 Apr 2021</span>
+   
+   
+   <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+   
+    </div>
+          <p>This tutorial shows how to work with big CSV files using command line
+applications.</p>
+
+<p>Quite often we need to extract canonical forms of scientific names, for example
+to compare one checklist with another. We also want to know if names in
+a checklist are well-formed. In this tutorial we will use <a href="https://github.com/gnames/gnparser">gnparser</a> and <a href="https://github.com/BurntSushi/xsv">xsv</a>
+command line applications to quickly go through names in a CSV file and create
+an output that combines original data with parsed information.</p>
+
+<p><a href="https://github.com/BurntSushi/xsv">xsv</a> is a very fast and powerful application to access and operate data in
+CSV format.</p>
+
+<p><a href="https://github.com/gnames/gnparser">gnparser</a> is a biodiversity informatics application for parsing scientific
+names and extracting canonical forms, aurhorships, etc.</p>
+
+<h2 id="install-xsv-and-gnparser">Install xsv and gnparser</h2>
+
+<p>Follow instructions at <a href="https://github.com/BurntSushi/xsv#installation">xsv</a> and <a href="https://github.com/gnames/gnparser#installation">gnparser</a> for
+installing the applications.</p>
+
+<p>If a checklist exists in Excel or Google Doc, save it as UTF-8 encoded CSV file
+on a disk.  Here we are going to use <a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> file as an example.</p>
+
+<h2 id="examine-csv-file">Examine CSV file</h2>
+
+<p><a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> contains <code class="language-plaintext highlighter-rouge">names.csv</code> — a well-formatted CSV file. At first we
+will examine its content:</p>
+
+<p>Lets see how many lines it has.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># wc counts characters, letters and lines</span>
+<span class="c"># -l flag means wc will only return lines number</span>
+<span class="c"># $ indicates a command line prompt</span>
+<span class="nv">$ </span><span class="nb">wc</span> <span class="nt">-l</span> names.csv
+100001 names.csv
+</code></pre></div></div>
+
+<p>So we can see the file is rather big and contains about 100 thousand records.
+Lets look at the first few records using <code class="language-plaintext highlighter-rouge">head</code> command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>names.csv
+Id,ScientificName
+1,Eutobrilus annetteae Joubert &amp; Heyns 1979
+2,Eburodacrys callixantha Bates 1872
+3,Agonopterix arenella Denis &amp; Schiffermüller 1775
+4,<span class="s2">"Xanthophenax pacificator Rousse &amp; Villemant, 2012"</span>
+5,Carabus <span class="o">(</span>Archiplectes<span class="o">)</span> pseudopshuensis Zamotajlov 1991
+6,Meropliosepsis sexsetosa Duda 1926
+7,Melanopsis acanthicoides Hoernes 1876
+8,Thalassironus de Man 1889
+9,Bruelia nawabi Ansari 1957
+</code></pre></div></div>
+
+<p>OK. Looks like it is a CSV file. It has a header and contains two fields: <code class="language-plaintext highlighter-rouge">Id</code>
+and <code class="language-plaintext highlighter-rouge">ScientificName</code>. If the <code class="language-plaintext highlighter-rouge">ScientificName</code> values contain a comma, they
+are surrounded by quotes.</p>
+
+<pre><code class="language-csv">4,"Xanthophenax pacificator Rousse &amp; Villemant, 2012"
+</code></pre>
+
+<p>To parse such file we have to extract the second CSV field with names, get
+rid of the header and remove quotes. We can use <code class="language-plaintext highlighter-rouge">xsv</code> application for such task.</p>
+
+<p><code class="language-plaintext highlighter-rouge">xsv</code> has many very useful commands. Here we are going to use <code class="language-plaintext highlighter-rouge">xsv select</code> and
+<code class="language-plaintext highlighter-rouge">xsv fmt</code>. We are also going to use command line pipes <code class="language-plaintext highlighter-rouge">|</code>: they allow to
+redirect output of one command into input of the next command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>names.csv|xsv <span class="k">select </span>ScientificName|tail <span class="nt">-n</span> +2|xsv <span class="nb">fmt</span> <span class="nt">-t</span> <span class="s1">'\t'</span>
+Eutobrilus annetteae Joubert &amp; Heyns 1979
+Eburodacrys callixantha Bates 1872
+Agonopterix arenella Denis &amp; Schiffermüller 1775
+Xanthophenax pacificator Rousse &amp; Villemant, 2012
+Carabus <span class="o">(</span>Archiplectes<span class="o">)</span> pseudopshuensis Zamotajlov 1991
+Meropliosepsis sexsetosa Duda 1926
+Melanopsis acanthicoides Hoernes 1876
+Thalassironus de Man 1889
+Bruelia nawabi Ansari 1957
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">head names.csv</code> gave us first 10 lines of a file.</p>
+
+<p><code class="language-plaintext highlighter-rouge">xsv select ScientificName</code> picked the second field out of these 10 lines.</p>
+
+<p><code class="language-plaintext highlighter-rouge">tail -n +2</code> excluded the first line (the header).</p>
+
+<p><code class="language-plaintext highlighter-rouge">xsv fmt -t '\t'</code> changed output from comma-separated to tab-separated.</p>
+
+<p>Even if we have only one column, <a href="https://github.com/BurntSushi/xsv">xsv</a> still follows CSV format and surrounds
+names containing comma with double quotes. But if we change Comma Separated
+Format to Tab Separated Format, names with commas will not need to be
+surrounded with quotes.</p>
+
+<h2 id="parsing-names">Parsing names</h2>
+
+<p>Now we can use <a href="https://github.com/gnames/gnparser">gnparser</a> to parse the names from the whole file.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xsv <span class="k">select </span>ScientificName names.csv|tail <span class="nt">-n</span> +2|xsv <span class="nb">fmt</span> <span class="nt">-t</span> <span class="s1">'\t'</span>|gnparser <span class="o">&gt;</span> parsed.csv
+2021/04/02 20:04:20 Parsing 50000-th line
+2021/04/02 20:04:21 Parsing 100000-th line
+</code></pre></div></div>
+
+<p><a href="https://github.com/gnames/gnparser">gnparser</a> returns parsed results in exactly same order as the original file. Lets examine the parsing result.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">wc</span> <span class="nt">-l</span> parsed.csv
+100001 parsed.csv
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>parsed.csv
+Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+3a0d3ba0-6184-5878-8d0e-139a23d10d00,Eutobrilus annetteae Joubert &amp; Heyns 1979,2,Eutobrilus annette,Eutobrilus annetteae,Eutobrilus annetteae,Joubert &amp; Heyns 1979,1979,1
+32635a0f-fc13-53c3-80b7-fde50fefd5dc,Eburodacrys callixantha Bates 1872,2,Eburodacrys callixanth,Eburodacrys callixantha,Eburodacrys callixantha,Bates 1872,1872,1
+d5de8cf3-709e-5e8a-8aea-2c1074d1880c,Agonopterix arenella Denis &amp; Schiffermüller 1775,2,Agonopterix arenell,Agonopterix arenella,Agonopterix arenella,Denis &amp; Schiffermüller 1775,1775,1
+d3e10f1e-fb0c-5480-80b3-bc4417b37cf1,<span class="s2">"Xanthophenax pacificator Rousse &amp; Villemant, 2012"</span>,2,Xanthophenax pacificator,Xanthophenax pacificator,Xanthophenax pacificator,Rousse &amp; Villemant 2012,2012,1
+61d1c25f-c675-5dfb-ba21-a27a420228a5,Carabus <span class="o">(</span>Archiplectes<span class="o">)</span> pseudopshuensis Zamotajlov 1991,2,Carabus pseudopshuens,Carabus pseudopshuensis,Carabus pseudopshuensis,Zamotajlov 1991,1991,1
+2cdb73b7-09d1-5605-82ce-e7742200db92,Meropliosepsis sexsetosa Duda 1926,2,Meropliosepsis sexsetos,Meropliosepsis sexsetosa,Meropliosepsis sexsetosa,Duda 1926,1926,1
+c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Melanopsis acanthicoid,Melanopsis acanthicoides,Melanopsis acanthicoides,Hoernes 1876,1876,1
+6db22e72-bb8a-5c0c-96c4-2621e3afcfb4,Thalassironus de Man 1889,1,Thalassironus,Thalassironus,Thalassironus,de Man 1889,1889,1
+04d34702-d231-5309-89c6-b9b837245954,Bruelia nawabi Ansari 1957,2,Bruelia nawab,Bruelia nawabi,Bruelia nawabi,Ansari 1957,1957,1
+</code></pre></div></div>
+
+<p>We discarded the first line with headers from names.csv. However gnparser
+inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from <code class="language-plaintext highlighter-rouge">names.csv</code> and <code class="language-plaintext highlighter-rouge">parsed.csv</code> together.</p>
+
+<p>To achieve that we will use <code class="language-plaintext highlighter-rouge">paste</code> command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">paste</span> <span class="nt">-d</span> <span class="s1">','</span> names.csv  parsed.csv|head
+Id,ScientificName,Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+1,Eutobrilus annetteae Joubert &amp; Heyns 1979,3a0d3ba0-6184-5878-8d0e-139a23d10d00,Eutobrilus annetteae Joubert &amp; Heyns 1979,2,Eutobrilus annette,Eutobrilus annetteae,Eutobrilus annetteae,Joubert &amp; Heyns 1979,1979,1
+2,Eburodacrys callixantha Bates 1872,32635a0f-fc13-53c3-80b7-fde50fefd5dc,Eburodacrys callixantha Bates 1872,2,Eburodacrys callixanth,Eburodacrys callixantha,Eburodacrys callixantha,Bates 1872,1872,1
+3,Agonopterix arenella Denis &amp; Schiffermüller 1775,d5de8cf3-709e-5e8a-8aea-2c1074d1880c,Agonopterix arenella Denis &amp; Schiffermüller 1775,2,Agonopterix arenell,Agonopterix arenella,Agonopterix arenella,Denis &amp; Schiffermüller 1775,1775,1
+4,<span class="s2">"Xanthophenax pacificator Rousse &amp; Villemant, 2012"</span>,d3e10f1e-fb0c-5480-80b3-bc4417b37cf1,<span class="s2">"Xanthophenax pacificator Rousse &amp; Villemant, 2012"</span>,2,Xanthophenax pacificator,Xanthophenax pacificator,Xanthophenax pacificator,Rousse &amp; Villemant 2012,2012,1
+5,Carabus <span class="o">(</span>Archiplectes<span class="o">)</span> pseudopshuensis Zamotajlov 1991,61d1c25f-c675-5dfb-ba21-a27a420228a5,Carabus <span class="o">(</span>Archiplectes<span class="o">)</span> pseudopshuensis Zamotajlov 1991,2,Carabus pseudopshuens,Carabus pseudopshuensis,Carabus pseudopshuensis,Zamotajlov 1991,1991,1
+6,Meropliosepsis sexsetosa Duda 1926,2cdb73b7-09d1-5605-82ce-e7742200db92,Meropliosepsis sexsetosa Duda 1926,2,Meropliosepsis sexsetos,Meropliosepsis sexsetosa,Meropliosepsis sexsetosa,Duda 1926,1926,1
+7,Melanopsis acanthicoides Hoernes 1876,c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Melanopsis acanthicoid,Melanopsis acanthicoides,Melanopsis acanthicoides,Hoernes 1876,1876,1
+8,Thalassironus de Man 1889,6db22e72-bb8a-5c0c-96c4-2621e3afcfb4,Thalassironus de Man 1889,1,Thalassironus,Thalassironus,Thalassironus,de Man 1889,1889,1
+9,Bruelia nawabi Ansari 1957,04d34702-d231-5309-89c6-b9b837245954,Bruelia nawabi Ansari 1957,2,Bruelia nawab,Bruelia nawabi,Bruelia nawabi,Ansari 1957,1957,1
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">paste -d ','</code> sets a comma as a delimiter when it merges lines from two files
+together.</p>
+
+<p>We can see here that headers and lines seem to merge correctly, and now we
+can pick only fields that we care about for our final result.</p>
+
+<h2 id="extract-required-fields">Extract required fields</h2>
+
+<p>If we look at the merged header, we can spot a problem: now there are two
+fields with the same name: <code class="language-plaintext highlighter-rouge">Id</code>. If we want only one of them, we can achieve it
+in two different ways:</p>
+
+<ul>
+  <li>
+    <p>We can add an index to the field: <code class="language-plaintext highlighter-rouge">xsv select Id[0]</code> for the first one
+(indices start the count from <code class="language-plaintext highlighter-rouge">0</code>).</p>
+  </li>
+  <li>
+    <p>We can use field position instead of the field name: <code class="language-plaintext highlighter-rouge">xsv select 1</code> (fields
+start the count from <code class="language-plaintext highlighter-rouge">1</code>).</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">paste</span> <span class="nt">-d</span> <span class="s1">','</span> names.csv  parsed.csv|xsv <span class="k">select </span>Id[0],ScientificName,Cardinality,CanonicalSimple,Quality <span class="o">&gt;</span> final.csv
+</code></pre></div></div>
+
+<h2 id="examine-final-data">Examine final data</h2>
+
+<p>Now we have a file that contains original data together with canonical form,
+name cardinality, and parsing quality. Lets try to search for a particular
+data.</p>
+
+<ol>
+  <li>
+    <p>Find names that were parsed as trinomials.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>xsv search <span class="nt">-s</span> Cardinality <span class="s1">'3'</span> final.csv|head
+ Id,ScientificName,Cardinality,CanonicalSimple,Quality
+ 32,Dorylus <span class="o">(</span>Anomma<span class="o">)</span> nigricans subsp. burmeisteri,3,Dorylus nigricans burmeisteri,1
+ 35,Malayepipona assamensis subsp. manipurensis Giordani Soika 1995,3,Malayepipona assamensis manipurensis,1
+ 62,Ipomoea retropilosa subsp. cundinamarcana,3,Ipomoea retropilosa cundinamarcana,1
+ 106,Lindernia dubia var. anagallidea <span class="o">(</span>Michx.<span class="o">)</span> Cooperr.,3,Lindernia dubia anagallidea,1
+ 172,Ballota nigra subsp. foetida Vis. 1753,3,Ballota nigra foetida,1
+ 180,Dendrobaena veneta subsp. veneta Rosa 1886,3,Dendrobaena veneta veneta,1
+ 217,Pheidole megacephala subsp. impressifrons,3,Pheidole megacephala impressifrons,1
+ 221,Ardonis <span class="o">(</span>Chloroclystis<span class="o">)</span> filicata subsp. mochleutes Prout 1958,3,Ardonis filicata mochleutes,1
+ 236,Camponotus perrisi subsp. jucundus,3,Camponotus perrisi jucundus,1
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Find if there are names that were parsed as pentanomials!</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>xsv search <span class="nt">-s</span> Cardinality <span class="s1">'5'</span> final.csv|head
+ Id,ScientificName,Cardinality,CanonicalSimple,Quality
+ 13261,Poa secunda subsp. juncifolia var. juncifolia var. juncifolia <span class="o">(</span>Scribn.<span class="o">)</span> Soreng,5,Poa secunda juncifolia juncifolia juncifolia,1
+ 27014,New endemic Fusarium species hitch-hiking with pathogenic Fusarium strains causing Panama disease <span class="k">in </span>small-holder banana plots <span class="k">in </span>Indonesia,5,New endemic species hitch-hiking with,4
+ 59457,<span class="s2">"Discovering the still unexplored arachnofauna of the National Park of Dadia-Lefkimi-Soufli, NE Greece: a taxonomic review with description of new species"</span>,5,Discovering the still unexplored arachnofauna,4
+</code></pre></div>    </div>
+
+    <p>As we can see one of the names does have 5 elements, and two others are not
+ real names and they have parsing quality=4 (the worst quality).</p>
+  </li>
+  <li>
+    <p>Find names that parser could not parse (Quality = 0).</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>xsv search <span class="nt">-s</span> Quality <span class="s1">'0'</span> final.csv|head
+ Id,ScientificName,Cardinality,CanonicalSimple,Quality
+ 487,andersoni Blanford 1869,0,,0
+ 2946,<span class="o">(</span>Fovephedrus<span class="o">)</span> Chen 1986,0,,0
+ 4763,<span class="s2">"""Orthomorpha"" oatesii Pocock 1895"</span>,0,,0
+ 5328,vagans Verhoeff 1905,0,,0
+ 5664,cavernicola Verhoeff 1937,0,,0
+ 5873,brahmakundensis Godwin-Austen 1915,0,,0
+ 7464,Cynolebiasinae.,0,,0
+ 7521,mandschuria Verhoeff 1936,0,,0
+ 7771,<span class="s2">"Convolvulus scoparius L. f., Suppl. Pl. 135. 1782 ["" 1781 ""]. (Linnaeus 1782"</span>,0,,0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Find names that were parsed with significant problems (Quality = 4).</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>xsv search <span class="nt">-s</span> Quality <span class="s1">'4'</span> final.csv|head
+ Id,ScientificName,Cardinality,CanonicalSimple,Quality
+ 76,<span class="s2">"Atheta ((Datomicra)) particula Brunke, Klimaszewski, Dorval, Bourdon, Paiero &amp; Marshall, 2012, New Ontario Record"</span>,1,Atheta,4
+ 118,<span class="s2">"Ophiogaleus , Thuy 2013"</span>,1,Ophiogaleus,4
+ 132,<span class="s2">"Trichillum (Trichillum) cordobense Vaz-De-Mello &amp; Génier, 2005"</span>,2,Trichillum cordobense,4
+ 262,<span class="s2">"Hypsibius dujardini subsp. sensu Kaczmarek, Michalczyk &amp; Mcinnes, 2015"</span>,2,Hypsibius dujardini,4
+ 283,Coleoptera  1758,1,Coleoptera,4
+ 324,<span class="s2">"Chlaenius ((Lithochlaenius)) propeagilis Valim, Kavanaugh, Shi &amp; Liang, 2011"</span>,1,Chlaenius,4
+ 359,<span class="s2">"Petermattinglyius (Petermattinglyius) Reinert, Harbach &amp; Kitching, 2009, SUBGEN. NOV."</span>,1,Petermattinglyius,4
+ 397,Graphium megarus subsp. megarus megarus <span class="o">(</span>Westwood 1844,4,Graphium megarus megarus megarus,4
+ 448,Ophelina abranchiata NHM _ 1769,2,Ophelina abranchiata,4
+</code></pre></div>    </div>
+
+    <p>If we want to find out why a name got Quality=4 we can parse it with more
+ details:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>gnparser <span class="s2">"Hypsibius dujardini subsp. sensu Kaczmarek, Michalczyk &amp; Mcinnes, 2015"</span> <span class="nt">-f</span> pretty
+ <span class="o">{</span>
+   <span class="s2">"parsed"</span>: <span class="nb">true</span>,
+   <span class="s2">"quality"</span>: 4,
+   <span class="s2">"qualityWarnings"</span>: <span class="o">[</span>
+     <span class="o">{</span>
+       <span class="s2">"quality"</span>: 4,
+       <span class="s2">"warning"</span>: <span class="s2">"Unparsed tail"</span>
+     <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">"verbatim"</span>: <span class="s2">"Hypsibius dujardini subsp. sensu Kaczmarek, Michalczyk </span><span class="se">\u</span><span class="s2">0026 Mcinnes, 2015"</span>,
+   <span class="s2">"normalized"</span>: <span class="s2">"Hypsibius dujardini"</span>,
+   <span class="s2">"canonical"</span>: <span class="o">{</span>
+     <span class="s2">"stemmed"</span>: <span class="s2">"Hypsibius duiardin"</span>,
+     <span class="s2">"simple"</span>: <span class="s2">"Hypsibius dujardini"</span>,
+     <span class="s2">"full"</span>: <span class="s2">"Hypsibius dujardini"</span>
+   <span class="o">}</span>,
+   <span class="s2">"cardinality"</span>: 2,
+   <span class="s2">"tail"</span>: <span class="s2">" subsp. sensu Kaczmarek, Michalczyk </span><span class="se">\u</span><span class="s2">0026 Mcinnes, 2015"</span>,
+   <span class="s2">"id"</span>: <span class="s2">"a17d9cc2-456d-56f3-9605-9ac22bf840ea"</span>,
+   <span class="s2">"parserVersion"</span>: <span class="s2">"v1.1.0-4-g3676b8a"</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>Looks like <a href="https://github.com/gnames/gnparser">gnparser</a> could not finish parsing and returned a warning
+ <code class="language-plaintext highlighter-rouge">Unparsed tail</code>. It would expect an infraspecific epithet after <code class="language-plaintext highlighter-rouge">subsp.</code>,
+ but received <code class="language-plaintext highlighter-rouge">sensu</code> instead.</p>
+  </li>
+</ol>
+
+
+          
+          
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section-nav">
+      <div class="left align-right">
+          
+            
+            
+            <a href="/docs/glossary/" class="prev">Back</a>
+          
+      </div>
+      <div class="right align-left">
+          
+            
+            
+            <a href="/docs/gnub/" class="next">Next</a>
+          
+      </div>
+    </div>
+    <div class="clear"></div>
+    
+        </article>
+      </div>
+
+          
+      <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    
+    
+    
+    <h4>Getting Started</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/home/">Introduction</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/glossary/">Glossary</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>Tutorials</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="current"><a href="/docs/tut-xsv-gnparser/">Parse names in CSV file</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>GN docs</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/gnub/">Global Names Usage Bank (GNUB)</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>Names</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+      <li class=""><a href="/docs/good-bad-names/">Good and Bad Names</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+      <li class=""><a href="/docs/curious-names/">Odd Names</a></li>
+      
+
+
+</ul>
+
+    
+  </aside>
+</div>
+
+          
+      <div class="clear"></div>
+
+    </div>
+  </section>
+
+
+  <footer role="contentinfo">
+  <div class="grid" style="vertical-align: middle">
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+          <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
+        </a>
+        The content of this</br>website is in public domain
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+      Powered by <a href="http://github.com/jekyll/jekyll">Jekyll</a>
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        Hosted on 
+        <a href="https://github.com/GlobalNamesArchitecture">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+
+  
+
+
+</body>
+</html>
