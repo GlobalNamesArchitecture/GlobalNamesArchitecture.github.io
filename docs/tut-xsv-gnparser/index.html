@@ -284,7 +284,7 @@ a checklist are well-formed. In this tutorial we will use <a href="https://githu
 command line applications to quickly go through names in a CSV file and create
 an output that combines original data with parsed information.</p>
 
-<p><a href="https://github.com/BurntSushi/xsv">xsv</a> is a very fast and powerful application to access and operate data in
+<p><a href="https://github.com/BurntSushi/xsv">xsv</a> is a very fast and powerful program to access and operate data in
 CSV format.</p>
 
 <p><a href="https://github.com/gnames/gnparser">gnparser</a> is a biodiversity informatics application for parsing scientific
@@ -335,12 +335,13 @@ are surrounded by quotes.</p>
 <pre><code class="language-csv">4,"Xanthophenax pacificator Rousse &amp; Villemant, 2012"
 </code></pre>
 
-<p>To parse such file we have to extract the second CSV field with names, get
-rid of the header and remove quotes. We can use <code class="language-plaintext highlighter-rouge">xsv</code> application for such task.</p>
+<p>To parse names in the file we have to extract the second CSV field with names,
+get rid of the header and remove quotes. We can use <code class="language-plaintext highlighter-rouge">xsv</code> application for such
+task.</p>
 
 <p><code class="language-plaintext highlighter-rouge">xsv</code> has many very useful commands. Here we are going to use <code class="language-plaintext highlighter-rouge">xsv select</code> and
 <code class="language-plaintext highlighter-rouge">xsv fmt</code>. We are also going to use command line pipes <code class="language-plaintext highlighter-rouge">|</code>: they allow to
-redirect output of one command into input of the next command.</p>
+redirect the output of one command into the input of the next command.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>names.csv|xsv <span class="k">select </span>ScientificName|tail <span class="nt">-n</span> +2|xsv <span class="nb">fmt</span> <span class="nt">-t</span> <span class="s1">'\t'</span>
 Eutobrilus annetteae Joubert &amp; Heyns 1979
@@ -354,7 +355,7 @@ Thalassironus de Man 1889
 Bruelia nawabi Ansari 1957
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">head names.csv</code> gave us first 10 lines of a file.</p>
+<p><code class="language-plaintext highlighter-rouge">head names.csv</code> gave us the first 10 lines of a file.</p>
 
 <p><code class="language-plaintext highlighter-rouge">xsv select ScientificName</code> picked the second field out of these 10 lines.</p>
 
@@ -376,7 +377,8 @@ surrounded with quotes.</p>
 2021/04/02 20:04:21 Parsing 100000-th line
 </code></pre></div></div>
 
-<p><a href="https://github.com/gnames/gnparser">gnparser</a> returns parsed results in exactly same order as the original file. Lets examine the parsing result.</p>
+<p><a href="https://github.com/gnames/gnparser">gnparser</a> returns parsed results in the exactly same order as the original
+file. Lets examine the parsing result.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">wc</span> <span class="nt">-l</span> parsed.csv
 100001 parsed.csv
@@ -534,7 +536,7 @@ data.</p>
  <span class="o">}</span>
 </code></pre></div>    </div>
 
-    <p>Looks like <a href="https://github.com/gnames/gnparser">gnparser</a> could not finish parsing and returned a warning
+    <p>It looks like <a href="https://github.com/gnames/gnparser">gnparser</a> could not finish parsing and returned a warning
  <code class="language-plaintext highlighter-rouge">Unparsed tail</code>. It would expect an infraspecific epithet after <code class="language-plaintext highlighter-rouge">subsp.</code>,
  but received <code class="language-plaintext highlighter-rouge">sensu</code> instead.</p>
   </li>
