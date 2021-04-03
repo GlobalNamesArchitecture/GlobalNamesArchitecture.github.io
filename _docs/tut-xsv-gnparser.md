@@ -24,8 +24,8 @@ names and extracting canonical forms, aurhorships, etc.
 
 ## Install xsv and gnparser
 
-Follow instructions at [xsv][xsv install] and [gnparser][gnparser install] for
-installing the applications.
+Follow instructions at [xsv][xsv install] and [gnparser][gnparser install] home
+pages for installing the applications.
 
 If a checklist exists in Excel or Google Doc, save it as UTF-8 encoded CSV file
 on a disk.  Here we are going to use [names.zip] file as an example.
