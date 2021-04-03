@@ -45,8 +45,8 @@ $ wc -l names.csv
 100001 names.csv
 ```
 
-So we can see the file is rather big and contains about 100 thousand records.
-Lets look at the first few records using ``head`` command.
+So we can see that the file is rather big and contains about 100 thousand
+records.  Lets look at the first few records using ``head`` command.
 
 ```bash
 $ head names.csv
@@ -71,10 +71,10 @@ are surrounded by quotes.
 ```
 
 To parse names in the file we have to extract the second CSV field with names,
-get rid of the header and remove quotes. We can use `xsv` application for such
+get rid of the header and remove quotes. We can use [xsv] application for such
 task.
 
-`xsv` has many very useful commands. Here we are going to use `xsv select` and
+[xsv] has many very useful commands. Here we are going to use `xsv select` and
 `xsv fmt`. We are also going to use command line pipes `|`: they allow to
 redirect the output of one command into the input of the next command.
 
@@ -136,7 +136,7 @@ c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Mel
 04d34702-d231-5309-89c6-b9b837245954,Bruelia nawabi Ansari 1957,2,Bruelia nawab,Bruelia nawabi,Bruelia nawabi,Ansari 1957,1957,1
 ```
 
-We discarded the first line with headers from names.csv. However gnparser
+We discarded the first line with headers from names.csv. However [gnparser]
 inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from `names.csv` and `parsed.csv` together.
 
 To achieve that we will use `paste` command.
