@@ -312,8 +312,8 @@ will examine its content:</p>
 100001 names.csv
 </code></pre></div></div>
 
-<p>So we can see the file is rather big and contains about 100 thousand records.
-Lets look at the first few records using <code class="language-plaintext highlighter-rouge">head</code> command.</p>
+<p>So we can see that the file is rather big and contains about 100 thousand
+records.  Lets look at the first few records using <code class="language-plaintext highlighter-rouge">head</code> command.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>names.csv
 Id,ScientificName
@@ -336,10 +336,10 @@ are surrounded by quotes.</p>
 </code></pre>
 
 <p>To parse names in the file we have to extract the second CSV field with names,
-get rid of the header and remove quotes. We can use <code class="language-plaintext highlighter-rouge">xsv</code> application for such
+get rid of the header and remove quotes. We can use <a href="https://github.com/BurntSushi/xsv">xsv</a> application for such
 task.</p>
 
-<p><code class="language-plaintext highlighter-rouge">xsv</code> has many very useful commands. Here we are going to use <code class="language-plaintext highlighter-rouge">xsv select</code> and
+<p><a href="https://github.com/BurntSushi/xsv">xsv</a> has many very useful commands. Here we are going to use <code class="language-plaintext highlighter-rouge">xsv select</code> and
 <code class="language-plaintext highlighter-rouge">xsv fmt</code>. We are also going to use command line pipes <code class="language-plaintext highlighter-rouge">|</code>: they allow to
 redirect the output of one command into the input of the next command.</p>
 
@@ -397,7 +397,7 @@ c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Mel
 04d34702-d231-5309-89c6-b9b837245954,Bruelia nawabi Ansari 1957,2,Bruelia nawab,Bruelia nawabi,Bruelia nawabi,Ansari 1957,1957,1
 </code></pre></div></div>
 
-<p>We discarded the first line with headers from names.csv. However gnparser
+<p>We discarded the first line with headers from names.csv. However <a href="https://github.com/gnames/gnparser">gnparser</a>
 inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from <code class="language-plaintext highlighter-rouge">names.csv</code> and <code class="language-plaintext highlighter-rouge">parsed.csv</code> together.</p>
 
 <p>To achieve that we will use <code class="language-plaintext highlighter-rouge">paste</code> command.</p>
