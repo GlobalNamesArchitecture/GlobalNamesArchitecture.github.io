@@ -16,26 +16,29 @@ a checklist are well-formed. In this tutorial we will use [gnparser] and [xsv]
 command line applications to quickly go through names in a CSV file and create
 an output that combines original data with parsed information.
 
-[xsv] is a very fast and powerful program to access and operate data in
+[xsv] is a very fast and powerful program to access and operate on data in
 CSV format.
 
 [gnparser] is a biodiversity informatics application for parsing scientific
 names and extracting canonical forms, aurhorships, etc.
 
+If you need a powerful introduction to the command line itself, most of the commands you will need for this
+[gnparser] exercise, you can learn via this [Software Carpentry Unix Shell lesson](http://swcarpentry.github.io/shell-novice/).
+
 ## Install xsv and gnparser
 
 Follow instructions at [xsv][xsv install] and [gnparser][gnparser install] home
-pages for installing the applications.
+pages for installing the applications needed.
 
-If a checklist exists in Excel or Google Doc, save it as UTF-8 encoded CSV file
+If a checklist exists in Excel or in a Google Doc, save it as UTF-8 encoded CSV file
 on a disk.  Here we are going to use [names.zip] file as an example.
 
 ## Examine CSV file
 
-[names.zip] contains `names.csv` --- a well-formatted CSV file. At first we
+[names.zip] contains `names.csv` --- a well-formatted CSV file with many strings to evaluate. At first we
 will examine its content:
 
-Lets see how many lines it has.
+Let's see how many lines it has.
 
 ```bash
 # wc counts characters, letters and lines
@@ -46,7 +49,7 @@ $ wc -l names.csv
 ```
 
 So we can see that the file is rather big and contains about 100 thousand
-records.  Lets look at the first few records using ``head`` command.
+records.  Let's look at the first few records using the ``head`` command.
 
 ```bash
 $ head names.csv
@@ -71,7 +74,7 @@ are surrounded by quotes.
 ```
 
 To parse names in the file we have to extract the second CSV field with names,
-get rid of the header and remove quotes. We can use [xsv] application for such
+get rid of the header row and remove the quotes. We can use the [xsv] application for such
 task.
 
 [xsv] has many very useful commands. Here we are going to use `xsv select` and
@@ -100,13 +103,13 @@ Bruelia nawabi Ansari 1957
 `xsv fmt -t '\t'` changed output from comma-separated to tab-separated.
 
 Even if we have only one column, [xsv] still follows CSV format and surrounds
-names containing comma with double quotes. But if we change Comma Separated
-Format to Tab Separated Format, names with commas will not need to be
+names containing comma with double quotes. But, if we change Comma Separated
+Format to Tab Separated Format with that last command above, names with commas will not need to be
 surrounded with quotes.
 
 ## Parsing names
 
-Now we can use [gnparser] to parse the names from the whole file.
+Now the data are formatted so we can use [gnparser] to parse the names from the whole file.
 
 ```bash
 $ xsv select ScientificName names.csv|tail -n +2|xsv fmt -t '\t'|gnparser > parsed.csv
@@ -115,7 +118,7 @@ $ xsv select ScientificName names.csv|tail -n +2|xsv fmt -t '\t'|gnparser > pars
 ```
 
 [gnparser] returns parsed results in the exactly same order as the original
-file. Lets examine the parsing result.
+file. Let's examine the parsing result.
 
 ```bash
 $ wc -l parsed.csv
@@ -137,7 +140,7 @@ c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Mel
 ```
 
 We discarded the first line with headers from names.csv. However [gnparser]
-inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from `names.csv` and `parsed.csv` together.
+inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from the orginal `names.csv` and new `parsed.csv` together.
 
 To achieve that we will use `paste` command.
 
@@ -180,7 +183,7 @@ paste -d ',' names.csv  parsed.csv|xsv select Id[0],ScientificName,Cardinality,C
 ## Examine final data
 
 Now we have a file that contains original data together with canonical form,
-name cardinality, and parsing quality. Lets try to search for a particular
+name cardinality, and parsing quality. Let's try to search for particular kinds of
 data.
 
 1. Find names that were parsed as trinomials.
@@ -243,7 +246,7 @@ data.
     448,Ophelina abranchiata NHM _ 1769,2,Ophelina abranchiata,4
     ```
 
-    If we want to find out why a name got Quality=4 we can parse it with more
+    If we want to find out why a name got Quality=4 we can parse it to show more
     details:
 
     ```bash
