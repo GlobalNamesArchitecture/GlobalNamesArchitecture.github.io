@@ -22,21 +22,23 @@ CSV format.
 [gnparser] is a biodiversity informatics application for parsing scientific
 names and extracting canonical forms, aurhorships, etc.
 
-If you need a powerful introduction to the command line itself, most of the commands you will need for this
-[gnparser] exercise, you can learn via this [Software Carpentry Unix Shell lesson](http://swcarpentry.github.io/shell-novice/).
+If you need a powerful introduction to the command line itself, most of the
+commands you will need for this [gnparser] exercise, you can learn via this
+[Software Carpentry Unix Shell
+lesson](http://swcarpentry.github.io/shell-novice/).
 
 ## Install xsv and gnparser
 
 Follow instructions at [xsv][xsv install] and [gnparser][gnparser install] home
 pages for installing the applications needed.
 
-If a checklist exists in Excel or in a Google Doc, save it as UTF-8 encoded CSV file
-on a disk.  Here we are going to use [names.zip] file as an example.
+If a checklist exists in Excel or in a Google Doc, save it as UTF-8 encoded CSV
+file on a disk.  Here we are going to use [names.zip] file as an example.
 
 ## Examine CSV file
 
-[names.zip] contains `names.csv` --- a well-formatted CSV file with many strings to evaluate. At first we
-will examine its content:
+[names.zip] contains `names.csv` --- a well-formatted CSV file with many
+strings to evaluate. At first we will examine its content:
 
 Let's see how many lines it has.
 
@@ -74,8 +76,8 @@ are surrounded by quotes.
 ```
 
 To parse names in the file we have to extract the second CSV field with names,
-get rid of the header row and remove the quotes. We can use the [xsv] application for such
-task.
+get rid of the header row and remove the quotes. We can use the [xsv]
+application for such task.
 
 [xsv] has many very useful commands. Here we are going to use `xsv select` and
 `xsv fmt`. We are also going to use command line pipes `|`: they allow to
@@ -104,12 +106,13 @@ Bruelia nawabi Ansari 1957
 
 Even if we have only one column, [xsv] still follows CSV format and surrounds
 names containing comma with double quotes. But, if we change Comma Separated
-Format to Tab Separated Format with that last command above, names with commas will not need to be
-surrounded with quotes.
+Format to Tab Separated Format with that last command above, names with commas
+will not need to be surrounded with quotes.
 
 ## Parsing names
 
-Now the data are formatted so we can use [gnparser] to parse the names from the whole file.
+Now the data are formatted so we can use [gnparser] to parse the names from the
+whole file.
 
 ```bash
 $ xsv select ScientificName names.csv|tail -n +2|xsv fmt -t '\t'|gnparser > parsed.csv
@@ -140,7 +143,9 @@ c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Mel
 ```
 
 We discarded the first line with headers from names.csv. However [gnparser]
-inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from the orginal `names.csv` and new `parsed.csv` together.
+inserted its own headers line, so we ended up with the same 100,001 lines. It
+means now we can merge the lines from the orginal `names.csv` and new
+`parsed.csv` together.
 
 To achieve that we will use `paste` command.
 
