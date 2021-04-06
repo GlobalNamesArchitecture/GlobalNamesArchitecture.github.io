@@ -284,26 +284,31 @@ a checklist are well-formed. In this tutorial we will use <a href="https://githu
 command line applications to quickly go through names in a CSV file and create
 an output that combines original data with parsed information.</p>
 
-<p><a href="https://github.com/BurntSushi/xsv">xsv</a> is a very fast and powerful program to access and operate data in
+<p><a href="https://github.com/BurntSushi/xsv">xsv</a> is a very fast and powerful program to access and operate on data in
 CSV format.</p>
 
 <p><a href="https://github.com/gnames/gnparser">gnparser</a> is a biodiversity informatics application for parsing scientific
 names and extracting canonical forms, aurhorships, etc.</p>
 
+<p>If you need a powerful introduction to the command line itself, most of the
+commands you will need for this <a href="https://github.com/gnames/gnparser">gnparser</a> exercise, you can learn via this
+<a href="http://swcarpentry.github.io/shell-novice/">Software Carpentry Unix Shell
+lesson</a>.</p>
+
 <h2 id="install-xsv-and-gnparser">Install xsv and gnparser</h2>
 
 <p>Follow instructions at <a href="https://github.com/BurntSushi/xsv#installation">xsv</a> and <a href="https://github.com/gnames/gnparser#installation">gnparser</a> home
-pages for installing the applications.</p>
+pages for installing the applications needed.</p>
 
-<p>If a checklist exists in Excel or Google Doc, save it as UTF-8 encoded CSV file
-on a disk.  Here we are going to use <a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> file as an example.</p>
+<p>If a checklist exists in Excel or in a Google Doc, save it as UTF-8 encoded CSV
+file on a disk.  Here we are going to use <a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> file as an example.</p>
 
 <h2 id="examine-csv-file">Examine CSV file</h2>
 
-<p><a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> contains <code class="language-plaintext highlighter-rouge">names.csv</code> — a well-formatted CSV file. At first we
-will examine its content:</p>
+<p><a href="https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip">names.zip</a> contains <code class="language-plaintext highlighter-rouge">names.csv</code> — a well-formatted CSV file with many
+strings to evaluate. At first we will examine its content:</p>
 
-<p>Lets see how many lines it has.</p>
+<p>Let’s see how many lines it has.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># wc counts characters, letters and lines</span>
 <span class="c"># -l flag means wc will only return lines number</span>
@@ -313,7 +318,7 @@ will examine its content:</p>
 </code></pre></div></div>
 
 <p>So we can see that the file is rather big and contains about 100 thousand
-records.  Lets look at the first few records using <code class="language-plaintext highlighter-rouge">head</code> command.</p>
+records.  Let’s look at the first few records using the <code class="language-plaintext highlighter-rouge">head</code> command.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">head </span>names.csv
 Id,ScientificName
@@ -336,8 +341,8 @@ are surrounded by quotes.</p>
 </code></pre>
 
 <p>To parse names in the file we have to extract the second CSV field with names,
-get rid of the header and remove quotes. We can use <a href="https://github.com/BurntSushi/xsv">xsv</a> application for such
-task.</p>
+get rid of the header row and remove the quotes. We can use the <a href="https://github.com/BurntSushi/xsv">xsv</a>
+application for such task.</p>
 
 <p><a href="https://github.com/BurntSushi/xsv">xsv</a> has many very useful commands. Here we are going to use <code class="language-plaintext highlighter-rouge">xsv select</code> and
 <code class="language-plaintext highlighter-rouge">xsv fmt</code>. We are also going to use command line pipes <code class="language-plaintext highlighter-rouge">|</code>: they allow to
@@ -364,13 +369,14 @@ Bruelia nawabi Ansari 1957
 <p><code class="language-plaintext highlighter-rouge">xsv fmt -t '\t'</code> changed output from comma-separated to tab-separated.</p>
 
 <p>Even if we have only one column, <a href="https://github.com/BurntSushi/xsv">xsv</a> still follows CSV format and surrounds
-names containing comma with double quotes. But if we change Comma Separated
-Format to Tab Separated Format, names with commas will not need to be
-surrounded with quotes.</p>
+names containing comma with double quotes. But, if we change Comma Separated
+Format to Tab Separated Format with that last command above, names with commas
+will not need to be surrounded with quotes.</p>
 
 <h2 id="parsing-names">Parsing names</h2>
 
-<p>Now we can use <a href="https://github.com/gnames/gnparser">gnparser</a> to parse the names from the whole file.</p>
+<p>Now the data are formatted so we can use <a href="https://github.com/gnames/gnparser">gnparser</a> to parse the names from the
+whole file.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xsv <span class="k">select </span>ScientificName names.csv|tail <span class="nt">-n</span> +2|xsv <span class="nb">fmt</span> <span class="nt">-t</span> <span class="s1">'\t'</span>|gnparser <span class="o">&gt;</span> parsed.csv
 2021/04/02 20:04:20 Parsing 50000-th line
@@ -378,7 +384,7 @@ surrounded with quotes.</p>
 </code></pre></div></div>
 
 <p><a href="https://github.com/gnames/gnparser">gnparser</a> returns parsed results in the exactly same order as the original
-file. Lets examine the parsing result.</p>
+file. Let’s examine the parsing result.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">wc</span> <span class="nt">-l</span> parsed.csv
 100001 parsed.csv
@@ -398,7 +404,9 @@ c93c5a7e-f873-5474-b201-6ff4db8db475,Melanopsis acanthicoides Hoernes 1876,2,Mel
 </code></pre></div></div>
 
 <p>We discarded the first line with headers from names.csv. However <a href="https://github.com/gnames/gnparser">gnparser</a>
-inserted its own headers line, so we ended up with the same 100,001 lines. It means now we can merge the lines from <code class="language-plaintext highlighter-rouge">names.csv</code> and <code class="language-plaintext highlighter-rouge">parsed.csv</code> together.</p>
+inserted its own headers line, so we ended up with the same 100,001 lines. It
+means now we can merge the lines from the orginal <code class="language-plaintext highlighter-rouge">names.csv</code> and new
+<code class="language-plaintext highlighter-rouge">parsed.csv</code> together.</p>
 
 <p>To achieve that we will use <code class="language-plaintext highlighter-rouge">paste</code> command.</p>
 
@@ -444,7 +452,7 @@ start the count from <code class="language-plaintext highlighter-rouge">1</code>
 <h2 id="examine-final-data">Examine final data</h2>
 
 <p>Now we have a file that contains original data together with canonical form,
-name cardinality, and parsing quality. Lets try to search for a particular
+name cardinality, and parsing quality. Let’s try to search for particular kinds of
 data.</p>
 
 <ol>
@@ -509,7 +517,7 @@ data.</p>
  448,Ophelina abranchiata NHM _ 1769,2,Ophelina abranchiata,4
 </code></pre></div>    </div>
 
-    <p>If we want to find out why a name got Quality=4 we can parse it with more
+    <p>If we want to find out why a name got Quality=4 we can parse it to show more
  details:</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>gnparser <span class="s2">"Hypsibius dujardini subsp. sensu Kaczmarek, Michalczyk &amp; Mcinnes, 2015"</span> <span class="nt">-f</span> pretty
