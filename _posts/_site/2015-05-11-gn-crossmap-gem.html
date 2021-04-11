@@ -1,0 +1,79 @@
+<p>Yesterday I released a new command line tool for name resolution called
+<a href="https://github.com/GlobalNamesArchitecture/gn_crossmap">gn_crossmap</a>. It is designed for people who work with checklists
+of scientific names using a spreadsheet software (MS Excel, Apple Numbers, Open
+Office, Libre Office, Google Sheets etc.) and want to compare names that they
+have with another reference source. The program takes a spreadsheet saved as
+csv file as input and generates another csv-based spreadsheet with resolution
+data.  <a href="https://github.com/GlobalNamesArchitecture/gn_crossmap/tree/master/spec/files">Examples of input and output</a> are included into the code.
+<a href="https://github.com/GlobalNamesArchitecture/gn_crossmap/blob/master/README.md">README</a> file describes how to use the project from a command line or
+as a Ruby library.</p>
+
+<p>This program requires internet connection, Ruby &gt;= 2.1 installed on the machine.</p>
+
+<p>Basic usage is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install gn_crossmap
+$ crossmap -i input.csv -o ouput.csv -d 1
+</code></pre></div></div>
+
+<p>where</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>short</th>
+      <th>long attr</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-i</td>
+      <td>–input</td>
+      <td>checklist’s spreadsheet saved as csv file</td>
+    </tr>
+    <tr>
+      <td>-o</td>
+      <td>–output</td>
+      <td>path to the output file. Default is output.csv in the current directory</td>
+    </tr>
+    <tr>
+      <td>-d</td>
+      <td>–data-source-id</td>
+      <td>ID of one of the GN Resolver <a href="http://resolver.globalnames.org/data_sources">data sources</a>, Catalogue of Life id (1) is default</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>Web interface to this program is also <a href="https://github.com/GlobalNamesArchitecture/checklist">in works</a></p>
+
+<p>This project started at the <a href="https://drive.google.com/file/d/0B-WDk-H2QjRKaWJUUkpMSEdta1k/view">Catalogue of Life workshop</a> in Leiden,
+which happened in March 2015. The main focus of the hackathon was to figure out
+how to help national checklist teams to create, maintain and compare data in their
+data.  We determined 3 main approaches</p>
+
+<ol>
+  <li><strong>Crossmapping</strong> checklists against other checklists and/or reference sources</li>
+  <li><strong>Annotation</strong> of crossmapped data – ability to share metadata, report mistakes</li>
+  <li><strong>Distribution of species</strong> – how to fix occurance errors for a country</li>
+</ol>
+
+<p>A hackathon group which worked on crossmapping produced a
+<a href="https://github.com/Sp2000/hackathon_group1">code</a> which would compare checklists against Catalogue of
+Life. The <code class="language-plaintext highlighter-rouge">gn_crossmap</code> program I am releasing is based heavily on what we
+learned during the hackathon. Crossmaping code is mostly based on use cases
+from <a href="https://github.com/rpfigueira">Rui Figueira</a> and <a href="https://github.com/WouterKoch">Wouter Koch</a>. During the hackathon we
+also determined ways to improve quality of name resolution further by:</p>
+
+<ul>
+  <li>Using infraspecies’ rank (var., f. subsp. etc) in the matching and penalize
+score if ranks are different</li>
+  <li>Taking in account if matching authors are basyonym or combination authors</li>
+  <li>Using meta-information attached to names via sensu…, not … etc.
+to distinguish name usages</li>
+</ul>
+

@@ -1,0 +1,25 @@
+<p>New version 3.4.0 of GlobalNames Parser gem <a href="http://rubygems.org/gems/biodiversity">biodiversity</a> is out. It adds new
+method that allows to add infraspecific ranks to canonical forms after the
+fact.</p>
+
+<p>It was possible to add ranks in canonical forms before using the following
+code:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"biodiversity"</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="no">ScientificNameParser</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">canonical_with_rank: </span><span class="kp">true</span><span class="p">)</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"Carex scirpoidea subsp. convoluta (Kük.)"</span><span class="p">)</span>
+<span class="n">parsed</span><span class="p">[</span><span class="ss">:scientificName</span><span class="p">][</span><span class="ss">:canonical</span><span class="p">]</span>
+<span class="c1">#output: Carex scirpoidea subsp. convoluta</span></code></pre></figure>
+
+<p>Now it is also possible to add ranks to canonical forms after the fact using
+static method <code class="language-plaintext highlighter-rouge">ScientificNameParser.add_rank_to_canonical</code></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"biodiversity"</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="no">ScientificNameParser</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"Carex scirpoidea subsp. convoluta (Kük.)"</span><span class="p">)</span>
+<span class="n">parsed</span><span class="p">[</span><span class="ss">:scientificName</span><span class="p">][</span><span class="ss">:canonical</span><span class="p">]</span>
+<span class="c1">#output: Carex scirpoidea convoluta</span>
+<span class="no">ScientificNameParser</span><span class="p">.</span><span class="nf">add_rank_to_canonical</span><span class="p">(</span><span class="n">parsed</span><span class="p">)</span>
+<span class="n">parsed</span><span class="p">[</span><span class="ss">:scientificName</span><span class="p">][</span><span class="ss">:canonical</span><span class="p">]</span>
+<span class="c1">#output: Carex scirpoidea subsp. convoluta</span></code></pre></figure>
+

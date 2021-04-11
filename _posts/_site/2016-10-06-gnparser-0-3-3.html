@@ -1,0 +1,39 @@
+<p>We are happy to announce the release of <a href="https://github.com/GlobalNamesArchitecture/gnparser"><code class="language-plaintext highlighter-rouge">gnparser</code></a>.
+Changes in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">v0.3.3 release</a>:</p>
+
+<ul>
+  <li>add optionally showing canonical name UUID</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">scala&gt;</span><span class="w"> </span><span class="err">fromString(</span><span class="s2">"Homo sapiens"</span><span class="err">).render(compact=</span><span class="kc">false</span><span class="err">,</span><span class="w"> </span><span class="err">showCanonicalUuid=</span><span class="kc">true</span><span class="err">)</span><span class="w">
+</span><span class="err">res</span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">=</span><span class="w"> 
+</span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
+  </span><span class="nl">"canonical_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"16f235a0-e4a3-529c-9b83-bd15fe722110"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo sapiens"</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="err">//</span><span class="w"> </span><span class="err">...</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p>add year’s range to AST node that is encoded with <code class="language-plaintext highlighter-rouge">Year</code>’s field
+<code class="language-plaintext highlighter-rouge">rangeEnd: Option[CapturePosition]</code></p>
+  </li>
+  <li>
+    <p>parse names ending on hybrid sign (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/88">#88</a>)</p>
+  </li>
+  <li>
+    <p>support hybrid abbreviation expansions (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/310">#310</a>)</p>
+  </li>
+  <li>
+    <p>support raw hybrid formula parsing (<a href="https://github.com/GlobalNamesArchitecture/gnparser/issues/311">#311</a>)</p>
+  </li>
+  <li>
+    <p>continuous build is moved to <a href="https://circleci.com/gh/GlobalNamesArchitecture/gnparser">CircleCI</a></p>
+  </li>
+  <li>
+    <p>and many structural changes, bug-fixes and quality improvements.
+They are described in the <a href="https://github.com/GlobalNamesArchitecture/gnparser/releases/tag/release-0.3.3">release</a> documenation.</p>
+  </li>
+</ul>
+

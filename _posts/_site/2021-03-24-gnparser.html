@@ -1,0 +1,83 @@
+<p>Scientific name parsing allows to determine a <em>canonical form</em>, the
+<em>authorship</em> of a name, and receive other meta-information. Canonical forms are
+crucial for comparing names from different data sources.</p>
+
+<p>We are releasing <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> v1.1.0 written in Go language. We
+support <a href="https://semver.org/">Semantic Versioning</a>, therefore it is a stable version. Output format,
+functions, and settings are going to be backward compatible for many years
+(until v2).</p>
+
+<p>This is the 3rd implementation of name-parsing for Global Names Architecture
+project. First one, written in Ruby, <a href="https://github.com/GlobalNamesArchitecture/biodiversity"><strong>biodiversity gem</strong></a>,
+uses now the Go code of <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a>. Second one, written in Scala
+<a href="https://github.com/GlobalNamesArchitecture/gnparser">is archived</a>, and awaits for a new maintainer.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> is a sophisticated software, it is able to parse the
+most complex scientific names. It is also very fast, and able to parse more
+than 200 million names in an hour. The parser is a core component of many other
+Global Names Architecture projects.</p>
+
+<p>It can be used via:</p>
+
+<ul>
+  <li><a href="https://parser.globalnames.org">Web page</a></li>
+  <li><a href="https://app.swaggerhub.com/apis-docs/dimus/gnparser/1.0.0">REST API</a></li>
+  <li><a href="https://github.com/gnames/gnparser#command-line">Command line application</a></li>
+  <li><a href="https://rubygems.org/gems/biodiversity">Ruby Gem</a></li>
+  <li><a href="https://github.com/ropensci/rgnparser">R package</a></li>
+  <li><a href="https://github.com/gnames/gnparser#use-as-a-library-in-go">Go Library</a></li>
+</ul>
+
+<p>We also provide
+<a href="https://github.com/gnames/gnparser/blob/master/binding/main.go">C-binding</a> to
+its code. This approach allows to incorporate <a href="https://github.com/gnames/gnparser"><strong>GNparser</strong></a> natively
+into all languages that support C-binding (such as Java, Python, Ruby etc)</p>
+
+<h2 id="improvements-since-the-last-scala-based-release-of-gnparser">Improvements since the last Scala-based release of GNparser</h2>
+
+<ul>
+  <li>
+    <p>Speed — about 2 times faster than Scala-based version for CSV output,
+             and about 8 times faster for JSON output.</p>
+  </li>
+  <li><a href="https://github.com/gnames/gnparser/issues/27">Issue #27</a> — support for <code class="language-plaintext highlighter-rouge">agamosp. agamossp. agamovar.</code> ranks.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/28">Issue #28</a> — support for non-ASCII apostrophes.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/36">Issue #36</a> — support <code class="language-plaintext highlighter-rouge">_</code> as a space for files in Newick format.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/40">Issue #40</a> — support names where one of parentheses is missing.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/43">Issue #43</a> — support for <code class="language-plaintext highlighter-rouge">notho-</code> (hybrid) ranks.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/45">Issue #45</a> — support for <code class="language-plaintext highlighter-rouge">natio</code> rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/46">Issue #46</a> — support for <code class="language-plaintext highlighter-rouge">subg.</code> rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/48">Issue #48</a> — improve transliteration of diactritical characters.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/49">Issue #49</a> — support for outdated names with several hyphens in specific
+                epithet.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/51">Issue #51</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus) cus</code> in botany and zoology
+                (author or subgenus).</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/52">Issue #52</a> — support hyphen in outdated genus names.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/57">Issue #57</a> — warn when <code class="language-plaintext highlighter-rouge">f.</code> might mean either <code class="language-plaintext highlighter-rouge">filius</code> or <code class="language-plaintext highlighter-rouge">forma</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/58">Issue #58</a> — distinguish between <code class="language-plaintext highlighter-rouge">Aus (Bus)</code> in ICN and ICZN
+                (author or subgenus).</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/63">Issue #63</a> — normalize <code class="language-plaintext highlighter-rouge">format</code> to <code class="language-plaintext highlighter-rouge">f.</code> instead of <code class="language-plaintext highlighter-rouge">fm.</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/60">Issue #60</a> — allow outdated ranks in form of Greek letters.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/61">Issue #61</a> — support authors’ names with <code class="language-plaintext highlighter-rouge">bis</code> suffix.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/66">Issue #66</a> — remove HTML tags from names, unless asked otherwise.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/67">Issue #67</a> — add name’s authorship to the “root” of JSON structure.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/68">Issue #68</a> — provide stemmed canonical form.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/69">Issue #69</a> — provide shared C library to bind <strong>GNparser</strong> to
+                other languages.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/72">Issue #72</a> — parse surrogate names from BOLD project.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/75">Issue #75</a> — normalize subspecies to subsp.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/74">Issue #74</a> — support CSV output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/78">Issue #78</a> — parse virus-like non-virus names correctly.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/79">Issue #79</a> — make CSV as a default output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/80">Issue #80</a> — add cardinality to output.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/81">Issue #81</a> — support year ranges like ‘1778/79’.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/82">Issue #82</a> — parse authors with prefix <code class="language-plaintext highlighter-rouge">zu</code>.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/89">Issue #89</a> — allow <code class="language-plaintext highlighter-rouge">subspec.</code> as a rank.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/90">Issue #90</a> — allow <code class="language-plaintext highlighter-rouge">ß</code> in names.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/93">Issue #93</a> — parse <code class="language-plaintext highlighter-rouge">y</code> from Spanish papers as an author separator.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/127">Issue #127</a> — release a stable 1.0.0 version.</li>
+  <li><a href="https://github.com/gnames/gnparser/issues/162">Issue #162</a> — support bacterial <code class="language-plaintext highlighter-rouge">Candidatus</code> names.</li>
+</ul>
+
