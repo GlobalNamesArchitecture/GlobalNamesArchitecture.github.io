@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>gnparser release (v0.12.0) can be used in most modern languages</title>
+  <title>GNverifier release v0.3.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -200,17 +200,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    gnparser release (v0.12.0) can be used in most modern languages
-    <a href="/news/2019/11/19/gnparser-clib/" class="permalink" title="Permalink">∞</a>
+    GNverifier release v0.3.0
+    <a href="/news/2021/04/10/gnverifier-0.3.0/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      gnparser and release
+      GNverifier and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      19 Nov 2019
+      10 Apr 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -223,64 +223,105 @@
   </div>
   
   <div class="post-content">
-    <p>A few days ago we released v0.12.0 of <a href="https://gitlab.com/gogna/gnparser/-/releases">gnparser (Go
-version)</a>. This version made it
-possible to compile gnparser algorithms into <a href="https://gitlab.com/gogna/gnparser/blob/master/binding/main.go">C-compatible
-library</a>. Such
-library makes it possible to use gnparser with its native speeds in any
-language that supports binding to C. Such languages inlude Python, Ruby, Java
-(via JNI), Rust, C, C++ and many others.</p>
+    <p>There are millions of checklists in use by scientists and nature enthusiast.
+Very often such lists contain misspellings or outdated names. To help our users
+to clean up their checklists and monitor the quality of them we are releasing
+<a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> v0.3.0 written in Go language. We support
+[Semantic Versioning]. Until v1.0.0 changes in the command line options, input
+and output format might not be backward compatible with previous v0.x. However
+the program can be used in production. Users just need to be aware that
+sometimes incompatible changes might happen.</p>
 
-<p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
-gem</a> to take benefit
-of a dramatic speed increase and parsing quality of <code class="language-plaintext highlighter-rouge">gnparser</code>.</p>
+<p>We released several implementation of name-verification
+(reconciliation/resolution) before. All of them did not have enough speed for
+the purposes of verifying massive lists of scientific names. This release
+provides from 10x to 100x throughput improvements compare to older versions.
+For example we get 2,500 names/second on average when we work with name-strings
+detected in Biodiversity Heritage Library.</p>
 
-<p>Here are a quick benchmarks that compare how <code class="language-plaintext highlighter-rouge">biodiversity</code> performs before
-and now:</p>
+<h2 id="summary">Summary</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Program</th>
-      <th>Version</th>
-      <th>Full/Simple</th>
-      <th style="text-align: right">Names/min</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>gnparser</td>
-      <td>0.12.0</td>
-      <td>Simple</td>
-      <td style="text-align: right">3,000,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>4.0.1</td>
-      <td>Simple</td>
-      <td style="text-align: right">2,000,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>4.0.1</td>
-      <td>Full JSON</td>
-      <td style="text-align: right">800,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>3.5.1</td>
-      <td>n/a</td>
-      <td style="text-align: right">40,000</td>
-    </tr>
-  </tbody>
-</table>
+<p><a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> can help to answer the following questions:</p>
 
-<p>With this improved speed Encyclopedia of Life, which is written in Ruby,
-can process all their names using Ruby in less than 15 minutes.</p>
+<ul>
+  <li>Is a name-string a real name?</li>
+  <li>Is it spelled correctly, and if not, what might be the right spelling?</li>
+  <li>Is the name currently in use?</li>
+  <li>If it is a synonym, what data-sources consider to be currently accepted name?</li>
+  <li>Is a name a homonym?</li>
+  <li>What is a taxon that the name points to and where it is placed in a variety
+of classifications?</li>
+</ul>
 
-<p>README file of <code class="language-plaintext highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
-library and <code class="language-plaintext highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
-other languages.</p>
+<p>Name verification and reconciliation involves several steps</p>
+
+<ul>
+  <li>Exact match: input name matches canonical form located in one or more
+data-sources.</li>
+  <li>Fuzzy match: if no exact match is found, there is a fuzzy matching of
+canonical forms</li>
+  <li>Partial Exact match: if previous 2 steps failed, we remove words from the end
+or from the middle of a name and try to match what is left, until we end up
+with a bare genus.</li>
+  <li>Partial Fuzzy match: in case if partial exact match did not work, and the
+remained name is not uninomial, we apply fuzzy matching algorithms.</li>
+</ul>
+
+<p>Matched results are then sorted by a scoring algorithm. The <a href="https://verifier.globalnames.org/about">“About”
+page</a> contains more detailed information about matching and scoring.</p>
+
+<h2 id="performance">Performance</h2>
+
+<p>We observe speeds ~2,500 names per second for checklists that are coming
+from optical character recognition process and contain many misspellings.</p>
+
+<h2 id="usages">Usages</h2>
+
+<p>The simplest way to use <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> is via
+<a href="https://verifier.globalnames.org">web-interface</a>.  The online application emits results in HTML,
+CSV and JSON formats and can process up to 5000 names per request.</p>
+
+<p>For larger datasets, and is an alternative there is a [command line
+application][gnparser cli] that can be downloaded for Windows, Mac and Linux.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier file-with-names.txt
+</code></pre></div></div>
+
+<p>This version adds an option to capitalize names before verification. It is
+especially useful for web-interface, as it allows users to be more lazy when
+they try to match names.</p>
+
+<p>It is possible to map a checklist to one of 100+ data-sources aggregated in
+<a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a>.</p>
+
+<p>For example the following command will match all names from
+<code class="language-plaintext highlighter-rouge">file-with-names.txt</code> against <code class="language-plaintext highlighter-rouge">the Catalogue of Life</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier file-with-names.txt <span class="nt">-s</span> 1 <span class="nt">-o</span> <span class="nt">-f</span> pretty
+</code></pre></div></div>
+
+<p>It is also possible to run web-interface locally by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier <span class="nt">-p</span> 4000
+</code></pre></div></div>
+
+<p>After running command above the interface can be accessed by a browser via
+<code class="language-plaintext highlighter-rouge">http://localhost:4000</code> URL.</p>
+
+<p>Complete list of <code class="language-plaintext highlighter-rouge">gnverifier</code> options can be found by running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier <span class="nt">-h</span>
+</code></pre></div></div>
+
+<h2 id="application-programming-interface-api">Application Programming Interface (API)</h2>
+
+<p><a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> does not keep all the data needed for processing
+name-strings locally. It uses a <a href="https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0">remote API</a> located at
+<code class="language-plaintext highlighter-rouge">https://verifier.globalnames.org/api/v1</code>.</p>
+
+<p>The RESTful API is public, it has an <a href="https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0">OpenAPI description</a> and is
+available for outside scripts.</p>
+
 
   </div>
 </article>
@@ -297,7 +338,7 @@ other languages.</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier v0.3.0</a>
       </li>
       
@@ -321,7 +362,7 @@ other languages.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</a>
         </li>
         
@@ -349,7 +390,7 @@ other languages.</p>
           <a href="/news/2019/11/20/col-gbif-bhl/">Biodiversity Heritage Library (BHL) link to Catalogue of Life Plus (CoL+)</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2019/11/19/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
         </li>
         

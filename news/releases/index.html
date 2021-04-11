@@ -94,6 +94,10 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</option>
+      
+      <option value="/news/2021/04/10/gnarser-1.2.0/">GNparser (Go language) release 1.2.0</option>
+      
       <option value="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</option>
       
       <option value="/news/2019/12/11/gnfinder/">gnfinder release 0.9.1 -- bug fixes</option>
@@ -195,6 +199,197 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/04/10/gnverifier-0.3.0/">
+      GNverifier release v0.3.0
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNverifier and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      10 Apr 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p>There are millions of checklists in use by scientists and nature enthusiast.
+Very often such lists contain misspellings or outdated names. To help our users
+to clean up their checklists and monitor the quality of them we are releasing
+<a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> v0.3.0 written in Go language. We support
+[Semantic Versioning]. Until v1.0.0 changes in the command line options, input
+and output format might not be backward compatible with previous v0.x. However
+the program can be used in production. Users just need to be aware that
+sometimes incompatible changes might happen.</p>
+
+<p>We released several implementation of name-verification
+(reconciliation/resolution) before. All of them did not have enough speed for
+the purposes of verifying massive lists of scientific names. This release
+provides from 10x to 100x throughput improvements compare to older versions.
+For example we get 2,500 names/second on average when we work with name-strings
+detected in Biodiversity Heritage Library.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> can help to answer the following questions:</p>
+
+<ul>
+  <li>Is a name-string a real name?</li>
+  <li>Is it spelled correctly, and if not, what might be the right spelling?</li>
+  <li>Is the name currently in use?</li>
+  <li>If it is a synonym, what data-sources consider to be currently accepted name?</li>
+  <li>Is a name a homonym?</li>
+  <li>What is a taxon that the name points to and where it is placed in a variety
+of classifications?</li>
+</ul>
+
+<p>Name verification and reconciliation involves several steps</p>
+
+<ul>
+  <li>Exact match: input name matches canonical form located in one or more
+data-sources.</li>
+  <li>Fuzzy match: if no exact match is found, there is a fuzzy matching of
+canonical forms</li>
+  <li>Partial Exact match: if previous 2 steps failed, we remove words from the end
+or from the middle of a name and try to match what is left, until we end up
+with a bare genus.</li>
+  <li>Partial Fuzzy match: in case if partial exact match did not work, and the
+remained name is not uninomial, we apply fuzzy matching algorithms.</li>
+</ul>
+
+<p>Matched results are then sorted by a scoring algorithm. The <a href="https://verifier.globalnames.org/about">“About”
+page</a> contains more detailed information about matching and scoring.</p>
+
+<h2 id="performance">Performance</h2>
+
+<p>We observe speeds ~2,500 names per second for checklists that are coming
+from optical character recognition process and contain many misspellings.</p>
+
+<h2 id="usages">Usages</h2>
+
+<p>The simplest way to use <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> is via
+<a href="https://verifier.globalnames.org">web-interface</a>.  The online application emits results in HTML,
+CSV and JSON formats and can process up to 5000 names per request.</p>
+
+<p>For larger datasets, and is an alternative there is a [command line
+application][gnparser cli] that can be downloaded for Windows, Mac and Linux.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier file-with-names.txt
+</code></pre></div></div>
+
+<p>This version adds an option to capitalize names before verification. It is
+especially useful for web-interface, as it allows users to be more lazy when
+they try to match names.</p>
+
+<p>It is possible to map a checklist to one of 100+ data-sources aggregated in
+<a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a>.</p>
+
+<p>For example the following command will match all names from
+<code class="language-plaintext highlighter-rouge">file-with-names.txt</code> against <code class="language-plaintext highlighter-rouge">the Catalogue of Life</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier file-with-names.txt <span class="nt">-s</span> 1 <span class="nt">-o</span> <span class="nt">-f</span> pretty
+</code></pre></div></div>
+
+<p>It is also possible to run web-interface locally by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier <span class="nt">-p</span> 4000
+</code></pre></div></div>
+
+<p>After running command above the interface can be accessed by a browser via
+<code class="language-plaintext highlighter-rouge">http://localhost:4000</code> URL.</p>
+
+<p>Complete list of <code class="language-plaintext highlighter-rouge">gnverifier</code> options can be found by running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier <span class="nt">-h</span>
+</code></pre></div></div>
+
+<h2 id="application-programming-interface-api">Application Programming Interface (API)</h2>
+
+<p><a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> does not keep all the data needed for processing
+name-strings locally. It uses a <a href="https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0">remote API</a> located at
+<code class="language-plaintext highlighter-rouge">https://verifier.globalnames.org/api/v1</code>.</p>
+
+<p>The RESTful API is public, it has an <a href="https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0">OpenAPI description</a> and is
+available for outside scripts.</p>
+
+
+  </div>
+</article>
+
+
+  <article>
+  <h2>
+    <a href="/news/2021/04/10/gnarser-1.2.0/">
+      GNparser (Go language) release 1.2.0
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      10 Apr 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.2.0">Version 1.2.0</a> of <a href="https://github.com/gnames/gnparser">GNparser</a> is out. It adds an option to parse low-case names
+in case if a checklist does not follow nomenclatural standards.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"plantago major"</span> <span class="nt">--capitalize</span>
+Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+085e38af-e19b-56e5-9fec-5d81a467a656,plantago major,2,Plantago maior,Plantago major,Plantago major,,,4
+</code></pre></div></div>
+
+<p>Capitalization does not apply if for named hybrids</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"xAus bus"</span> <span class="nt">-c</span>
+Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+9b24b828-88a6-58b7-ac76-1342c8ac135d,xAus bus,2,Aus bus,Aus bus,× Aus bus,,,3
+</code></pre></div></div>
+
+<p>GNparser assigns Quality=4 (the worst) and issues a warning.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"plantago major"</span> <span class="nt">-c</span> <span class="nt">-f</span> pretty
+<span class="o">{</span>
+  <span class="s2">"parsed"</span>: <span class="nb">true</span>,
+  <span class="s2">"quality"</span>: 4,
+  <span class="s2">"qualityWarnings"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"quality"</span>: 4,
+      <span class="s2">"warning"</span>: <span class="s2">"Name starts with low-case character"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"verbatim"</span>: <span class="s2">"plantago major"</span>,
+  <span class="s2">"normalized"</span>: <span class="s2">"Plantago major"</span>,
+  <span class="s2">"canonical"</span>: <span class="o">{</span>
+    <span class="s2">"stemmed"</span>: <span class="s2">"Plantago maior"</span>,
+    <span class="s2">"simple"</span>: <span class="s2">"Plantago major"</span>,
+    <span class="s2">"full"</span>: <span class="s2">"Plantago major"</span>
+  <span class="o">}</span>,
+  <span class="s2">"cardinality"</span>: 2,
+  <span class="s2">"id"</span>: <span class="s2">"085e38af-e19b-56e5-9fec-5d81a467a656"</span>,
+  <span class="s2">"parserVersion"</span>: <span class="s2">"nightly"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/03/23/gnparser/">
@@ -1352,6 +1547,14 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier v0.3.0</a>
+      </li>
+      
+      <li class="">
+        <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser v1.2.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
       </li>
       
@@ -1363,17 +1566,17 @@ using any field from the input.</p>
         <a href="/news/2019/12/10/gnrd/">GNRD v0.9.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2019/11/19/gnparser-clib/">GNParser v0.12.0</a>
-      </li>
-      
-      <li class="">
-        <a href="/news/2016/10/06/gnparser-0-3-3/">GNParser v0.3.3</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</a>
+        </li>
+        
+        <li class="">
+          <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser (Go language) release 1.2.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/03/23/gnparser/">GNparser (Go language) release 1.1.0</a>

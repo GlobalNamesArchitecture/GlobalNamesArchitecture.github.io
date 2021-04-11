@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>gnparser release (v0.12.0) can be used in most modern languages</title>
+  <title>GNparser (Go language) release 1.2.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -200,17 +200,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    gnparser release (v0.12.0) can be used in most modern languages
-    <a href="/news/2019/11/19/gnparser-clib/" class="permalink" title="Permalink">∞</a>
+    GNparser (Go language) release 1.2.0
+    <a href="/news/2021/04/10/gnarser-1.2.0/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      gnparser and release
+      GNparser and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      19 Nov 2019
+      10 Apr 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -223,64 +223,46 @@
   </div>
   
   <div class="post-content">
-    <p>A few days ago we released v0.12.0 of <a href="https://gitlab.com/gogna/gnparser/-/releases">gnparser (Go
-version)</a>. This version made it
-possible to compile gnparser algorithms into <a href="https://gitlab.com/gogna/gnparser/blob/master/binding/main.go">C-compatible
-library</a>. Such
-library makes it possible to use gnparser with its native speeds in any
-language that supports binding to C. Such languages inlude Python, Ruby, Java
-(via JNI), Rust, C, C++ and many others.</p>
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.2.0">Version 1.2.0</a> of <a href="https://github.com/gnames/gnparser">GNparser</a> is out. It adds an option to parse low-case names
+in case if a checklist does not follow nomenclatural standards.</p>
 
-<p>We already updated <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Ruby’s biodiversity parser
-gem</a> to take benefit
-of a dramatic speed increase and parsing quality of <code class="language-plaintext highlighter-rouge">gnparser</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"plantago major"</span> <span class="nt">--capitalize</span>
+Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+085e38af-e19b-56e5-9fec-5d81a467a656,plantago major,2,Plantago maior,Plantago major,Plantago major,,,4
+</code></pre></div></div>
 
-<p>Here are a quick benchmarks that compare how <code class="language-plaintext highlighter-rouge">biodiversity</code> performs before
-and now:</p>
+<p>Capitalization does not apply if for named hybrids</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Program</th>
-      <th>Version</th>
-      <th>Full/Simple</th>
-      <th style="text-align: right">Names/min</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>gnparser</td>
-      <td>0.12.0</td>
-      <td>Simple</td>
-      <td style="text-align: right">3,000,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>4.0.1</td>
-      <td>Simple</td>
-      <td style="text-align: right">2,000,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>4.0.1</td>
-      <td>Full JSON</td>
-      <td style="text-align: right">800,000</td>
-    </tr>
-    <tr>
-      <td>biodiversity</td>
-      <td>3.5.1</td>
-      <td>n/a</td>
-      <td style="text-align: right">40,000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"xAus bus"</span> <span class="nt">-c</span>
+Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Year,Quality
+9b24b828-88a6-58b7-ac76-1342c8ac135d,xAus bus,2,Aus bus,Aus bus,× Aus bus,,,3
+</code></pre></div></div>
 
-<p>With this improved speed Encyclopedia of Life, which is written in Ruby,
-can process all their names using Ruby in less than 15 minutes.</p>
+<p>GNparser assigns Quality=4 (the worst) and issues a warning.</p>
 
-<p>README file of <code class="language-plaintext highlighter-rouge">gnparser</code> contains <a href="https://gitlab.com/gogna/gnparser#use-as-a-shared-c-library">instructions</a> how to make such c-shared
-library and <code class="language-plaintext highlighter-rouge">biodiversity</code> code is a good example of connecting the library to
-other languages.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnparser <span class="s2">"plantago major"</span> <span class="nt">-c</span> <span class="nt">-f</span> pretty
+<span class="o">{</span>
+  <span class="s2">"parsed"</span>: <span class="nb">true</span>,
+  <span class="s2">"quality"</span>: 4,
+  <span class="s2">"qualityWarnings"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"quality"</span>: 4,
+      <span class="s2">"warning"</span>: <span class="s2">"Name starts with low-case character"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"verbatim"</span>: <span class="s2">"plantago major"</span>,
+  <span class="s2">"normalized"</span>: <span class="s2">"Plantago major"</span>,
+  <span class="s2">"canonical"</span>: <span class="o">{</span>
+    <span class="s2">"stemmed"</span>: <span class="s2">"Plantago maior"</span>,
+    <span class="s2">"simple"</span>: <span class="s2">"Plantago major"</span>,
+    <span class="s2">"full"</span>: <span class="s2">"Plantago major"</span>
+  <span class="o">}</span>,
+  <span class="s2">"cardinality"</span>: 2,
+  <span class="s2">"id"</span>: <span class="s2">"085e38af-e19b-56e5-9fec-5d81a467a656"</span>,
+  <span class="s2">"parserVersion"</span>: <span class="s2">"nightly"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 
   </div>
 </article>
@@ -301,7 +283,7 @@ other languages.</p>
         <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier v0.3.0</a>
       </li>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser v1.2.0</a>
       </li>
       
@@ -325,7 +307,7 @@ other languages.</p>
           <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</a>
         </li>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser (Go language) release 1.2.0</a>
         </li>
         
@@ -349,7 +331,7 @@ other languages.</p>
           <a href="/news/2019/11/20/col-gbif-bhl/">Biodiversity Heritage Library (BHL) link to Catalogue of Life Plus (CoL+)</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2019/11/19/gnparser-clib/">gnparser release (v0.12.0) can be used in most modern languages</a>
         </li>
         
