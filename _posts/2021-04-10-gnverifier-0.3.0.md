@@ -63,7 +63,7 @@ The simplest way to use [**GNverifier**][gnverifier] is via
 [web-interface][gnverifier web].  The online application emits results in HTML,
 CSV and JSON formats and can process up to 5000 names per request.
 
-For larger datasets, and is an alternative there is a [command line
+For larger datasets, and as an alternative there is a [command line
 application][gnverifier cli] that can be downloaded for Windows, Mac and Linux.
 
 ```bash
