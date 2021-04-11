@@ -64,15 +64,15 @@ The simplest way to use [**GNverifier**][gnverifier] is via
 CSV and JSON formats and can process up to 5000 names per request.
 
 For larger datasets, and is an alternative there is a [command line
-application][gnparser cli] that can be downloaded for Windows, Mac and Linux.
+application][gnverifier cli] that can be downloaded for Windows, Mac and Linux.
 
 ```bash
 gnverifier file-with-names.txt
 ```
 
-This version adds an option to capitalize names before verification. It is
-especially useful for web-interface, as it allows users to be more lazy when
-they try to match names.
+This version adds an option `-c` or `--capitalize` to fix capitalization of
+name-srings before verification. It is especially useful for web-interface, as
+it allows users "to be lazy" when they try to match names.
 
 ```bash
 $ gnverifier "drsophila melanogaster" -c -f pretty
@@ -147,6 +147,7 @@ The RESTful API is public, it has an [OpenAPI description][api] and is
 available for outside scripts.
 
 [gnverifier]: https://github.com/gnames/gnverifier
+[gnverifier cli]: https://github.com/gnames/gnverifier/releases/tag/v0.3.0
 [about]: https://verifier.globalnames.org/about
 [gnverifier web]: https://verifier.globalnames.org
 [api]: https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0
