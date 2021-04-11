@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Sat, 10 Apr 2021 21:29:23 -0500</pubDate>
-    <lastBuildDate>Sat, 10 Apr 2021 21:29:23 -0500</lastBuildDate>
+    <pubDate>Sat, 10 Apr 2021 21:35:52 -0500</pubDate>
+    <lastBuildDate>Sat, 10 Apr 2021 21:35:52 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.0</generator>
     <description>Scientific Name Services</description>
@@ -95,15 +95,15 @@ from optical character recognition process and contain many misspellings.&lt;/p&
 &lt;a href=&quot;https://verifier.globalnames.org&quot;&gt;web-interface&lt;/a&gt;.  The online application emits results in HTML,
 CSV and JSON formats and can process up to 5000 names per request.&lt;/p&gt;
 
-&lt;p&gt;For larger datasets, and is an alternative there is a [command line
-application][gnparser cli] that can be downloaded for Windows, Mac and Linux.&lt;/p&gt;
+&lt;p&gt;For larger datasets, and is an alternative there is a &lt;a href=&quot;https://github.com/gnames/gnverifier/releases/tag/v0.3.0&quot;&gt;command line
+application&lt;/a&gt; that can be downloaded for Windows, Mac and Linux.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnverifier file-with-names.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This version adds an option to capitalize names before verification. It is
-especially useful for web-interface, as it allows users to be more lazy when
-they try to match names.&lt;/p&gt;
+&lt;p&gt;This version adds an option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-c&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--capitalize&lt;/code&gt; to fix capitalization of
+name-srings before verification. It is especially useful for web-interface, as
+it allows users “to be lazy” when they try to match names.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gnverifier &lt;span class=&quot;s2&quot;&gt;&quot;drsophila melanogaster&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty
 INFO[0000] Using config file: /home/dimus/.config/gnverifier.yaml.
