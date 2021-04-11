@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Sat, 10 Apr 2021 21:12:40 -0500</pubDate>
-    <lastBuildDate>Sat, 10 Apr 2021 21:12:40 -0500</lastBuildDate>
+    <pubDate>Sat, 10 Apr 2021 21:29:23 -0500</pubDate>
+    <lastBuildDate>Sat, 10 Apr 2021 21:29:23 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.0</generator>
     <description>Scientific Name Services</description>
@@ -37,11 +37,11 @@
       <category>release</category>
       
       <guid isPermaLink="true">http://globalnames.org/news/2021/04/10/gnverifier-0.3.0/</guid>
-      <description>&lt;p&gt;There are millions of checklists in use by scientists and nature enthusiast.
+      <description>&lt;p&gt;There are millions of checklists in use by scientists and nature enthusiasts.
 Very often such lists contain misspellings or outdated names. To help our users
 to clean up their checklists and monitor the quality of them we are releasing
 &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;&lt;strong&gt;GNverifier&lt;/strong&gt;&lt;/a&gt; v0.3.0 written in Go language. We support
-[Semantic Versioning]. Until v1.0.0 changes in the command line options, input
+&lt;a href=&quot;https://semver.org&quot;&gt;Semantic Versioning&lt;/a&gt;. Until v1.0.0 changes in the command line options, input
 and output format might not be backward compatible with previous v0.x. However
 the program can be used in production. Users just need to be aware that
 sometimes incompatible changes might happen.&lt;/p&gt;
@@ -105,10 +105,47 @@ application][gnparser cli] that can be downloaded for Windows, Mac and Linux.&lt
 especially useful for web-interface, as it allows users to be more lazy when
 they try to match names.&lt;/p&gt;
 
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gnverifier &lt;span class=&quot;s2&quot;&gt;&quot;drsophila melanogaster&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty
+INFO[0000] Using config file: /home/dimus/.config/gnverifier.yaml.
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;inputId&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;b20a7c40-f593-5a68-a048-0a24742b4283&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;input&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;drsophila melanogaster&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;inputCapitalized&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;matchType&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Fuzzy&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;bestResult&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;dataSourceId&quot;&lt;/span&gt;: 1,
+    &lt;span class=&quot;s2&quot;&gt;&quot;dataSourceTitleShort&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Catalogue of Life&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;curation&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Curated&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;recordId&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;2586298&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;localId&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;69bbaee49e7c2f749ee7712f3f168920&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;outlink&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/69bbaee49e7c2f749ee7712f3f168920&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;entryDate&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;2020-06-15&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;matchedName&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster Meigen, 1830&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;matchedCardinality&quot;&lt;/span&gt;: 2,
+    &lt;span class=&quot;s2&quot;&gt;&quot;matchedCanonicalSimple&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;matchedCanonicalFull&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;currentRecordId&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;2586298&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;currentName&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster Meigen, 1830&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;currentCardinality&quot;&lt;/span&gt;: 2,
+    &lt;span class=&quot;s2&quot;&gt;&quot;currentCanonicalSimple&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;currentCanonicalFull&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Drosophila melanogaster&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;isSynonym&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;classificationPath&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Animalia|Arthropoda|Insecta|Diptera|Drosophilidae|Drosophila|Drosophila melanogaster&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;classificationRanks&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;kingdom|phylum|class|order|family|genus|species&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;classificationIds&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;3939792|3940206|3940214|3946159|3946225|4031785|2586298&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;editDistance&quot;&lt;/span&gt;: 1,
+    &lt;span class=&quot;s2&quot;&gt;&quot;stemEditDistance&quot;&lt;/span&gt;: 1,
+    &lt;span class=&quot;s2&quot;&gt;&quot;matchType&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Fuzzy&quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;dataSourcesNum&quot;&lt;/span&gt;: 28,
+  &lt;span class=&quot;s2&quot;&gt;&quot;curation&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Curated&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;It is possible to map a checklist to one of 100+ data-sources aggregated in
 &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;&lt;strong&gt;GNverifier&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;For example the following command will match all names from
+&lt;p&gt;The following command will match all names from
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-with-names.txt&lt;/code&gt; against &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the Catalogue of Life&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnverifier file-with-names.txt &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty

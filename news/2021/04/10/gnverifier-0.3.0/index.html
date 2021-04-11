@@ -223,11 +223,11 @@
   </div>
   
   <div class="post-content">
-    <p>There are millions of checklists in use by scientists and nature enthusiast.
+    <p>There are millions of checklists in use by scientists and nature enthusiasts.
 Very often such lists contain misspellings or outdated names. To help our users
 to clean up their checklists and monitor the quality of them we are releasing
 <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a> v0.3.0 written in Go language. We support
-[Semantic Versioning]. Until v1.0.0 changes in the command line options, input
+<a href="https://semver.org">Semantic Versioning</a>. Until v1.0.0 changes in the command line options, input
 and output format might not be backward compatible with previous v0.x. However
 the program can be used in production. Users just need to be aware that
 sometimes incompatible changes might happen.</p>
@@ -291,10 +291,47 @@ application][gnparser cli] that can be downloaded for Windows, Mac and Linux.</p
 especially useful for web-interface, as it allows users to be more lazy when
 they try to match names.</p>
 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gnverifier <span class="s2">"drsophila melanogaster"</span> <span class="nt">-c</span> <span class="nt">-f</span> pretty
+INFO[0000] Using config file: /home/dimus/.config/gnverifier.yaml.
+<span class="o">{</span>
+  <span class="s2">"inputId"</span>: <span class="s2">"b20a7c40-f593-5a68-a048-0a24742b4283"</span>,
+  <span class="s2">"input"</span>: <span class="s2">"drsophila melanogaster"</span>,
+  <span class="s2">"inputCapitalized"</span>: <span class="nb">true</span>,
+  <span class="s2">"matchType"</span>: <span class="s2">"Fuzzy"</span>,
+  <span class="s2">"bestResult"</span>: <span class="o">{</span>
+    <span class="s2">"dataSourceId"</span>: 1,
+    <span class="s2">"dataSourceTitleShort"</span>: <span class="s2">"Catalogue of Life"</span>,
+    <span class="s2">"curation"</span>: <span class="s2">"Curated"</span>,
+    <span class="s2">"recordId"</span>: <span class="s2">"2586298"</span>,
+    <span class="s2">"localId"</span>: <span class="s2">"69bbaee49e7c2f749ee7712f3f168920"</span>,
+    <span class="s2">"outlink"</span>: <span class="s2">"http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/69bbaee49e7c2f749ee7712f3f168920"</span>,
+    <span class="s2">"entryDate"</span>: <span class="s2">"2020-06-15"</span>,
+    <span class="s2">"matchedName"</span>: <span class="s2">"Drosophila melanogaster Meigen, 1830"</span>,
+    <span class="s2">"matchedCardinality"</span>: 2,
+    <span class="s2">"matchedCanonicalSimple"</span>: <span class="s2">"Drosophila melanogaster"</span>,
+    <span class="s2">"matchedCanonicalFull"</span>: <span class="s2">"Drosophila melanogaster"</span>,
+    <span class="s2">"currentRecordId"</span>: <span class="s2">"2586298"</span>,
+    <span class="s2">"currentName"</span>: <span class="s2">"Drosophila melanogaster Meigen, 1830"</span>,
+    <span class="s2">"currentCardinality"</span>: 2,
+    <span class="s2">"currentCanonicalSimple"</span>: <span class="s2">"Drosophila melanogaster"</span>,
+    <span class="s2">"currentCanonicalFull"</span>: <span class="s2">"Drosophila melanogaster"</span>,
+    <span class="s2">"isSynonym"</span>: <span class="nb">false</span>,
+    <span class="s2">"classificationPath"</span>: <span class="s2">"Animalia|Arthropoda|Insecta|Diptera|Drosophilidae|Drosophila|Drosophila melanogaster"</span>,
+    <span class="s2">"classificationRanks"</span>: <span class="s2">"kingdom|phylum|class|order|family|genus|species"</span>,
+    <span class="s2">"classificationIds"</span>: <span class="s2">"3939792|3940206|3940214|3946159|3946225|4031785|2586298"</span>,
+    <span class="s2">"editDistance"</span>: 1,
+    <span class="s2">"stemEditDistance"</span>: 1,
+    <span class="s2">"matchType"</span>: <span class="s2">"Fuzzy"</span>
+  <span class="o">}</span>,
+  <span class="s2">"dataSourcesNum"</span>: 28,
+  <span class="s2">"curation"</span>: <span class="s2">"Curated"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <p>It is possible to map a checklist to one of 100+ data-sources aggregated in
 <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a>.</p>
 
-<p>For example the following command will match all names from
+<p>The following command will match all names from
 <code class="language-plaintext highlighter-rouge">file-with-names.txt</code> against <code class="language-plaintext highlighter-rouge">the Catalogue of Life</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnverifier file-with-names.txt <span class="nt">-s</span> 1 <span class="nt">-o</span> <span class="nt">-f</span> pretty
