@@ -9,7 +9,7 @@ categories: GNverifier release
 comments: true
 ---
 
-There are millions of checklists in use by scientists and nature enthusiast.
+There are millions of checklists in use by scientists and nature enthusiasts.
 Very often such lists contain misspellings or outdated names. To help our users
 to clean up their checklists and monitor the quality of them we are releasing
 [**GNverifier**][gnverifier] v0.3.0 written in Go language. We support
@@ -74,10 +74,48 @@ This version adds an option to capitalize names before verification. It is
 especially useful for web-interface, as it allows users to be more lazy when
 they try to match names.
 
+```bash
+$ gnverifier "drsophila melanogaster" -c -f pretty
+INFO[0000] Using config file: /home/dimus/.config/gnverifier.yaml.
+{
+  "inputId": "b20a7c40-f593-5a68-a048-0a24742b4283",
+  "input": "drsophila melanogaster",
+  "inputCapitalized": true,
+  "matchType": "Fuzzy",
+  "bestResult": {
+    "dataSourceId": 1,
+    "dataSourceTitleShort": "Catalogue of Life",
+    "curation": "Curated",
+    "recordId": "2586298",
+    "localId": "69bbaee49e7c2f749ee7712f3f168920",
+    "outlink": "http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/69bbaee49e7c2f749ee7712f3f168920",
+    "entryDate": "2020-06-15",
+    "matchedName": "Drosophila melanogaster Meigen, 1830",
+    "matchedCardinality": 2,
+    "matchedCanonicalSimple": "Drosophila melanogaster",
+    "matchedCanonicalFull": "Drosophila melanogaster",
+    "currentRecordId": "2586298",
+    "currentName": "Drosophila melanogaster Meigen, 1830",
+    "currentCardinality": 2,
+    "currentCanonicalSimple": "Drosophila melanogaster",
+    "currentCanonicalFull": "Drosophila melanogaster",
+    "isSynonym": false,
+    "classificationPath": "Animalia|Arthropoda|Insecta|Diptera|Drosophilidae|Drosophila|Drosophila melanogaster",
+    "classificationRanks": "kingdom|phylum|class|order|family|genus|species",
+    "classificationIds": "3939792|3940206|3940214|3946159|3946225|4031785|2586298",
+    "editDistance": 1,
+    "stemEditDistance": 1,
+    "matchType": "Fuzzy"
+  },
+  "dataSourcesNum": 28,
+  "curation": "Curated"
+}
+```
+
 It is possible to map a checklist to one of 100+ data-sources aggregated in
 [**GNverifier**][gnverifier].
 
-For example the following command will match all names from
+The following command will match all names from
 `file-with-names.txt` against `the Catalogue of Life`
 
 ```bash
@@ -112,4 +150,4 @@ available for outside scripts.
 [about]: https://verifier.globalnames.org/about
 [gnverifier web]: https://verifier.globalnames.org
 [api]: https://app.swaggerhub.com/apis-docs/dimus/gnames/1.0.0
-
+[Semantic Versioning]: https://semver.org
