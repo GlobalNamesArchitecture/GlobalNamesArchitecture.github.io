@@ -45,7 +45,7 @@ file on a disk.  Here we are going to use [names.csv] file as an example.
 
 ## Examine CSV file
 
-[names.csv] contains `names.csv` --- a well-formatted CSV file with many
+[names.csv] is a well-formatted CSV file with many
 strings to evaluate. At first we will examine its content:
 
 Let's see how many lines it has.
