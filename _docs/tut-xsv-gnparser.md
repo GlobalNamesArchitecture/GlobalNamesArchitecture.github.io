@@ -1,11 +1,19 @@
 ---
 layout: docs
 title: Parse names in CSV file
-date: 2021-04-02 19:09:34
+date: 2021-04-19 15:02:21
 type: docs
 author: dimus
 permalink: /docs/tut-xsv-gnparser/
 ---
+
+## Prerequisites
+
+- [GNparser][gnparser install] - a scientific names parsing app.
+- [XSV][xsv install] - a powerful CSV processing app.
+- [names.zip] - an example of a compressed CSV file.
+
+## Introduction
 
 This tutorial shows how to work with big CSV files using command line
 applications.
