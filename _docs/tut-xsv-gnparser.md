@@ -11,7 +11,7 @@ permalink: /docs/tut-xsv-gnparser/
 
 - [GNparser][gnparser install] - a scientific names parsing app.
 - [XSV][xsv install] - a powerful CSV processing app.
-- [names.zip] - an example of a compressed CSV file.
+- [names.csv] - an example of a compressed CSV file.
 
 ## Introduction
 
@@ -41,11 +41,11 @@ Follow instructions at [xsv][xsv install] and [gnparser][gnparser install] home
 pages for installing the applications needed.
 
 If a checklist exists in Excel or in a Google Doc, save it as UTF-8 encoded CSV
-file on a disk.  Here we are going to use [names.zip] file as an example.
+file on a disk.  Here we are going to use [names.csv] file as an example.
 
 ## Examine CSV file
 
-[names.zip] contains `names.csv` --- a well-formatted CSV file with many
+[names.csv] contains `names.csv` --- a well-formatted CSV file with many
 strings to evaluate. At first we will examine its content:
 
 Let's see how many lines it has.
@@ -295,4 +295,4 @@ data.
 [xsv install]: https://github.com/BurntSushi/xsv#installation
 [gnparser]:https://github.com/gnames/gnparser
 [gnparser install]: https://github.com/gnames/gnparser#installation
-[names.zip]: https://github.com/dimus/tutorials/raw/master/xsv_parser/names.zip
+[names.csv]: https://github.com/dimus/tutorials/raw/master/xsv_parser/names.csv
