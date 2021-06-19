@@ -113,12 +113,10 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0225)
-    mini_portile2 (2.5.3)
     minitest (5.14.4)
     multipart-post (2.1.1)
     namae (1.1.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -186,7 +184,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (~> 4.2)
@@ -206,4 +204,4 @@ DEPENDENCIES
   solargraph (~> 0.40)
 
 BUNDLED WITH
-   1.17.3
+   2.2.20
