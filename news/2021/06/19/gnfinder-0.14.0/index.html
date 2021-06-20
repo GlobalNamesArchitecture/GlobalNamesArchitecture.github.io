@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Catalogue of Life Meeting in Champaign/Urbana</title>
+  <title>GNfinder release v0.14.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -202,17 +202,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Catalogue of Life Meeting in Champaign/Urbana
-    <a href="/news/2015/08/13/col-meeting/" class="permalink" title="Permalink">∞</a>
+    GNfinder release v0.14.0
+    <a href="/news/2021/06/19/gnfinder-0.14.0/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      catalogue-of-life
+      GNfinder and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      13 Aug 2015
+      19 Jun 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -225,31 +225,91 @@
   </div>
   
   <div class="post-content">
-    <p>There was a short meeting about <a href="http://www.catalogueoflife.org/">Catalogue of Life</a> future directions
-organized at <a href="http://software.speciesfile.org/HomePage/Software/SoftwareHomePage.aspx">Species File Group</a> at Champaign/Urbana. Concerning Global
-Names it was a very productive meeting. It was great to understand the current
-state of Catalogue of Life, to see that CoL is not loosing momentum inspite of
-financial problems of biodiversity informatics in general. There was
-definitely interest in creating more bridges between various projects.</p>
+    <p>Find scientific names in plain texts, PDF files, MS documents etc.</p>
 
-<p>Yuri Roskov did present a ‘pilot’ project of cooperation between Encyclopeia of
-Life species pages group and CoL. Data about <a href="http://www.ntnu.no/ub/scorpion-files/">~2000 species of
-scorpions</a> had been harvested from html-based site to be used in
-both projects. I think it was a great exercise and I do hope it will be just
-the first example of such cooperation.</p>
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a program for finding scientific names in texts.
+GNfinder exists for several years now and is responsible for creation of name
+indices for Biodiversity Heritage Library (BHL) and HathiTrust Digital Library.
+The program is fast enough to process 5 million pages of BHL in just a couple
+of hours.</p>
 
-<p>From the point of Global Names there were good news too. I think it was
-everybody’s feeling that Global Names resolution is an important complementary
-service for Catalogue of Life. Cooperation between various biodiversity
-projects was brought up again and again, and organizing biodiversity
-infrastructure as a mix of several projects where GBIF, EOL, CoL, GN etc
-work as modules of a bigger puzzle, complement and enhance each other.</p>
+<p>The new <a href="https://github.com/gnames/gnfinder/releases/v0.14.0"><strong>GNfinder</strong> v0.14.0</a> can find names not only
+in plain UTF8-encoded texts, but also in a large variety of files including
+PDF, MS Word, MS Excel, and images. In this blog post we describe how it
+can be used.</p>
 
-<p>One thing that was brought up is lack of nomenclatural component in GN. I
-talked about our plans to integrate <a href="http://www.gbif.org/dataset/34a96ebe-e51c-4222-9d08-5c2043c39dec">GN Usage Bank</a> and
-<a href="http://resolver.globalnames.org/">GN Resolver</a> and demonstrate the flow of nomenclatural data into
-resolution/reconciliation process. We will try to make such connection by
-November and demonstrate the workflow on upcoming GBIF/CoL workshop.</p>
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> code follows <a href="https://semver.org">Semantic Versioning</a> practices.  So
+users need to be aware that for versions 0.x.x backward incompatible changes
+might happen.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a command line application, that can also be used
+as a RESTful service. In the near future it will also have a web-based user
+interface and will run at <code class="language-plaintext highlighter-rouge">https://finder.globalnames.org</code></p>
+
+<p>The program uses heuristic and Natural Language Processing (NLP) algorithms for
+name finding.</p>
+
+<h2 id="performance">Performance</h2>
+
+<p>For a test we used 4MB PDF file that contains ~2000 unique names. These names
+are mentioned in text ~13000 times.</p>
+
+<p>Time for conversion to UTF8-encoded plain text: 2.5 sec</p>
+
+<p>Time for name-finding: 0.4 sec</p>
+
+<p>Time for name-verification of 2000 uniquely found names: 2.5 sec</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>The program consists of one stand-alone file, so it is easy to install. The
+binaries for MS WIndows, Mac OS or Linux can be downloaded from
+<a href="https://github.com/gnames/gnfinder/releases/v0.14.0">GitHub</a>. In addition <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> can be
+installed using a Homebrew package manager with the following terminal commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
+brew <span class="nb">install </span>gnfinder
+</code></pre></div></div>
+
+<p>For more detailed installation instructions see the <a href="https://github.com/gnames/gnfinder">documentation</a>
+on GitHub.</p>
+
+<h2 id="usages">Usages</h2>
+
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a command line application. It requires an internet
+connection for converting files to UTF8-encoded text and for name-verification.</p>
+
+<p>To get help use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>To get names from a UTF8-encoded text file (with -U flag no internet connection
+is required):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-U</span> file-with-names.txt
+</code></pre></div></div>
+
+<p>To get names from any other kind of file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf
+</code></pre></div></div>
+
+<p>To find names, to verify them and to output results in JSON format:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf <span class="nt">-v</span> <span class="nt">-f</span> pretty
+</code></pre></div></div>
+
+<p>For more information read the <a href="https://github.com/gnames/gnfinder">documentation</a> on GitHub.</p>
+
+<h2 id="restful-api">RESTful (API)</h2>
+
+<p>You can run <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> as a <a href="https://apidoc.globalnames.org/gnfinder">RESTful API</a>
+service as well. For now API can work only with UTF-8 encoded texts, but other
+file formats will be available via API as well after completion of a
+web-based user interface.</p>
 
 
   </div>
@@ -267,7 +327,7 @@ November and demonstrate the workflow on upcoming GBIF/CoL workshop.</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/06/19/gnfinder-0.14.0/">GNfinder v0.14.0</a>
       </li>
       
@@ -291,7 +351,7 @@ November and demonstrate the workflow on upcoming GBIF/CoL workshop.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/06/19/gnfinder-0.14.0/">GNfinder release v0.14.0</a>
         </li>
         
@@ -411,7 +471,7 @@ November and demonstrate the workflow on upcoming GBIF/CoL workshop.</p>
           <a href="/news/2015/08/14/parser-3-3-0/">GlobalNames Parser v.3.3.0 adds host option for socket server</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/08/13/col-meeting/">Catalogue of Life Meeting in Champaign/Urbana</a>
         </li>
         

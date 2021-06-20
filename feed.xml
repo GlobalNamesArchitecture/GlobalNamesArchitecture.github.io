@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Mon, 19 Apr 2021 15:37:19 -0500</pubDate>
-    <lastBuildDate>Mon, 19 Apr 2021 15:37:19 -0500</lastBuildDate>
+    <pubDate>Sun, 20 Jun 2021 08:36:48 -0500</pubDate>
+    <lastBuildDate>Sun, 20 Jun 2021 08:36:48 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.0</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,107 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>GNfinder release v0.14.0</title>
+      <link>http://globalnames.org/news/2021/06/19/gnfinder-0.14.0/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>GNfinder</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2021/06/19/gnfinder-0.14.0/</guid>
+      <description>&lt;p&gt;Find scientific names in plain texts, PDF files, MS documents etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; is a program for finding scientific names in texts.
+GNfinder exists for several years now and is responsible for creation of name
+indices for Biodiversity Heritage Library (BHL) and HathiTrust Digital Library.
+The program is fast enough to process 5 million pages of BHL in just a couple
+of hours.&lt;/p&gt;
+
+&lt;p&gt;The new &lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.0&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt; v0.14.0&lt;/a&gt; can find names not only
+in plain UTF8-encoded texts, but also in a large variety of files including
+PDF, MS Word, MS Excel, and images. In this blog post we describe how it
+can be used.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; code follows &lt;a href=&quot;https://semver.org&quot;&gt;Semantic Versioning&lt;/a&gt; practices.  So
+users need to be aware that for versions 0.x.x backward incompatible changes
+might happen.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; is a command line application, that can also be used
+as a RESTful service. In the near future it will also have a web-based user
+interface and will run at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://finder.globalnames.org&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The program uses heuristic and Natural Language Processing (NLP) algorithms for
+name finding.&lt;/p&gt;
+
+&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;For a test we used 4MB PDF file that contains ~2000 unique names. These names
+are mentioned in text ~13000 times.&lt;/p&gt;
+
+&lt;p&gt;Time for conversion to UTF8-encoded plain text: 2.5 sec&lt;/p&gt;
+
+&lt;p&gt;Time for name-finding: 0.4 sec&lt;/p&gt;
+
+&lt;p&gt;Time for name-verification of 2000 uniquely found names: 2.5 sec&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;The program consists of one stand-alone file, so it is easy to install. The
+binaries for MS WIndows, Mac OS or Linux can be downloaded from
+&lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.0&quot;&gt;GitHub&lt;/a&gt;. In addition &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; can be
+installed using a Homebrew package manager with the following terminal commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew tap gnames/gn
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;gnfinder
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For more detailed installation instructions see the &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;documentation&lt;/a&gt;
+on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;usages&quot;&gt;Usages&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; is a command line application. It requires an internet
+connection for converting files to UTF8-encoded text and for name-verification.&lt;/p&gt;
+
+&lt;p&gt;To get help use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To get names from a UTF8-encoded text file (with -U flag no internet connection
+is required):&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt; file-with-names.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To get names from any other kind of file:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder file.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To find names, to verify them and to output results in JSON format:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder file.pdf &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For more information read the &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;documentation&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;restful-api&quot;&gt;RESTful (API)&lt;/h2&gt;
+
+&lt;p&gt;You can run &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; as a &lt;a href=&quot;https://apidoc.globalnames.org/gnfinder&quot;&gt;RESTful API&lt;/a&gt;
+service as well. For now API can work only with UTF-8 encoded texts, but other
+file formats will be available via API as well after completion of a
+web-based user interface.&lt;/p&gt;
+
+</description>
+    </item>
     
     <item>
       <title>GNverifier release v0.3.0</title>
@@ -1341,8 +1442,8 @@ that.&lt;/p&gt;
       
       <guid isPermaLink="true">http://globalnames.org/news/2015/08/27/parser-3-4-1/</guid>
       <description>&lt;p&gt;New version 3.4.1 of GlobalNames Parser gem &lt;a href=&quot;http://rubygems.org/gems/biodiversity&quot;&gt;biodiversity&lt;/a&gt; is out.
-It adds ability to parse authors names starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d'&lt;/code&gt; like
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cirsium creticum d'Urv. subsp. creticum&lt;/code&gt;&lt;/p&gt;
+It adds ability to parse authors names starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&apos;&lt;/code&gt; like
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cirsium creticum d&apos;Urv. subsp. creticum&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;which now is parsed correctly&lt;/p&gt;
 
@@ -1552,7 +1653,7 @@ are not code compliant.&lt;/p&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;b3a9b1a3-f73c-5333-8194-a84c6583d130&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parsed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;parser_version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;3.2.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca m'coyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;verbatim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca m&apos;coyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;normalized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi Tenison-Woods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;canonical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Arca mcoyi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hybrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1962,13 +2063,13 @@ Sputnik virophage 3
 &lt;p&gt;Names like below are now parsed correctly. Their normalized/canonical forms
 preserve apostrophe&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Junellia o'donelli Moldenke, 1946
-Trophon d'orbignyi Carcelles, 1946
-Arca m'coyi Tenison-Woods, 1878
-Nucula m'andrewii Hanley, 1860
-Eristalis l'herminierii Macquart
-Odynerus o'neili Cameron
-Serjania meridionalis Cambess. var. o'donelli F.A. Barkley
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Junellia o&apos;donelli Moldenke, 1946
+Trophon d&apos;orbignyi Carcelles, 1946
+Arca m&apos;coyi Tenison-Woods, 1878
+Nucula m&apos;andrewii Hanley, 1860
+Eristalis l&apos;herminierii Macquart
+Odynerus o&apos;neili Cameron
+Serjania meridionalis Cambess. var. o&apos;donelli F.A. Barkley
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
