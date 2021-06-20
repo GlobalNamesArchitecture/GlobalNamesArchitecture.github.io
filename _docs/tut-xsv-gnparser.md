@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Parse names in CSV file
+title: Parse names into a CSV file
 date: 2021-04-19 15:02:21
 type: docs
 author: dimus

@@ -6,6 +6,7 @@
 - title: Tutorials
   docs:
     - tut-xsv-gnparser
+    - tut-gnfinder
 
 - title: GN docs
   docs:
