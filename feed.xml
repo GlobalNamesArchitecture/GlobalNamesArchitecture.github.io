@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Sun, 20 Jun 2021 08:36:48 -0500</pubDate>
-    <lastBuildDate>Sun, 20 Jun 2021 08:36:48 -0500</lastBuildDate>
+    <pubDate>Sun, 20 Jun 2021 13:03:49 -0500</pubDate>
+    <lastBuildDate>Sun, 20 Jun 2021 13:03:49 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.0</generator>
     <description>Scientific Name Services</description>
@@ -26,8 +26,8 @@
     </image>
     
     <item>
-      <title>GNfinder release v0.14.0</title>
-      <link>http://globalnames.org/news/2021/06/19/gnfinder-0.14.0/</link>
+      <title>GNfinder release v0.14.1</title>
+      <link>http://globalnames.org/news/2021/06/19/gnfinder-0.14.1/</link>
       <pubDate>Sat, 19 Jun 2021 00:00:00 -0500</pubDate>
       <dc:creator>dimus</dc:creator>
       
@@ -36,7 +36,7 @@
       
       <category>release</category>
       
-      <guid isPermaLink="true">http://globalnames.org/news/2021/06/19/gnfinder-0.14.0/</guid>
+      <guid isPermaLink="true">http://globalnames.org/news/2021/06/19/gnfinder-0.14.1/</guid>
       <description>&lt;p&gt;Find scientific names in plain texts, PDF files, MS documents etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; is a program for finding scientific names in texts.
@@ -45,7 +45,7 @@ indices for Biodiversity Heritage Library (BHL) and HathiTrust Digital Library.
 The program is fast enough to process 5 million pages of BHL in just a couple
 of hours.&lt;/p&gt;
 
-&lt;p&gt;The new &lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.0&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt; v0.14.0&lt;/a&gt; can find names not only
+&lt;p&gt;The new &lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.1&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt; v0.14.1&lt;/a&gt; can find names not only
 in plain UTF8-encoded texts, but also in a large variety of files including
 PDF, MS Word, MS Excel, and images. In this blog post we describe how it
 can be used.&lt;/p&gt;
@@ -78,7 +78,7 @@ are mentioned in text ~13000 times.&lt;/p&gt;
 
 &lt;p&gt;The program consists of one stand-alone file, so it is easy to install. The
 binaries for MS WIndows, Mac OS or Linux can be downloaded from
-&lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.0&quot;&gt;GitHub&lt;/a&gt;. In addition &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; can be
+&lt;a href=&quot;https://github.com/gnames/gnfinder/releases/v0.14.1&quot;&gt;GitHub&lt;/a&gt;. In addition &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;&lt;strong&gt;GNfinder&lt;/strong&gt;&lt;/a&gt; can be
 installed using a Homebrew package manager with the following terminal commands:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew tap gnames/gn
@@ -111,8 +111,18 @@ is required):&lt;/p&gt;
 
 &lt;p&gt;To find names, to verify them and to output results in JSON format:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder file.pdf &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder file.pdf &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; pretty &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; file-names.csv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To convert PDF file into text:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gnfinder &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt; file.pdf &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; file.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h2&gt;
+
+&lt;p&gt;I wrote a &lt;a href=&quot;https://globalnames.org/docs/tut-gnfinder/&quot;&gt;tutorial&lt;/a&gt; how to exctract scientific names in parallel from a
+large number of PDF files.&lt;/p&gt;
 
 &lt;p&gt;For more information read the &lt;a href=&quot;https://github.com/gnames/gnfinder&quot;&gt;documentation&lt;/a&gt; on GitHub.&lt;/p&gt;
 

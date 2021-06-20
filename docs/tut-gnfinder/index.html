@@ -1,0 +1,733 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Extract names from many PDF files</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v4.2.0">
+  <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body class="wrap">
+  <header role="banner">
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/workshops/">Workshops</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="current">
+    <a href="/docs/home/">Docs</a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit one-quarter center-on-mobiles">
+      <div class="logo">
+        <a href="/">
+          <span class="sr-only">GlobalNames</span>
+          <img src="/img/gna-logo.svg" width="100" alt="GNA Logo">
+        </a>
+      </div>
+    </div>
+    <nav class="main-nav unit three-quarters hide-on-mobiles">
+      <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/apps/">Apps</a>
+  </li>
+  <li class="">
+    <a href="/workshops/">Workshops</a>
+  </li>
+  <li class="">
+    <a href="/bibliography/">Papers</a>
+  </li>
+  <li class="current">
+    <a href="/docs/home/">Docs</a>
+  </li>
+  <li>
+    <a href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io"><span class="hide-on-mobiles"></span>Source</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <section class="docs">
+    <div class="grid">
+
+      
+
+<div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the docs…</option>
+    
+    <optgroup label="Getting Started">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+      <option value="/docs/home/">Introduction</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/glossary/">Glossary</option>
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="Tutorials">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/tut-xsv-gnparser/">Parse names into a CSV file</option>
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/tut-gnfinder/">Extract names from many PDF files</option>
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="GN docs">
+      
+
+
+
+
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <option value="/docs/gnub/">Global Names Usage Bank (GNUB)</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+    <optgroup label="Names">
+      
+
+
+
+
+
+  
+
+  
+    
+      <option value="/docs/good-bad-names/">Good and Bad Names</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+      <option value="/docs/curious-names/">Odd Names</option>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+    </optgroup>
+    
+  </select>
+</div>
+
+
+      <div class="unit four-fifths">
+        <article>
+          <h2>
+          Extract names from many PDF files
+          <a href="/docs/tut-gnfinder/" class="permalink" title="Permalink">∞</a>
+          </h2>
+    <div>
+   
+   <span class="doc-date">Edited on: 20 Jun 2021</span>
+   
+   
+   <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+   
+    </div>
+          <h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> - a scientific names finding app.</li>
+  <li><a href="https://www.gnu.org/software/parallel/"><strong>GNU parallel</strong></a> - a tool for parallel execution of a command (usually it
+is either already included, or can be istalled via standard package manager
+for an OS).</li>
+  <li>a folder with several PDF files that contain scientific names.</li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This tutorial shows how to find scientific names in many PDF files
+using <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> and <a href="https://www.gnu.org/software/parallel/"><strong>GNU parallel</strong></a>.</p>
+
+<p>If you need a powerful introduction to the command line itself, most of the
+commands you will need for this <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> exercise, you can learn via this
+<a href="http://swcarpentry.github.io/shell-novice/">Software Carpentry Unix Shell
+lesson</a>.</p>
+
+<h2 id="install-gnfinder-and-parallel">Install gnfinder and parallel</h2>
+
+<p>Follow instructions at <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> home
+page for installing the application.</p>
+
+<p>Check if <a href="https://www.gnu.org/software/parallel/"><strong>GNU parallel</strong></a> is installed already, if not, follow instructions for
+your OS how to install it.</p>
+
+<h2 id="extracting-names-from-documents">Extracting names from documents</h2>
+
+<p>To write this tutorial I used a folder with several PDF files in it as an
+example. First, go to such folder on your own computer and create <code class="language-plaintext highlighter-rouge">names</code>
+folder in it. Note that <code class="language-plaintext highlighter-rouge">❯</code> character designates a command line prompt and is
+not part of a command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">mkdir </span>names
+</code></pre></div></div>
+
+<p>Now lets examine how many files are in the folder and how big the folder is.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">ls</span> <span class="k">*</span>pdf |wc <span class="nt">-l</span>
+558
+❯ <span class="nb">du</span> <span class="nt">-hd0</span>
+854M <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>So my folder contains 558 files and is 854 Megabytes in size.</p>
+
+<p>Now lets use <a href="https://www.gnu.org/software/parallel/"><strong>GNU parallel</strong></a> program to extract and verify names from these PDF
+files. We are going to use the default CSV format for the output.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">ls</span> <span class="k">*</span>.pdf | parallel <span class="s1">'gnfinder  {} -v &gt; ./names/{.}.csv'</span>
+</code></pre></div></div>
+
+<p>The first <code class="language-plaintext highlighter-rouge">ls *.pdf</code> command returns filenames in the folder that end with
+<code class="language-plaintext highlighter-rouge">.pdf</code>. Then we send the filenames via pipe (<code class="language-plaintext highlighter-rouge">|</code>) as an input to a <a href="https://www.gnu.org/software/parallel/"><strong>GNU
+parallel</strong></a> command. The <a href="https://www.gnu.org/software/parallel/"><strong>GNU parallel</strong></a> checks how many CPUs the
+computer has, creates the corresponding number of processes and then executes
+<a href="https://github.com/gnames/gnfinder"><strong>gnfinder</strong></a> command in parallel for each filename using these processes. The
+<code class="language-plaintext highlighter-rouge">{}</code> in the command is substituted with the name of a file, for example if pipe
+received the file <code class="language-plaintext highlighter-rouge">Hamilton_1983.pdf</code>, the name of this file will be used
+instead of <code class="language-plaintext highlighter-rouge">{}</code> in the command. The <code class="language-plaintext highlighter-rouge">{.}</code> is almost the same as <code class="language-plaintext highlighter-rouge">{}</code>, but it
+strips the extension of the file, so <code class="language-plaintext highlighter-rouge">Hamilton_1983.pdf</code> gets to
+<code class="language-plaintext highlighter-rouge">Hamilton_1983</code> and <code class="language-plaintext highlighter-rouge">./names/{.}.csv</code> becomes <code class="language-plaintext highlighter-rouge">.names/Hamilton_1983.csv</code>.</p>
+
+<p>Make sure you do not overuse the parallel command, as it might overload
+Apache Tika server if too many jobs are send to it simultaneously. If such
+thing happens, you will start to get error messages.</p>
+
+<p>On my computer the process of converting PDF to text and then running
+name verification took 1 min 21 sec. Lets examine the result:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">cd </span>names
+❯ <span class="nb">ls</span> <span class="k">*</span>csv |wc <span class="nt">-l</span>
+558
+❯ <span class="nb">du</span> <span class="nt">-hd0</span>
+9.7M <span class="nb">.</span>
+❯ <span class="nb">cat</span> <span class="k">*</span> |wc <span class="nt">-l</span>
+70909
+</code></pre></div></div>
+
+<p>Looks like for every PDF file there is now one CSV file (558 total), the total
+size of the results is 9.7 Megabytes and there are 700909 rows generated in the
+output.</p>
+
+<p>Lets look inside one of the files:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">head </span>Hamilton_1983.csv
+Index,Verbatim,Name,Start,End,OddsLog10,Cardinality,AnnotNomenType,WordsBefore,WordsAfter,VerifMatchType,VerifEditDistance,VerifMatchedName,VerifMatchedCanonical,VerifTaxonId,VerifDataSourceId,VerifDataSourceTitle,VerifError
+0,<span class="o">(</span>RHYNCHOTA:,Rhynchota,69,80,3.67,1,NO_ANNOT,,,Exact,0,<span class="s2">"Rhynchota Schmarda, 1859"</span>,Rhynchota,urn:lsid:irmng.org:taxname:1377138,181,IRMNG,
+1,HOMOPTERA:,Homoptera,81,91,5.15,1,NO_ANNOT,,,Exact,0,<span class="s2">"Homoptera Boisduval in Guenée, 1852"</span>,Homoptera,urn:lsid:irmng.org:taxname:1405844,181,IRMNG,
+2,CICADELLIDAE<span class="o">)</span>,Cicadellidae,92,105,4.81,1,NO_ANNOT,,,Exact,0,Cicadellidae,Cicadellidae,3950452,1,Catalogue of Life,
+3,<span class="o">(</span>Macrosteles quadrilineatus,Macrosteles quadrilineatus,1025,1052,11.75,2,NO_ANNOT,,,Exact,0,<span class="s2">"Macrosteles quadrilineatus Forbes, 1885"</span>,Macrosteles quadrilineatus,2918990,1,Catalogue of Life,
+4,<span class="s2">"Aphrodes,"</span>,Aphrodes,1208,1217,4.76,1,NO_ANNOT,,,Exact,0,Aphrodes,Aphrodes,3971201,1,Catalogue of Life,
+5,<span class="s2">"Euscelis,"</span>,Euscelis,1218,1227,4.12,1,NO_ANNOT,,,Exact,0,Euscelis,Euscelis,4044198,1,Catalogue of Life,
+6,<span class="s2">"Evacanthus,"</span>,Evacanthus,1228,1239,4.99,1,NO_ANNOT,,,Exact,0,Evacanthus,Evacanthus,4044915,1,Catalogue of Life,
+7,<span class="s2">"Limotettix,"</span>,Limotettix,1240,1251,4.75,1,NO_ANNOT,,,Exact,0,Limotettix,Limotettix,4088755,1,Catalogue of Life,
+8,<span class="s2">"Macrosteles,"</span>,Macrosteles,1253,1265,3.62,1,NO_ANNOT,,,Exact,0,Macrosteles,Macrosteles,4094664,1,Catalogue of Life,
+</code></pre></div></div>
+
+<p>It looks like in case of this file the first 9 names were found in one or more
+biodiversity databases.</p>
+
+<h2 id="extracting-text-out-of-pdf-files">Extracting text out of PDF files</h2>
+
+<p>It is possible to use <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> for extracting UTF8-encoded text out of
+a large variety of files as well. Go again to the folder with PDF files and
+use the following commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">mkdir </span>texts
+❯ <span class="nb">ls</span> <span class="k">*</span>.pdf | parallel <span class="s1">'gnfinder {} -I &gt; ./texts/{.}.txt'</span>
+</code></pre></div></div>
+
+<p>Lets look at the results:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">cd </span>texts
+❯ <span class="nb">ls</span> <span class="k">*</span>.txt|wc <span class="nt">-l</span>
+558
+❯ <span class="nb">head </span>Hamilton_1983.txt
+
+INTRODUCED AND NATIVE LEAFHOPPERS COMMON TO THE OLD AND NEW
+WORLDS <span class="o">(</span>RHYNCHOTA: HOMOPTERA: CICADELLIDAE<span class="o">)</span>
+
+K. G. A. Hamilton
+Biosysternatics Research Institute, Agriculture Canada, Ottawa KIA OC6
+
+Abstract Can. Ent. 115: 473-511 <span class="o">(</span>1983<span class="o">)</span>
+
+Fourteen new records of introduced leafhoppers are added to the 157 leafhoppers pre-
+</code></pre></div></div>
+
+<p>Now that you have textual respresentations of all the PDF files, you can
+run <a href="https://github.com/gnames/gnfinder"><strong>gnfinder</strong></a> locally on these files without the use of remote services:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ <span class="nb">ls</span> <span class="k">*</span>.txt | parallel <span class="s1">'gnfinder {} -U &gt; {.}.csv'</span>
+</code></pre></div></div>
+
+
+          
+          
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="section-nav">
+      <div class="left align-right">
+          
+            
+            
+            <a href="/docs/tut-xsv-gnparser/" class="prev">Back</a>
+          
+      </div>
+      <div class="right align-left">
+          
+            
+            
+            <a href="/docs/gnub/" class="next">Next</a>
+          
+      </div>
+    </div>
+    <div class="clear"></div>
+    
+        </article>
+      </div>
+
+          
+      <div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    
+    
+    
+    <h4>Getting Started</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/home/">Introduction</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/glossary/">Glossary</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>Tutorials</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/tut-xsv-gnparser/">Parse names into a CSV file</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="current"><a href="/docs/tut-gnfinder/">Extract names from many PDF files</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>GN docs</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class=""><a href="/docs/gnub/">Global Names Usage Bank (GNUB)</a></li>
+      
+
+
+</ul>
+
+    
+    <h4>Names</h4>
+    
+
+
+
+
+
+<ul>
+
+  
+
+  
+
+  
+    
+      <li class=""><a href="/docs/good-bad-names/">Good and Bad Names</a></li>
+      
+
+
+  
+
+  
+
+  
+    
+  
+    
+      <li class=""><a href="/docs/curious-names/">Odd Names</a></li>
+      
+
+
+</ul>
+
+    
+  </aside>
+</div>
+
+          
+      <div class="clear"></div>
+
+    </div>
+  </section>
+
+
+  <footer role="contentinfo">
+  <div class="grid" style="vertical-align: middle">
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+          <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
+        </a>
+        The content of this</br>website is in public domain
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+      Powered by <a href="http://github.com/jekyll/jekyll">Jekyll</a>
+      </p>
+    </div>
+    <div class="unit one-third center-on-mobiles">
+      <p>
+        Hosted on 
+        <a href="https://github.com/GlobalNamesArchitecture">
+          <img src="/img/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  var anchorForId = function (id) {
+    var anchor = document.createElement("a");
+    anchor.className = "header-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<span class=\"sr-only\">Permalink</span><i class=\"fa fa-link\"></i>";
+    anchor.title = "Permalink";
+    return anchor;
+  };
+
+  var linkifyAnchors = function (level, containingElement) {
+    var headers = containingElement.getElementsByTagName("h" + level);
+    for (var h = 0; h < headers.length; h++) {
+      var header = headers[h];
+
+      if (typeof header.id !== "undefined" && header.id !== "") {
+        header.appendChild(anchorForId(header.id));
+      }
+    }
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
+      if (!contentBlock) {
+        return;
+      }
+      for (var level = 1; level <= 6; level++) {
+        linkifyAnchors(level, contentBlock);
+      }
+    }
+  };
+</script>
+
+  
+
+
+</body>
+</html>

@@ -94,7 +94,7 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
-      <option value="/news/2021/06/19/gnfinder-0.14.0/">GNfinder release v0.14.0</option>
+      <option value="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</option>
       
       <option value="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</option>
       
@@ -203,8 +203,8 @@
         
   <article>
   <h2>
-    <a href="/news/2021/06/19/gnfinder-0.14.0/">
-      GNfinder release v0.14.0
+    <a href="/news/2021/06/19/gnfinder-0.14.1/">
+      GNfinder release v0.14.1
     </a>
   </h2>
   <span class="post-category">
@@ -230,7 +230,7 @@ indices for Biodiversity Heritage Library (BHL) and HathiTrust Digital Library.
 The program is fast enough to process 5 million pages of BHL in just a couple
 of hours.</p>
 
-<p>The new <a href="https://github.com/gnames/gnfinder/releases/v0.14.0"><strong>GNfinder</strong> v0.14.0</a> can find names not only
+<p>The new <a href="https://github.com/gnames/gnfinder/releases/v0.14.1"><strong>GNfinder</strong> v0.14.1</a> can find names not only
 in plain UTF8-encoded texts, but also in a large variety of files including
 PDF, MS Word, MS Excel, and images. In this blog post we describe how it
 can be used.</p>
@@ -263,7 +263,7 @@ are mentioned in text ~13000 times.</p>
 
 <p>The program consists of one stand-alone file, so it is easy to install. The
 binaries for MS WIndows, Mac OS or Linux can be downloaded from
-<a href="https://github.com/gnames/gnfinder/releases/v0.14.0">GitHub</a>. In addition <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> can be
+<a href="https://github.com/gnames/gnfinder/releases/v0.14.1">GitHub</a>. In addition <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> can be
 installed using a Homebrew package manager with the following terminal commands:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
@@ -296,8 +296,18 @@ is required):</p>
 
 <p>To find names, to verify them and to output results in JSON format:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf <span class="nt">-v</span> <span class="nt">-f</span> pretty
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf <span class="nt">-v</span> <span class="nt">-f</span> pretty <span class="o">&gt;</span> file-names.csv
 </code></pre></div></div>
+
+<p>To convert PDF file into text:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-I</span> file.pdf <span class="o">&gt;</span> file.txt
+</code></pre></div></div>
+
+<h2 id="tutorial">Tutorial</h2>
+
+<p>I wrote a <a href="https://globalnames.org/docs/tut-gnfinder/">tutorial</a> how to exctract scientific names in parallel from a
+large number of PDF files.</p>
 
 <p>For more information read the <a href="https://github.com/gnames/gnfinder">documentation</a> on GitHub.</p>
 
@@ -1711,7 +1721,7 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
-        <a href="/news/2021/06/19/gnfinder-0.14.0/">GNfinder v0.14.0</a>
+        <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder v0.14.1</a>
       </li>
       
       <li class="">
@@ -1735,7 +1745,7 @@ using any field from the input.</p>
     <ul>
         
         <li class="">
-          <a href="/news/2021/06/19/gnfinder-0.14.0/">GNfinder release v0.14.0</a>
+          <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</a>
         </li>
         
         <li class="">

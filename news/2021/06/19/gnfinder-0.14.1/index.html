@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Scala-based gnparser v.0.2.0</title>
+  <title>GNfinder release v0.14.1</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -202,17 +202,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Scala-based gnparser v.0.2.0
-    <a href="/news/2015/11/30/gnparser-0-2-0/" class="permalink" title="Permalink">∞</a>
+    GNfinder release v0.14.1
+    <a href="/news/2021/06/19/gnfinder-0.14.1/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      gnparser and release
+      GNfinder and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      30 Nov 2015
+      19 Jun 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -225,64 +225,101 @@
   </div>
   
   <div class="post-content">
-    <p>(Please note that gnparser is a new project, different from the formerly
-released biodiversity parser.)</p>
+    <p>Find scientific names in plain texts, PDF files, MS documents etc.</p>
 
-<p>We are happy to announce a public release of <a href="https://github.com/GlobalNamesArchitecture/gnparser">Global Names Parser</a>
-or <code class="language-plaintext highlighter-rouge">gnparser</code> – the first project that marks transition of Global Names
-reconciliation and resolution services from “prototype” to “production”. The
-<code class="language-plaintext highlighter-rouge">gnparser</code> project is developed by <a href="https://github.com/alexander-myltsev" class="user-mention">@alexander-myltsev</a> and <a href="https://github.com/dimus" class="user-mention">@dimus</a> in Scala
-language. GNParser can be used as a library, a command line tool, a socket
-server, a web-program and RESTful-service. It is easiest to try it at
-<a href="http://parser.globalnames.org">parser.globalnames.org</a></p>
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a program for finding scientific names in texts.
+GNfinder exists for several years now and is responsible for creation of name
+indices for Biodiversity Heritage Library (BHL) and HathiTrust Digital Library.
+The program is fast enough to process 5 million pages of BHL in just a couple
+of hours.</p>
 
-<p>Scientific names might be expressed by quite different name strings. Sometimes
-the difference is just one comma, sometimes authors are included or excluded,
-sometimes ranks are omitted. With all this variability “in the wild” we need to
-figure out how to group all these different spelling variants.  Name parsing is
-an unexpectedly complex and absolutely necessary step for connecting biological
-information via scientific names.</p>
+<p>The new <a href="https://github.com/gnames/gnfinder/releases/v0.14.1"><strong>GNfinder</strong> v0.14.1</a> can find names not only
+in plain UTF8-encoded texts, but also in a large variety of files including
+PDF, MS Word, MS Excel, and images. In this blog post we describe how it
+can be used.</p>
 
-<p>In 2008 Global Names released <a href="https://github.com/GlobalNamesArchitecture/biodiversity">Biodiversity Gem</a> – a
-scientific name parser written in Ruby for these purposes. The library in its
-3 variants enjoyed a significant success – about <a href="https://rubygems.org/search?utf8=%E2%9C%93&amp;query=biodiversity">150 000
-downloads</a> and a notion as the <a href="http://biogems.info/">most popular bio-library</a>
-for Ruby language. It allowed to parse about 2-3 million names an hour, and
-had been the basis of name reconciliation for many projects from the moment
-of its publication.</p>
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> code follows <a href="https://semver.org">Semantic Versioning</a> practices.  So
+users need to be aware that for versions 0.x.x backward incompatible changes
+might happen.</p>
 
-<p>GNParser is a direct descendant of the biodiversity gem. It serves the same
-purpose and input/output format of both projects are similar. It also marks
-eventual discontinuation of ‘biodiversity gem project’ and migration of all
-Global Names code to the new <code class="language-plaintext highlighter-rouge">gnparser</code> library.</p>
+<h2 id="summary">Summary</h2>
 
-<p>Why did we go through the pain of making a completely new parser from scratch?
-The short answer is <em>scalability and portability</em>. We want to be able to
-remove parsing step from being a bottleneck for any number of names thrown at
-resolution services. For example finding all names in <a href="http://www.biodiversitylibrary.org/">Biodiversity Heritage
-Library</a> took us 43 days 3 years ago. Parsing step alone took more than 1
-day. If we want to improve algorithms of finding names in BHL – we cannot
-wait 40 days. We want to be able to do it within one day and improve whole
-BHL index every time our algorithms are enhanced significantly.</p>
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a command line application, that can also be used
+as a RESTful service. In the near future it will also have a web-based user
+interface and will run at <code class="language-plaintext highlighter-rouge">https://finder.globalnames.org</code></p>
 
-<p>We have an ambitious goal of making time spent on sending names to resolution
-services over internet and then time spent on transferring the answers back to
-be the bottlenecks of our name matching services. For such speeds we need a
-very fast parsing. Scala allows us to dramatically improve speed and
-scalability of the parsing step.</p>
+<p>The program uses heuristic and Natural Language Processing (NLP) algorithms for
+name finding.</p>
 
-<p>Having a parser running in Java Virtual Machine environment allows us to give
-biodiversity community a much more portable parsing tool. <a href="https://github.com/GlobalNamesArchitecture/gnparser/tree/master/examples">Out of the
-box</a> parser library will work with Scala, Java, R, Jython and JRuby
-directly. We hope that it will speedup and simplify many biodiversity projects.</p>
+<h2 id="performance">Performance</h2>
 
-<p>This is the first public release of the library. Please download it, run
-it, test it and give us your feedback, so we can improve it further. Happy
-parsing <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"></p>
+<p>For a test we used 4MB PDF file that contains ~2000 unique names. These names
+are mentioned in text ~13000 times.</p>
 
-<p><strong>WARNING:</strong> JSON output format might change slightly or dramatically, as we
-are in the process of refining it. The JSON format should be finalized for
-version 0.3.0</p>
+<p>Time for conversion to UTF8-encoded plain text: 2.5 sec</p>
+
+<p>Time for name-finding: 0.4 sec</p>
+
+<p>Time for name-verification of 2000 uniquely found names: 2.5 sec</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>The program consists of one stand-alone file, so it is easy to install. The
+binaries for MS WIndows, Mac OS or Linux can be downloaded from
+<a href="https://github.com/gnames/gnfinder/releases/v0.14.1">GitHub</a>. In addition <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> can be
+installed using a Homebrew package manager with the following terminal commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
+brew <span class="nb">install </span>gnfinder
+</code></pre></div></div>
+
+<p>For more detailed installation instructions see the <a href="https://github.com/gnames/gnfinder">documentation</a>
+on GitHub.</p>
+
+<h2 id="usages">Usages</h2>
+
+<p><a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> is a command line application. It requires an internet
+connection for converting files to UTF8-encoded text and for name-verification.</p>
+
+<p>To get help use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>To get names from a UTF8-encoded text file (with -U flag no internet connection
+is required):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-U</span> file-with-names.txt
+</code></pre></div></div>
+
+<p>To get names from any other kind of file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf
+</code></pre></div></div>
+
+<p>To find names, to verify them and to output results in JSON format:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder file.pdf <span class="nt">-v</span> <span class="nt">-f</span> pretty <span class="o">&gt;</span> file-names.csv
+</code></pre></div></div>
+
+<p>To convert PDF file into text:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnfinder <span class="nt">-I</span> file.pdf <span class="o">&gt;</span> file.txt
+</code></pre></div></div>
+
+<h2 id="tutorial">Tutorial</h2>
+
+<p>I wrote a <a href="https://globalnames.org/docs/tut-gnfinder/">tutorial</a> how to exctract scientific names in parallel from a
+large number of PDF files.</p>
+
+<p>For more information read the <a href="https://github.com/gnames/gnfinder">documentation</a> on GitHub.</p>
+
+<h2 id="restful-api">RESTful (API)</h2>
+
+<p>You can run <a href="https://github.com/gnames/gnfinder"><strong>GNfinder</strong></a> as a <a href="https://apidoc.globalnames.org/gnfinder">RESTful API</a>
+service as well. For now API can work only with UTF-8 encoded texts, but other
+file formats will be available via API as well after completion of a
+web-based user interface.</p>
 
 
   </div>
@@ -300,7 +337,7 @@ version 0.3.0</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder v0.14.1</a>
       </li>
       
@@ -324,7 +361,7 @@ version 0.3.0</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</a>
         </li>
         
@@ -384,7 +421,7 @@ version 0.3.0</p>
           <a href="/news/2015/11/30/ubio-is-back/">uBio and Nomenclator Zoologicus are back</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/11/30/gnparser-0-2-0/">Scala-based gnparser v.0.2.0</a>
         </li>
         
@@ -542,7 +579,7 @@ version 0.3.0</p>
         <a href="https://creativecommons.org/publicdomain/zero/1.0/">
           <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
         </a>
-        The content of thiswebsite is in public domain
+        The content of this</br>website is in public domain
       </p>
     </div>
     <div class="unit one-third center-on-mobiles">
