@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2021/07/05/gnparser-1.3.0/">GNparser (Go language) release 1.3.0</option>
+      
       <option value="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</option>
       
       <option value="/news/2021/04/10/gnverifier-0.3.0/">GNverifier release v0.3.0</option>
@@ -201,6 +203,127 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/07/05/gnparser-1.3.0/">
+      GNparser (Go language) release 1.3.0
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      05 Jul 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.3.0">GNparser v1.3.0</a> is out. The major new functionality is an ability
+to recognize and parse botanical cultivar names. This ability was added to
+<a href="https://github.com/gnames/gnparser">GNparser</a> by <a href="https://github.com/tobymarsden">Toby Marsden</a>, thanks Toby for a great patch!</p>
+
+<p>In addition to <a href="https://www.iapt-taxon.org/nomen/main.php">ICN</a> nomenclatural code for botanical scientific names there is
+an <a href="https://www.ishs.org/sites/default/files/static/ScriptaHorticulturae_18.pdf">ICNCP</a> nomenclatural code for cultivated plants. <a href="https://www.ishs.org/sites/default/files/static/ScriptaHorticulturae_18.pdf">ICNCP</a> supports names
+like:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dahlia ‘Doris Day’
+`Fragaria 'Cambridge Favourite'
+`Rosa multiflora cv. 'Crimson Rambler'
+</code></pre></div></div>
+
+<p>Now, if these names are parsed as cultivars, the cultivar epithet is included
+into canonical form like <code class="language-plaintext highlighter-rouge">Rosa multiflora ‘Crimson Rambler’</code>. However such
+addition would create problems for users who are more interested in the
+canonical form according to <a href="https://www.iapt-taxon.org/nomen/main.php">ICN</a>: <code class="language-plaintext highlighter-rouge">Rosa multiflora</code>. Therefore, by default
+<a href="https://github.com/gnames/gnparser">GNparser</a> will process such names according to <a href="https://www.iapt-taxon.org/nomen/main.php">ICN</a> code, providing a
+warning:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"quality"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"warning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cultivar epithet"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If a user does need to treat such names as cultivars, there is a flag in the
+command line app: <code class="language-plaintext highlighter-rouge">gnparser "Rosa multiflora cv. 'Crimson Rambler'" -C</code>. When
+parsed with this flag, warning will disappear and canonical forms will include
+cultivar information. <a href="https://parser.globalnames.org">GNparser web-interface</a> has a “cultivar checkbox” now,
+as well as there is a “cultivar” option in <a href="https://apidoc.globalnames.org/gnparser">GNparser RESTful API</a>.</p>
+
+<p>Parsed detailed data for cultivars:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnparser <span class="s2">"Rosa multiflora cv. 'Crimson Rambler'"</span> <span class="nt">-C</span> <span class="nt">-d</span> <span class="nt">-f</span> pretty
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"parsed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"quality"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa multiflora cv. 'Crimson Rambler'"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa multiflora ‘Crimson Rambler’"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"stemmed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa multiflor ‘Crimson Rambler’"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"simple"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa multiflora ‘Crimson Rambler’"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa multiflora ‘Crimson Rambler’"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"cardinality"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"genus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiflora"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"cultivar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"‘Crimson Rambler’"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"words"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rosa"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"wordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GENUS"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiflora"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiflora"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"wordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SPECIES"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"verbatim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Crimson Rambler"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"normalized"</span><span class="p">:</span><span class="w"> </span><span class="s2">"‘Crimson Rambler’"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"wordType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CULTIVAR"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"38ff69c4-7e1a-5a26-bfc4-ee641fed6ba7"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parserVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nightly"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In addition Toby found and helped to fix problems with <a href="https://github.com/amazingplants/gnparser/blob/378a4d1d4907a3d696b2fe02a0336ca6445d2bc7/ent/stemmer/stemmer.go">stemming of hybrid
+formulas</a> and with providing correct <a href="https://github.com/gnames/gnparser/issues/174">output for hybrid signs</a>
+in the “details:words” section. Again, thanks for this contribution <a href="https://github.com/tobymarsden">Toby
+Marsden</a>!</p>
+
+<p>You can grab <a href="https://github.com/gnames/gnparser/releases/tag/v1.3.0">GNparser v1.3.0</a> binaries and follow <a href="https://github.com/gnames/gnparser#installation">installation instructions</a>,
+or use <a href="https://brew.sh/">Homebrew</a> to install it on operating systems that support it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
+brew <span class="nb">install </span>gnparser
+</code></pre></div></div>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/06/19/gnfinder-0.14.1/">
@@ -1721,6 +1844,10 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/07/05/gnparser-1.3.0/">GNparser v1.3.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder v0.14.1</a>
       </li>
       
@@ -1736,13 +1863,13 @@ using any field from the input.</p>
         <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2019/12/11/gnfinder/">gnfinder v0.9.1</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/07/05/gnparser-1.3.0/">GNparser (Go language) release 1.3.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</a>
