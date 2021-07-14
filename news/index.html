@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2021/07/14/go/">Why Go is a great language for biodiversity informatics</option>
+      
       <option value="/news/2021/07/05/gnparser-1.3.0/">GNparser (Go language) release 1.3.0</option>
       
       <option value="/news/2021/06/19/gnfinder-0.14.1/">GNfinder release v0.14.1</option>
@@ -203,6 +205,187 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/07/14/go/">
+      Why Go is a great language for biodiversity informatics
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      review
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      14 Jul 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p>We, as a biodiversity informatics community, use quite a few programming
+languages. Python, Java, R, Ruby are probably the most popular ones. After
+working for the last few years with a language Go I think it would be very
+beneficial to add it to the biodiversity informatics toolset.</p>
+
+<p>When I started writing in Go, the language seemed to be a bit clunky, did not
+have much of cool shiny language constructs that other modern languages have.  I
+felt there were no “cute” syntax gold nuggets that are common in languages like
+Ruby or Python. However, I think Go is amasing for solving many biodiversity
+informatics problems.</p>
+
+<p>I tried about 10 different languages for the last 12 years working on
+Encyclopedia Of Life and Global Names projects, and for the last 5 years Go
+is the language of choice for the vast majority of projects I make.</p>
+
+<p>Lets look at the key features of the language that influenced my choice.</p>
+
+<h2 id="feature-1-amazing-code-readability">Feature 1: Amazing code readability</h2>
+
+<p>Biodiversity informatics runs mostly in academia. In academia projects
+blossom and wither depending on availability of funds. Funds often appear and
+dissapear, students and postdocs come and go, and quite often people have to
+continue development of projects written by someone else.</p>
+
+<p>Therefore, an ability to understand a code written by another person is crucial
+for longevity of academia projects. So many important and interesting
+developments become stale or died out only because their code was too hard to
+understand by newcomers.</p>
+
+<p>I found that code written in Go is one of the easiest to understand. The
+simplicity of syntax was one of major design goals in Go, and most of the common
+programming tasks can be solved only in one way. Go designers decided on a
+brutally minimalistic approach, as a result Go has very little bloat and in vast
+majority of cases has no duplication of features between its syntactic
+constructs.</p>
+
+<p>As a result a programming style of novice and experienced programmers does not
+differ that much. It is great for supporting projects written by others, and for
+learning from Go code itself how to solve common problems.</p>
+
+<h2 id="feature-2-go-is-easy-to-learn">Feature 2: Go is easy to learn</h2>
+
+<p>Minimalistic approach to the language design makes it possible to learn Go with
+5-20 times less effort than other languages. Specification of the language is
+tiny and just going through an <a href="https://tour.golang.org/welcome/1">‘official’ Go tutorial</a> is enough to
+become productive after a few hours.</p>
+
+<h2 id="feature-3-go-is-easy-to-maintain">Feature 3: Go is easy to maintain</h2>
+
+<p>Developers of the language released Go v1.0 in 2012 and plan to support backward
+compatibility for many years to come. Starting with Go v1.11 there is also
+support for versioning of community packages as dependencies. As a result
+it is possible to write a program or library and use it without any changes
+inspite new versiong of Go appearing regularly. If a library or a program
+depends on Open Source packages, the specific version of each packages can be
+set in a <code class="language-plaintext highlighter-rouge">go.mod</code> file.</p>
+
+<p>New versions of Go appear regularly, and to use recently added features a
+developer can provide Go version in <code class="language-plaintext highlighter-rouge">go.mod</code>.</p>
+
+<p>Go team is very careful when they consider new features, and such features are
+implemented only after much thought and discussion. As a result even massive new
+functionalities do not create backward incompatibilities.</p>
+
+<h2 id="feature-4-go-is-fast">Feature 4: Go is fast</h2>
+
+<p>Go is much faster than such languages like Python, Ruby, Perl or R. In addition
+concurrency and parallel execution of the code is a core concept of Go.
+Writing concurrent code in Go is orders of magnitude easier than
+in C, and after some practice becomes a second nature of a developer.</p>
+
+<p>The combination of the language speed and parallel execution of the code on
+multi-core CPUs allows to make Go programs up to 100 times faster than programs
+written in interpreted languages. Go is somewhat slower than C, but Go programs
+are often faster than analogous C programs, because of the ease of developing
+concurrency and parallelism in Go.</p>
+
+<h2 id="feature-5-speed-of-programming-is-great">Feature 5: Speed of programming is great</h2>
+
+<p>Go is quite expressive, and, in my experience, the speed of developing in Go
+is comparable with speed of development in Python or Ruby.</p>
+
+<p>Also, running tests in Go is very fast, even big programs
+can be tested without a long wait. It allows to run tests often, or run
+them on each save.</p>
+
+<h2 id="feature-6-very-fast-compilation">Feature 6: Very fast compilation</h2>
+
+<p>Go is a compiled language, and requires compilation of its code before
+execution. The speed of compiling the code is usually almost instantaneous,
+and the language developers spend a lot of effort to keep it this way. The
+speed of compiling is only slightly slower than executing Python or Ruby
+code.</p>
+
+<h2 id="feature-7-convenient-executable-files">Feature 7: Convenient executable files</h2>
+
+<p>As a rule, Go compiles a program into a self-sufficient single executable file.
+Most of Go programs have no external dependencies and, as a result, are very
+easy to distribute and install. Downloading one file and running it is all what
+is required. Go supports cross-compilation. It means that it can create
+executable files for any supported OS on one computer. For example, a computer
+running Linux can create executables for MS Windows, Mac OS, and Linux in one
+go.</p>
+
+<p>The size of the executable files is really tiny. For example, the size of a
+name-finding project written in Ruby (GNRD) is about a gigabyte, while the
+analogous code in Go is only 50 megabytes.</p>
+
+<p>Small size of executables and lack of external dependencies make Go fantastic
+for publishing projects as Docker images, or deplying such images on Kubernetes.</p>
+
+<h2 id="feature-8-go-is-great-for-remote-apis-and-web-applications">Feature 8: Go is great for remote APIs and web-applications</h2>
+
+<p>Writing an extemely fast web-server in Go is a trivial task. Developing
+web-applications is quite easy with provided template methods. Distributing
+web-applications is also easy, because all the static files are usually
+included into a single binary. Besides a traditional REST approach to APIs
+there is a very fast streaming gRPC approach.</p>
+
+<h2 id="feature-9-rich-ecosystem-of-open-source-libraries">Feature 9: Rich ecosystem of Open Source libraries</h2>
+
+<p>Inspite of being a relatively young language (v1.0.0 was released in 2012) Go
+has a very active community and a large number of libraries for many development
+needs. Specific libraries for biodiversity informatics are scarse so far, but
+they start to appear. For example Global Names provides libraries for <a href="https://github.com/gnames/gnfinder">finding</a>,
+<a href="https://github.com/gnames/gnparser">parsing</a> and <a href="https://github.com/gnames/gnverifier">verifying</a> of scientific names.</p>
+
+<h2 id="feature-10-go-code-can-be-used-in-many-other-languages-via-c-bindings">Feature 10: Go code can be used in many other languages via C-bindings</h2>
+
+<p>It is possible to compile Go into a C library, and use it via C-binding with
+many other languages (C, R, Ruby, Python, Java for example).</p>
+
+<p>It is also possible to incorporate C libraries into Go, however most of
+functionality usually provided by C libraries is already implemented in pure Go
+and, most of the time, introducing such depencencies is not required. For
+example there are fantastic Go drivers for most popular databases.</p>
+
+<h2 id="feature-11-there-are-very-good-tools-for-go-developers">Feature 11: There are very good tools for Go developers</h2>
+
+<p>A lot of tools exist for Go that simplify development. Go creators pioneered an
+idea of auto-formatting of a written code. There are fantastic plugins for Go
+development in VS code, Vim, Emacs etc. JetBrains releases a standalone Go
+development platform. Go plugins incorporate linting, formatting,
+debugging, refactoring tools. Most of these tools can also be used as a
+stand-alone command line applications. Go has powerful profiling and tracing
+tools as well.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this post gave you an idea why Go is good for biodiversity informatics,
+and you can try to start solving problems that appear in your work using Go
+language. I would suggest to pick a small well-defined task, that requires fast
+execution, read the <a href="https://tour.golang.org/welcome/1">tour of Go</a> tutotiral, install Go and its tools for your
+favorite editor and start hacking the code!</p>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/07/05/gnparser-1.3.0/">
@@ -3642,6 +3825,10 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/07/14/go/">Why Go is a great language for biodiversity informatics</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/07/05/gnparser-1.3.0/">GNparser (Go language) release 1.3.0</a>

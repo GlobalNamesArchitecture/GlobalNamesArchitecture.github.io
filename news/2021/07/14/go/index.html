@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Outcomes draft (Final Report for NSF award 1645959)</title>
+  <title>Why Go is a great language for biodiversity informatics</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -206,17 +206,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Outcomes draft (Final Report for NSF award 1645959)
-    <a href="/news/2019/11/21/nsf1645959-outcomes/" class="permalink" title="Permalink">∞</a>
+    Why Go is a great language for biodiversity informatics
+    <a href="/news/2021/07/14/go/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      NSF
+      review
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      21 Nov 2019
+      14 Jul 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -229,107 +229,161 @@
   </div>
   
   <div class="post-content">
-    <p>We developed an ability to discover scientific names in millions of books in
-a matter of hours. We are now able to finish name-finding for Biodiversity
-Heritage Library (200 000 volumes) in 12 hours on a single laptop, and
-HathiTrust Digital Library (18 million volumes, estimated 10% of all
-published books) in 9 hours, using 50 servers. Scientific name-strings are
-often represented differently by different sources. For example <em>Homo
-sapiens</em> can be written as <em>Homo sapiens</em> Linnaeus, 1758, <em>Homo sapiens
-sapiens</em>, <em>Homo sapiens</em> Linn. etc. To understand that all these variations
-talk about the same species they need to be normalized. We built a tool that
-normalizes 300 million name-strings per hour on a single computer. Also we
-created a service that is able to verify scientific names in all existing
-variations. The service validates names against well-known curated data
-sources with a rate of 800,000 per hour. As a result of all these new
-developments we have an opportunity to create a truly global index of
-scientific names and mine biological information using scientific names as
-anchors.</p>
+    <p>We, as a biodiversity informatics community, use quite a few programming
+languages. Python, Java, R, Ruby are probably the most popular ones. After
+working for the last few years with a language Go I think it would be very
+beneficial to add it to the biodiversity informatics toolset.</p>
 
-<p>Modern biology depends heavily on scientific names. They were introduced in
-18th century by Carl Linnaeus. For more than a quarter of a millennium they
-are the basis of sharing information about biological taxa. Scientific names
-are heavily used by researches, physicians, students, governmental agencies,
-citizen scientists etc. Scientific names create a common basis for
-biology and give us an ability to connect millions of medical and
-biological facts together into a graph of knowledge.</p>
+<p>When I started writing in Go, the language seemed to be a bit clunky, did not
+have much of cool shiny language constructs that other modern languages have.  I
+felt there were no “cute” syntax gold nuggets that are common in languages like
+Ruby or Python. However, I think Go is amasing for solving many biodiversity
+informatics problems.</p>
 
-<p>However scientific names change quite often. According to our observations
-there are about 3 different scientific names per species on average. On top
-of that, scientific names usually are not rendered exactly the same way in
-different publications, as we showed above, and such lexical variants of
-names have to be reconciled. To collect a complete history of studies about
-species we have to be able to take in account of these differences between
-name variations. To provide an access to globally accumulated biodiversity
-knowledge we have to scientific names in literature published in the last 250
-years.</p>
+<p>I tried about 10 different languages for the last 12 years working on
+Encyclopedia Of Life and Global Names projects, and for the last 5 years Go
+is the language of choice for the vast majority of projects I make.</p>
 
-<p>Our group have been participating in Global Names Architecture project since
-2007 and tried to find solutions for these three major questions:</p>
+<p>Lets look at the key features of the language that influenced my choice.</p>
 
-<ul>
-  <li>How to find scientific names in texts?</li>
-  <li>How to “normalize” lexical and spelling inconsistencies in names belonging to
-the same lexical group?</li>
-  <li>How to connect a given name to all names ever given to its taxon, and find
-which one of these names is currently accepted as valid?</li>
-</ul>
+<h2 id="feature-1-amazing-code-readability">Feature 1: Amazing code readability</h2>
 
-<p>Former ABI innovation grant from NSF from 2011 (#1062387) gave us an
-opportunity to develop functional prototypes of programs that were answering
-these questions. However, these prototypes had been too slow to be applied
-to whole corpus of biological and medical human knowledge.</p>
+<p>Biodiversity informatics runs mostly in academia. In academia projects
+blossom and wither depending on availability of funds. Funds often appear and
+dissapear, students and postdocs come and go, and quite often people have to
+continue development of projects written by someone else.</p>
 
-<p>We understood that for such programs to be useful on a global scale they must
-be dramatically improved in speed, quality and scalability. They must be able
-to use all resources of a multi-processor computer, and scale to multiple
-machines with ease. Current ABI Development funding allowed us to achieve
-speed and scalability goals.</p>
+<p>Therefore, an ability to understand a code written by another person is crucial
+for longevity of academia projects. So many important and interesting
+developments become stale or died out only because their code was too hard to
+understand by newcomers.</p>
 
-<p>We developed 3 major software tools:</p>
+<p>I found that code written in Go is one of the easiest to understand. The
+simplicity of syntax was one of major design goals in Go, and most of the common
+programming tasks can be solved only in one way. Go designers decided on a
+brutally minimalistic approach, as a result Go has very little bloat and in vast
+majority of cases has no duplication of features between its syntactic
+constructs.</p>
 
-<h2 id="parser-of-scientific-names-gnparser">Parser of Scientific Names: gnparser</h2>
+<p>As a result a programming style of novice and experienced programmers does not
+differ that much. It is great for supporting projects written by others, and for
+learning from Go code itself how to solve common problems.</p>
 
-<p>This tool allows to dissect vast majority of scientific names into their
-semantic elements. For example it is able to find out that “Carex scirpoidea
-ssp. convoluta (Kük.) Dunlop” and “Carex scirpoidea Michaux var. convoluta
-Kükenthal” both have the same conservative element “Cares scirpoidea
-convoluta”, but vary in rank (variety vs subspecies) “Carex scirpoidea var.
-convoluta” and “Carex scirpoidea subsp. convoluta”. Such matching is very
-important for aggregation of biodiversity data from a variety of sources. The
-gnparser program is designed to be small, easy to install and be blazingly
-fast. It is currently used by several prominent biodiversity aggregators,
-such as Encyclopedia of Life and Catalogue of Life, as well as Global Names
-Index. It is able to process 300,000,000 names in an hour on one computer.</p>
+<h2 id="feature-2-go-is-easy-to-learn">Feature 2: Go is easy to learn</h2>
 
-<h2 id="global-names-index-gnindex">Global Names Index: gnindex</h2>
+<p>Minimalistic approach to the language design makes it possible to learn Go with
+5-20 times less effort than other languages. Specification of the language is
+tiny and just going through an <a href="https://tour.golang.org/welcome/1">‘official’ Go tutorial</a> is enough to
+become productive after a few hours.</p>
 
-<p>The gnindex service aggregates scientific names from a large number of
-biodiversity data sources and uses them to verify incoming names. A user is
-able to send a list of name-strings and find out if they are known names, if
-they contain spelling mistakes, if they are currently accepted as valid
-names, etc. Such service is important for many use cases, for example as a
-verification tool for species lists collected by citizen scientists, as a
-curation tool for museum collections, for mapping country species lists of
-government agencies to standardized data set, such as Catalogue of Life etc.
-This tool relies heavily on gnparser to align data from many sources. It is
-also indispensable for verifying (reconciling/resolving) name candidates
-found in texts by our algorithms. This service currently has a throughput of
-800,000 names per hour.</p>
+<h2 id="feature-3-go-is-easy-to-maintain">Feature 3: Go is easy to maintain</h2>
 
-<h2 id="global-names-finder-gnfinder">Global Names Finder: gnfinder</h2>
+<p>Developers of the language released Go v1.0 in 2012 and plan to support backward
+compatibility for many years to come. Starting with Go v1.11 there is also
+support for versioning of community packages as dependencies. As a result
+it is possible to write a program or library and use it without any changes
+inspite new versiong of Go appearing regularly. If a library or a program
+depends on Open Source packages, the specific version of each packages can be
+set in a <code class="language-plaintext highlighter-rouge">go.mod</code> file.</p>
 
-<p>The gnfinder tool uses heuristic and natural language processing algorithms
-to detect scientific names in texts. In machine learning terms it belongs to
-named entity recognition class of tools. It marks parts of texts that
-potentially can be scientific names, and then sends them for remote
-verification to gnindex. Average book in digital libraries is about 300 pages
-long. On a single machine we are able to reach a rate of name-detection to
-45,000 books an hour.</p>
+<p>New versions of Go appear regularly, and to use recently added features a
+developer can provide Go version in <code class="language-plaintext highlighter-rouge">go.mod</code>.</p>
 
-<p>To summarize, these new tools give us ability to create indexes of scientific
-names in a matter of hours for gigantic collections of literature and make
-a global index for all digitized literature possible.</p>
+<p>Go team is very careful when they consider new features, and such features are
+implemented only after much thought and discussion. As a result even massive new
+functionalities do not create backward incompatibilities.</p>
+
+<h2 id="feature-4-go-is-fast">Feature 4: Go is fast</h2>
+
+<p>Go is much faster than such languages like Python, Ruby, Perl or R. In addition
+concurrency and parallel execution of the code is a core concept of Go.
+Writing concurrent code in Go is orders of magnitude easier than
+in C, and after some practice becomes a second nature of a developer.</p>
+
+<p>The combination of the language speed and parallel execution of the code on
+multi-core CPUs allows to make Go programs up to 100 times faster than programs
+written in interpreted languages. Go is somewhat slower than C, but Go programs
+are often faster than analogous C programs, because of the ease of developing
+concurrency and parallelism in Go.</p>
+
+<h2 id="feature-5-speed-of-programming-is-great">Feature 5: Speed of programming is great</h2>
+
+<p>Go is quite expressive, and, in my experience, the speed of developing in Go
+is comparable with speed of development in Python or Ruby.</p>
+
+<p>Also, running tests in Go is very fast, even big programs
+can be tested without a long wait. It allows to run tests often, or run
+them on each save.</p>
+
+<h2 id="feature-6-very-fast-compilation">Feature 6: Very fast compilation</h2>
+
+<p>Go is a compiled language, and requires compilation of its code before
+execution. The speed of compiling the code is usually almost instantaneous,
+and the language developers spend a lot of effort to keep it this way. The
+speed of compiling is only slightly slower than executing Python or Ruby
+code.</p>
+
+<h2 id="feature-7-convenient-executable-files">Feature 7: Convenient executable files</h2>
+
+<p>As a rule, Go compiles a program into a self-sufficient single executable file.
+Most of Go programs have no external dependencies and, as a result, are very
+easy to distribute and install. Downloading one file and running it is all what
+is required. Go supports cross-compilation. It means that it can create
+executable files for any supported OS on one computer. For example, a computer
+running Linux can create executables for MS Windows, Mac OS, and Linux in one
+go.</p>
+
+<p>The size of the executable files is really tiny. For example, the size of a
+name-finding project written in Ruby (GNRD) is about a gigabyte, while the
+analogous code in Go is only 50 megabytes.</p>
+
+<p>Small size of executables and lack of external dependencies make Go fantastic
+for publishing projects as Docker images, or deplying such images on Kubernetes.</p>
+
+<h2 id="feature-8-go-is-great-for-remote-apis-and-web-applications">Feature 8: Go is great for remote APIs and web-applications</h2>
+
+<p>Writing an extemely fast web-server in Go is a trivial task. Developing
+web-applications is quite easy with provided template methods. Distributing
+web-applications is also easy, because all the static files are usually
+included into a single binary. Besides a traditional REST approach to APIs
+there is a very fast streaming gRPC approach.</p>
+
+<h2 id="feature-9-rich-ecosystem-of-open-source-libraries">Feature 9: Rich ecosystem of Open Source libraries</h2>
+
+<p>Inspite of being a relatively young language (v1.0.0 was released in 2012) Go
+has a very active community and a large number of libraries for many development
+needs. Specific libraries for biodiversity informatics are scarse so far, but
+they start to appear. For example Global Names provides libraries for <a href="https://github.com/gnames/gnfinder">finding</a>,
+<a href="https://github.com/gnames/gnparser">parsing</a> and <a href="https://github.com/gnames/gnverifier">verifying</a> of scientific names.</p>
+
+<h2 id="feature-10-go-code-can-be-used-in-many-other-languages-via-c-bindings">Feature 10: Go code can be used in many other languages via C-bindings</h2>
+
+<p>It is possible to compile Go into a C library, and use it via C-binding with
+many other languages (C, R, Ruby, Python, Java for example).</p>
+
+<p>It is also possible to incorporate C libraries into Go, however most of
+functionality usually provided by C libraries is already implemented in pure Go
+and, most of the time, introducing such depencencies is not required. For
+example there are fantastic Go drivers for most popular databases.</p>
+
+<h2 id="feature-11-there-are-very-good-tools-for-go-developers">Feature 11: There are very good tools for Go developers</h2>
+
+<p>A lot of tools exist for Go that simplify development. Go creators pioneered an
+idea of auto-formatting of a written code. There are fantastic plugins for Go
+development in VS code, Vim, Emacs etc. JetBrains releases a standalone Go
+development platform. Go plugins incorporate linting, formatting,
+debugging, refactoring tools. Most of these tools can also be used as a
+stand-alone command line applications. Go has powerful profiling and tracing
+tools as well.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this post gave you an idea why Go is good for biodiversity informatics,
+and you can try to start solving problems that appear in your work using Go
+language. I would suggest to pick a small well-defined task, that requires fast
+execution, read the <a href="https://tour.golang.org/welcome/1">tour of Go</a> tutotiral, install Go and its tools for your
+favorite editor and start hacking the code!</p>
+
 
   </div>
 </article>
@@ -370,7 +424,7 @@ a global index for all digitized literature possible.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/07/14/go/">Why Go is a great language for biodiversity informatics</a>
         </li>
         
@@ -402,7 +456,7 @@ a global index for all digitized literature possible.</p>
           <a href="/news/2019/12/10/gnrd/">GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2019/11/21/nsf1645959-outcomes/">Outcomes draft (Final Report for NSF award 1645959)</a>
         </li>
         
