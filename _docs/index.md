@@ -36,4 +36,4 @@ Global Names.
 Please [file an issue on github]({{ site.repository }}/issues/new) if you have
 suggestions about style or content of this site.
 
-[tdwg-talk]: http://www.tdwg.org/fileadmin/2008conference/slides/Pyle_03_01_Taxonomic_Names_of_Organisms.swf
+[tdwg-talk]: https://www.youtube.com/watch?v=vPVm5S0qIcs
