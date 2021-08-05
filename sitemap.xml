@@ -81,10 +81,6 @@
 <lastmod>2015-08-28T09:18:28-05:00</lastmod>
 </url>
 <url>
-<loc>/docs/home/</loc>
-<lastmod>2015-08-28T13:39:28-05:00</lastmod>
-</url>
-<url>
 <loc>/docs/gnub/</loc>
 <lastmod>2015-09-23T03:12:08-05:00</lastmod>
 </url>
@@ -103,6 +99,10 @@
 <url>
 <loc>/docs/tut-gnfinder/</loc>
 <lastmod>2021-06-20T03:40:23-05:00</lastmod>
+</url>
+<url>
+<loc>/docs/home/</loc>
+<lastmod>2021-08-04T13:59:44-05:00</lastmod>
 </url>
 <url>
 <loc>/news/2015/04/17/gna_is_back/</loc>
