@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>New UUID v5 Generation Tool -- gn_uuid v0.5.0</title>
+  <title>GNparser (Go language) release 1.3.3</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.0">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -208,17 +208,17 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    New UUID v5 Generation Tool -- gn_uuid v0.5.0
-    <a href="/news/2015/05/31/gn-uuid-0-5-0/" class="permalink" title="Permalink">∞</a>
+    GNparser (Go language) release 1.3.3
+    <a href="/news/2021/08/13/gnparser-1.3.3/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      uuid and release
+      GNparser and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      31 May 2015
+      13 Aug 2021
     </span>
     <a href="https://github.com/dimus" class="post-author">
       <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
@@ -231,197 +231,83 @@
   </div>
   
   <div class="post-content">
-    <p>We are releasing a new tool - <a href="https://github.com/GlobalNamesArchitecture/gn_uuid">gn_uuid</a> to simplify creation of UUID
-version 5 identifiers for scientific name strings.  UUID v5 has features which
-are particular useful for the biodiversity community.</p>
-
-<h2 id="uuid-version-5-description">UUID version 5: Description</h2>
-
-<p><a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">Universally unique identifiers</a> are very popular because for all
-practical purposes they <a href="http://tools.ietf.org/html/rfc4122#section-2_">guarantee globally unique IDs</a> without any
-negotiation between different entities. There are several ways how UUIDs can be
-created:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>UUID version</th>
-      <th>Uniqueness is achieved by</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>version 1</td>
-      <td>Using computer’s MAC address and time</td>
-    </tr>
-    <tr>
-      <td>version 2</td>
-      <td>like v1 plus adding info about user and local domain</td>
-    </tr>
-    <tr>
-      <td>version 3</td>
-      <td>Using MD5 hash of a string in combination with a name space</td>
-    </tr>
-    <tr>
-      <td>version 4</td>
-      <td>Using pseudo-random algorithms</td>
-    </tr>
-    <tr>
-      <td>version 5</td>
-      <td>Using SHA1 hash of a string in combination with a name space</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>UUID v5 is generated using information from a string, so everyone who uses this
-method will generate exactly same ID out of the same string. Interested parties
-do need to agree on generation of a name space, and after that no matter which
-programming language they use – they will be able to exchange data about a
-string using their identifiers.</p>
-
-<p>This gem already has a DNS domain “globalnames.org” defined as a name space, so
-generation of the UUID v5 becomes simpler.</p>
-
-<p>I believe UUID v5 creates very exciting opportunities for biodiversity
-community.  For example if one expert annotates a string or attaches data to it
-– this information can be linked globally and then harvested by anybody,
-without any preliminary negotiation.</p>
-
-<p>Quite often researches make an argument that a scientific name is an identifier
-on its own and there is no need for another level of indirection like UUID.
-They are right, scientific name string can be an identifier, however,
-scientific names have severe shortcomings in such a role.</p>
-
-<h2 id="why-scientific-names-are-bad-identifiers-for-computers">Why Scientific Names are Bad Identifiers for Computers</h2>
-
-<h3 id="scientific-name-strings-have-different-length">Scientific name strings have different length</h3>
-
-<p>More often than not identifiers end up in databases and used as a primary index
-to sort, connect and search data. Scientific name strings vary from 2 bytes to
-more than  500 bytes in length. So if they are used as keys in database they
-are inefficient, they waste a lot of space, become less efficient for finding
-or sorting information – indexes key size is usually determined by the
-the largest key.</p>
-
-<p>UUIDs have always the same, rather small size – 16 bytes.  Even when UUIDs are
-used in their “standard” string representation – they are still reasonably
-small – 36 characters. Storing them in a database as a number is obviously more
-efficient.</p>
-
-<h3 id="it-is-hard-to-spot-differences-in-name-strings">It is hard to spot differences in name strings</h3>
-
-<p>It is very hard for human eye to spot the difference between strings like this</p>
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.3.3">GNparser v1.3.3</a> is out. The following changes happened since 1.3.0:</p>
 
 <ul>
   <li>
-    <p>Corchoropsis tomentosa var. psilocarpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+    <p>GNparser received a <a href="https://zenodo.org/badge/DOI/10.5281/zenodo.5180412.svg">citable DOI</a> (v1.3.1)</p>
   </li>
   <li>
-    <p>Corchoropsis tomentosa var. psilocanpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+    <p><a href="https://github.com/gnames/gnparser/issues/53">Names-exceptions</a> that are hard to parse because they use some nomenclautral,
+or biochemical terms as specific epithets are [now covered]. Some examples:</p>
   </li>
 </ul>
 
-<p>Much easier for their corresponding UUIDs</p>
+<pre><code class="language-txt">Navicula bacterium
+Xestia cfuscum
+Bolivina prion
+Bembidion satellites
+Acrostichum nudum
+Gnathopleustes den
+</code></pre>
+
+<ul>
+  <li>2-letter generic names are appended with <a href="https://github.com/gnames/gnparser/issues/182">3 more genera</a> (<code class="language-plaintext highlighter-rouge">Do</code>, <code class="language-plaintext highlighter-rouge">Oo</code>, <code class="language-plaintext highlighter-rouge">Du</code>).</li>
+</ul>
+
+<pre><code class="language-txt">Do holotrichius (beetle)
+Oo spinosum (arachnid)
+Nu aakhu (annelid)
+</code></pre>
+
+<ul>
+  <li>Known prefixes in authorships are appended with <a href="https://github.com/gnames/gnparser/issues/183">3 more prefixes</a> adding
+support for authors like:</li>
+</ul>
+
+<pre><code class="language-txt">delle Chiaje
+dos Santos
+ten Broeke
+ten Hove
+</code></pre>
 
 <ul>
   <li>
-    <p>5edecb2b-903f-54f1-a087-b47b3b021fcd</p>
+    <p>Parsing of names with <a href="https://github.com/gnames/gnparser/issues/184">ms in</a> like <code class="language-plaintext highlighter-rouge">Crisia eburneodenticulata Smitt ms in Busk, 1875</code> is 
+supported (normalized to <code class="language-plaintext highlighter-rouge">Crisia eburneodenticulata Smitt ex Busk, 1875</code>).</p>
   </li>
   <li>
-    <p>833c664b-7d00-5c3b-97a4-98b0ab7d0a9a</p>
+    <p>More <a href="https://github.com/gnames/gnparser/issues/184">annotation ‘stop’ words are added</a>, fixing parsing for names like:</p>
   </li>
 </ul>
 
-<h3 id="name-strings-come-in-different-encodings">Name strings come in different encodings.</h3>
+<pre><code class="language-txt">Crisina excavata (d'Orbigny, 1853) non (d'Orbigny, 1853)
+Eulima excellens Verkrüzen fide Paetel, 1887
+Porina reussi Meneghini in De Amicis, 1885 vide Neviani (1900)
+</code></pre>
 
-<p>Currently Latin1, UTF-8 and UTF-16 are most popular encodings used in
-biodiversity. If authorship or name itself has characters outside of the
-128bits of ASCII code – identically looking names will be quite different for
-computers.</p>
+<p>Many thanks to <a href="https://github.com/diatomsRcool" class="user-mention">@diatomsRcool</a>, <a href="https://github.com/KatjaSchulz" class="user-mention">@KatjaSchulz</a> and <a href="https://github.com/joelnitta" class="user-mention">@joelnitta</a> for feature requests
+and bug reports!</p>
 
-<h3 id="name-strings-are-less-stable-because-of-their-encoding">Name strings are less stable because of their encoding</h3>
+<h2 id="clib-libraries-are-now-provided-with-each-new-release">Clib libraries are now provided with each new release</h2>
 
-<p>When names are moved from one database to another, from one paper to another
-sometimes they do not survive the trip. If you spent any time looking at
-scientific names in electronic form you did see something like this:</p>
+<p>GNparser can be incorportated via C-binding into many other languages. To make
+such incorporation easier, the clib files for MacOS, Linux and MS Windows are
+now provided with <a href="https://github.com/gnames/gnparser/releases/tag/v1.3.3">every new release</a>.</p>
 
-<ul>
-  <li>
-    <p>Acacia ampliceps ? Acacia bivenosa</p>
-  </li>
-  <li>
-    <p>Absidia macrospora V�nov� 1968</p>
-  </li>
-  <li>
-    <p>Absidia sphaerosporangioides Man&lt;acute&gt;ka &amp; Truszk., 1958</p>
-  </li>
-  <li>
-    <p>Cnemisus kaszabi Endr?di 1964</p>
-  </li>
-</ul>
+<pre><code class="language-txt">macos-latest-clib.zip
+ubuntu-latest-clib.zip
+windows-latest-clib.zip
+</code></pre>
 
-<p>Usually names like these had been submitted in a “wrong” encoding and some
-characters in them were misinterpreted. UUID on the other hand is just a
-hexadecimal number, which can be transitioned between various encodings more
-safely.</p>
+<h2 id="update-of-c-binding-for-ruby-based-parser">Update of C-binding for Ruby-based parser</h2>
 
-<h3 id="name-strings-might-look-the-same-in-print-or-on-screen-but-be-different">Name strings might look the same in print or on screen, but be different</h3>
+<p>The new v5.3.3 <a href="https://rubygems.org/gems/biodiversity"><code class="language-plaintext highlighter-rouge">biodiversity</code> Ruby gem</a> is released using C-binding to
+GNparser v1.3.3</p>
 
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Homo sapiens</code></p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Homo sаpiens</code></p>
-  </li>
-</ul>
+<h2 id="gnparser-for-javascript">GNparser for JavaScript</h2>
 
-<p>These two strings might look exactly the same on a screen or printed on paper,
-but in reality they are different. Here are their UUIDs:</p>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">16f235a0-e4a3-529c-9b83-bd15fe722110</code></p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">093dc7f7-5915-56a5-87de-033e20310b14</code></p>
-  </li>
-</ul>
-
-<p>The difference is that the second name has a Cyrillic <code class="language-plaintext highlighter-rouge">а</code> character, which in
-most cases will look exactly the same as Latin <code class="language-plaintext highlighter-rouge">a</code> character. And when the
-names are printed on paper there is absolutely no way to tell the difference.
-UUID will tell us that these two name strings are not the same.</p>
-
-<h3 id="nothing-prevents-to-continue-to-use-name-strings-for-human-interaction">Nothing prevents to continue to use name strings for human interaction</h3>
-
-<p>One argument that people often give – it is much easier for users to type</p>
-
-<p>http://biosite.org/Parus_major</p>
-
-<p>than</p>
-
-<p>http://biosite.org/47d61c81-5a0f-5448-964a-34bbfb54ce8b</p>
-
-<p>For most of us it is definitely true and nothing prevents developers
-to create links of the first type, while still using UUIDs behind the scene.</p>
-
-<h2 id="why-uuids-v5-are-better-than-any-other-uuids-as-a-scientific-name-identifier">Why UUIDs v5 are better than any other UUIDs as a scientific name identifier</h2>
-
-<ul>
-  <li>
-    <p>They can be generated independently by anybody and still be the same to the
-same name string</p>
-  </li>
-  <li>
-    <p>They use SHA1 algorithm which does not have (extremely rare) collisions
-found for MD5 algorithm</p>
-  </li>
-  <li>
-    <p>Same ID can be generated in <a href="https://github.com/GlobalNamesArchitecture/gn_uuid_examples">any popular language</a> following
-<a href="http://tools.ietf.org/html/rfc4122#section-4.3">well-defined algorithm</a></p>
-  </li>
-</ul>
+<p><a href="https://github.com/tobymarsden" class="user-mention">@tobymarsden</a> incorporated GNparser C-binding into a <a href="https://github.com/gnames/gnparser/issues/181">Node.js package</a>. He plans to release the new package for NPM.</p>
 
 
   </div>
@@ -439,7 +325,7 @@ found for MD5 algorithm</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser v1.3.3</a>
       </li>
       
@@ -463,7 +349,7 @@ found for MD5 algorithm</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</a>
         </li>
         
@@ -607,7 +493,7 @@ found for MD5 algorithm</p>
           <a href="/news/2015/06/01/biodiversity-3-2-1/">Global Names Parser v3.2.1</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2015/05/31/gn-uuid-0-5-0/">New UUID v5 Generation Tool -- gn_uuid v0.5.0</a>
         </li>
         
@@ -693,7 +579,7 @@ found for MD5 algorithm</p>
         <a href="https://creativecommons.org/publicdomain/zero/1.0/">
           <img src="/img/cc0.png" width="80" alt="Creative Commons 0">
         </a>
-        The content of this</br>website is in public domain
+        The content of thiswebsite is in public domain
       </p>
     </div>
     <div class="unit one-third center-on-mobiles">

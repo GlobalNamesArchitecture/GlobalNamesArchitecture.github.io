@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</option>
+      
       <option value="/news/2021/07/14/go/">Why Go is a great language for biodiversity informatics</option>
       
       <option value="/news/2021/07/05/gnparser-1.3.0/">GNparser (Go language) release 1.3.0</option>
@@ -205,6 +207,110 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/08/13/gnparser-1.3.3/">
+      GNparser (Go language) release 1.3.3
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      13 Aug 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.3.3">GNparser v1.3.3</a> is out. The following changes happened since 1.3.0:</p>
+
+<ul>
+  <li>
+    <p>GNparser received a <a href="https://zenodo.org/badge/DOI/10.5281/zenodo.5180412.svg">citable DOI</a> (v1.3.1)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/gnames/gnparser/issues/53">Names-exceptions</a> that are hard to parse because they use some nomenclautral,
+or biochemical terms as specific epithets are [now covered]. Some examples:</p>
+  </li>
+</ul>
+
+<pre><code class="language-txt">Navicula bacterium
+Xestia cfuscum
+Bolivina prion
+Bembidion satellites
+Acrostichum nudum
+Gnathopleustes den
+</code></pre>
+
+<ul>
+  <li>2-letter generic names are appended with <a href="https://github.com/gnames/gnparser/issues/182">3 more genera</a> (<code class="language-plaintext highlighter-rouge">Do</code>, <code class="language-plaintext highlighter-rouge">Oo</code>, <code class="language-plaintext highlighter-rouge">Du</code>).</li>
+</ul>
+
+<pre><code class="language-txt">Do holotrichius (beetle)
+Oo spinosum (arachnid)
+Nu aakhu (annelid)
+</code></pre>
+
+<ul>
+  <li>Known prefixes in authorships are appended with <a href="https://github.com/gnames/gnparser/issues/183">3 more prefixes</a> adding
+support for authors like:</li>
+</ul>
+
+<pre><code class="language-txt">delle Chiaje
+dos Santos
+ten Broeke
+ten Hove
+</code></pre>
+
+<ul>
+  <li>
+    <p>Parsing of names with <a href="https://github.com/gnames/gnparser/issues/184">ms in</a> like <code class="language-plaintext highlighter-rouge">Crisia eburneodenticulata Smitt ms in Busk, 1875</code> is 
+supported (normalized to <code class="language-plaintext highlighter-rouge">Crisia eburneodenticulata Smitt ex Busk, 1875</code>).</p>
+  </li>
+  <li>
+    <p>More <a href="https://github.com/gnames/gnparser/issues/184">annotation ‘stop’ words are added</a>, fixing parsing for names like:</p>
+  </li>
+</ul>
+
+<pre><code class="language-txt">Crisina excavata (d'Orbigny, 1853) non (d'Orbigny, 1853)
+Eulima excellens Verkrüzen fide Paetel, 1887
+Porina reussi Meneghini in De Amicis, 1885 vide Neviani (1900)
+</code></pre>
+
+<p>Many thanks to <a href="https://github.com/diatomsRcool" class="user-mention">@diatomsRcool</a>, <a href="https://github.com/KatjaSchulz" class="user-mention">@KatjaSchulz</a> and <a href="https://github.com/joelnitta" class="user-mention">@joelnitta</a> for feature requests
+and bug reports!</p>
+
+<h2 id="clib-libraries-are-now-provided-with-each-new-release">Clib libraries are now provided with each new release</h2>
+
+<p>GNparser can be incorportated via C-binding into many other languages. To make
+such incorporation easier, the clib files for MacOS, Linux and MS Windows are
+now provided with <a href="https://github.com/gnames/gnparser/releases/tag/v1.3.3">every new release</a>.</p>
+
+<pre><code class="language-txt">macos-latest-clib.zip
+ubuntu-latest-clib.zip
+windows-latest-clib.zip
+</code></pre>
+
+<h2 id="update-of-c-binding-for-ruby-based-parser">Update of C-binding for Ruby-based parser</h2>
+
+<p>The new v5.3.3 <a href="https://rubygems.org/gems/biodiversity"><code class="language-plaintext highlighter-rouge">biodiversity</code> Ruby gem</a> is released using C-binding to
+GNparser v1.3.3</p>
+
+<h2 id="gnparser-for-javascript">GNparser for JavaScript</h2>
+
+<p><a href="https://github.com/tobymarsden" class="user-mention">@tobymarsden</a> incorporated GNparser C-binding into a <a href="https://github.com/gnames/gnparser/issues/181">Node.js package</a>. He plans to release the new package for NPM.</p>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/07/14/go/">
@@ -3803,6 +3909,10 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser v1.3.3</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2021/07/05/gnparser-1.3.0/">GNparser v1.3.0</a>
       </li>
       
@@ -3818,13 +3928,13 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
         <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser v1.2.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2021/03/23/gnparser/">GNparser v1.1.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/07/14/go/">Why Go is a great language for biodiversity informatics</a>
