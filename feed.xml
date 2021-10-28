@@ -11,10 +11,10 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Fri, 13 Aug 2021 09:43:11 -0500</pubDate>
-    <lastBuildDate>Fri, 13 Aug 2021 09:43:11 -0500</lastBuildDate>
+    <pubDate>Thu, 28 Oct 2021 17:52:19 -0500</pubDate>
+    <lastBuildDate>Thu, 28 Oct 2021 17:52:19 -0500</lastBuildDate>
     <language>en-US</language>
-    <generator>Jekyll v4.2.0</generator>
+    <generator>Jekyll v4.2.1</generator>
     <description>Scientific Name Services</description>
     <image>
       <description>Scientific Names Services</description>
@@ -24,6 +24,64 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>GNparser (Go language) release 1.5.0</title>
+      <link>http://globalnames.org/news/2021/10/28/gnparser-1.5.0/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 -0500</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>GNparser</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2021/10/28/gnparser-1.5.0/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnparser/releases/tag/v1.5.0&quot;&gt;GNparser v1.5.0&lt;/a&gt; is out. The following changes happened since 1.3.3:&lt;/p&gt;
+
+&lt;h2 id=&quot;v150&quot;&gt;[v1.5.0]&lt;/h2&gt;
+
+&lt;p&gt;Courtesy of Toby Marsden (@tobymarsden) GNparser in ‘cultivars mode’ is able to parse graft-chymeras.
+An example: “Cytisus purpureus + Laburnum anagyroides”
+Note that cultivar-specific names are not recognized outside of the cultivars node.&lt;/p&gt;
+
+&lt;h2 id=&quot;v142&quot;&gt;[v1.4.2]&lt;/h2&gt;
+
+&lt;p&gt;Add support for authors with prefix ‘ver’.
+An example: “Cryptopleura farlowiana (J.Agardh) ver Steeg &amp;amp; Jossly”&lt;/p&gt;
+
+&lt;h2 id=&quot;v141&quot;&gt;[v1.4.1]&lt;/h2&gt;
+
+&lt;p&gt;Fixed parsing of multinomials where authorship is not separated by space.
+An example: “Paeonia daurica coriifolia(Rupr.) D.Y.Hong”&lt;/p&gt;
+
+&lt;h2 id=&quot;v140&quot;&gt;[v1.4.0]&lt;/h2&gt;
+
+&lt;p&gt;Support an output in tab-separated values format. Quite often TSV format is much easier to parse than CSV.
+Tab character is much less common inside of scientific names than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt; character.
+Therefore just splitting by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\t&lt;/code&gt; breaks a row into its components in many cases.
+It is still recommended to use CSV libraries for any given language to avoid unexpected problems.&lt;/p&gt;
+
+&lt;p&gt;Authors that contain prefixes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;do&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;de los&lt;/code&gt; are now parsed correctly.
+An example: “… de Cássia Silva do Nascimento …”&lt;/p&gt;
+
+&lt;p&gt;Authors with suffex &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ter&lt;/code&gt; are parsed correctly.
+An example: “Dematiocladium celtidicola Crous, M.J. Wingf. &amp;amp; Y. Zhang ter”&lt;/p&gt;
+
+&lt;p&gt;Added support for non-ASCII apostrophes in Authors’ names.
+An example: “Galega officinalis (L.) L`Hèr.”&lt;/p&gt;
+
+&lt;h2 id=&quot;new-gnparser-c-binding-package-for-nodejs-by-toby-marsden&quot;&gt;New GNparser C-binding package for Node.js by Toby Marsden&lt;/h2&gt;
+
+&lt;p&gt;Toby Marsden also [created GNparser wrapper for Node.js][GNparser Node].&lt;/p&gt;
+
+&lt;h2 id=&quot;update-of-c-binding-for-ruby-based-parser&quot;&gt;Update of C-binding for Ruby-based parser&lt;/h2&gt;
+
+&lt;p&gt;The new v5.3.4 [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; Ruby gem][biodiversity] is released using C-binding to
+GNparser v1.4.2&lt;/p&gt;
+
+</description>
+    </item>
     
     <item>
       <title>GNparser (Go language) release 1.3.3</title>

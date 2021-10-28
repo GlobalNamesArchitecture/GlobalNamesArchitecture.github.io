@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Releases</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v4.2.0">
+  <meta name="generator" content="Jekyll v4.2.1">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to the site" href="https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -93,6 +93,8 @@
     <option value="">Navigate the blog…</option>
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
+      
+      <option value="/news/2021/10/28/gnparser-1.5.0/">GNparser (Go language) release 1.5.0</option>
       
       <option value="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</option>
       
@@ -207,6 +209,75 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/10/28/gnparser-1.5.0/">
+      GNparser (Go language) release 1.5.0
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNparser and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      28 Oct 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p><a href="https://github.com/gnames/gnparser/releases/tag/v1.5.0">GNparser v1.5.0</a> is out. The following changes happened since 1.3.3:</p>
+
+<h2 id="v150">[v1.5.0]</h2>
+
+<p>Courtesy of Toby Marsden (<a href="https://github.com/tobymarsden" class="user-mention">@tobymarsden</a>) GNparser in ‘cultivars mode’ is able to parse graft-chymeras.
+An example: “Cytisus purpureus + Laburnum anagyroides”
+Note that cultivar-specific names are not recognized outside of the cultivars node.</p>
+
+<h2 id="v142">[v1.4.2]</h2>
+
+<p>Add support for authors with prefix ‘ver’.
+An example: “Cryptopleura farlowiana (J.Agardh) ver Steeg &amp; Jossly”</p>
+
+<h2 id="v141">[v1.4.1]</h2>
+
+<p>Fixed parsing of multinomials where authorship is not separated by space.
+An example: “Paeonia daurica coriifolia(Rupr.) D.Y.Hong”</p>
+
+<h2 id="v140">[v1.4.0]</h2>
+
+<p>Support an output in tab-separated values format. Quite often TSV format is much easier to parse than CSV.
+Tab character is much less common inside of scientific names than <code class="language-plaintext highlighter-rouge">,</code> character.
+Therefore just splitting by <code class="language-plaintext highlighter-rouge">\t</code> breaks a row into its components in many cases.
+It is still recommended to use CSV libraries for any given language to avoid unexpected problems.</p>
+
+<p>Authors that contain prefixes <code class="language-plaintext highlighter-rouge">do</code> and <code class="language-plaintext highlighter-rouge">de los</code> are now parsed correctly.
+An example: “… de Cássia Silva do Nascimento …”</p>
+
+<p>Authors with suffex <code class="language-plaintext highlighter-rouge">ter</code> are parsed correctly.
+An example: “Dematiocladium celtidicola Crous, M.J. Wingf. &amp; Y. Zhang ter”</p>
+
+<p>Added support for non-ASCII apostrophes in Authors’ names.
+An example: “Galega officinalis (L.) L`Hèr.”</p>
+
+<h2 id="new-gnparser-c-binding-package-for-nodejs-by-toby-marsden">New GNparser C-binding package for Node.js by Toby Marsden</h2>
+
+<p>Toby Marsden also [created GNparser wrapper for Node.js][GNparser Node].</p>
+
+<h2 id="update-of-c-binding-for-ruby-based-parser">Update of C-binding for Ruby-based parser</h2>
+
+<p>The new v5.3.4 [<code class="language-plaintext highlighter-rouge">biodiversity</code> Ruby gem][biodiversity] is released using C-binding to
+GNparser v1.4.2</p>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/08/13/gnparser-1.3.3/">
@@ -1952,6 +2023,10 @@ using any field from the input.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/10/28/gnparser-1.5.0/">GNparser v1.5.0</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser v1.3.3</a>
       </li>
       
@@ -1967,13 +2042,13 @@ using any field from the input.</p>
         <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier v0.3.0</a>
       </li>
       
-      <li class="">
-        <a href="/news/2021/04/10/gnarser-1.2.0/">GNparser v1.2.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/10/28/gnparser-1.5.0/">GNparser (Go language) release 1.5.0</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</a>
