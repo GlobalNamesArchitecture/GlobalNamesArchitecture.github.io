@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Fri, 29 Oct 2021 08:36:49 -0500</pubDate>
-    <lastBuildDate>Fri, 29 Oct 2021 08:36:49 -0500</lastBuildDate>
+    <pubDate>Fri, 29 Oct 2021 08:43:13 -0500</pubDate>
+    <lastBuildDate>Fri, 29 Oct 2021 08:43:13 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.1</generator>
     <description>Scientific Name Services</description>
@@ -73,7 +73,7 @@ An example: “Galega officinalis (L.) L`Hèr.”.&lt;/p&gt;
 
 &lt;h2 id=&quot;new-gnparser-c-binding-package-for-nodejs-by-toby-marsden&quot;&gt;New GNparser C-binding package for Node.js by Toby Marsden&lt;/h2&gt;
 
-&lt;p&gt;Toby Marsden also [created GNparser wrapper for Node.js][GNparser Node].&lt;/p&gt;
+&lt;p&gt;Toby Marsden also &lt;a href=&quot;https://github.com/amazingplants/node-gnparser&quot;&gt;created GNparser wrapper for Node.js&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;update-of-c-binding-for-ruby-based-parser&quot;&gt;Update of C-binding for Ruby-based parser&lt;/h2&gt;
 
