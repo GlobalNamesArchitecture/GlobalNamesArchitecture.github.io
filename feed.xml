@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Thu, 28 Oct 2021 17:52:19 -0500</pubDate>
-    <lastBuildDate>Thu, 28 Oct 2021 17:52:19 -0500</lastBuildDate>
+    <pubDate>Thu, 28 Oct 2021 19:05:37 -0500</pubDate>
+    <lastBuildDate>Thu, 28 Oct 2021 19:05:37 -0500</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.1</generator>
     <description>Scientific Name Services</description>
@@ -42,18 +42,18 @@
 &lt;h2 id=&quot;v150&quot;&gt;[v1.5.0]&lt;/h2&gt;
 
 &lt;p&gt;Courtesy of Toby Marsden (@tobymarsden) GNparser in ‘cultivars mode’ is able to parse graft-chymeras.
-An example: “Cytisus purpureus + Laburnum anagyroides”
-Note that cultivar-specific names are not recognized outside of the cultivars node.&lt;/p&gt;
+An example: “Cytisus purpureus + Laburnum anagyroides”.
+Note that cultivar-specific names are not recognized outside of the cultivars mode.&lt;/p&gt;
 
 &lt;h2 id=&quot;v142&quot;&gt;[v1.4.2]&lt;/h2&gt;
 
 &lt;p&gt;Add support for authors with prefix ‘ver’.
-An example: “Cryptopleura farlowiana (J.Agardh) ver Steeg &amp;amp; Jossly”&lt;/p&gt;
+An example: “Cryptopleura farlowiana (J.Agardh) ver Steeg &amp;amp; Jossly”.&lt;/p&gt;
 
 &lt;h2 id=&quot;v141&quot;&gt;[v1.4.1]&lt;/h2&gt;
 
 &lt;p&gt;Fixed parsing of multinomials where authorship is not separated by space.
-An example: “Paeonia daurica coriifolia(Rupr.) D.Y.Hong”&lt;/p&gt;
+An example: “Paeonia daurica coriifolia(Rupr.) D.Y.Hong”.&lt;/p&gt;
 
 &lt;h2 id=&quot;v140&quot;&gt;[v1.4.0]&lt;/h2&gt;
 
@@ -66,10 +66,10 @@ It is still recommended to use CSV libraries for any given language to avoid une
 An example: “… de Cássia Silva do Nascimento …”&lt;/p&gt;
 
 &lt;p&gt;Authors with suffex &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ter&lt;/code&gt; are parsed correctly.
-An example: “Dematiocladium celtidicola Crous, M.J. Wingf. &amp;amp; Y. Zhang ter”&lt;/p&gt;
+An example: “Dematiocladium celtidicola Crous, M.J. Wingf. &amp;amp; Y. Zhang ter”.&lt;/p&gt;
 
 &lt;p&gt;Added support for non-ASCII apostrophes in Authors’ names.
-An example: “Galega officinalis (L.) L`Hèr.”&lt;/p&gt;
+An example: “Galega officinalis (L.) L`Hèr.”.&lt;/p&gt;
 
 &lt;h2 id=&quot;new-gnparser-c-binding-package-for-nodejs-by-toby-marsden&quot;&gt;New GNparser C-binding package for Node.js by Toby Marsden&lt;/h2&gt;
 
@@ -77,8 +77,7 @@ An example: “Galega officinalis (L.) L`Hèr.”&lt;/p&gt;
 
 &lt;h2 id=&quot;update-of-c-binding-for-ruby-based-parser&quot;&gt;Update of C-binding for Ruby-based parser&lt;/h2&gt;
 
-&lt;p&gt;The new v5.3.4 [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; Ruby gem][biodiversity] is released using C-binding to
-GNparser v1.4.2&lt;/p&gt;
+&lt;p&gt;The new v5.3.4 [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biodiversity&lt;/code&gt; Ruby gem][biodiversity] is released using C-binding to GNparser v1.4.2&lt;/p&gt;
 
 </description>
     </item>
