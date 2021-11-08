@@ -226,7 +226,7 @@ A scientific name  that is spelled in the same way but refers to more than one g
 group of peas. Homonyms can occur within codes or between codes (when some people refer to them as hemihomonyms. The meanings of homonyms needs to bedisambiguated if we are to understand what the name refers to. Most homonyms occur with the names of genera, those involving species are few and far between, but one is Acanthocystis and *Pieris japonica*.  The author information or context can often be sufficient to disambiguate homonyms. However the occurrence of chresonyms within databases creates many entries with the same genus (or species) names, and hence creates a confusing situation that needs to be addressed.
 
 
-####Homotypic or Objective synonyms
+#### Homotypic or Objective synonyms
 Refers to different names for the same species, and have the same basionym. An example is: *Leucocryptos remigera* Vørs, 1992 and *Kathablepharis remigera* (Vørs, 1992) Clay & Krugens, 1999, or with an alternative spelling, *Katablepharis remigera*. Homotypic synonyms are also referred to as objective or nomenclatural synonyms.
 
 
