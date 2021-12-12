@@ -89,4 +89,4 @@ because older systems will eventually be deprecated and stopped.
 [DOI information]: https://zenodo.org/record/5774421#.YbXkDYpMFOQ
 [AlgaeBase]: https://www.algaebase.org
 [advanced search]: https://github.com/gnames/gnverifier#advanced-search
-[GNI]: https://gni.globalnames.org
+[GNI]: http://gni.globalnames.org
