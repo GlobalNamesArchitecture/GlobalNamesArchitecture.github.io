@@ -94,6 +94,8 @@
     <option value="/news/">Home</option>
     <optgroup label="v1.x">
       
+      <option value="/news/2021/12/12/gnverifier-0.6.2/">GNverifier release v0.6.2</option>
+      
       <option value="/news/2021/10/28/gnparser-1.5.0/">GNparser (Go language) release 1.5.0</option>
       
       <option value="/news/2021/08/13/gnparser-1.3.3/">GNparser (Go language) release 1.3.3</option>
@@ -209,6 +211,115 @@
 
       <div class="unit four-fifths">
         
+  <article>
+  <h2>
+    <a href="/news/2021/12/12/gnverifier-0.6.2/">
+      GNverifier release v0.6.2
+    </a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      GNverifier and release
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      12 Dec 2021
+    </span>
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
+    </a>
+  </div>
+  <div class="post-content">
+    <p><a href="https://github.com/gnames/gnverifier">GNverifier</a> can help to answer the following questions:</p>
+
+<ul>
+  <li>Is a name-string a real name?</li>
+  <li>Is it spelled correctly, and if not, what might be the correct spelling?</li>
+  <li>Is the name currently in use?</li>
+  <li>If it is a synonym, what data sources consider to be currently accepted names?</li>
+  <li>Is a name a homonym?</li>
+  <li>What is a taxon that the name points to, and where is it placed in various
+classifications?</li>
+</ul>
+
+<p>The <a href="https://github.com/gnames/gnverifier/releases/tag/v0.6.2">v0.6.2</a> version of <a href="https://github.com/gnames/gnverifier">GNverifier</a> is out. It brings new features and some
+changes in API, input and output format. The main change is an ability to
+perform a search by name details, such as an abbreviated genus, author, year.</p>
+
+<p>For example <code class="language-plaintext highlighter-rouge">g:M. sp:galloprovincialis au:Oliv. y:-1800</code> will search for a
+name with genus starting with <code class="language-plaintext highlighter-rouge">M</code>, <code class="language-plaintext highlighter-rouge">galloprovincialis</code> as a specific epithet,
+an author starting with <code class="language-plaintext highlighter-rouge">Oliv</code> and a year earlier or equal to <code class="language-plaintext highlighter-rouge">1800</code>.</p>
+
+<p>Both name-verification and search return the same format of results. Because of
+that we needed to change the name of some fields in the output, so their
+meaning would correspond to both verification and search outputs.</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">inputId</code> changed to <code class="language-plaintext highlighter-rouge">id</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">input</code> changed to <code class="language-plaintext highlighter-rouge">name</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">preferredResults changed to </code>results`</li>
+</ul>
+
+<p>GNverifier’s <a href="https://apidoc.globalnames.org/gnames">API v1</a> still can be used
+(it did not undrgo any format changes), but the <a href="https://verifier.globalnames.org">web-page</a> and command line app
+<code class="language-plaintext highlighter-rouge">gnverifier</code> moved to use new
+<a href="https://apidoc.globalnames.org/gnames-beta">API v0</a>. When the new API
+stabilizes, it will be renamed to API v2.</p>
+
+<h2 id="install-gnverifier-with-homebrew">Install GNverifier with Homebrew</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
+brew <span class="nb">install </span>gnverifier
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew upgrade gnverifier
+</code></pre></div></div>
+
+<h2 id="changes-in-functionality-since-v030">Changes in functionality since v0.3.0</h2>
+
+<ul>
+  <li>
+<a href="https://verifier.globalnames.org">web-page</a> shows the date when a name was imported into <a href="https://github.com/gnames/gnverifier">GNverifier</a> database.</li>
+  <li>to make it easier to cite <a href="https://github.com/gnames/gnverifier">GNverifier</a>, there is a <a href="https://zenodo.org/record/5774421#.YbXkDYpMFOQ">DOI information</a> on
+its <a href="https://github.com/gnames/gnverifier">GitHub page</a>.</li>
+  <li>tab-delimited values (TSV) format is now supported.</li>
+  <li>added <a href="https://www.algaebase.org">AlgaeBase</a> to data-sources.</li>
+  <li>there are now options to return all matched results (use with caution, as
+the output might be excessively big).</li>
+  <li>show score details in the output and on the <a href="https://verifier.globalnames.org">web-page</a>.</li>
+  <li>
+<a href="https://github.com/gnames/gnverifier#advanced-search">advanced search</a> is added to both command line and web-based user interfaces.</li>
+</ul>
+
+<h2 id="deprecation-of-services">Deprecation of services.</h2>
+
+<p><a href="https://gni.globalnames.org">GNI</a> is the oldest version of GN name-verification algorithms. Most of its
+functionality now exists in <a href="https://github.com/gnames/gnverifier">GNverifier</a>, so the <a href="https://gni.globalnames.org">GNI web-site</a> is
+going to be removed in the beginning of 2022.</p>
+
+<p>The <a href="https://index.globalnames.org">Scala version of GNI</a> will also be
+scheduled for removal.</p>
+
+<p><a href="https://resolver.globalnames.org">GNresolver</a> will continue to run the longest.
+It will not be deprecated until <a href="https://github.com/gnames/gnverifier">GNverifier</a> API v2 will be released.</p>
+
+<p>If you use old systems, consider switching to <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a>
+because older systems will eventually be deprecated and stopped.</p>
+
+
+  </div>
+</article>
+
+
   <article>
   <h2>
     <a href="/news/2021/10/28/gnparser-1.5.0/">
@@ -3979,6 +4090,10 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
     <ul>
       
       <li class="">
+        <a href="/news/2021/12/12/gnverifier-0.6.2/">GNverifier v0.6.2</a>
+      </li>
+      
+      <li class="">
         <a href="/news/2021/10/28/gnparser-1.5.0/">GNparser v1.5.0</a>
       </li>
       
@@ -3994,13 +4109,13 @@ github issues, fixing bugs, adding features, thinking about new ideas.</p>
         <a href="/news/2021/06/19/gnfinder-0.14.1/">GNfinder v0.14.1</a>
       </li>
       
-      <li class="">
-        <a href="/news/2021/04/10/gnverifier-0.3.0/">GNverifier v0.3.0</a>
-      </li>
-      
     </ul>
     <h4>Other News</h4>
     <ul>
+        
+        <li class="">
+          <a href="/news/2021/12/12/gnverifier-0.6.2/">GNverifier release v0.6.2</a>
+        </li>
         
         <li class="">
           <a href="/news/2021/10/28/gnparser-1.5.0/">GNparser (Go language) release 1.5.0</a>

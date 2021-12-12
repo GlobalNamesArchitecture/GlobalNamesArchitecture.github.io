@@ -11,8 +11,8 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Mon, 08 Nov 2021 10:30:52 -0600</pubDate>
-    <lastBuildDate>Mon, 08 Nov 2021 10:30:52 -0600</lastBuildDate>
+    <pubDate>Sun, 12 Dec 2021 06:11:15 -0600</pubDate>
+    <lastBuildDate>Sun, 12 Dec 2021 06:11:15 -0600</lastBuildDate>
     <language>en-US</language>
     <generator>Jekyll v4.2.1</generator>
     <description>Scientific Name Services</description>
@@ -24,6 +24,97 @@
       <width>144</width>
       <height>73</height>
     </image>
+    
+    <item>
+      <title>GNverifier release v0.6.2</title>
+      <link>http://globalnames.org/news/2021/12/12/gnverifier-0.6.2/</link>
+      <pubDate>Sun, 12 Dec 2021 00:00:00 -0600</pubDate>
+      <dc:creator>dimus</dc:creator>
+      
+      
+      <category>GNverifier</category>
+      
+      <category>release</category>
+      
+      <guid isPermaLink="true">http://globalnames.org/news/2021/12/12/gnverifier-0.6.2/</guid>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt; can help to answer the following questions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is a name-string a real name?&lt;/li&gt;
+  &lt;li&gt;Is it spelled correctly, and if not, what might be the correct spelling?&lt;/li&gt;
+  &lt;li&gt;Is the name currently in use?&lt;/li&gt;
+  &lt;li&gt;If it is a synonym, what data sources consider to be currently accepted names?&lt;/li&gt;
+  &lt;li&gt;Is a name a homonym?&lt;/li&gt;
+  &lt;li&gt;What is a taxon that the name points to, and where is it placed in various
+classifications?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/gnames/gnverifier/releases/tag/v0.6.2&quot;&gt;v0.6.2&lt;/a&gt; version of &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt; is out. It brings new features and some
+changes in API, input and output format. The main change is an ability to
+perform a search by name details, such as an abbreviated genus, author, year.&lt;/p&gt;
+
+&lt;p&gt;For example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g:M. sp:galloprovincialis au:Oliv. y:-1800&lt;/code&gt; will search for a
+name with genus starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;M&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;galloprovincialis&lt;/code&gt; as a specific epithet,
+an author starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oliv&lt;/code&gt; and a year earlier or equal to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1800&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Both name-verification and search return the same format of results. Because of
+that we needed to change the name of some fields in the output, so their
+meaning would correspond to both verification and search outputs.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inputId&lt;/code&gt; changed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; changed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;preferredResults changed to &lt;/code&gt;results`&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;GNverifier’s &lt;a href=&quot;https://apidoc.globalnames.org/gnames&quot;&gt;API v1&lt;/a&gt; still can be used
+(it did not undrgo any format changes), but the &lt;a href=&quot;https://verifier.globalnames.org&quot;&gt;web-page&lt;/a&gt; and command line app
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnverifier&lt;/code&gt; moved to use new
+&lt;a href=&quot;https://apidoc.globalnames.org/gnames-beta&quot;&gt;API v0&lt;/a&gt;. When the new API
+stabilizes, it will be renamed to API v2.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-gnverifier-with-homebrew&quot;&gt;Install GNverifier with Homebrew&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew tap gnames/gn
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;gnverifier
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew upgrade gnverifier
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;changes-in-functionality-since-v030&quot;&gt;Changes in functionality since v0.3.0&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://verifier.globalnames.org&quot;&gt;web-page&lt;/a&gt; shows the date when a name was imported into &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt; database.&lt;/li&gt;
+  &lt;li&gt;to make it easier to cite &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt;, there is a &lt;a href=&quot;https://zenodo.org/record/5774421#.YbXkDYpMFOQ&quot;&gt;DOI information&lt;/a&gt; on
+its &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GitHub page&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;tab-delimited values (TSV) format is now supported.&lt;/li&gt;
+  &lt;li&gt;added &lt;a href=&quot;https://www.algaebase.org&quot;&gt;AlgaeBase&lt;/a&gt; to data-sources.&lt;/li&gt;
+  &lt;li&gt;there are now options to return all matched results (use with caution, as
+the output might be excessively big).&lt;/li&gt;
+  &lt;li&gt;show score details in the output and on the &lt;a href=&quot;https://verifier.globalnames.org&quot;&gt;web-page&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gnames/gnverifier#advanced-search&quot;&gt;advanced search&lt;/a&gt; is added to both command line and web-based user interfaces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deprecation-of-services&quot;&gt;Deprecation of services.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gni.globalnames.org&quot;&gt;GNI&lt;/a&gt; is the oldest version of GN name-verification algorithms. Most of its
+functionality now exists in &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt;, so the &lt;a href=&quot;https://gni.globalnames.org&quot;&gt;GNI web-site&lt;/a&gt; is
+going to be removed in the beginning of 2022.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://index.globalnames.org&quot;&gt;Scala version of GNI&lt;/a&gt; will also be
+scheduled for removal.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://resolver.globalnames.org&quot;&gt;GNresolver&lt;/a&gt; will continue to run the longest.
+It will not be deprecated until &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;GNverifier&lt;/a&gt; API v2 will be released.&lt;/p&gt;
+
+&lt;p&gt;If you use old systems, consider switching to &lt;a href=&quot;https://github.com/gnames/gnverifier&quot;&gt;&lt;strong&gt;GNverifier&lt;/strong&gt;&lt;/a&gt;
+because older systems will eventually be deprecated and stopped.&lt;/p&gt;
+
+</description>
+    </item>
     
     <item>
       <title>GNparser (Go language) release 1.5.0</title>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Names in November meeting</title>
+  <title>GNverifier release v0.6.2</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.2.1">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -212,21 +212,21 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Names in November meeting
-    <a href="/news/2016/11/15/names-in-november/" class="permalink" title="Permalink">∞</a>
+    GNverifier release v0.6.2
+    <a href="/news/2021/12/12/gnverifier-0.6.2/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
-      names
+      GNverifier and release
     </span>
   </span>
   <div class="post-meta">
     <span class="post-date">
-      15 Nov 2016
+      12 Dec 2021
     </span>
-    <a href="https://github.com/deepreef" class="post-author">
-      <img src="https://github.com/deepreef.png" class="avatar" alt="deepreef avatar" width="24" height="24">
-      deepreef
+    <a href="https://github.com/dimus" class="post-author">
+      <img src="https://github.com/dimus.png" class="avatar" alt="dimus avatar" width="24" height="24">
+      dimus
     </a>
     <div class="social-media">
 			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
@@ -235,31 +235,82 @@
   </div>
   
   <div class="post-content">
-    <p>Global Names developers Dmitry Mozzherin and Richard Pyle were invited to
-attend a workshop called “Names in November”, organized by the Catalog of Life
-and GBIF and hosted in Leiden.  The three-day meeting involved more than twenty
-people from key taxonomic and nomenclatural organizations, and focused on
-discussing ways that a global information system of taxonomy, including both
-names data and accepted species information, could be designed to more
-seamlessly interconnect biodiversity data through organism names.  Although the
-theme of the meeting was certainly not new (many participants in this meeting
-had attended similar meetings going back decades discussing essentially the
-same idea), the tone of the discussion was refreshing in that it focused
-comparatively little on politics and technical details, and instead
-concentrated on identifying whether such a shared taxonomic infrastructure was
-even possible (given the political, financial, and technical circumstances
-currently existing within the main likely partners), and what conditions would
-need to be met.</p>
+    <p><a href="https://github.com/gnames/gnverifier">GNverifier</a> can help to answer the following questions:</p>
 
-<p>Many of the points that participants agreed on in terms of needs and services
-very closely matched the fundamental goals and infrastructure we have developed
-(and continue to develop) within the context of Global Names.  Now that GN is
-much more closely coordinating with the Catalog of Life, GN data indexes and
-services will likely play an important role in implementing the shared global
-taxonomy resource envisioned during the meeting. Following this meeting, we
-have a renewed sense of focus within GN development to finish harmonizing
-integration of GNI and GNUB services, and especially to rapidly increase the
-effort to bulk-populate GNUB from existing data.</p>
+<ul>
+  <li>Is a name-string a real name?</li>
+  <li>Is it spelled correctly, and if not, what might be the correct spelling?</li>
+  <li>Is the name currently in use?</li>
+  <li>If it is a synonym, what data sources consider to be currently accepted names?</li>
+  <li>Is a name a homonym?</li>
+  <li>What is a taxon that the name points to, and where is it placed in various
+classifications?</li>
+</ul>
+
+<p>The <a href="https://github.com/gnames/gnverifier/releases/tag/v0.6.2">v0.6.2</a> version of <a href="https://github.com/gnames/gnverifier">GNverifier</a> is out. It brings new features and some
+changes in API, input and output format. The main change is an ability to
+perform a search by name details, such as an abbreviated genus, author, year.</p>
+
+<p>For example <code class="language-plaintext highlighter-rouge">g:M. sp:galloprovincialis au:Oliv. y:-1800</code> will search for a
+name with genus starting with <code class="language-plaintext highlighter-rouge">M</code>, <code class="language-plaintext highlighter-rouge">galloprovincialis</code> as a specific epithet,
+an author starting with <code class="language-plaintext highlighter-rouge">Oliv</code> and a year earlier or equal to <code class="language-plaintext highlighter-rouge">1800</code>.</p>
+
+<p>Both name-verification and search return the same format of results. Because of
+that we needed to change the name of some fields in the output, so their
+meaning would correspond to both verification and search outputs.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">inputId</code> changed to <code class="language-plaintext highlighter-rouge">id</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input</code> changed to <code class="language-plaintext highlighter-rouge">name</code></li>
+  <li><code class="language-plaintext highlighter-rouge">preferredResults changed to </code>results`</li>
+</ul>
+
+<p>GNverifier’s <a href="https://apidoc.globalnames.org/gnames">API v1</a> still can be used
+(it did not undrgo any format changes), but the <a href="https://verifier.globalnames.org">web-page</a> and command line app
+<code class="language-plaintext highlighter-rouge">gnverifier</code> moved to use new
+<a href="https://apidoc.globalnames.org/gnames-beta">API v0</a>. When the new API
+stabilizes, it will be renamed to API v2.</p>
+
+<h2 id="install-gnverifier-with-homebrew">Install GNverifier with Homebrew</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap gnames/gn
+brew <span class="nb">install </span>gnverifier
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew upgrade gnverifier
+</code></pre></div></div>
+
+<h2 id="changes-in-functionality-since-v030">Changes in functionality since v0.3.0</h2>
+
+<ul>
+  <li><a href="https://verifier.globalnames.org">web-page</a> shows the date when a name was imported into <a href="https://github.com/gnames/gnverifier">GNverifier</a> database.</li>
+  <li>to make it easier to cite <a href="https://github.com/gnames/gnverifier">GNverifier</a>, there is a <a href="https://zenodo.org/record/5774421#.YbXkDYpMFOQ">DOI information</a> on
+its <a href="https://github.com/gnames/gnverifier">GitHub page</a>.</li>
+  <li>tab-delimited values (TSV) format is now supported.</li>
+  <li>added <a href="https://www.algaebase.org">AlgaeBase</a> to data-sources.</li>
+  <li>there are now options to return all matched results (use with caution, as
+the output might be excessively big).</li>
+  <li>show score details in the output and on the <a href="https://verifier.globalnames.org">web-page</a>.</li>
+  <li><a href="https://github.com/gnames/gnverifier#advanced-search">advanced search</a> is added to both command line and web-based user interfaces.</li>
+</ul>
+
+<h2 id="deprecation-of-services">Deprecation of services.</h2>
+
+<p><a href="https://gni.globalnames.org">GNI</a> is the oldest version of GN name-verification algorithms. Most of its
+functionality now exists in <a href="https://github.com/gnames/gnverifier">GNverifier</a>, so the <a href="https://gni.globalnames.org">GNI web-site</a> is
+going to be removed in the beginning of 2022.</p>
+
+<p>The <a href="https://index.globalnames.org">Scala version of GNI</a> will also be
+scheduled for removal.</p>
+
+<p><a href="https://resolver.globalnames.org">GNresolver</a> will continue to run the longest.
+It will not be deprecated until <a href="https://github.com/gnames/gnverifier">GNverifier</a> API v2 will be released.</p>
+
+<p>If you use old systems, consider switching to <a href="https://github.com/gnames/gnverifier"><strong>GNverifier</strong></a>
+because older systems will eventually be deprecated and stopped.</p>
+
 
   </div>
 </article>
@@ -276,7 +327,7 @@ effort to bulk-populate GNUB from existing data.</p>
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2021/12/12/gnverifier-0.6.2/">GNverifier v0.6.2</a>
       </li>
       
@@ -300,7 +351,7 @@ effort to bulk-populate GNUB from existing data.</p>
     <h4>Other News</h4>
     <ul>
         
-        <li class="">
+        <li class="current">
           <a href="/news/2021/12/12/gnverifier-0.6.2/">GNverifier release v0.6.2</a>
         </li>
         
@@ -364,7 +415,7 @@ effort to bulk-populate GNUB from existing data.</p>
           <a href="/news/2017/05/19/blackout/">Power down</a>
         </li>
         
-        <li class="current">
+        <li class="">
           <a href="/news/2016/11/15/names-in-november/">Names in November meeting</a>
         </li>
         
