@@ -1,6 +1,6 @@
 ---
 layout: news_item
-title: GNverifier release v0.6.2
+title: GNverifier release v0.6.2, Advanced Search
 date: 2021-12-12 Sun
 author: dimus
 product: GNverifier
@@ -18,6 +18,9 @@ comments: true
 - Is a name a homonym?
 - What is a taxon that the name points to, and where is it placed in various
   classifications?
+
+Biannual [GNverifier] database update is done for 14 datasets, new datasets are
+pending to be added.
 
 The [v0.6.2] version of [GNverifier] is out. It brings new features and some
 changes in API, input and output format. The main change is an ability to
