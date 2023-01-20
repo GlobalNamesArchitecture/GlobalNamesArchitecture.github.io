@@ -11,10 +11,10 @@
     <title xml:lang="en">Global Names Architecture</title>
     <atom:link type="application/atom+xml" href="http://globalnames.org/feed.xml" rel="self"/>
     <link>http://globalnames.org/</link>
-    <pubDate>Sun, 12 Dec 2021 14:30:31 -0600</pubDate>
-    <lastBuildDate>Sun, 12 Dec 2021 14:30:31 -0600</lastBuildDate>
+    <pubDate>Fri, 20 Jan 2023 19:01:54 +0000</pubDate>
+    <lastBuildDate>Fri, 20 Jan 2023 19:01:54 +0000</lastBuildDate>
     <language>en-US</language>
-    <generator>Jekyll v4.2.1</generator>
+    <generator>Jekyll v4.3.2</generator>
     <description>Scientific Name Services</description>
     <image>
       <description>Scientific Names Services</description>
@@ -28,7 +28,7 @@
     <item>
       <title>GNverifier release v0.6.2, Advanced Search</title>
       <link>http://globalnames.org/news/2021/12/12/gnverifier-0.6.2/</link>
-      <pubDate>Sun, 12 Dec 2021 00:00:00 -0600</pubDate>
+      <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -122,7 +122,7 @@ because older systems will eventually be deprecated and stopped.&lt;/p&gt;
     <item>
       <title>GNparser (Go language) release 1.5.0</title>
       <link>http://globalnames.org/news/2021/10/28/gnparser-1.5.0/</link>
-      <pubDate>Thu, 28 Oct 2021 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -179,7 +179,7 @@ An example: “Galega officinalis (L.) L`Hèr.”.&lt;/p&gt;
     <item>
       <title>GNparser (Go language) release 1.3.3</title>
       <link>http://globalnames.org/news/2021/08/13/gnparser-1.3.3/</link>
-      <pubDate>Fri, 13 Aug 2021 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -272,7 +272,7 @@ GNparser v1.3.3&lt;/p&gt;
     <item>
       <title>Why Go is a great language for biodiversity informatics</title>
       <link>http://globalnames.org/news/2021/07/14/go/</link>
-      <pubDate>Wed, 14 Jul 2021 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -440,7 +440,7 @@ favorite editor and start hacking the code!&lt;/p&gt;
     <item>
       <title>GNparser (Go language) release 1.3.0</title>
       <link>http://globalnames.org/news/2021/07/05/gnparser-1.3.0/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -550,7 +550,7 @@ brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;gnparser
     <item>
       <title>GNfinder release v0.14.1</title>
       <link>http://globalnames.org/news/2021/06/19/gnfinder-0.14.1/</link>
-      <pubDate>Sat, 19 Jun 2021 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -661,7 +661,7 @@ web-based user interface.&lt;/p&gt;
     <item>
       <title>GNverifier release v0.3.0</title>
       <link>http://globalnames.org/news/2021/04/10/gnverifier-0.3.0/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -825,7 +825,7 @@ because older systems will eventually be deprecated and stopped.&lt;/p&gt;
     <item>
       <title>GNparser (Go language) release 1.2.0</title>
       <link>http://globalnames.org/news/2021/04/10/gnarser-1.2.0/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -880,7 +880,7 @@ Id,Verbatim,Cardinality,CanonicalStem,CanonicalSimple,CanonicalFull,Authorship,Y
     <item>
       <title>GNparser (Go language) release 1.1.0</title>
       <link>http://globalnames.org/news/2021/03/23/gnparser/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -978,7 +978,7 @@ into all languages that support C-binding (such as Java, Python, Ruby etc)&lt;/p
     <item>
       <title>gnfinder release 0.9.1 -- bug fixes</title>
       <link>http://globalnames.org/news/2019/12/11/gnfinder/</link>
-      <pubDate>Wed, 11 Dec 2019 06:52:20 -0600</pubDate>
+      <pubDate>Wed, 11 Dec 2019 12:52:20 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1008,7 +1008,7 @@ engine for &lt;a href=&quot;https://gnrd.globalnames.org&quot;&gt;GNRD&lt;/a&gt;
     <item>
       <title>GNRD release (v0.9.0) switched to gnfinder from TaxonFinder/NetiNeti and became 25 times faster.</title>
       <link>http://globalnames.org/news/2019/12/10/gnrd/</link>
-      <pubDate>Tue, 10 Dec 2019 08:50:39 -0600</pubDate>
+      <pubDate>Tue, 10 Dec 2019 14:50:39 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1052,7 +1052,7 @@ recommend to use name-verification option to weed out such false results.&lt;/p&
     <item>
       <title>Outcomes draft (Final Report for NSF award 1645959)</title>
       <link>http://globalnames.org/news/2019/11/21/nsf1645959-outcomes/</link>
-      <pubDate>Thu, 21 Nov 2019 05:24:45 -0600</pubDate>
+      <pubDate>Thu, 21 Nov 2019 11:24:45 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1166,7 +1166,7 @@ a global index for all digitized literature possible.&lt;/p&gt;
     <item>
       <title>Biodiversity Heritage Library (BHL) link to Catalogue of Life Plus (CoL+)</title>
       <link>http://globalnames.org/news/2019/11/20/col-gbif-bhl/</link>
-      <pubDate>Wed, 20 Nov 2019 08:55:30 -0600</pubDate>
+      <pubDate>Wed, 20 Nov 2019 14:55:30 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1203,7 +1203,7 @@ biodiversity informatics.&lt;/p&gt;
     <item>
       <title>gnparser release (v0.12.0) can be used in most modern languages</title>
       <link>http://globalnames.org/news/2019/11/19/gnparser-clib/</link>
-      <pubDate>Tue, 19 Nov 2019 09:01:13 -0600</pubDate>
+      <pubDate>Tue, 19 Nov 2019 15:01:13 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1275,14 +1275,14 @@ other languages.&lt;/p&gt;
     
     <item>
       <title>Biodiversity-Next Conference</title>
-      <link>http://globalnames.org/news/2019/11/13/biodiversity-next/</link>
-      <pubDate>Wed, 13 Nov 2019 22:53:39 -0600</pubDate>
+      <link>http://globalnames.org/news/2019/11/14/biodiversity-next/</link>
+      <pubDate>Thu, 14 Nov 2019 04:53:39 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
       <category>Meetings/Workshops</category>
       
-      <guid isPermaLink="true">http://globalnames.org/news/2019/11/13/biodiversity-next/</guid>
+      <guid isPermaLink="true">http://globalnames.org/news/2019/11/14/biodiversity-next/</guid>
       <description>&lt;p&gt;For the last couple of years I have been working on making scientific-name
 detection possible on a massive scale. The result of this work was creation
 of several tools that increased the speed of name-finding dramatically:&lt;/p&gt;
@@ -1328,14 +1328,14 @@ such a workshop in April/May 2020.&lt;/p&gt;
     
     <item>
       <title>Power down</title>
-      <link>http://globalnames.org/news/2017/05/19/blackout/</link>
-      <pubDate>Fri, 19 May 2017 23:53:39 -0500</pubDate>
+      <link>http://globalnames.org/news/2017/05/20/blackout/</link>
+      <pubDate>Sat, 20 May 2017 04:53:39 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
       <category>announcement</category>
       
-      <guid isPermaLink="true">http://globalnames.org/news/2017/05/19/blackout/</guid>
+      <guid isPermaLink="true">http://globalnames.org/news/2017/05/20/blackout/</guid>
       <description>&lt;p&gt;On May 20th all our servers are going to be down because of a power maintenance
 at our computer center. Sorry for inconvenience! We are going to be back as soon
 as possible.&lt;/p&gt;
@@ -1345,7 +1345,7 @@ as possible.&lt;/p&gt;
     <item>
       <title>Names in November meeting</title>
       <link>http://globalnames.org/news/2016/11/15/names-in-november/</link>
-      <pubDate>Tue, 15 Nov 2016 09:51:28 -0600</pubDate>
+      <pubDate>Tue, 15 Nov 2016 15:51:28 +0000</pubDate>
       <dc:creator>deepreef</dc:creator>
       
       
@@ -1383,7 +1383,7 @@ effort to bulk-populate GNUB from existing data.&lt;/p&gt;
     <item>
       <title>gnparser release v0.3.3</title>
       <link>http://globalnames.org/news/2016/10/06/gnparser-0-3-3/</link>
-      <pubDate>Thu, 06 Oct 2016 09:00:00 -0500</pubDate>
+      <pubDate>Thu, 06 Oct 2016 14:00:00 +0000</pubDate>
       <dc:creator>alexander-myltsev</dc:creator>
       
       
@@ -1437,7 +1437,7 @@ They are described in the &lt;a href=&quot;https://github.com/GlobalNamesArchite
     <item>
       <title>Scala-based gnparser v.0.3.0</title>
       <link>http://globalnames.org/news/2016/05/23/gnparser-0-3-0/</link>
-      <pubDate>Mon, 23 May 2016 06:33:44 -0500</pubDate>
+      <pubDate>Mon, 23 May 2016 11:33:44 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1493,7 +1493,7 @@ They are described in the &lt;a href=&quot;https://github.com/GlobalNamesArchite
     <item>
       <title>uBio and Nomenclator Zoologicus are back</title>
       <link>http://globalnames.org/news/2015/11/30/ubio-is-back/</link>
-      <pubDate>Mon, 30 Nov 2015 11:54:44 -0600</pubDate>
+      <pubDate>Mon, 30 Nov 2015 17:54:44 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1524,7 +1524,7 @@ Kubernetes at Google Container Engine to keep it alive.&lt;/p&gt;
     <item>
       <title>Scala-based gnparser v.0.2.0</title>
       <link>http://globalnames.org/news/2015/11/30/gnparser-0-2-0/</link>
-      <pubDate>Mon, 30 Nov 2015 11:01:30 -0600</pubDate>
+      <pubDate>Mon, 30 Nov 2015 17:01:30 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1597,14 +1597,14 @@ version 0.3.0&lt;/p&gt;
     
     <item>
       <title>Writing Papers as Open Source -- Solutions</title>
-      <link>http://globalnames.org/news/2015/10/30/open-source-papers2/</link>
-      <pubDate>Fri, 30 Oct 2015 19:15:11 -0500</pubDate>
+      <link>http://globalnames.org/news/2015/10/31/open-source-papers2/</link>
+      <pubDate>Sat, 31 Oct 2015 00:15:11 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
       <category>openscience</category>
       
-      <guid isPermaLink="true">http://globalnames.org/news/2015/10/30/open-source-papers2/</guid>
+      <guid isPermaLink="true">http://globalnames.org/news/2015/10/31/open-source-papers2/</guid>
       <description>&lt;p&gt;I decided to figure out how can I write scientific papers in truly Open Source
 fashion. And here are practical decisions that allowed me to do it:&lt;/p&gt;
 
@@ -1659,7 +1659,7 @@ system&lt;/a&gt; with LaTeX, vim and tmux.&lt;/p&gt;
     <item>
       <title>Writing Papers as Open Source</title>
       <link>http://globalnames.org/news/2015/10/19/open-source-papers/</link>
-      <pubDate>Mon, 19 Oct 2015 04:10:09 -0500</pubDate>
+      <pubDate>Mon, 19 Oct 2015 09:10:09 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1701,7 +1701,7 @@ write a scientific paper –&lt;/p&gt;
     <item>
       <title>Honolulu Workshop</title>
       <link>http://globalnames.org/news/2015/10/14/bishop-museum-workshop/</link>
-      <pubDate>Wed, 14 Oct 2015 13:55:36 -0500</pubDate>
+      <pubDate>Wed, 14 Oct 2015 18:55:36 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1738,7 +1738,7 @@ about species.&lt;/p&gt;
     <item>
       <title>BioGUID Wins Award!</title>
       <link>http://globalnames.org/news/2015/10/13/BioGUID-Wins-Award/</link>
-      <pubDate>Tue, 13 Oct 2015 15:55:49 -0500</pubDate>
+      <pubDate>Tue, 13 Oct 2015 20:55:49 +0000</pubDate>
       <dc:creator>deepreef</dc:creator>
       
       
@@ -1753,7 +1753,7 @@ about species.&lt;/p&gt;
     <item>
       <title>BioGUID merges with GN</title>
       <link>http://globalnames.org/news/2015/10/08/BioGUID-Moved/</link>
-      <pubDate>Thu, 08 Oct 2015 03:53:49 -0500</pubDate>
+      <pubDate>Thu, 08 Oct 2015 08:53:49 +0000</pubDate>
       <dc:creator>deepreef</dc:creator>
       
       
@@ -1770,7 +1770,7 @@ about species.&lt;/p&gt;
     <item>
       <title>GNUB proposal submitted to NSF</title>
       <link>http://globalnames.org/news/2015/10/06/gnub-proposal/</link>
-      <pubDate>Tue, 06 Oct 2015 11:03:49 -0500</pubDate>
+      <pubDate>Tue, 06 Oct 2015 16:03:49 +0000</pubDate>
       <dc:creator>deepreef</dc:creator>
       
       
@@ -1792,7 +1792,7 @@ the core infrastructure behind GNUB in particular, and globalnames in general.&l
     <item>
       <title>Global Names Gains Stable Funding</title>
       <link>http://globalnames.org/news/2015/10/05/ui-mid-november/</link>
-      <pubDate>Mon, 05 Oct 2015 00:59:02 -0500</pubDate>
+      <pubDate>Mon, 05 Oct 2015 05:59:02 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1821,7 +1821,7 @@ Bank&lt;/a&gt; for which Rich just submitted a grant proposal.&lt;/p&gt;
     <item>
       <title>Crossmapping Names by IDs</title>
       <link>http://globalnames.org/news/2015/09/22/otol-eol/</link>
-      <pubDate>Tue, 22 Sep 2015 11:26:49 -0500</pubDate>
+      <pubDate>Tue, 22 Sep 2015 16:26:49 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1865,7 +1865,7 @@ used separately on its own.&lt;/p&gt;
     <item>
       <title>Alexander Myltsev</title>
       <link>http://globalnames.org/news/2015/09/09/alex-myltsev/</link>
-      <pubDate>Wed, 09 Sep 2015 02:46:21 -0500</pubDate>
+      <pubDate>Wed, 09 Sep 2015 07:46:21 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1894,7 +1894,7 @@ with the announcement until major paperwork hurdles were solved.&lt;/p&gt;
     <item>
       <title>Sysopia release v0.5.0</title>
       <link>http://globalnames.org/news/2015/09/03/sysopia/</link>
-      <pubDate>Thu, 03 Sep 2015 13:05:09 -0500</pubDate>
+      <pubDate>Thu, 03 Sep 2015 18:05:09 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1937,7 +1937,7 @@ new computers are in place.&lt;/p&gt;
     <item>
       <title>Site globalnames.org merged with GN blog</title>
       <link>http://globalnames.org/news/2015/09/03/globalnames-site/</link>
-      <pubDate>Thu, 03 Sep 2015 10:37:55 -0500</pubDate>
+      <pubDate>Thu, 03 Sep 2015 15:37:55 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1964,7 +1964,7 @@ that.&lt;/p&gt;
     <item>
       <title>GN Parser v.3.4.1</title>
       <link>http://globalnames.org/news/2015/08/27/parser-3-4-1/</link>
-      <pubDate>Thu, 27 Aug 2015 06:58:18 -0500</pubDate>
+      <pubDate>Thu, 27 Aug 2015 11:58:18 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -1985,7 +1985,7 @@ It adds ability to parse authors names starting with &lt;code class=&quot;langua
     <item>
       <title>GN Parser v.3.4.0</title>
       <link>http://globalnames.org/news/2015/08/20/parser-3-4-0/</link>
-      <pubDate>Thu, 20 Aug 2015 06:58:18 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2015 11:58:18 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2024,8 +2024,8 @@ static method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
     
     <item>
       <title>GlobalNames Parser v.3.3.0 adds host option for socket server</title>
-      <link>http://globalnames.org/news/2015/08/14/parser-3-3-0/</link>
-      <pubDate>Fri, 14 Aug 2015 20:58:18 -0500</pubDate>
+      <link>http://globalnames.org/news/2015/08/15/parser-3-3-0/</link>
+      <pubDate>Sat, 15 Aug 2015 01:58:18 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2033,7 +2033,7 @@ static method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
       
       <category>release</category>
       
-      <guid isPermaLink="true">http://globalnames.org/news/2015/08/14/parser-3-3-0/</guid>
+      <guid isPermaLink="true">http://globalnames.org/news/2015/08/15/parser-3-3-0/</guid>
       <description>&lt;p&gt;New version 3.3.0 of GlobalNames Parser gem biodiversity is out. It adds new
 option to socket server &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-H&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--host&lt;/code&gt; to change default 127.0.0.1
 host setting.  To see full set of options run&lt;/p&gt;
@@ -2047,7 +2047,7 @@ parserver &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;&lt;/code&gt;&lt;/pre&
     <item>
       <title>Catalogue of Life Meeting in Champaign/Urbana</title>
       <link>http://globalnames.org/news/2015/08/13/col-meeting/</link>
-      <pubDate>Thu, 13 Aug 2015 04:26:28 -0500</pubDate>
+      <pubDate>Thu, 13 Aug 2015 09:26:28 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2086,7 +2086,7 @@ November and demonstrate the workflow on upcoming GBIF/CoL workshop.&lt;/p&gt;
     <item>
       <title>Global Names Resolver now shows vernacular names</title>
       <link>http://globalnames.org/news/2015/08/12/gn-resolver-vernaculars/</link>
-      <pubDate>Wed, 12 Aug 2015 05:00:43 -0500</pubDate>
+      <pubDate>Wed, 12 Aug 2015 10:00:43 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2105,7 +2105,7 @@ interested in particular &lt;a href=&quot;http://resolver.globalnames.org/data_s
     <item>
       <title>Global Names Parser v3.2.1</title>
       <link>http://globalnames.org/news/2015/06/01/biodiversity-3-2-1/</link>
-      <pubDate>Mon, 01 Jun 2015 06:02:24 -0500</pubDate>
+      <pubDate>Mon, 01 Jun 2015 11:02:24 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2217,7 +2217,7 @@ are not code compliant.&lt;/p&gt;
     <item>
       <title>New UUID v5 Generation Tool -- gn_uuid v0.5.0</title>
       <link>http://globalnames.org/news/2015/05/31/gn-uuid-0-5-0/</link>
-      <pubDate>Sun, 31 May 2015 04:01:43 -0500</pubDate>
+      <pubDate>Sun, 31 May 2015 09:01:43 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2424,7 +2424,7 @@ found for MD5 algorithm&lt;/p&gt;
     <item>
       <title>Crossmap Tool v0.1.6</title>
       <link>http://globalnames.org/news/2015/05/31/gn-crossmap-0-1-6/</link>
-      <pubDate>Sun, 31 May 2015 03:58:50 -0500</pubDate>
+      <pubDate>Sun, 31 May 2015 08:58:50 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2447,7 +2447,7 @@ Resolver.&lt;/p&gt;
     <item>
       <title>Crossmap Tool v0.1.5</title>
       <link>http://globalnames.org/news/2015/05/28/gn-crossmap-0-1-5/</link>
-      <pubDate>Thu, 28 May 2015 01:54:54 -0500</pubDate>
+      <pubDate>Thu, 28 May 2015 06:54:54 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2495,7 +2495,7 @@ using any field from the input.&lt;/p&gt;
     <item>
       <title>iDigBio API Client v0.1.1</title>
       <link>http://globalnames.org/news/2015/05/20/idigbio-client/</link>
-      <pubDate>Wed, 20 May 2015 03:01:08 -0500</pubDate>
+      <pubDate>Wed, 20 May 2015 08:01:08 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2524,7 +2524,7 @@ beta API will move to production.&lt;/p&gt;
     <item>
       <title>Scientific Name Parser v3.1.10</title>
       <link>http://globalnames.org/news/2015/05/14/parser-3-1-10/</link>
-      <pubDate>Thu, 14 May 2015 03:57:07 -0500</pubDate>
+      <pubDate>Thu, 14 May 2015 08:57:07 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2610,7 +2610,7 @@ Serjania meridionalis Cambess. var. o&apos;donelli F.A. Barkley
     <item>
       <title>Global Names Grant Goes to Illinois</title>
       <link>http://globalnames.org/news/2015/05/12/gn-moves-to-illinois/</link>
-      <pubDate>Tue, 12 May 2015 11:14:13 -0500</pubDate>
+      <pubDate>Tue, 12 May 2015 16:14:13 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2659,7 +2659,7 @@ believe GN suddenly got a brighter future ahead.&lt;/p&gt;
     <item>
       <title>New tool to crossmap checklists</title>
       <link>http://globalnames.org/news/2015/05/11/gn-crossmap-gem/</link>
-      <pubDate>Mon, 11 May 2015 06:39:02 -0500</pubDate>
+      <pubDate>Mon, 11 May 2015 11:39:02 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2753,7 +2753,7 @@ to distinguish name usages&lt;/li&gt;
     <item>
       <title>Kickoff  Meeting for Disseminating Phylogenetic Knowledge Project</title>
       <link>http://globalnames.org/news/2015/05/06/phylo-trees/</link>
-      <pubDate>Wed, 06 May 2015 04:02:32 -0500</pubDate>
+      <pubDate>Wed, 06 May 2015 09:02:32 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2791,7 +2791,7 @@ find out the requirements during the design process.&lt;/p&gt;
     <item>
       <title>New Higher Level Classification for Catalogue of Life</title>
       <link>http://globalnames.org/news/2015/05/03/higher-level-classification/</link>
-      <pubDate>Sun, 03 May 2015 05:25:31 -0500</pubDate>
+      <pubDate>Sun, 03 May 2015 10:25:31 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2832,7 +2832,7 @@ classification is a practical human enterprise where compromises must be made&lt
     <item>
       <title>Starting GSOC 2015 Sysopia Project</title>
       <link>http://globalnames.org/news/2015/05/03/sysopia-starts/</link>
-      <pubDate>Sun, 03 May 2015 04:25:38 -0500</pubDate>
+      <pubDate>Sun, 03 May 2015 09:25:38 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2870,7 +2870,7 @@ expand it to other backends after we nail down the user interface.&lt;/p&gt;
     <item>
       <title>Species File Group -- new home for GN?</title>
       <link>http://globalnames.org/news/2015/05/02/species-file-group/</link>
-      <pubDate>Sat, 02 May 2015 07:44:45 -0500</pubDate>
+      <pubDate>Sat, 02 May 2015 12:44:45 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2924,7 +2924,7 @@ On Monady I am going to talk about my trip at my work at MBL.&lt;/p&gt;
     <item>
       <title>Good names, bad names?</title>
       <link>http://globalnames.org/news/2015/04/29/good-bad-names/</link>
-      <pubDate>Wed, 29 Apr 2015 10:52:58 -0500</pubDate>
+      <pubDate>Wed, 29 Apr 2015 15:52:58 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -2995,7 +2995,7 @@ Globit &lt;a href=&quot;https://github.com/jhpoelen/eol-globi-data/issues/132&qu
     <item>
       <title>iDigBio hackathon preparation</title>
       <link>http://globalnames.org/news/2015/04/28/idigbio-api-hackathon-meet/</link>
-      <pubDate>Tue, 28 Apr 2015 16:44:50 -0500</pubDate>
+      <pubDate>Tue, 28 Apr 2015 21:44:50 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -3024,7 +3024,7 @@ version of the API client before the hackathon.&lt;/p&gt;
     <item>
       <title>Launching NetiNeti Google Summer of Code Project</title>
       <link>http://globalnames.org/news/2015/04/28/gsoc-netineti/</link>
-      <pubDate>Tue, 28 Apr 2015 16:34:40 -0500</pubDate>
+      <pubDate>Tue, 28 Apr 2015 21:34:40 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -3057,7 +3057,7 @@ and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt
     <item>
       <title>Google Summer of Code 2015 starts</title>
       <link>http://globalnames.org/news/2015/04/27/gsoc-2015-starts/</link>
-      <pubDate>Mon, 27 Apr 2015 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -3133,7 +3133,7 @@ to the Google Summer of Code 2015.&lt;/p&gt;
     <item>
       <title>Gracious gift from Encylopedia of Life</title>
       <link>http://globalnames.org/news/2015/04/22/thank_you_eol/</link>
-      <pubDate>Wed, 22 Apr 2015 10:41:03 -0500</pubDate>
+      <pubDate>Wed, 22 Apr 2015 15:41:03 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
@@ -3159,7 +3159,7 @@ biodiversity community.&lt;/p&gt;
     <item>
       <title>GNA work continues</title>
       <link>http://globalnames.org/news/2015/04/17/gna_is_back/</link>
-      <pubDate>Fri, 17 Apr 2015 05:53:00 -0500</pubDate>
+      <pubDate>Fri, 17 Apr 2015 10:53:00 +0000</pubDate>
       <dc:creator>dimus</dc:creator>
       
       
