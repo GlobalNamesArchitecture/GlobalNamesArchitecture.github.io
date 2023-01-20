@@ -4,6 +4,6 @@ labels: [bug]
 body:
   - type: input
     attributes:
-      value: Issue Title
+      label: Issue Title
       description: Describe your thoughts/reports here.
 
