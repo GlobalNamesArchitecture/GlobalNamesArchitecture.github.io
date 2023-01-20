@@ -2,3 +2,6 @@ contact_links:
   - name: GNparser Issue
     url: https://github.com/gnames/gnparser/issues/new
     about: Scientific Names Parsing
+  - name: Biodiversity Ruby Gem Issue
+    url: https://github.com/GlobalNamesArchitecture/biodiversity/issues/new
+    about: Scientific Names Parsing
