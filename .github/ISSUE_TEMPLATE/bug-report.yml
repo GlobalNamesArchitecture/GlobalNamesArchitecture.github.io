@@ -1,0 +1,8 @@
+name: Bug Report
+description: Bug/Feature for https://globalnames.org site.
+labels: [bug]
+body:
+  - type: input
+    attributes:
+      description: Describe your thoughts/reports here.
+

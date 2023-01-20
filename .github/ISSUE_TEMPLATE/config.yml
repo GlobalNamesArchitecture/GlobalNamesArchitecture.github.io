@@ -12,5 +12,5 @@ contact_links:
     url: https://github.com/gnames/gnverifier/issues/new
     about: Scientific Names Verification
   - name: BHLindex Issue
-    url: https://github.com/gnames/gnverifier/issues/new
+    url: https://github.com/gnames/bhlindex/issues/new
     about: Problems with NamesIndex at Biodiversity Heritage Library
