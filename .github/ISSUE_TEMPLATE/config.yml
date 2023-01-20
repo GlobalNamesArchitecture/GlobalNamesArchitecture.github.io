@@ -5,3 +5,12 @@ contact_links:
   - name: Biodiversity Ruby Gem Issue
     url: https://github.com/GlobalNamesArchitecture/biodiversity/issues/new
     about: Scientific Names Parsing
+  - name: GNfinder Issue
+    url: https://github.com/gnames/gnfinder/issues/new
+    about: Scientific Names Detection in Texts
+  - name: GNverifier Issue
+    url: https://github.com/gnames/gnverifier/issues/new
+    about: Scientific Names Verification
+  - name: BHLindex Issue
+    url: https://github.com/gnames/gnverifier/issues/new
+    about: Problems with NamesIndex at Biodiv. Herit. Lib.
