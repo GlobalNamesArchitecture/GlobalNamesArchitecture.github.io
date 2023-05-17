@@ -1,7 +1,7 @@
 permalink: /news/:year/:month/:day/:title/
 excerpt_separator: ""
 baseurl: ""
-# url: "http://globalnames.org"
+url: "https://globalnames.org"
 repository: https://github.com/GlobalNamesArchitecture/GlobalNamesArchitecture.github.io
 highlighter: rouge
 
