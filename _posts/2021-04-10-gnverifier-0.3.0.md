@@ -129,7 +129,7 @@ gnverifier -p 4000
 ```
 
 After running the command above, the interface can be accessed by a browser via
-`http://localhost:4000` URL.
+`https://globalnames.org` URL.
 
 One can find a complete list of `gnverifier` by running:
 
