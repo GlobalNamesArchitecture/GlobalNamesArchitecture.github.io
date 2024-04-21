@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Global Names Usage Bank (GNUB)</title>
+  <title>Scientific Names and UUIDs</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="generator" content="Jekyll v4.3.2">
   <link rel="alternate" type="application/rss+xml" title="Global Names Architecture" href="/feed.xml">
@@ -333,76 +333,150 @@
       <div class="unit four-fifths">
         <article>
           <h2>
-          Global Names Usage Bank (GNUB)
-          <a href="/docs/gnub/" class="permalink" title="Permalink">∞</a>
+          Scientific Names and UUIDs
+          <a href="/docs/sci-names-uuids/" class="permalink" title="Permalink">∞</a>
           </h2>
     <div>
    
-   <span class="doc-date">Edited on: 23 Sep 2015</span>
+   <span class="doc-date">Edited on: 21 Apr 2024</span>
    
-   
-   <a href="https://github.com/deepreef" class="post-author">
-      <img src="https://github.com/deepreef.png" class="avatar" alt="deepreef avatar" width="24" height="24">
-      deepreef
-    </a>
    
     </div>
-          <p>GNUB, the Global Names Usage Bank, will be the core of GNA. GNUB will be the
-means by which we index and organize our recorded knowledge that we have about
-life on earth (well at least all of the recorded knowledge that is available
-on-line in a digital format).</p>
+          <h1 id="why-scientific-names-are-bad-identifiers-for-computers">Why Scientific Names are Bad Identifiers for Computers</h1>
 
-<p>A usage is a statement that includes a name. The usage might be a statement in
-a paper about the food of a brine shrimp, records of its occurrence, its
-presence on a web page, a digitized specimen label from a museum, or even field
-notes that refer to the organism.  All such usages of all species in all
-documents make up humanity’s knowledge of the biosphere.  GNUB is an
-environment that will have the capacity to index all such usages that are
-available on-line in a digital format.</p>
+<p>Scientific names are very important in biodiversity informatics, and are way
+better than numbers or strange combination of characters for human to
+human communication. However, they are not the best choice as global
+identifiers for computers.</p>
 
-<p>GNUB connects names with their use. Through the uses that occur in
-nomenclators, we will know what the correct name is and how to present it.
-Through the uses in taxonomies, we will know what the synonyms are.  Through
-all of the statements about what the organism does, where it lives, what it
-looks like and so on, we will be informed as to what the species is (the
-species concept/s). By indexing and grouping the index we will accelerate
-access to information.</p>
+<h3 id="scientific-name-strings-have-different-length">Scientific name strings have different length</h3>
 
-<p>As GNUB grows to an early beta form into a much
-larger structure, it will complement and eventually subsume other parts of the
-Global Names Architecture, such as the discovery and acquisition of names
-currently being pursued by GNI.</p>
+<p>More often than not identifiers end up in databases and used as a primary index
+to sort, connect and search data. Scientific name strings vary from 2 bytes to
+more than  500 bytes in length. So if they are used as keys in database they
+are inefficient, they waste a lot of space, become less efficient for finding
+or sorting information – indexes key size is usually determined by the
+the largest key.</p>
 
-<p>The role of GNUB as an index will be dwarfed by rich diversity of uses to which
-the information it indexes can be put.   The Global Names team will build some
-of the functions that help to promote the Global Names Architecture, but by
-providing APIs, the information will be made available to other players to
-serve the needs of their clients.  As the group assembling GNUB has very strong
-taxonomic influences, it is not surprising that lead figures include the
-Zoological and Fungal nomenclators ZooBank and Index Fungorum.   As all
-nomenclatural acts to date require conventional publication, GNUB must interact
-with literature management environments such as the CiteBank environment being
-developed by the Biodiversity Heritage Library.</p>
+<p>UUIDs have always the same, rather small size – 16 bytes.  Even when UUIDs are
+used in their “standard” string representation – they are still reasonably
+small – 36 characters. Storing them in a database as a number is obviously more
+efficient.</p>
 
-<p>Zoobank is a specialist service that draws on GNUB.</p>
+<h3 id="it-is-hard-to-spot-differences-in-name-strings">It is hard to spot differences in name strings</h3>
 
-<p>Model components are shown below:</p>
+<p>It is very hard for human eye to spot the difference between strings like this</p>
 
-<h4 id="core-components">Core Components</h4>
+<ul>
+  <li>
+    <p>Corchoropsis tomentosa var. psilocarpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+  </li>
+  <li>
+    <p>Corchoropsis tomentosa var. psilocanpa (Harms &amp; Loes.) C.Y.Wu &amp; Y.Tang</p>
+  </li>
+</ul>
 
-<p><a href="/img/gnub_core_tables.jpg"><img src="/img/gnub_core_tables.jpg" alt="[GNUB Core]" /></a></p>
+<p>Much easier for their corresponding UUIDs</p>
 
-<h4 id="taxon-name-usage-tnu-cluster">Taxon Name Usage (TNU) Cluster</h4>
+<ul>
+  <li>
+    <p>5edecb2b-903f-54f1-a087-b47b3b021fcd</p>
+  </li>
+  <li>
+    <p>833c664b-7d00-5c3b-97a4-98b0ab7d0a9a</p>
+  </li>
+</ul>
 
-<p><a href="/img/gnub_tnu_cluster.jpg"><img src="/img/gnub_tnu_cluster.jpg" alt="[GNUB Tacon Name Usage]" /></a></p>
+<h3 id="name-strings-come-in-different-encodings">Name strings come in different encodings.</h3>
 
-<h4 id="references-cluster">References Cluster</h4>
+<p>Currently Latin1, UTF-8 and UTF-16 are most popular encodings used in
+biodiversity. If authorship or name itself has characters outside of the
+128bits of ASCII code – identically looking names will be quite different for
+computers.</p>
 
-<p><a href="/img/gnub_ref_cluster.jpg"><img src="/img/gnub_ref_cluster.jpg" alt="[GNUB References]" /></a></p>
+<h3 id="name-strings-are-less-stable-because-of-their-encoding">Name strings are less stable because of their encoding</h3>
 
-<h4 id="agents-cluster">Agents Cluster</h4>
+<p>When names are moved from one database to another, from one paper to another
+sometimes they do not survive the trip. If you spent any time looking at
+scientific names in electronic form you did see something like this:</p>
 
-<p><a href="/img/gnub_agent_cluster.jpg"><img src="/img/gnub_agent_cluster.jpg" alt="[GNUB Agents]" /></a></p>
+<ul>
+  <li>
+    <p>Acacia ampliceps ? Acacia bivenosa</p>
+  </li>
+  <li>
+    <p>Absidia macrospora V�nov� 1968</p>
+  </li>
+  <li>
+    <p>Absidia sphaerosporangioides Man&lt;acute&gt;ka &amp; Truszk., 1958</p>
+  </li>
+  <li>
+    <p>Cnemisus kaszabi Endr?di 1964</p>
+  </li>
+</ul>
+
+<p>Usually names like these had been submitted in a “wrong” encoding and some
+characters in them were misinterpreted. UUID on the other hand is just a
+hexadecimal number, which can be transitioned between various encodings more
+safely.</p>
+
+<h3 id="name-strings-might-look-the-same-in-print-or-on-screen-but-be-different">Name strings might look the same in print or on screen, but be different</h3>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Homo sapiens</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Homo sаpiens</code></p>
+  </li>
+</ul>
+
+<p>These two strings might look exactly the same on a screen or printed on paper,
+but in reality they are different. Here are their UUIDs:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">16f235a0-e4a3-529c-9b83-bd15fe722110</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">093dc7f7-5915-56a5-87de-033e20310b14</code></p>
+  </li>
+</ul>
+
+<p>The difference is that the second name has a Cyrillic <code class="language-plaintext highlighter-rouge">а</code> character, which in
+most cases will look exactly the same as Latin <code class="language-plaintext highlighter-rouge">a</code> character. And when the
+names are printed on paper there is absolutely no way to tell the difference.
+UUID will tell us that these two name strings are not the same.</p>
+
+<h3 id="nothing-prevents-to-continue-to-use-name-strings-for-human-interaction">Nothing prevents to continue to use name strings for human interaction</h3>
+
+<p>One argument that people often give – it is much easier for users to type</p>
+
+<p>http://biosite.org/Parus_major</p>
+
+<p>than</p>
+
+<p>http://biosite.org/47d61c81-5a0f-5448-964a-34bbfb54ce8b</p>
+
+<p>For most of us it is definitely true and nothing prevents developers
+to create links of the first type, while still using UUIDs behind the scene.</p>
+
+<h2 id="why-uuids-v5-are-better-than-any-other-uuids-as-a-scientific-name-identifier">Why UUIDs v5 are better than any other UUIDs as a scientific name identifier</h2>
+
+<ul>
+  <li>
+    <p>They can be generated independently by anybody and still be the same to the
+same name string</p>
+  </li>
+  <li>
+    <p>They use SHA1 algorithm which does not have (extremely rare) collisions
+found for MD5 algorithm</p>
+  </li>
+  <li>
+    <p>Same ID can be generated in <a href="https://github.com/GlobalNamesArchitecture/gn_uuid_examples">any popular language</a> following
+<a href="http://tools.ietf.org/html/rfc4122#section-4.3">well-defined algorithm</a></p>
+  </li>
+</ul>
 
 
           
@@ -411,6 +485,9 @@ developed by the Biodiversity Heritage Library.</p>
 
 
 
+
+  
+  
 
   
   
@@ -431,14 +508,14 @@ developed by the Biodiversity Heritage Library.</p>
           
             
             
-            <a href="/docs/tut-gnfinder/" class="prev">Back</a>
+            <a href="/docs/gnub/" class="prev">Back</a>
           
       </div>
       <div class="right align-left">
           
             
             
-            <a href="/docs/sci-names-uuids/" class="next">Next</a>
+            <a href="/docs/good-bad-names/" class="next">Next</a>
           
       </div>
     </div>
@@ -578,7 +655,7 @@ developed by the Biodiversity Heritage Library.</p>
     
   
     
-      <li class="current"><a href="https://globalnames.org/docs/gnub/">Global Names Usage Bank (GNUB)</a></li>
+      <li class=""><a href="https://globalnames.org/docs/gnub/">Global Names Usage Bank (GNUB)</a></li>
       
 
 
@@ -616,7 +693,7 @@ developed by the Biodiversity Heritage Library.</p>
     
   
     
-      <li class=""><a href="https://globalnames.org/docs/sci-names-uuids/">Scientific Names and UUIDs</a></li>
+      <li class="current"><a href="https://globalnames.org/docs/sci-names-uuids/">Scientific Names and UUIDs</a></li>
       
 
 
