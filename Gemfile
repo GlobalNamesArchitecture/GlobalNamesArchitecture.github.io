@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem "rake", "~> 13.0"
-gem "jekyll", "~> 4.2"
-gem "jekyll-coffeescript", "~> 2.0"
-gem "jekyll-gist", "~> 1.5"
-gem "jekyll-mentions", "~> 1.6"
-gem "jekyll-paginate", "~> 1.1"
-gem "jekyll-redirect-from", "~> 0.16"
-gem "jekyll-sitemap", "~> 1.4"
-gem "jekyll-scholar", "~> 6.8"
-gem "jemoji", "~> 0.12"
-gem "rouge", "~> 3.26"
-gem "kramdown", "~> 2.3"
-gem "mime-types", "~> 3.3"
-gem "pygments.rb", "~> 2.2"
-gem "solargraph", "~> 0.40"
+gem 'jekyll'
+gem 'jekyll-coffeescript'
+gem 'jekyll-gist'
+gem 'jekyll-mentions'
+gem 'jekyll-paginate'
+gem 'jekyll-redirect-from'
+gem 'jekyll-scholar'
+gem 'jekyll-sitemap'
+gem 'jemoji'
+gem 'kramdown'
+gem 'mime-types'
+gem 'pygments.rb'
+gem 'rake'
+gem 'rouge'
+gem 'ruby-lsp'
